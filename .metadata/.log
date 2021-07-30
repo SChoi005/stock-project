@@ -4738,3 +4738,18 @@ Command-line arguments:  -data /workspace
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:35:54.626
 !MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:43:10.890
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:43:12.008
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:43:14.175
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:43:15.352
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-29 14:48:04.744
+!MESSAGE >> document/hover
