@@ -14,4 +14,5 @@ public class UserDto{
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
+    private String grade;
 }
