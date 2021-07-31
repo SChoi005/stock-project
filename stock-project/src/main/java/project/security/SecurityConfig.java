@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import project.service.UserService;
 
@@ -39,7 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     
     @Override // 로그인 할때 필요한 정보를 가져옴
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    
-    
+        auth.userDetailsService(userService)
+            .passwordEncoder(new BCryptPasswordEncoder()); // password 인코더
+        
     }
 }

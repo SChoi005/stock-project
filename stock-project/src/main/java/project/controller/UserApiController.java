@@ -10,31 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
+import project.db.dto.UserDto;
 import project.db.entity.User;
 import project.service.UserService;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("")
 public class UserApiController{
     
     @Autowired
     private UserService userService;
     
-    @PostMapping("")
-    public ResponseEntity<String> createUser(@RequestBody User user){
-        log.info("user : {}", user);
-        return userService.create(user);
+    @PostMapping("/user")
+    public String signUp(UserDto userDto){
+        userService.save(userDto);
+        return "redirect:/login";
     }
-    
-    @GetMapping("/check-id/{checkId}")
-    public ResponseEntity<String> checkUserId(@PathVariable String checkId){
-        return userService.checkUserId(checkId);
-    }
-    
-    @GetMapping("/check-nickname/{checkNickname}")
-    public ResponseEntity<String> checkNickname(@PathVariable String checkNickname){
-        return userService.checkNickname(checkNickname);
-    }
-    
 }

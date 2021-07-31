@@ -2,6 +2,13 @@ package project.db.dto;
 
 import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class UserDto{
     
     private Long id;
@@ -14,5 +21,5 @@ public class UserDto{
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
-    private String grade;
+    private String auth;
 }
