@@ -1,0 +1,426 @@
+!SESSION 2021-07-31 08:58:27.417 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+This is a continuation of log file /workspace/.metadata/.bak_0.log
+Created Time: 2021-07-31 09:36:57.584
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:57.584
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:57.934
+!MESSAGE Reconciled 0. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.325
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.387
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.388
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.400
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.410
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.469
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.478
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.496
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.497
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.506
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.509
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.511
+!MESSAGE Validated 5. Took 170 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:58.881
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:36:59.498
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:04.983
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:04.987
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.441
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.584
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.657
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.883
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.883
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.897
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.897
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.927
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.928
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.946
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.946
+!MESSAGE 9 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.975
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:05.985
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:06.003
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:06.007
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:06.013
+!MESSAGE Validated 6. Took 170 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:06.584
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:06.684
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.037
+!MESSAGE Reconciled 0. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.272
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.501
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.502
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.504
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.504
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.536
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.536
+!MESSAGE 6 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.538
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.538
+!MESSAGE 0 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.540
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.540
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.550
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.552
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:07.553
+!MESSAGE Validated 6. Took 66 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:12.894
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:12.900
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.356
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.499
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.819
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.821
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.825
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.825
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.829
+!MESSAGE begin problem for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.829
+!MESSAGE 0 problems reported for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.835
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.836
+!MESSAGE 6 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.838
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.838
+!MESSAGE 0 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.840
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.840
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.843
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.843
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:13.844
+!MESSAGE Validated 7. Took 38 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:14.247
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:14.351
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:14.700
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.061
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.113
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.114
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.116
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.116
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.118
+!MESSAGE begin problem for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.118
+!MESSAGE 0 problems reported for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.135
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.136
+!MESSAGE 6 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.142
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.145
+!MESSAGE 0 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.151
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.151
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.157
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.158
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:15.160
+!MESSAGE Validated 7. Took 56 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:18.500
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:37:19.230
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:29.584
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:29.961
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:30.095
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:30.286
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.014
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.033
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.467
+!MESSAGE Reconciled 0. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.862
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.927
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.940
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.951
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.960
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.962
+!MESSAGE begin problem for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.963
+!MESSAGE 0 problems reported for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.966
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.967
+!MESSAGE 0 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.971
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.971
+!MESSAGE 0 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.986
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.986
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.995
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.995
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:31.996
+!MESSAGE Validated 7. Took 79 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.089
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.094
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.095
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.106
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.194
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.547
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:32.984
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.008
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.008
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.020
+!MESSAGE begin problem for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.020
+!MESSAGE 0 problems reported for /UserRepository.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.025
+!MESSAGE begin problem for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.025
+!MESSAGE 0 problems reported for /Grade.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.027
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.027
+!MESSAGE 0 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.028
+!MESSAGE begin problem for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.032
+!MESSAGE 0 problems reported for /UserDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.035
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.047
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.052
+!MESSAGE begin problem for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.053
+!MESSAGE 0 problems reported for /UserService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.054
+!MESSAGE Validated 7. Took 57 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:38:33.454
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:42:11.155
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-07-31 09:42:20.382
+!MESSAGE >> document/hover
