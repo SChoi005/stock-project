@@ -3,6 +3,7 @@ package project.db.entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -34,7 +35,7 @@ public class User{
     private String auth;
     
     // User 1 : n Portfolio
-    @OneToMany(fetch = FetchType.LAZY, mappedBy="user")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="user", cascade = CascadeType.REMOVE)
     private List<Portfolio> portfolios;
     
 }

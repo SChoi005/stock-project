@@ -20,6 +20,7 @@ public class Stock{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    private String symbol;
     
     @ManyToOne
     private Portfolio portfolio;

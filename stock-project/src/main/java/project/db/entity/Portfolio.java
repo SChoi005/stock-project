@@ -2,6 +2,7 @@ package project.db.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -30,7 +31,7 @@ public class Portfolio{
     private User user;
     
     // Portfolio 1 : n Stock
-    @OneToMany(fetch = FetchType.LAZY, mappedBy="stock")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="portfolio", cascade = CascadeType.REMOVE)
     private List<Stock> stocks;
     
 }
