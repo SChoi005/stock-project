@@ -25,8 +25,8 @@ public class StockService{
             return null;
         }else{
             Stock stock = new Stock();
-            stock.setId(stockDto.setId());
-            stock.setSymbol(stockDto.setSymbol());
+            stock.setId(stockDto.getId());
+            stock.setSymbol(stockDto.getSymbol());
             stock.setPortfolio(portfolioRepository.getOne(stockDto.getPortfolioId()));
 
             stockRepository.save(stock);
@@ -34,5 +34,10 @@ public class StockService{
             return stockDto;
         }
     }
+    //r
+    
+    //u
+    
+    //d
         
 }
