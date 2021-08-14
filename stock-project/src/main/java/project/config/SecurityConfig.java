@@ -3,8 +3,8 @@ package project.config;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.reactive.PathRequest;
-import org.springframework.http.HttpMethod;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,12 +13,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-import project.db.repository.UserRepository;
-import project.service.UserService;
 
 @EnableWebSecurity(debug = true)
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -26,9 +23,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     
     @Autowired
     private UserDetailsService userDetailsService;
-    
-    @Autowired
-    private PasswordEncoder passwordEncoder;
     
     @Autowired
     private JwtTokenFilter jwtTokenFilter;
@@ -41,10 +35,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // 사용자의 유저네임과 패스워드가 맞는지 검증
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }    
     
-    
+    @Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -71,8 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         
         //엔드포인트 permission 설정
         http.authorizeRequests()
-            .antMatchers(HttpMethod.POST, "/api/user").permitAll()
-            .antMatchers("/api/stock/**").permitAll()
+            .antMatchers("/api/authenticate","/api/signup","/swagger-ui.html/**").permitAll()
             .anyRequest().authenticated()
             .and()
             .formLogin()
