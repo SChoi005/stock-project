@@ -1,6 +1,7 @@
 package project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -16,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import project.config.JwtRequest;
 import project.config.JwtResponse;
 import project.config.JwtTokenUtil;
+import project.db.entity.User;
 import project.service.UserService;
 
 @Slf4j
@@ -31,6 +33,12 @@ public class UserApiController{
     
     @Autowired
     private UserService userDetailService;
+    
+    @PostMapping("/signup")
+    public HttpStatus signUp(User user){
+        return userDetailService.create(user);
+    }
+    
     
     @PostMapping("/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception{

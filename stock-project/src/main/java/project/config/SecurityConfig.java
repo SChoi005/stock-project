@@ -30,6 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // 정적 자원에 대해서는 Security 설정 적용안함
     @Override
     public void configure(WebSecurity web) throws Exception {
+        
     }
     
     // 사용자의 유저네임과 패스워드가 맞는지 검증
@@ -51,6 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        
+        String[] permitted ={ "/api/authenticate","/api/signup","/swagger-ui.html/**","/v2/api-docs", "/configuration/**", "/swagger*/**", "/webjars/**"};
         
         // cors 사용, csrf 미사용
         http = http.cors().and().csrf().disable();
@@ -74,7 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         
         //엔드포인트 permission 설정
         http.authorizeRequests()
-            .antMatchers("/api/authenticate","/api/signup","/swagger-ui.html/**").permitAll()
+            .antMatchers(permitted).permitAll()
             .anyRequest().authenticated()
             .and()
             .formLogin()

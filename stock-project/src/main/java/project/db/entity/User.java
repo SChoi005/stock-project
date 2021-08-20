@@ -6,12 +6,19 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
 
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -31,11 +38,14 @@ public class User implements UserDetails{
     private String username;
     private String password;
     private String nickname;
+    
     private LocalDateTime createdAt;
+    
     private String createdBy;
+    
     private LocalDateTime updatedAt;
+    
     private String updatedBy;
-    private String auth;
     
     // User 1 : n Portfolio
     @OneToMany(fetch = FetchType.LAZY, mappedBy="user", cascade = CascadeType.REMOVE)

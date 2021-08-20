@@ -3,9 +3,11 @@ package project.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import project.db.entity.User;
@@ -16,6 +18,16 @@ public class UserService implements UserDetailsService{
     
     @Autowired 
     private UserRepository userRepository;
+    
+    public HttpStatus create(User user){
+        if(userRepository.findByUsername(user.getUsername())==null){
+            user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+            userRepository.save(user);
+            return HttpStatus.OK;
+        }else{
+            return HttpStatus.BAD_REQUEST;
+        }
+    }
     
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
