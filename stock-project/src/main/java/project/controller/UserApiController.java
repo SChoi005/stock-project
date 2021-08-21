@@ -40,7 +40,7 @@ public class UserApiController{
     }
     
     
-    @PostMapping("/authenticate")
+    @PostMapping("/signin")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception{
         
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());

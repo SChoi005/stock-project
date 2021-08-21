@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-public class User implements UserDetails{
+public class User extends BaseEntity implements UserDetails{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,14 +38,6 @@ public class User implements UserDetails{
     private String username;
     private String password;
     private String nickname;
-    
-    private LocalDateTime createdAt;
-    
-    private String createdBy;
-    
-    private LocalDateTime updatedAt;
-    
-    private String updatedBy;
     
     // User 1 : n Portfolio
     @OneToMany(fetch = FetchType.LAZY, mappedBy="user", cascade = CascadeType.REMOVE)

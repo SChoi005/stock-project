@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "http://localhost:8080/api/";
 
 class AuthService{
     login(username, password){
-        axios
+        const res = axios
             .post(API_URL + "signin", {username, password})
-            .then((res)=>{
+            .then((response)=>{
            if(response.data.accessToken){
                localStorage.setItem("user", JSON.stringify(response.data));
            } 
         });
         
-        return response.data;
+        return res.data;
     }
     
     logout(){
