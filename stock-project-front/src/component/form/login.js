@@ -45,6 +45,7 @@ class Login extends Component{
                     ref={c => {
                       this.form = c;
                     }}
+                    /* method="post" */
                 >
                     <div>
                         <label>Username</label>
