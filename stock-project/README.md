@@ -29,4 +29,4 @@ https://shinsunyoung.tistory.com/78
 -> portfolio crud 구현부터 들감 유후~
 
 git token
-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
+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

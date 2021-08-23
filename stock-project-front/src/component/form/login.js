@@ -21,20 +21,20 @@ class Login extends Component{
         this.login = this.login.bind(this);
         this.state= {
             username:"",
-            password:""
+            password:"",
+            token:""
         };
     }
     
-    // validateFrom(){
-    //     return this.state.username.length > 0;
-    // }
-    
     login(e){
-        AuthService.login(this.state.username, this.state.password);
-        console.log(AuthService.authHeader());
+        AuthService.login(this.state.username, this.state.password)
+                    .then((res)=>{
+                            console.log(res);
+                        });
     }
     
     render(){
+        console.log(this.state.token);
         return (
             <div>
                 <div>
