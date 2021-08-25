@@ -25,7 +25,7 @@ class AuthService{
             username,
             password,
             nickname
-        });
+        })
     }
     
     getCurrentUser(){
