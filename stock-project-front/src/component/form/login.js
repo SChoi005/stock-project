@@ -30,7 +30,8 @@ class Login extends Component{
         AuthService.login(this.state.username, this.state.password)
                     .then((res)=>{
                             console.log(res);
-                        });
+                        })
+                    .catch((error)=>{console.log(error)});
     }
     
     render(){
