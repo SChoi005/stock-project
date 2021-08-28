@@ -35,7 +35,6 @@ class Login extends Component{
     }
     
     render(){
-        console.log(this.state.token);
         return (
             <div>
                 <div>

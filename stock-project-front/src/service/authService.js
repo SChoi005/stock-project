@@ -8,9 +8,7 @@ class AuthService{
         return axios
             .post(API_URL + "signin", {password, username})
             .then((response)=>{
-            localStorage.setItem("test1","test");
             localStorage.setItem("user",JSON.stringify(response.data));
-            
             return response.data;
         })
         .catch((error)=>{return error;});

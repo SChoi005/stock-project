@@ -5323,3 +5323,822 @@ ThreadId: 1 ThreadName: main ThreadState: WAITING
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 03:47:27.260
 !MESSAGE >> watchers registered
+!SESSION 2021-08-27 13:38:28.672 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-08-27 13:38:32.599
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:40.971
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:42.502
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:42.890
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:42.922
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:43.038
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:43.047
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:43.275
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:38:46.069
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:39:35.143
+!MESSAGE Workspace initialized in 52078ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:39:35.156
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:39:35.177
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:39:35.281
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:39:35.320
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:40:03.429
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:40:09.606
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:40:10.144
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 13:40:10.161
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:19.619
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:20.222
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:20.933
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:21.075
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:22.545
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:27.075
+!MESSAGE Reconciled 0. Took 6400 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:27.088
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:27.108
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:27.648
+!MESSAGE Reconciled 0. Took 106 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:28.816
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:28.823
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:28.828
+!MESSAGE Validated 1. Took 725 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:32.640
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:32.654
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:32.655
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:32.662
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.092
+!MESSAGE Reconciled 0. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.769
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.775
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.775
+!MESSAGE Validated 1. Took 280 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.800
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.829
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.835
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:33.836
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:34.142
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:34.156
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:34.166
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:34.168
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:34.740
+!MESSAGE Reconciled 0. Took 123 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.010
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.050
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.054
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.086
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.200
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.201
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.202
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.335
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.335
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.343
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.344
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.601
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.644
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.676
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.705
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.742
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.744
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.755
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.772
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.827
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:35.968
+!MESSAGE Reconciled 0. Took 209 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:36.804
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:36.804
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:36.804
+!MESSAGE Validated 1. Took 395 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:37.382
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:37.386
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:37.477
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:37.487
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:37.825
+!MESSAGE Reconciled 0. Took 38 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:38.319
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:38.327
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:38.328
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:38.329
+!MESSAGE Validated 1. Took 52 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:46.877
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:47.564
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:47.571
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:47.665
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.041
+!MESSAGE Reconciled 0. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.308
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.309
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.387
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.408
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:48.771
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:49.254
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:49.355
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:49.725
+!MESSAGE Reconciled 0. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:50.215
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:50.216
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:50.217
+!MESSAGE Validated 1. Took 42 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:50.536
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:50.638
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.011
+!MESSAGE Reconciled 0. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.546
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.549
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.551
+!MESSAGE Validated 1. Took 88 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.880
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.881
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.918
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:51.973
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:52.284
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:52.384
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:52.735
+!MESSAGE Reconciled 0. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:52.760
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:52.861
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:53.246
+!MESSAGE Reconciled 0. Took 35 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:53.787
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:53.788
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:53.799
+!MESSAGE Validated 1. Took 86 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:54.401
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:54.499
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:54.869
+!MESSAGE Reconciled 0. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:55.445
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:55.445
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:55.445
+!MESSAGE Validated 1. Took 125 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:55.971
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:58.773
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:01:59.744
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:02.427
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:02.752
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:03.226
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:03.573
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:04.111
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:04.113
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:04.730
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:04.731
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:05.124
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:05.224
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:05.588
+!MESSAGE Reconciled 0. Took 58 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:05.599
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:05.759
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:06.013
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:06.208
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:06.215
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:06.217
+!MESSAGE Validated 1. Took 175 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:06.558
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:07.229
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:07.425
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:07.586
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:08.799
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:09.913
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:09.917
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:09.944
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:10.014
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:10.336
+!MESSAGE Reconciled 0. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:10.651
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:10.875
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:11.248
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:11.297
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:11.311
+!MESSAGE Validated 1. Took 568 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:11.916
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:12.986
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:13.143
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:13.288
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:14.072
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:14.172
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:14.521
+!MESSAGE Reconciled 0. Took 47 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:15.100
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:15.101
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:15.102
+!MESSAGE Validated 1. Took 178 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:15.489
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:18.963
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:19.333
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:19.879
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:20.360
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:20.441
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:20.979
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:21.618
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:02:23.293
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:08.247
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:25.864
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:28.546
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:29.318
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:30.032
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:30.363
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:30.442
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:32.002
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:03:52.642
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:04:39.499
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:06:29.357
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:06:43.104
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:06:45.259
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:06:46.233
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:01.393
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:06.728
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:07.188
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:10.713
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:26.663
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:27.855
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:28.281
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:33.373
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:07:34.289
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:31.986
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:33.108
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:33.601
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:33.695
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:34.367
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:34.512
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:34.718
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:36.756
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:52.652
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:53.937
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:55.355
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:55.360
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:55.408
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:55.460
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:55.895
+!MESSAGE Reconciled 0. Took 81 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:56.535
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:56.535
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:56.574
+!MESSAGE Validated 1. Took 245 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:56.723
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:59.345
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:10:59.793
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:11:08.302
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:11:46.660
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:13:41.637
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:15:56.403
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:15:59.240
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:16:10.484
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:16:41.575
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-27 14:18:17.860
+!MESSAGE >> document/hover
+!SESSION 2021-08-28 00:55:20.708 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-08-28 00:55:37.953
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:09.137
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:14.711
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:16.149
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:16.192
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:16.774
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:16.776
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:18.357
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:56:22.260
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:40.528
+!MESSAGE Workspace initialized in 143698ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:40.712
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:41.618
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:41.841
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:41.842
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:42.015
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:42.438
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 00:58:42.457
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:19.427
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:19.769
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:26.326
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:31.753
+!MESSAGE Reconciled 0. Took 10955 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:36.986
+!MESSAGE begin problem for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:37.098
+!MESSAGE 4 problems reported for /UserApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:37.205
+!MESSAGE Validated 1. Took 5031 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:47.036
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:48.329
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:00:48.336
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.core 2 0 2021-08-28 01:01:09.914
+!MESSAGE The Java indexing could not index /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!STACK 0
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:475)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class by: java.lang.ArrayIndexOutOfBoundsException: 32800
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.readModuleAttribute(ModuleInfo.java:129)
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.createModule(ModuleInfo.java:113)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:438)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:01:40.448
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:03:26.205
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:03:27.253
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:03:58.353
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:04:15.168
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:04:15.575
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-08-28 01:04:16.511
+!MESSAGE >> document/hover
