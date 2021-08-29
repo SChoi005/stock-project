@@ -28,10 +28,14 @@ class Login extends Component{
     login(e){
         e.preventDefault();
         AuthService.login(this.state.username, this.state.password)
-                    .then((res)=>{
-                            console.log(res);
-                        })
-                    .catch((error)=>{console.log(error)});
+                    .then(()=>{
+                            console.log();
+                                window.location.reload();
+                            },
+                            error =>{
+                                console.log(error);
+                            }
+                        );
     }
     
     render(){

@@ -17,7 +17,6 @@ class AuthService{
                     }
                 })
                 .then((response)=>{
-                    console.log(response);
                     localStorage.setItem("user", JSON.stringify(response.data));
                     return response.data;
                 })
@@ -33,11 +32,11 @@ class AuthService{
             username,
             password,
             nickname
-        })
+        });
     }
     
     getCurrentUser(){
-        return JSON.parse(localStorage.getItem("user"));
+        return JSON.parse(localStorage.getItem("user")).token;
     }
     
     authHeader(){

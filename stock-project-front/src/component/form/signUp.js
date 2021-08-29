@@ -16,7 +16,10 @@ class SignUp extends Component{
     }
     
     signup(e){
-        AuthService.register(this.state.username, this.state.password, this.state.nickname).then((res)=>{console.log(res)});
+        e.preventDefault();
+        AuthService.register(this.state.username, this.state.password, this.state.nickname)
+            .then((res)=>{console.log(res)})
+            .catch((error)=>{console.log(error)});
     }
     
     render(){

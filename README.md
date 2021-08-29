@@ -1,4 +1,5 @@
 * Project name : stock-project *
+
 => 주식 포트폴리오 웹 서비스
 
 & github 사용법
@@ -21,13 +22,12 @@ https://shinsunyoung.tistory.com/78
 3. 주식 db 작성 -> stock crud 작성
 4. google openApi 주식 정보 가져오기
 
--> 로그인 ui 간단하게 만들고 client - server 둘이 토큰 주고 받을 수 있는가 => 구현하자~
--> axios post로 body가 제대로 가긴가는데 response가 안받아짐,=> promise객체는 비동기로 작동하여서 그렇다고한다.
-그리고 form method를 post로 해야하는데 -> 이후 component를 만들어줘야할듯
-
-이것들 다되면 이제 시작~~~
--> portfolio crud 구현부터 들감 유후~
+# 해야할것
+1. token에서 username 빼오기!!
+2. signup 구현하기
+=> 현재 client에서 jwt토큰의 username을 빼오는 법을 잘모르겠다.
+=> 토큰이 만료되었을때 로그아웃예제를 보면 알수도있으니 나중에 거기부터 확인하자.
 
 git token
-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
+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
 
