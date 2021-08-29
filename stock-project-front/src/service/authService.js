@@ -5,13 +5,23 @@ const API_URL = "/api/";
 class AuthService{
     
     login(username, password){
-        return axios
-            .post(API_URL + "signin", {password, username})
-            .then((response)=>{
-            localStorage.setItem("user",JSON.stringify(response.data));
-            return response.data;
-        })
-        .catch((error)=>{return error;});
+        return axios({
+                    method:'post',
+                    url:API_URL+'signin',
+                    headers:{
+                        "Content-Type": "application/json"
+                    },
+                    data:{
+                        username,
+                        password
+                    }
+                })
+                .then((response)=>{
+                    console.log(response);
+                    localStorage.setItem("user", JSON.stringify(response.data));
+                    return response.data;
+                })
+                .catch((error)=>{return error;});
     }
     
     logout(){

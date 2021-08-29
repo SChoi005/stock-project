@@ -21,12 +21,12 @@ class Login extends Component{
         this.login = this.login.bind(this);
         this.state= {
             username:"",
-            password:"",
-            token:""
+            password:""
         };
     }
     
     login(e){
+        e.preventDefault();
         AuthService.login(this.state.username, this.state.password)
                     .then((res)=>{
                             console.log(res);

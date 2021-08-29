@@ -1,5 +1,7 @@
 package project.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,18 +45,19 @@ public class UserApiController{
     
     
     @PostMapping("/signin")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception{
+    public ResponseEntity<?> createAuthenticationToken(@Valid @RequestBody JwtRequest authenticationRequest) throws Exception{
         
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
         
         final UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());
         
         final String token = jwtTokenUtil.generateToken(userDetails);
+        log.info("data : {} \n token: {}",authenticationRequest,token);
         
         return ResponseEntity.ok(new JwtResponse(token));
     }
     
-    private void authenticate(String username, String password) throws Exception     {
+    void authenticate(String username, String password) throws Exception     {
 	    try {
         	authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {

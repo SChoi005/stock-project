@@ -8,7 +8,7 @@ module.exports = function(app){
           headers: {
               "Connection": "keep-alive"
           },
-          followRedirects: true,
+          followRedirects: true
       })
   )
 };
