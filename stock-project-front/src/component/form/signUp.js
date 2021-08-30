@@ -18,8 +18,15 @@ class SignUp extends Component{
     signup(e){
         e.preventDefault();
         AuthService.register(this.state.username, this.state.password, this.state.nickname)
-            .then((res)=>{console.log(res)})
-            .catch((error)=>{console.log(error)});
+            .then((res)=>{
+                console.log(res);
+                this.props.history.push("/");
+                window.location.reload();
+            })
+            .catch((error)=>{
+                console.log(error)
+                window.location.reload();
+            });
     }
     
     render(){
@@ -68,6 +75,7 @@ class SignUp extends Component{
                         <div className="form-group">
                             <button type="submit" className="btn btn-primary btn-block">signUp</button>
                         </div>
+                        <a href="/">Login</a>
                     </Form>
                 </div>
             </div>

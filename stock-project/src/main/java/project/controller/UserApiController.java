@@ -39,7 +39,7 @@ public class UserApiController{
     private UserService userDetailService;
     
     @PostMapping("/signup")
-    public HttpStatus signUp(User user){
+    public HttpStatus signUp(@RequestBody User user) throws Exception{
         return userDetailService.create(user);
     }
     

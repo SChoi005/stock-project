@@ -19,13 +19,13 @@ public class UserService implements UserDetailsService{
     @Autowired 
     private UserRepository userRepository;
     
-    public HttpStatus create(User user){
+    public HttpStatus create(User user) throws Exception{
         if(userRepository.findByUsername(user.getUsername())==null){
             user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
             userRepository.save(user);
             return HttpStatus.OK;
         }else{
-            return HttpStatus.BAD_REQUEST;
+            throw new Exception("Duplicate username");
         }
     }
     
