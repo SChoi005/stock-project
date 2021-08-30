@@ -31,8 +31,8 @@ class SignUp extends Component{
     
     render(){
         return (
-            <div className="col-md-12">
-                <div className="card card-container">
+            <div>
+                <div>
                     <div>
                         Sign Up
                     </div>
@@ -42,38 +42,35 @@ class SignUp extends Component{
                             this.form = c;
                         }}
                     >
-                        <div className="form-group">
+                        <div>
                             <label>Username</label>
                             <Input 
                                 type="text" 
                                 name="username" 
-                                className="form-control"
                                 value={this.state.username}
                                 onChange={(e)=> this.setState({username:e.target.value})}
                             />
                         </div>
-                        <div className="form-group">
+                        <div>
                             <label>Password</label>
                             <Input 
                                 type="password" 
                                 name="password"
-                                className="form-control"
                                 value={this.state.password}
                                 onChange={(e)=> this.setState({password:e.target.value})}
                             />
                         </div>
-                        <div className="form-group">
+                        <div>
                             <label>nickname</label>
                             <Input 
                                 type="text" 
                                 name="nickname"
-                                className="form-control"
                                 value={this.state.nickname}
                                 onChange={(e)=> this.setState({nickname:e.target.value})}
                             />
                         </div>
-                        <div className="form-group">
-                            <button type="submit" className="btn btn-primary btn-block">signUp</button>
+                        <div>
+                            <button type="submit">signUp</button>
                         </div>
                         <a href="/">Login</a>
                     </Form>

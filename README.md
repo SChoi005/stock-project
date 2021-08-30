@@ -29,5 +29,5 @@ https://shinsunyoung.tistory.com/78
 => 토큰이 만료되었을때 로그아웃예제를 보면 알수도있으니 나중에 거기부터 확인하자.
 
 git token
-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
+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
 

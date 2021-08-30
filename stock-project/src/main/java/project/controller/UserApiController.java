@@ -11,9 +11,12 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
@@ -37,6 +40,12 @@ public class UserApiController{
     
     @Autowired
     private UserService userDetailService;
+    
+    @GetMapping("/user/{token}")
+    public ResponseEntity<?> getUser(@PathVariable String token){
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        return ResponseEntity.ok(userDetailService.loadUserByUsername(username));
+    }
     
     @PostMapping("/signup")
     public HttpStatus signUp(@RequestBody User user) throws Exception{
