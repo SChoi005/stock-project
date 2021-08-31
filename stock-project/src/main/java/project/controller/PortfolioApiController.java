@@ -1,6 +1,7 @@
 package project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,8 @@ public class PortfolioApiController{
     private PortfolioService portfolioService;
     
     @PostMapping("/portfolio")
-    public PortfolioDto create(@RequestBody PortfolioDto portfolioDto){
-        return portfolioService.create(portfolioDto);
+    public ResponseEntity<?> create(@RequestBody PortfolioDto portfolioDto) throws Exception{
+        return ResponseEntity.ok(portfolioService.create(portfolioDto));
     }
-    
+
 }

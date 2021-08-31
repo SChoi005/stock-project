@@ -42,13 +42,13 @@ class Main extends Component{
     }
     
     render(){
+        console.log(JSON.stringify(this.state.currentUser.portfolios))
         return (
             <div>
                 <div>Component1</div>
                 <div>Component2</div>
                 <div>Component3</div>
                 <div>Component4</div>
-
             </div>
         );
     }

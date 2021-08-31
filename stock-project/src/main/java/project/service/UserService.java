@@ -25,7 +25,7 @@ public class UserService implements UserDetailsService{
             userRepository.save(user);
             return HttpStatus.OK;
         }else{
-            throw new Exception("Duplicate username");
+            throw new Exception("Duplicated username");
         }
     }
     

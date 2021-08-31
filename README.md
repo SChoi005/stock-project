@@ -24,11 +24,11 @@ https://shinsunyoung.tistory.com/78
 
 
 # 해야할것
-1. 토큰 만료시 로그아웃 !
-2. portfolio CRUD
+1. portfolio CRUD
 
 # 나중에 해야할것
-1. 로그인 폼 부분에서 modal을 이용하던지해서 조금 깔끔하게 조정이 필요할듯
+* portfolio r은 만들필요없을 듯 loadUserByusername으로 내려받기 때문
+1. 그러므로 u, d 만들고 프론트엔드 제작을 해봐야할듯
 
 git token
 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

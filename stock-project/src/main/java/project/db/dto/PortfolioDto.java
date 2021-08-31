@@ -13,5 +13,5 @@ public class PortfolioDto{
     
     private String name;
     
-    private Long userId;
+    private Long userid;
 }

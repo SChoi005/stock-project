@@ -53,7 +53,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         
-        String[] permitted ={ "/api/signin","/api/signup","/swagger-ui.html/**","/v2/api-docs", "/configuration/**", "/swagger*/**", "/webjars/**"};
+        String[] permitted ={ 
+            "/api/signin",
+            "/api/signup",
+            "/swagger-ui.html/**",
+            "/api/portfolio/**",
+            "/v2/api-docs",
+            "/configuration/**", 
+            "/swagger*/**", 
+            "/webjars/**"
+        };
         
         // cors 사용, csrf 미사용
         http = http.cors().and().csrf().disable();
