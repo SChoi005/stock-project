@@ -28,7 +28,11 @@ class Main extends Component{
                     Authorization: 'Bearer ' + token
                 }
             })
-            .then(res=>{return res.data;});
+            .then(res=>{return res.data;})
+            .catch(()=>{
+                localStorage.removeItem('user');
+                window.location.reload();
+            })
         
         this.setState({currentUser:data});
     }

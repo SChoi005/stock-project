@@ -13,7 +13,7 @@ https://shinsunyoung.tistory.com/78
 2. 메인 화면 UI 틀 만들기
 3. 실시간으로 주식변화 나타내는 법 찾기
 4. 등락비율 나타내기
-
+5. modal
 
 ### Server ( Springboot ) ###
 
@@ -22,11 +22,13 @@ https://shinsunyoung.tistory.com/78
 3. 주식 db 작성 -> stock crud 작성
 4. google openApi 주식 정보 가져오기
 
+
 # 해야할것
-1. token에서 username 빼오기!!
-2. signup 구현하기
-=> 현재 client에서 jwt토큰의 username을 빼오는 법을 잘모르겠다.
-=> 토큰이 만료되었을때 로그아웃예제를 보면 알수도있으니 나중에 거기부터 확인하자.
+1. 토큰 만료시 로그아웃 !
+2. portfolio CRUD
+
+# 나중에 해야할것
+1. 로그인 폼 부분에서 modal을 이용하던지해서 조금 깔끔하게 조정이 필요할듯
 
 git token
 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
