@@ -37,4 +37,33 @@ public class PortfolioService{
         }
     }
     
+    //U
+    public PortfolioDto update(PortfolioDto portfolioDto) throws Exception{
+        
+        if(portfolioRepository.findById(portfolioDto.getId()).isPresent()){
+            Portfolio portfolio = new Portfolio();
+            portfolio.setId(portfolioDto.getId());
+            portfolio.setName(portfolioDto.getName());
+            portfolio.setUser(userRepository.getOne(portfolioDto.getUserid()));
+
+            portfolioRepository.save(portfolio);
+            
+            return portfolioDto;
+        }
+        else{
+            throw new Exception("Not found");
+        }
+    }
+    
+    //D
+    public String delete(Long id) throws Exception{
+        if(portfolioRepository.findById(id).isPresent()){
+            portfolioRepository.deleteById(id);
+            return "Delete Successfully!";
+        }
+        else{
+            throw new Exception("Not found");
+        }
+    }
+
 }

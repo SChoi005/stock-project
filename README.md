@@ -31,5 +31,5 @@ https://shinsunyoung.tistory.com/78
 1. 그러므로 u, d 만들고 프론트엔드 제작을 해봐야할듯
 
 git token
-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
+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
 
