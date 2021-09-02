@@ -6,9 +6,6 @@ class Header extends Component{
     constructor(props){
         super(props);
         this.logOut = this.logOut.bind(this);
-        this.state = {
-            nickname : "My"
-        };
     }
     
     logOut(){
@@ -18,7 +15,7 @@ class Header extends Component{
     render(){
         return (
             <div>
-                <h1>{this.state.nickname}Portfolio</h1>
+                <h1>My Portfolio</h1>
                 {localStorage.getItem('user')?
                     <a href="/" onClick={this.logOut}>LogOut</a>
                     :

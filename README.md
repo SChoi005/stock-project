@@ -24,7 +24,9 @@ https://shinsunyoung.tistory.com/78
 
 
 # 해야할것
-1. portfolio CRUD
+1. portfolio r client 제작 => selectPortfolio 잘되는지 확인해야함 그러면 r 제작 끝
+2. portfolio c client 제작 => (+) 버튼을 만들고 팝업창을 띄우고 싶음
+
 
 # 나중에 해야할것
 1. 프론트엔드 제작을 해봐야할듯

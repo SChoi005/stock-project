@@ -4,15 +4,6 @@ import Input from "react-validation/build/input";
 //import CheckButton from "react-validation/build/button";
 import AuthService from "../../service/authService";
 
-const required = value =>{
-    if(!value){
-        return(
-            <div>
-                This field is required!
-            </div>  
-        );
-    }
-}
 
 class Login extends Component{
     
@@ -29,7 +20,6 @@ class Login extends Component{
         e.preventDefault();
         AuthService.login(this.state.username, this.state.password)
                     .then(()=>{
-                            console.log();
                                 window.location.reload();
                             },
                             error =>{
@@ -49,7 +39,6 @@ class Login extends Component{
                     ref={c => {
                       this.form = c;
                     }}
-                    /* method="post" */
                 >
                     <div>
                         <label>Username</label>
@@ -58,7 +47,6 @@ class Login extends Component{
                             name="username" 
                             value={this.state.username}
                             onChange={(e)=> this.setState({username:e.target.value})}
-                            validations={[required]}
                         />
                     </div>
                     <div>
@@ -68,7 +56,6 @@ class Login extends Component{
                             name="password" 
                             value={this.state.password}
                             onChange={(e)=> this.setState({password:e.target.value})}
-                            validations={[required]}
                         />
                     </div>
                     <div>
