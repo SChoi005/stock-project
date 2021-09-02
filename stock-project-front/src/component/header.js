@@ -18,7 +18,7 @@ class Header extends Component{
     render(){
         return (
             <div>
-                <h1>{this.state.nickname} Portfolio</h1>
+                <h1>{this.state.nickname}Portfolio</h1>
                 {localStorage.getItem('user')?
                     <a href="/" onClick={this.logOut}>LogOut</a>
                     :

@@ -23,7 +23,7 @@ public class PortfolioService{
     
     public PortfolioDto create(PortfolioDto portfolioDto) throws Exception{
         
-        if(portfolioRepository.findByName(portfolioDto.getName()).isPresent()){
+        if(portfolioRepository.findByNameAndUser(portfolioDto.getName(),userRepository.getOne(portfolioDto.getUserid())).isPresent()){
             throw new Exception("Duplicated Name");
         }
         else{
@@ -40,7 +40,8 @@ public class PortfolioService{
     //U
     public PortfolioDto update(PortfolioDto portfolioDto) throws Exception{
         
-        if(portfolioRepository.findById(portfolioDto.getId()).isPresent()){
+        if(!portfolioRepository.findByNameAndUser(portfolioDto.getName(),userRepository.getOne(portfolioDto.getUserid())).isPresent()){
+            
             Portfolio portfolio = new Portfolio();
             portfolio.setId(portfolioDto.getId());
             portfolio.setName(portfolioDto.getName());
@@ -51,7 +52,7 @@ public class PortfolioService{
             return portfolioDto;
         }
         else{
-            throw new Exception("Not found");
+            throw new Exception("Duplicated name");
         }
     }
     

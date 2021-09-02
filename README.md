@@ -27,8 +27,7 @@ https://shinsunyoung.tistory.com/78
 1. portfolio CRUD
 
 # 나중에 해야할것
-* portfolio r은 만들필요없을 듯 loadUserByusername으로 내려받기 때문
-1. 그러므로 u, d 만들고 프론트엔드 제작을 해봐야할듯
+1. 프론트엔드 제작을 해봐야할듯
 
 git token
 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

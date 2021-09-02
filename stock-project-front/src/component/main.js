@@ -1,10 +1,11 @@
 import React, { Component }from 'react';
 import axios from 'axios';
+import PieGraph from './stock/pieGraph';
 
 class Main extends Component{
 
     constructor(props){
-        super(props); 
+        super(props);
         this.state = {
             currentUser : {
                 id:'',
@@ -17,7 +18,8 @@ class Main extends Component{
                 account_non_expired:true,
                 credentials_non_expired:true,
                 account_non_locked:true
-            } 
+            },
+            selectPortfolio:{}
         };
     }
 
@@ -42,10 +44,13 @@ class Main extends Component{
     }
     
     render(){
-        console.log(JSON.stringify(this.state.currentUser.portfolios))
+        console.log(JSON.stringify(this.state.currentUser))
         return (
+            
             <div>
                 <div>Component1</div>
+                <PieGraph></PieGraph>
+                
                 <div>Component2</div>
                 <div>Component3</div>
                 <div>Component4</div>
