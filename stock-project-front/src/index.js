@@ -5,7 +5,6 @@ import Header from './component/header';
 import Clock from './component/clock';
 import FormRouter from './router/formRouter';
 import "bootstrap/dist/css/bootstrap.min.css";
-//import reportWebVitals from './reportWebVitals';
 
 
 

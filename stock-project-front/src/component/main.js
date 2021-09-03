@@ -1,13 +1,18 @@
 import React, { Component }from 'react';
 import axios from 'axios';
 import PieGraph from './stock/pieGraph';
+import {Button, Modal} from 'react-bootstrap';
+import Form from "react-validation/build/form";
+import Input from "react-validation/build/input";
 
 class Main extends Component{
 
     constructor(props){
         super(props);
-        this.handleSelect = this.handleSelect.bind(this);
+        this.createPortfolio = this.createPortfolio.bind(this);
         this.state = {
+            showHide:false,
+            createPortfolioName:"",
             currentUser : {
                 id:'',
                 username:'',
@@ -24,6 +29,10 @@ class Main extends Component{
         };
     }
 
+    componentDidMount(){
+        this.getUser();
+    }
+    
     async getUser(){
         const token = JSON.parse(localStorage.getItem('user')).token;
         const data = await axios.get('/api/user/'+token,{
@@ -39,15 +48,30 @@ class Main extends Component{
         
         this.setState({currentUser:data});
     }
-    
-    componentDidMount(){
-        this.getUser();
+
+    async postPortfolio(){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        await axios.post('/api/portfolio',{
+                headers: {
+                        Authorization: 'Bearer ' + token
+                }
+            },
+            {
+                id:0,
+                name:this.state.createPortfolioName,
+                userid:this.state.currentUser.id,
+            })
+            .then(()=>{window.location.reload();})
+            .catch((error)=>{console.log(error);});
     }
     
-    handleSelect(e){
-        this.setState({
-            selectPortfolio : e.target.value
-        });
+    handleModalShowHide(){
+        this.setState({showHide:!this.state.showHide});
+    }
+    
+    createPortfolio(e){
+        e.preventDefault();
+        this.postPortfolio();
     }
     
     render(){
@@ -56,22 +80,55 @@ class Main extends Component{
             <div>
                 <div><h2>자산구성</h2></div>
                 <div>
-                    <select 
-                        onChange={this.handleSelect} 
-                        value={this.state.selectPortfolio}
-                    >
-                        {this.state.currentUser.portfolios.map((item)=>(
-                            <option value={item} key={item.name}>
-                                {item.name}
-                            </option>
-                        ))}
-                    </select>
+                    <Button>
+                        U
+                    </Button>
+                    <Button>
+                        D
+                    </Button>
+                    <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+                        +
+                    </Button>
                 </div>
+                
+            
+                    
                 <PieGraph></PieGraph>
                 
                 <div><h2>Component2</h2></div>
                 <div><h2>Component3</h2></div>
                 <div><h2>Component4</h2></div>
+                
+                
+                
+                <Modal show={this.state.showHide}>
+                    <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
+                        <Modal.Title>포트폴리오 추가</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form
+                            onSubmit={this.createPortfolio}
+                            ref={c =>{
+                                this.form = c;
+                            }}
+                        >
+                            <label>Portfolio Name</label>
+                            <Input 
+                                type="text" 
+                                name="portfolioName" 
+                                value={this.state.createPortfolioName}
+                                onChange={(e)=> this.setState({createPortfolioName:e.target.value})}
+                            />
+                            <button type="submit">create</button>
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+                
             </div>
         );
     }

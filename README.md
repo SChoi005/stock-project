@@ -24,8 +24,9 @@ https://shinsunyoung.tistory.com/78
 
 
 # 해야할것
-1. portfolio r client 제작 => selectPortfolio 잘되는지 확인해야함 그러면 r 제작 끝
-2. portfolio c client 제작 => (+) 버튼을 만들고 팝업창을 띄우고 싶음
+1. portfolio c client 제작 => modal 띄우는 것은 성공! 현재 create api로 보내는 것에 에러발생
+=> 고치면 c는 작성 완료 위에 close 삭제좀 어케 해야할듯
+2. portfolio r client 제작 => 펼쳐서 선택하는 방식으로 하고싶음 
 
 
 # 나중에 해야할것
