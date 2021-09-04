@@ -1,5 +1,5 @@
 function PieGraph(props){
-    return <div>PieGraph</div>;
+    return <div><h2>PieGraph</h2></div>;
 }
 
 export default PieGraph;

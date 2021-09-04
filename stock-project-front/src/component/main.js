@@ -51,15 +51,18 @@ class Main extends Component{
 
     async postPortfolio(){
         const token = JSON.parse(localStorage.getItem('user')).token;
-        await axios.post('/api/portfolio',{
-                headers: {
-                        Authorization: 'Bearer ' + token
+        await axios({
+                method:'post',
+                url:'/api/portfolio',
+                headers:{
+                    "Content-Type": "application/json",
+                    "Authorization": 'Bearer ' + token
+                },
+                data:{
+                    id:0,
+                    name:this.state.createPortfolioName,
+                    userid:this.state.currentUser.id,
                 }
-            },
-            {
-                id:0,
-                name:this.state.createPortfolioName,
-                userid:this.state.currentUser.id,
             })
             .then(()=>{window.location.reload();})
             .catch((error)=>{console.log(error);});
@@ -78,8 +81,10 @@ class Main extends Component{
         console.log(JSON.stringify(this.state.currentUser,null,2));
         return (
             <div>
-                <div><h2>자산구성</h2></div>
                 <div>
+                    <Button>
+                        R                        
+                    </Button>
                     <Button>
                         U
                     </Button>
@@ -90,8 +95,6 @@ class Main extends Component{
                         +
                     </Button>
                 </div>
-                
-            
                     
                 <PieGraph></PieGraph>
                 
@@ -102,16 +105,16 @@ class Main extends Component{
                 
                 
                 <Modal show={this.state.showHide}>
-                    <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
+                    <Modal.Header>
                         <Modal.Title>포트폴리오 추가</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
-                        <Form
-                            onSubmit={this.createPortfolio}
-                            ref={c =>{
-                                this.form = c;
-                            }}
-                        >
+                    <Form
+                        onSubmit={this.createPortfolio}
+                        ref={c =>{
+                            this.form = c;
+                        }}
+                    >
+                        <Modal.Body>
                             <label>Portfolio Name</label>
                             <Input 
                                 type="text" 
@@ -119,14 +122,14 @@ class Main extends Component{
                                 value={this.state.createPortfolioName}
                                 onChange={(e)=> this.setState({createPortfolioName:e.target.value})}
                             />
-                            <button type="submit">create</button>
-                        </Form>
-                    </Modal.Body>
+                        </Modal.Body>
                     <Modal.Footer>
+                        <Button type="submit">create</Button>
                         <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
                             Close
                         </Button>
                     </Modal.Footer>
+                    </Form>
                 </Modal>
                 
             </div>
