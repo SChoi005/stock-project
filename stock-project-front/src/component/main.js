@@ -1,7 +1,7 @@
 import React, { Component }from 'react';
 import axios from 'axios';
 import PieGraph from './stock/pieGraph';
-import {Button, Modal} from 'react-bootstrap';
+import {Button, Modal, Collapse} from 'react-bootstrap';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 
@@ -10,8 +10,10 @@ class Main extends Component{
     constructor(props){
         super(props);
         this.createPortfolio = this.createPortfolio.bind(this);
+        this.selectPortfolio = this.selectPortfolio.bind(this); 
         this.state = {
             showHide:false,
+            isOpen:false,
             createPortfolioName:"",
             currentUser : {
                 id:'',
@@ -25,7 +27,11 @@ class Main extends Component{
                 credentials_non_expired:true,
                 account_non_locked:true
             },
-            selectPortfolio : {}
+            selectedPortfolio : {
+                id:'',
+                name:'',
+                stocks:[]
+            }
         };
     }
 
@@ -65,11 +71,20 @@ class Main extends Component{
                 }
             })
             .then(()=>{window.location.reload();})
-            .catch((error)=>{console.log(error);});
+            .catch((error)=>{console.log(error.message);});
     }
     
     handleModalShowHide(){
         this.setState({showHide:!this.state.showHide});
+    }
+    
+    toggle(){
+        this.setState({isOpen:!this.state.isOpen});
+    }
+    
+    selectPortfolio(e, item){
+        e.preventDefault();
+        this.setState({selectedPortfolio:item});
     }
     
     createPortfolio(e){
@@ -79,10 +94,16 @@ class Main extends Component{
     
     render(){
         console.log(JSON.stringify(this.state.currentUser,null,2));
+        console.log(JSON.stringify(this.state.selectedPortfolio.name));
         return (
             <div>
                 <div>
-                    <Button>
+                    <Button 
+                        variant="primary" 
+                        onClick={()=>this.toggle()}
+                        aria-controls="collapse-text"
+                        aria-expanded={this.state.isOpen}
+                    >
                         R                        
                     </Button>
                     <Button>
@@ -91,17 +112,28 @@ class Main extends Component{
                     <Button>
                         D
                     </Button>
-                    <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+                    <Button 
+                        variant="primary" 
+                        onClick={() => this.handleModalShowHide()}
+                    >
                         +
                     </Button>
                 </div>
-                    
+                
+                <Collapse in={this.state.isOpen}>
+                    <div id="collapse-text">
+                        {this.state.currentUser.portfolios.map((item)=>{
+                             return (<li key={item.name}><a href="/{item.name}" onClick={(event,item)=>this.selectPortfolio(event,item)}>{item.name}</a></li>);   
+                        })}
+                        <li><a href="../">default</a></li>
+                    </div>
+                </Collapse>
+                
                 <PieGraph></PieGraph>
                 
                 <div><h2>Component2</h2></div>
                 <div><h2>Component3</h2></div>
                 <div><h2>Component4</h2></div>
-                
                 
                 
                 <Modal show={this.state.showHide}>

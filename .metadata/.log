@@ -18537,3 +18537,4173 @@ Command-line arguments:  -data /workspace
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 01:41:43.278
 !MESSAGE >> document/hover
+!SESSION 2021-09-04 03:34:41.917 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-09-04 03:34:45.414
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:53.270
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:53.966
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:54.237
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:54.251
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:54.446
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:54.446
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:54.615
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:34:56.664
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:35:36.367
+!MESSAGE Workspace initialized in 41890ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:35:36.420
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:35:36.439
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:35:36.561
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:35:36.694
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:04.572
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:04.722
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:04.784
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:04.803
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:05.309
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.002
+!MESSAGE Reconciled 0. Took 4170 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.013
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.031
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.045
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.065
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.080
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.096
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.162
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.171
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.188
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.200
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:10.222
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:19.464
+!MESSAGE Reconciled 0. Took 124 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.348
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.349
+!MESSAGE 10 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.376
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.376
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.403
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.404
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.425
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.426
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.426
+!MESSAGE Validated 4. Took 875 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.443
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.585
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:20.586
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:21.813
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:22.102
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:22.390
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:24.438
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:24.710
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:24.914
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:25.710
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:25.820
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:26.244
+!MESSAGE Reconciled 0. Took 127 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:26.387
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:26.620
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:26.721
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.051
+!MESSAGE Reconciled 0. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.168
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.536
+!MESSAGE Reconciled 0. Took 50 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.566
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:27.762
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.322
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.374
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.411
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.411
+!MESSAGE 0 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.471
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.757
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.848
+!MESSAGE Reconciled 0. Took 58 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:28.886
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.530
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.648
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.648
+!MESSAGE 4 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.664
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.688
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.765
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.765
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.850
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.850
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:29.851
+!MESSAGE Validated 4. Took 595 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:32.536
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:32.742
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:33.107
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:34.096
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:34.272
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:34.372
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:34.493
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:34.814
+!MESSAGE Reconciled 0. Took 93 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.017
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.371
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.447
+!MESSAGE Reconciled 0. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.895
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.936
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.936
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.943
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.943
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.960
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:35.960
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:36.020
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:36.037
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:36.039
+!MESSAGE Validated 4. Took 141 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:37.227
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:37.293
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:38.315
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:38.459
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:38.699
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:36:39.498
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:15.710
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:15.991
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:16.277
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:20.495
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:20.597
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:20.961
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.537
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.537
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.549
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.549
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.570
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.575
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.605
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.605
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:21.621
+!MESSAGE Validated 4. Took 258 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:22.609
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:22.707
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.026
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.525
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.525
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.536
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.536
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.546
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.546
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.553
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.553
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.554
+!MESSAGE Validated 4. Took 78 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.789
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:23.794
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:24.536
+!MESSAGE Reconciled 0. Took 333 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.156
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.156
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.176
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.176
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.301
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.302
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.324
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.324
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:25.325
+!MESSAGE Validated 4. Took 338 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:29.250
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:29.263
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:29.265
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:29.267
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:29.761
+!MESSAGE Reconciled 0. Took 76 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.157
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.182
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.200
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.212
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.354
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.355
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.357
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.360
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.486
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.487
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.495
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.497
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.593
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.599
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.605
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.607
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.671
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.673
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.674
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.686
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.739
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:30.739
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.149
+!MESSAGE Reconciled 0. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.800
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.800
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.812
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.812
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.840
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.840
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.864
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.864
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:31.865
+!MESSAGE Validated 4. Took 313 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:33.134
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:33.235
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:33.548
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.031
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.031
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.037
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.037
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.047
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.048
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.113
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.119
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:34.123
+!MESSAGE Validated 4. Took 121 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:47.073
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:47.174
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:47.532
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.089
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.095
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.129
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.129
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.165
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.165
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.198
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.199
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.203
+!MESSAGE Validated 4. Took 220 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.227
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.229
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:48.715
+!MESSAGE Reconciled 0. Took 72 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.228
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.228
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.244
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.244
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.267
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.267
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.287
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.287
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.292
+!MESSAGE Validated 4. Took 175 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.406
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.419
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.420
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.422
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.691
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.711
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.715
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.759
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.760
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.761
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.769
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:49.808
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.170
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.662
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.662
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.671
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.672
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.701
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.702
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.719
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.719
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:50.721
+!MESSAGE Validated 4. Took 100 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.503
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.504
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.549
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.922
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.938
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.951
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:51.958
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.369
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.389
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.390
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.440
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.491
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:52.847
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.369
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.369
+!MESSAGE 3 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.380
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.381
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.406
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.406
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.428
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.429
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:53.436
+!MESSAGE Validated 4. Took 139 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:54.363
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:54.364
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:54.375
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:54.471
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:54.830
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.375
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.375
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.416
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.426
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.453
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.453
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.501
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.502
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:55.502
+!MESSAGE Validated 4. Took 268 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:56.264
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:58.791
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:38:59.385
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:02.128
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:02.129
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:02.162
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:02.232
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:02.606
+!MESSAGE Reconciled 0. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.776
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.802
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.852
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.852
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.865
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.866
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.877
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.877
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.913
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.913
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.913
+!MESSAGE Validated 4. Took 845 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:03.945
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:04.363
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:05.065
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:05.743
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:05.968
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:09.035
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:09.581
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:09.680
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:10.041
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:10.625
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:10.636
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.041
+!MESSAGE Reconciled 0. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.578
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.578
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.615
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.641
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.646
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.648
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.944
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:11.947
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.070
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.694
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.694
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.722
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.722
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.751
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.751
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.774
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.783
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:12.784
+!MESSAGE Validated 4. Took 263 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:13.105
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:13.106
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:13.146
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:13.210
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:13.535
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.091
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.091
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.157
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.159
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.170
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.170
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.238
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.261
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:14.565
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.040
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.041
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.045
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.046
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.053
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.053
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.061
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.061
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:15.062
+!MESSAGE Validated 4. Took 47 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:16.751
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:17.152
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:17.255
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:17.622
+!MESSAGE Reconciled 0. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:17.905
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.135
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.136
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.141
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.141
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.156
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.157
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.190
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.191
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.191
+!MESSAGE Validated 4. Took 119 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:18.545
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:19.901
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:19.903
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:19.928
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.003
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.309
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.862
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.871
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.883
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.886
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.921
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.922
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.948
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.948
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:20.950
+!MESSAGE Validated 4. Took 191 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:22.643
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:22.743
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.126
+!MESSAGE Reconciled 0. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.611
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.611
+!MESSAGE 3 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.618
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.618
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.640
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.641
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.648
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.648
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:23.648
+!MESSAGE Validated 4. Took 120 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:24.244
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:25.988
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:26.090
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:26.095
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:26.405
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:26.741
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:26.742
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.167
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.843
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.843
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.899
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.900
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.912
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.923
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.947
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.947
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.955
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.956
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.957
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.957
+!MESSAGE 0 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:27.958
+!MESSAGE Validated 4. Took 383 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.115
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.336
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.337
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.390
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.460
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:28.801
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.274
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.274
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.294
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.296
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.342
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.342
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.365
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.365
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.365
+!MESSAGE Validated 4. Took 113 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.743
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.744
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.767
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:29.843
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.151
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.365
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.627
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.627
+!MESSAGE 3 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.641
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.641
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.669
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.669
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.691
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.703
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.706
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:30.727
+!MESSAGE Validated 4. Took 174 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:32.162
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:32.700
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:32.959
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.059
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.369
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.803
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.840
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.841
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.863
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.863
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.878
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.893
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.945
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.946
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:33.947
+!MESSAGE Validated 4. Took 176 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:34.109
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:34.386
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:35.075
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:35.282
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:35.384
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:35.703
+!MESSAGE Reconciled 0. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.243
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.243
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.267
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.267
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.294
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.294
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.347
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.347
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.348
+!MESSAGE Validated 4. Took 243 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:36.537
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:37.611
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:37.712
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.071
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.467
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.468
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.527
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.567
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:38.926
+!MESSAGE Reconciled 0. Took 58 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.121
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.360
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.361
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.367
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.367
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.375
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.375
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.406
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.408
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.409
+!MESSAGE Validated 4. Took 74 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:39.743
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:40.214
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:40.897
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:40.995
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.355
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.438
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.886
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.886
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.913
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.913
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.957
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.957
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.974
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.974
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:41.987
+!MESSAGE Validated 4. Took 180 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:39:42.793
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:02.975
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:04.276
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:04.463
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:04.981
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:05.212
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:05.219
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:05.644
+!MESSAGE Reconciled 0. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.120
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.120
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.130
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.130
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.141
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.141
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.147
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.148
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.148
+!MESSAGE Validated 4. Took 103 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.160
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.163
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.166
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.167
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.313
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.357
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.358
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.452
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.453
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:06.814
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.320
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.320
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.332
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.332
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.342
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.342
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.346
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.346
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:07.351
+!MESSAGE Validated 4. Took 87 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:08.270
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:08.271
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:08.351
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:08.368
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:08.682
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.125
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.125
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.142
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.143
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.153
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.153
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.170
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.170
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.171
+!MESSAGE Validated 4. Took 88 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:09.582
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:12.793
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:13.544
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:14.798
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:15.108
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:15.207
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:15.564
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.003
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.004
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.008
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.008
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.020
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.020
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.025
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.026
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.026
+!MESSAGE Validated 4. Took 61 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:16.925
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:17.495
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:17.495
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:18.257
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:18.262
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:19.159
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:19.272
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:19.843
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:20.126
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:20.127
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:20.149
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:20.227
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:20.533
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.016
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.017
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.021
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.022
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.162
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.162
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.225
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.225
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.232
+!MESSAGE Validated 4. Took 249 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:21.477
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:32.740
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:33.166
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:39.041
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:52.508
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:53.257
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:56.091
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:57.358
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:40:58.500
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:22.676
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:23.717
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:23.719
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:23.817
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.173
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.661
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.661
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.688
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.688
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.703
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.703
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.724
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.725
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.725
+!MESSAGE Validated 4. Took 101 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.884
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.885
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.894
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:24.988
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.289
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.304
+!MESSAGE Reconciled 0. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.313
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.317
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.391
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.764
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:25.993
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.094
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.474
+!MESSAGE Reconciled 0. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.985
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.985
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.991
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:26.991
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.018
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.018
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.054
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.054
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.057
+!MESSAGE Validated 4. Took 175 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.650
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:27.751
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.085
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.086
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.128
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.543
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.676
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.677
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.688
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:28.776
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.132
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.575
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.576
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.587
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.587
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.599
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.599
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.605
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.608
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.609
+!MESSAGE Validated 4. Took 76 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.629
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:29.733
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.040
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.374
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.374
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.396
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.625
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.627
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.635
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:30.728
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.038
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.604
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.604
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.628
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.628
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.657
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.658
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.704
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.704
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.719
+!MESSAGE Validated 4. Took 230 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.941
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.942
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:31.962
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.043
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.353
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.824
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.824
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.828
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.828
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.835
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.835
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.841
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.841
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:32.842
+!MESSAGE Validated 4. Took 39 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.296
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.297
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.301
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.398
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.697
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:33.798
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:34.111
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:34.112
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:34.116
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:34.518
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:34.854
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.314
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.501
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.504
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.518
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.599
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:35.956
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:36.299
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:36.400
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:36.755
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.244
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.244
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.260
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.260
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.301
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.301
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.350
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.350
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.355
+!MESSAGE Validated 4. Took 150 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.581
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.582
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.586
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.967
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.968
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:37.997
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:38.222
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:38.223
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:38.236
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:38.327
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:38.627
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.110
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.110
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.116
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.116
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.123
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.123
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.134
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.134
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.135
+!MESSAGE Validated 4. Took 57 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.781
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:39.883
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.245
+!MESSAGE Reconciled 0. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.821
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.821
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.841
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.841
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.904
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.905
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.932
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.933
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:40.940
+!MESSAGE Validated 4. Took 243 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:41.644
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:44.055
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:44.417
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:45.356
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:45.357
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:46.023
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:46.251
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:46.784
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:46.884
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.239
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.356
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.729
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.730
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.736
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.736
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.776
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.776
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.784
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.784
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.785
+!MESSAGE Validated 4. Took 145 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:47.857
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:48.857
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:49.756
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:49.883
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:50.984
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:50.985
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:50.994
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.255
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.256
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.268
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.639
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.640
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:51.657
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.046
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.271
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.272
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.276
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.366
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:52.677
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.060
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.148
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.148
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.151
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.152
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.159
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.159
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.163
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.164
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.164
+!MESSAGE Validated 4. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:53.408
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:57.111
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:41:59.188
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:05.260
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:12.060
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:14.532
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:15.847
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:16.058
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:16.812
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:16.813
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:16.825
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:16.912
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.217
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.638
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.638
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.642
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.642
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.647
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.647
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.653
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.653
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:17.653
+!MESSAGE Validated 4. Took 35 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:18.283
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:20.006
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:21.439
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:21.883
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:22.377
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:23.009
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:23.011
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:23.387
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:23.391
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:24.508
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:24.777
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:24.877
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.197
+!MESSAGE Reconciled 0. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.713
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.713
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.725
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.725
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.753
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.753
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.782
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.783
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:25.783
+!MESSAGE Validated 4. Took 136 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:26.425
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:26.771
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:27.119
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.090
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.091
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.095
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.191
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.501
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.546
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.547
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.561
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:29.645
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.002
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.248
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.249
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.253
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.351
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.653
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.909
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.912
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:30.917
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.218
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.219
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.225
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.316
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.681
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.689
+!MESSAGE Reconciled 0. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.690
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:31.703
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.145
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.246
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.247
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.251
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.347
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:32.653
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.239
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.239
+!MESSAGE 1 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.259
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.259
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.287
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.287
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.347
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.347
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:33.348
+!MESSAGE Validated 4. Took 243 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:42:36.707
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:43:54.992
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:43:55.972
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:39.152
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:39.572
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:40.177
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:40.277
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:40.575
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:40.676
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.021
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.036
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.638
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.852
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.853
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:41.873
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.073
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.074
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.077
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.296
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.297
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.318
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.394
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:42.702
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.020
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.021
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.026
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.120
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.452
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.485
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.721
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:43.819
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.134
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.636
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.636
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.641
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.641
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.649
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.650
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.650
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.653
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.666
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:44.747
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.108
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.645
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.646
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.689
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.689
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.696
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.696
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.702
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.703
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.737
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:45.795
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.055
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.332
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.333
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.355
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.589
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.810
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:46.922
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.267
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.690
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.690
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.695
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.695
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.702
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.702
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.716
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.718
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:47.719
+!MESSAGE Validated 4. Took 51 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:48.819
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:49.720
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.039
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.084
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.091
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.194
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.450
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.552
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.857
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.896
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.897
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:50.919
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.000
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.230
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.231
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.265
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.335
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.581
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.582
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.633
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:51.825
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:52.063
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:52.175
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:52.490
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:52.968
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:52.968
+!MESSAGE 3 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.021
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.021
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.052
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.052
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.062
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.062
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:53.062
+!MESSAGE Validated 4. Took 121 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:54.408
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:54.697
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:55.004
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:55.085
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:55.462
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:55.490
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:55.610
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.061
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.061
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.090
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.090
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.133
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.133
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.219
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.219
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.220
+!MESSAGE Validated 4. Took 351 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:56.252
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:57.503
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:58.690
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:59.033
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:44:59.994
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:00.767
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:00.870
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.224
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.746
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.746
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.767
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.767
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.777
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.777
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.802
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.834
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.835
+!MESSAGE Validated 4. Took 160 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:01.890
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:06.019
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:06.660
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:06.884
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.047
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.053
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.373
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.375
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.462
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.973
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.973
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.981
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:13.981
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.005
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.005
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.013
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.013
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.023
+!MESSAGE Validated 4. Took 109 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.842
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.844
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.933
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:14.943
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.185
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.186
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.369
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.370
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.505
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.506
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.604
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.611
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:15.960
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.450
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.450
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.461
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.461
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.467
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.467
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.471
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.471
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.472
+!MESSAGE Validated 4. Took 60 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.549
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.550
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.581
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:16.649
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.014
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.502
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.511
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.517
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.517
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.524
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.524
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.527
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.528
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.528
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:17.528
+!MESSAGE Validated 4. Took 64 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:19.534
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:19.535
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:19.543
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:19.638
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:19.942
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.430
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.430
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.434
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.435
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.441
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.441
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.447
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.447
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.461
+!MESSAGE Validated 4. Took 69 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.622
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.623
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.634
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:20.724
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.077
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.571
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.572
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.620
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.620
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.663
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.663
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.674
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.675
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:21.691
+!MESSAGE Validated 4. Took 213 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:22.903
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:22.904
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.006
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.357
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.835
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.835
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.842
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.843
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.850
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.850
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.855
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.855
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:23.858
+!MESSAGE Validated 4. Took 49 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.020
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.022
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.025
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.120
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.473
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.795
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:24.897
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.252
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.742
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.742
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.746
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.747
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.758
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.758
+!MESSAGE 1 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.767
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.767
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:25.768
+!MESSAGE Validated 4. Took 65 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.040
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.140
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.495
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.976
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.977
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.985
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.985
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.993
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:26.993
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:27.000
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:27.000
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:27.001
+!MESSAGE Validated 4. Took 56 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:29.757
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:29.758
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:29.760
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:29.857
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.216
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.326
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.425
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.661
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.662
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:30.665
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.116
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.125
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.126
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.130
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.225
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.538
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.570
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:31.976
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:32.141
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:32.244
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:32.596
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.032
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.032
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.035
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.036
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.041
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.041
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.046
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.046
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.046
+!MESSAGE Validated 4. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.844
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.844
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.849
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:33.946
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:34.298
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:34.377
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:34.833
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.262
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.262
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.274
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.274
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.319
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.319
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.337
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.420
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:35.791
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.219
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.223
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.227
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.228
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.236
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.237
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.241
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.242
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:36.242
+!MESSAGE Validated 4. Took 50 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.036
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.037
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.040
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.441
+!MESSAGE Reconciled 0. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.944
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.945
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.959
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.960
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.985
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:41.985
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.000
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.001
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.001
+!MESSAGE Validated 4. Took 109 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.088
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.187
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:42.544
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.019
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.019
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.026
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.026
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.033
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.033
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.037
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.037
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.085
+!MESSAGE Validated 4. Took 91 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.628
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:43.729
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.082
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.529
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.529
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.532
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.533
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.544
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.544
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.551
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.552
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.552
+!MESSAGE Validated 4. Took 69 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.745
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.746
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:44.749
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.174
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.175
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.178
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.274
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.593
+!MESSAGE Reconciled 0. Took 17 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:45.991
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.092
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.448
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.925
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.926
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.929
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.929
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.935
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.935
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.938
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.938
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:46.939
+!MESSAGE Validated 4. Took 40 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:48.183
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:49.287
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:45:52.570
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:46:14.753
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:46:15.188
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:46:15.551
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:46:20.619
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:46:50.523
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:48:35.605
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:50:55.299
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:50:55.395
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:50:59.047
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:52:18.012
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:52:19.232
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:52:20.363
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:52:27.166
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:54:11.662
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:10.712
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:10.720
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:11.200
+!MESSAGE Reconciled 0. Took 76 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:11.364
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:11.934
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:11.937
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.024
+!MESSAGE begin problem for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.024
+!MESSAGE 10 problems reported for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.041
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.041
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.059
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.060
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.068
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.069
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:12.074
+!MESSAGE Validated 5. Took 424 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:13.726
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:15.191
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:32.415
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 03:56:33.892
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:52.503
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:52.703
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:53.404
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:55.604
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:56.267
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:57.753
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:02:58.521
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:02.828
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:04.430
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:07.768
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:14.369
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:15.270
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:16.271
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:21.708
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:22.293
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:25.086
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:27.255
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:28.571
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:29.989
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:31.673
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:32.742
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:34.198
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:36.319
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:37.127
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:37.688
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:38.460
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:39.503
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:03:40.629
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:33.443
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:34.266
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:35.828
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:37.035
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:37.143
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:37.552
+!MESSAGE Reconciled 0. Took 115 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:37.575
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:38.672
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:38.672
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:38.891
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:38.998
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:39.381
+!MESSAGE Reconciled 0. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.438
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.439
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.686
+!MESSAGE begin problem for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.817
+!MESSAGE 10 problems reported for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.904
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:40.904
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.041
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.041
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.207
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.227
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.228
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.228
+!MESSAGE Validated 5. Took 1445 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:41.938
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:45.111
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:45.224
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:45.563
+!MESSAGE Reconciled 0. Took 44 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:45.798
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:45.900
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:46.261
+!MESSAGE Reconciled 0. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:46.375
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:46.429
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:46.744
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:46.815
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:47.210
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:47.661
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:48.417
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:48.604
+!MESSAGE begin problem for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:48.607
+!MESSAGE 2 problems reported for /User.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:48.712
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.001
+!MESSAGE begin problem for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.001
+!MESSAGE 10 problems reported for /PortfolioService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.065
+!MESSAGE begin problem for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.065
+!MESSAGE 0 problems reported for /BaseEntity.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.175
+!MESSAGE begin problem for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.175
+!MESSAGE 0 problems reported for /Portfolio.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.269
+!MESSAGE begin problem for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.270
+!MESSAGE 1 problems reported for /Stock.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:49.270
+!MESSAGE Validated 5. Took 1608 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:04:54.218
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:05:18.132
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:05:18.949
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:05:33.637
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:05:39.332
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:08:21.134
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:08:22.582
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:08:23.052
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:08:31.196
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-04 04:08:32.529
+!MESSAGE >> document/hover
