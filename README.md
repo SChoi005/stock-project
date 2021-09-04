@@ -24,8 +24,7 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. selectPortfolio select하기
-2. update, delete 구현
+1. update, delete 구현
 
 # 나중에 해야할것
 1. 프론트엔드 제작을 해봐야할듯
