@@ -24,7 +24,9 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. update (진행중)
+1. stock 자동완성기능 api 만들기
+2. 자동완성 client 구현
+3. stock c r u d
 
 # 나중에 해야할것
 1. input validation 만들기

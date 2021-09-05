@@ -1,6 +1,7 @@
 package project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,8 @@ public class StockApiController{
     private StockService stockService;
     
     @PostMapping("/stock")
-    public StockDto create(@RequestBody StockDto stockDto){
-        return stockService.create(stockDto);
+    public ResponseEntity<?> create(@RequestBody StockDto stockDto){
+        return ResponseEntity.ok(stockService.create(stockDto));
     }
+    
 }

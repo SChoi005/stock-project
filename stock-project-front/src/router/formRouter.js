@@ -10,9 +10,9 @@ class FormRouter extends Component{
             <Router>
                 <Switch>
                     {localStorage.getItem('user')?
-                        ( <Route exact path='/**' component={Main}/>
+                        ( <Route exact path='/' component={Main}/>
                         ):(
-                        <Route exact path='/**' component={Login}/>
+                        <Route exact path='/' component={Login}/>
                     )}
                     <Route exact path='/signup' component={SignUp}/>
                 </Switch>
