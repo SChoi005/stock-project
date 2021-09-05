@@ -24,11 +24,10 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. update, delete 구현
+1. update (진행중)
 
 # 나중에 해야할것
-1. 프론트엔드 제작을 해봐야할듯
-2. input validation 만들기
+1. input validation 만들기
 
 git token
 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

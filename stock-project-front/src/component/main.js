@@ -9,11 +9,14 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.createPortfolio = this.createPortfolio.bind(this);
-        //this.selectPortfolio = this.selectPortfolio.bind(this);
+        this.removePortfolio = this.removePortfolio.bind(this);
+        this.updatePortfolio = this.updatePortfolio.bind(this);
         this.state = {
-            showHide: false,
+            createShowHide: false,
+            deleteShowHide: false,
             isOpen: false,
-            createPortfolioName: '',
+            isRename:false,
+            portfolioName: '',
             currentUser: {
                 id: '',
                 username: '',
@@ -64,11 +67,12 @@ class Main extends Component {
                 },
                 data: {
                     id: 0,
-                    name: this.state.createPortfolioName,
+                    name: this.state.portfolioName,
                     userid: this.state.currentUser.id,
-                }
+                },
             })
             .then(() => {
+                this.emptyPortfolioName();
                 window.location.reload();
             })
             .catch((error) => {
@@ -76,10 +80,37 @@ class Main extends Component {
             });
     }
 
-    handleModalShowHide() {
-        this.setState({ showHide: !this.state.showHide });
+    async deletePortfolio(){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        await axios({
+            method: 'delete',
+                url: '/api/portfolio/'+this.state.selectedPortfolio.id,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + token,
+            }
+        })
+        .then(()=>{
+            this.emptyPortfolioName();
+            window.location.reload();
+        })
+        .catch((error)=>{
+            console.log(error.message); 
+        });
+    }
+    
+    async putPortfolio(){
+
+    }
+    
+    handleCreateModalShowHide() {
+        this.setState({ createShowHide: !this.state.createShowHide });
     }
 
+    handleDeleteModalShowHide() {
+        this.setState({ deleteShowHide: !this.state.deleteShowHide });
+    }
+    
     toggle() {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -94,10 +125,26 @@ class Main extends Component {
         e.preventDefault();
         this.postPortfolio();
     }
+    
+    removePortfolio(e) {
+        e.preventDefault();
+        if(this.state.portfolioName == this.state.selectedPortfolio.name)
+            this.deletePortfolio();
+    }
 
+    updatePortfolio(e){
+        
+    }
+    
+    emptyPortfolioName(){
+        this.setState({portfolioName:''});
+    }
+    
     render() {
         console.log(JSON.stringify(this.state.currentUser, null, 2));
         console.log(JSON.stringify(this.state.selectedPortfolio));
+        const isEmpty = Object.keys(this.state.selectedPortfolio).length;
+
         return (
             <div>
                 <div>
@@ -109,18 +156,31 @@ class Main extends Component {
                     >
                         R
                     </Button>
-                    {Object.keys(this.state.selectedPortfolio).length !== 0 ? (
-                        <h2>{this.state.selectedPortfolio.name}</h2>
+                    {isEmpty !== 0 ? (
+                        <div>
+                            {this.state.isRename ?
+                                <Form>
+                                    <input></input>
+                                </Form>
+                                :
+                                <h2>{this.state.selectedPortfolio.name}</h2>
+                            }
+                            <Button variant="primary" onClick={() => { this.setState({isRename:!this.state.isRename})}}>U</Button>
+                            <Button variant="primary" onClick={() => this.handleDeleteModalShowHide()}>
+                                D
+                            </Button>
+                            <Button>+</Button>
+                        </div>
                     ) : (
                         <h2>Select Portfolio!</h2>
                     )}
-                    <Button>U</Button>
-                    <Button>D</Button>
-                    <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+                    <Button variant="primary" onClick={() => this.handleCreateModalShowHide()}>
                         +
                     </Button>
                 </div>
 
+                {/* folding */}
+                
                 <Collapse in={this.state.isOpen}>
                     <div id="collapse-text">
                         {this.state.currentUser.portfolios.map((item) => {
@@ -143,19 +203,60 @@ class Main extends Component {
                     </div>
                 </Collapse>
 
-                <PieGraph></PieGraph>
-
+                {/* Stock Component */}
+                
                 <div>
-                    <h2>Component2</h2>
+                    <PieGraph></PieGraph>
+                    <div>
+                        <h2>Component2</h2>
+                    </div>
+                    <div>
+                        <h2>Component3</h2>
+                    </div>
+                    <div>
+                        <h2>Component4</h2>
+                    </div>
                 </div>
-                <div>
-                    <h2>Component3</h2>
-                </div>
-                <div>
-                    <h2>Component4</h2>
-                </div>
-
-                <Modal show={this.state.showHide}>
+                
+                {/*Portfolio Delete Modal*/}
+                
+                <Modal show={this.state.deleteShowHide}>
+                    <Modal.Header>
+                        <Modal.Title>포트폴리오 삭제</Modal.Title>
+                    </Modal.Header>
+                    <Form
+                        onSubmit={this.removePortfolio}
+                        ref={(c) => {
+                            this.form = c;
+                        }}    
+                    >
+                        <Modal.Body>
+                            <label>삭제할 포트폴리오를 입력해주십시오.</label>
+                            <Input
+                                type="text"
+                                name="portfolioName"
+                                value={this.state.portfolioName}
+                                onChange={(e) =>
+                                    this.setState({ portfolioName: e.target.value })
+                                }
+                                placeholder={this.state.selectedPortfolio.name}
+                            />
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button type="submit">Delete</Button>
+                            <Button variant="secondary" onClick={() => {
+                                this.handleDeleteModalShowHide();
+                                this.emptyPortfolioName();
+                            }}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Form>
+                </Modal>
+                
+                {/*Portfolio Create Modal*/}
+                
+                <Modal show={this.state.createShowHide}>
                     <Modal.Header>
                         <Modal.Title>포트폴리오 추가</Modal.Title>
                     </Modal.Header>
@@ -170,20 +271,24 @@ class Main extends Component {
                             <Input
                                 type="text"
                                 name="portfolioName"
-                                value={this.state.createPortfolioName}
+                                value={this.state.portfolioName}
                                 onChange={(e) =>
-                                    this.setState({ createPortfolioName: e.target.value })
+                                    this.setState({ portfolioName: e.target.value })
                                 }
                             />
                         </Modal.Body>
                         <Modal.Footer>
                             <Button type="submit">create</Button>
-                            <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
+                            <Button variant="secondary" onClick={() => {
+                                    this.handleCreateModalShowHide();
+                                    this.emptyPortfolioName();
+                            }}>
                                 Close
                             </Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
+                
             </div>
         );
     }
