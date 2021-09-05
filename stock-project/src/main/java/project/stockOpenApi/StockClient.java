@@ -12,9 +12,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
+import project.stockOpenApi.dto.SymbolSearchRequest;
+import project.stockOpenApi.dto.SymbolSearchResponse;
 
+@Slf4j
 @Component
 public class StockClient{
     
@@ -46,4 +50,28 @@ public class StockClient{
         return responseEntity.getBody();
     }
     
+    public SymbolSearchResponse searchSymbol(SymbolSearchRequest symbolSearchRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(symbolSearchRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<SymbolSearchResponse>() {};
+        
+        ResponseEntity<SymbolSearchResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        
+        return responseEntity.getBody();
+    }
 }

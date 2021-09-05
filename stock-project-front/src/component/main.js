@@ -11,6 +11,7 @@ class Main extends Component {
         this.createPortfolio = this.createPortfolio.bind(this);
         this.removePortfolio = this.removePortfolio.bind(this);
         this.updatePortfolio = this.updatePortfolio.bind(this);
+        this.searchStock = this.searchStock.bind(this);
         this.state = {
             createShowHide: false,
             deleteShowHide: false,
@@ -18,6 +19,8 @@ class Main extends Component {
             isOpen: false,
             isRename: false,
             portfolioName: '',
+            keywords:'',
+            stocks:[],
             currentUser: {
                 id: '',
                 username: '',
@@ -107,7 +110,7 @@ class Main extends Component {
                 url: '/api/portfolio',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: 'Bearer ' + token,
+                    'Authorization': 'Bearer ' + token,
                 },
                 data: {
                     id: this.state.selectedPortfolio.id,
@@ -124,6 +127,20 @@ class Main extends Component {
             });
     }
 
+    async searchSymbolSearch(){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        await axios({
+                method: 'get',
+                url: '/open-api/search/'+this.state.keywords,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+            })
+            .then((res)=>{this.setState({stocks:res})})
+            .catch((error)=>{console.log('/open-api/search/'+this.state.keywords);});
+    }
+    
     handleCreateModalShowHide() {
         this.setState({ createShowHide: !this.state.createShowHide });
     }
@@ -161,13 +178,18 @@ class Main extends Component {
         this.putPortfolio();
     }
 
+    searchStock(e){
+        e.preventDefault();
+        this.searchSymbolSearch();
+    }
+    
     emptyPortfolioName() {
         this.setState({ portfolioName: '' });
     }
 
     render() {
         console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.selectedPortfolio));
+        console.log(JSON.stringify(this.state.stocks));
         const isEmpty = Object.keys(this.state.selectedPortfolio).length;
 
         return (
@@ -346,7 +368,24 @@ class Main extends Component {
                     <Modal.Header>
                         <Modal.Title>주식 추가/삭제</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body></Modal.Body>
+                    <Modal.Body>
+                        <Form
+                            onSubmit={this.searchStock}
+                            ref={(c) => {
+                                this.form = c;
+                            }}    
+                        >
+                            <label>Search Stock Name</label>
+                            <Input
+                                type="text"
+                                name="stockName"
+                                placeholder="Search"
+                                value={this.state.keywords}
+                                onChange={(e) => this.setState({ keywords: e.target.value })}
+                            />
+                        </Form>
+                    
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button
                             variant="secondary"

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import project.stockOpenApi.StockClient;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
+import project.stockOpenApi.dto.SymbolSearchRequest;
 
 @RestController
 @RequestMapping("/open-api")
@@ -19,18 +20,20 @@ public class OpenApiController{
     @Autowired
     private StockClient stockClient;
     
-    @GetMapping("/quote-endpoint")
-    public ResponseEntity<?> searchQuoteEndpoint(@RequestParam String symbol){
+    @GetMapping("/quote-endpoint/{symbol}")
+    public ResponseEntity<?> searchQuoteEndpoint(@PathVariable String symbol){
         QuoteEndpointRequest req = new QuoteEndpointRequest();
         req.setSymbol(symbol);
         
-        return ResponseEntity.ok(stockClient.searchQuoteEndpoint(req));
+        return ResponseEntity.ok(stockClient.searchQuoteEndpoint(req).getGlobalQuote());
     }
     
-    @GetMapping("/stock/search/{keywords}")
+    @GetMapping("/search/{keywords}")
     public ResponseEntity<?> search(@PathVariable String keywords){
+        SymbolSearchRequest req = new SymbolSearchRequest();
+        req.setKeywords(keywords);
         
-        return ResponseEntity.ok("");
+        return ResponseEntity.ok(stockClient.searchSymbol(req).getBestMatches());
     }
     
 }
