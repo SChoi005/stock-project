@@ -131,13 +131,13 @@ class Main extends Component {
         const token = JSON.parse(localStorage.getItem('user')).token;
         await axios({
                 method: 'get',
-                url: '/open-api/search/'+this.state.keywords,
+                url: '/api/search/'+this.state.keywords,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token,
                 },
             })
-            .then((res)=>{this.setState({stocks:res})})
+            .then((res)=>{this.setState({stocks:res.data})})
             .catch((error)=>{console.log('/open-api/search/'+this.state.keywords);});
     }
     
@@ -183,15 +183,17 @@ class Main extends Component {
         this.searchSymbolSearch();
     }
     
+    
+    
     emptyPortfolioName() {
         this.setState({ portfolioName: '' });
     }
 
     render() {
         console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.stocks));
-        const isEmpty = Object.keys(this.state.selectedPortfolio).length;
-
+        console.log(JSON.stringify(this.state.stocks,null, 2));
+        const isEmpty = (item)=>{return Object.keys(item).length;};
+        
         return (
             <div>
                 <div>
@@ -203,7 +205,7 @@ class Main extends Component {
                     >
                         R
                     </Button>
-                    {isEmpty !== 0 ? (
+                    {isEmpty(this.state.selectedPortfolio) !== 0 ? (
                         <div>
                             {this.state.isRename ? (
                                 <Form
@@ -375,14 +377,22 @@ class Main extends Component {
                                 this.form = c;
                             }}    
                         >
-                            <label>Search Stock Name</label>
                             <Input
                                 type="text"
                                 name="stockName"
-                                placeholder="Search"
+                                placeholder="Search Stock Name"
                                 value={this.state.keywords}
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                             />
+                            {this.state.stocks.length === 0 ?
+                                <div></div>
+                                :
+                                (this.state.stocks.map((item)=>{
+                                    return (
+                                        <li key={item["1. symbol"]}>{item["1. symbol"]} ({item["2. name"]})</li>
+                                    );                                
+                                }))
+                            }
                         </Form>
                     
                     </Modal.Body>
@@ -391,6 +401,7 @@ class Main extends Component {
                             variant="secondary"
                             onClick={() => {
                                 this.handleStockModalShowHide();
+                                this.setState({stocks:[], keywords:''});
                             }}
                         >
                             Close

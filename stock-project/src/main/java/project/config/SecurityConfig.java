@@ -61,7 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/configuration/**", 
             "/swagger*/**", 
             "/webjars/**",
-            "/open-api/**"
+            "/api/stock/**"
         };
         
         // cors 사용, csrf 미사용

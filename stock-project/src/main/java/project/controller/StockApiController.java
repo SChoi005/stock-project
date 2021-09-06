@@ -18,7 +18,7 @@ public class StockApiController{
     private StockService stockService;
     
     @PostMapping("/stock")
-    public ResponseEntity<?> create(@RequestBody StockDto stockDto){
+    public ResponseEntity<?> create(@RequestBody StockDto stockDto) throws Exception{
         return ResponseEntity.ok(stockService.create(stockDto));
     }
     

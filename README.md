@@ -24,8 +24,10 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. 자동완성 client 구현 => 클라이언트에서 서버 uri 연결이 잘안됨
-2. stock c r u d
+1. stock c client 만들기
+2. stock d api 만들기
+3. stock d client 만들기
+stock u d
 
 # 나중에 해야할것
 1. input validation 만들기

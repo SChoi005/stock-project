@@ -14,7 +14,7 @@ import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 
 @RestController
-@RequestMapping("/open-api")
+@RequestMapping("/api")
 public class OpenApiController{
     
     @Autowired

@@ -1,5 +1,7 @@
 package project.db.entity;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +25,24 @@ public class Stock{
     private Long id;
     
     private String symbol;
+    
+    private String name;
+
+    private String type;
+    
+    private Long quantity;
+
+    private BigDecimal averagePrice;
+    
+    private String region;
+
+    private String marketOpen;
+
+    private String marketClose;
+
+    private String timezone;
+
+    private String currency;
 
     @JsonIgnore        
     @ManyToOne
