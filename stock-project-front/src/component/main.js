@@ -12,26 +12,21 @@ class Main extends Component {
         this.removePortfolio = this.removePortfolio.bind(this);
         this.updatePortfolio = this.updatePortfolio.bind(this);
         this.searchStock = this.searchStock.bind(this);
+        this.createStock = this.createStock.bind(this);
         this.state = {
             createShowHide: false,
             deleteShowHide: false,
             stockShowHide: false,
             isOpen: false,
+            isOpenStock: false,
             isRename: false,
             portfolioName: '',
+            averagePrice: '',
+            quantity:'',
             keywords:'',
             stocks:[],
             currentUser: {
-                id: '',
-                username: '',
-                password: '',
-                nickname: '',
                 portfolios: [],
-                enabled: true,
-                authorities: null,
-                account_non_expired: true,
-                credentials_non_expired: true,
-                account_non_locked: true,
             },
             selectedPortfolio: {},
         };
@@ -137,8 +132,43 @@ class Main extends Component {
                     'Authorization': 'Bearer ' + token,
                 },
             })
-            .then((res)=>{this.setState({stocks:res.data})})
+            .then((res)=>{
+                this.setState({stocks:res.data});
+            })
             .catch((error)=>{console.log('/open-api/search/'+this.state.keywords);});
+    }
+    
+    async postStock(item){
+        console.log(Object.keys(item["item"]));
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        await axios({
+                method: 'post',
+                url: '/api/stock',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+                data: {
+                    id:0,
+                    symbol:item["item"]["1. symbol"],
+                    name:item["item"]["2. name"],
+                    type:item["item"]["3. type"],
+                    quantity:this.state.quantity,
+                    averageprice:this.state.averagePrice,
+                    region:item["item"]["4. region"],
+                    marketopen:item["item"]["5. marketOpen"],
+                    marketclose:item["item"]["6. marketClose"],
+                    timezone:item["item"]["7. timezone"],
+                    currency:item["item"]["8. currency"],
+                    portfolioid:this.state.selectedPortfolio.id,
+                },
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
     }
     
     handleCreateModalShowHide() {
@@ -156,7 +186,12 @@ class Main extends Component {
     toggle() {
         this.setState({ isOpen: !this.state.isOpen });
     }
+    
+    toggleStock() {
+        this.setState({ isOpenStock: !this.state.isOpenStock });
+    }
 
+    /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
         this.setState({ selectedPortfolio: item });
@@ -178,22 +213,27 @@ class Main extends Component {
         this.putPortfolio();
     }
 
+    emptyPortfolioName() {
+        this.setState({ portfolioName: '' });
+    }
+    
+    /*stock*/
     searchStock(e){
         e.preventDefault();
         this.searchSymbolSearch();
     }
     
-    
-    
-    emptyPortfolioName() {
-        this.setState({ portfolioName: '' });
+    createStock(e, item){
+        e.preventDefault();
+        this.postStock(item).then(()=>{
+            this.setState({averagePrice:'', quantity:''});
+            this.getUser();
+        });
     }
-
+    
     render() {
         console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.stocks,null, 2));
         const isEmpty = (item)=>{return Object.keys(item).length;};
-        
         return (
             <div>
                 <div>
@@ -372,7 +412,7 @@ class Main extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <Form
-                            onSubmit={this.searchStock}
+                            onSubmit={(event)=>{this.searchStock(event)}}
                             ref={(c) => {
                                 this.form = c;
                             }}    
@@ -384,16 +424,53 @@ class Main extends Component {
                                 value={this.state.keywords}
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                             />
-                            {this.state.stocks.length === 0 ?
-                                <div></div>
-                                :
-                                (this.state.stocks.map((item)=>{
-                                    return (
-                                        <li key={item["1. symbol"]}>{item["1. symbol"]} ({item["2. name"]})</li>
-                                    );                                
-                                }))
-                            }
                         </Form>
+                        
+                        {this.state.stocks.length === 0 ?
+                            <div></div>
+                            :
+                            (this.state.stocks.map((item)=>{
+                                return (
+                                    <div key={item["1. symbol"]}>
+                                        <Button
+                                            variant="primary"
+                                            onClick={() => this.toggleStock()}
+                                            aria-controls="collapse-text"
+                                            aria-expanded={this.state.isOpenStock}    
+                                        >{item["1. symbol"]} ({item["2. name"]})</Button>
+                                        
+                                        <Collapse in={this.state.isOpenStock}>
+                                            <div id="collapse-text">
+                                                <Form
+                                                    onSubmit={(event)=>this.createStock(event, {item})}
+                                                    ref={(c) => {
+                                                    this.form = c;
+                                                    }}    
+                                                >
+                                                    <label>평균단가</label>
+                                                    <Input
+                                                        type="text"
+                                                        name="averagePrice"
+                                                        placeholder="평균단가"
+                                                        value={this.state.averagePrice}
+                                                        onChange={(e) => this.setState({ averagePrice: e.target.value })}    
+                                                    />
+                                                    <label>갯수</label>
+                                                    <Input
+                                                        type="text"
+                                                        name="quantity"
+                                                        placeholder="갯수"
+                                                        value={this.state.quantity}
+                                                        onChange={(e) => this.setState({ quantity: e.target.value })}    
+                                                    />
+                                                    <Button type="submit">매수</Button>
+                                                </Form>
+                                            </div>
+                                        </Collapse>
+                                    </div>
+                                );                                
+                            }))
+                        }
                     
                     </Modal.Body>
                     <Modal.Footer>
@@ -402,6 +479,7 @@ class Main extends Component {
                             onClick={() => {
                                 this.handleStockModalShowHide();
                                 this.setState({stocks:[], keywords:''});
+                                window.location.reload();
                             }}
                         >
                             Close

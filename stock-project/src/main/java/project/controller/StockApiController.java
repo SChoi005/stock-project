@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import project.db.dto.StockDto;
 import project.service.StockService;
 
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class StockApiController{
@@ -19,6 +21,7 @@ public class StockApiController{
     
     @PostMapping("/stock")
     public ResponseEntity<?> create(@RequestBody StockDto stockDto) throws Exception{
+        log.info("{}", stockDto);
         return ResponseEntity.ok(stockService.create(stockDto));
     }
     

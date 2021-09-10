@@ -24,7 +24,7 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. stock c client 만들기
+1. stock c client 만들기 ( 진행중 )
 2. stock d api 만들기
 3. stock d client 만들기
 stock u d
