@@ -2,7 +2,10 @@ package project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,4 +28,14 @@ public class StockApiController{
         return ResponseEntity.ok(stockService.create(stockDto));
     }
     
+    @PutMapping("/stock/addition")
+    public ResponseEntity<?> additionalPurchase(@RequestBody StockDto stockDto) throws Exception{
+        log.info("{}", stockDto);
+        return ResponseEntity.ok(stockService.additionalUpdate(stockDto));
+    }
+    
+    @DeleteMapping("/stock/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) throws Exception{
+        return ResponseEntity.ok(stockService.delete(id));
+    }
 }

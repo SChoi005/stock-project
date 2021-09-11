@@ -25,12 +25,11 @@ https://shinsunyoung.tistory.com/78
 
 # 해야할것
 1. stock c client 만들기 ( 진행중 )
-2. stock d api 만들기
-3. stock d client 만들기
-stock u d
+2. stock d client 만들기
 
 # 나중에 해야할것
 1. input validation 만들기
+2. 지금 계속 reload를 통해 selectedPortfolio를 다시클릭하고 이지럴중인데 어케좀 바꿔야할듯
 
 git token
 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

@@ -139,7 +139,6 @@ class Main extends Component {
     }
     
     async postStock(item){
-        console.log(Object.keys(item["item"]));
         const token = JSON.parse(localStorage.getItem('user')).token;
         await axios({
                 method: 'post',
@@ -155,6 +154,42 @@ class Main extends Component {
                     type:item["item"]["3. type"],
                     quantity:this.state.quantity,
                     averageprice:this.state.averagePrice,
+                    region:item["item"]["4. region"],
+                    marketopen:item["item"]["5. marketOpen"],
+                    marketclose:item["item"]["6. marketClose"],
+                    timezone:item["item"]["7. timezone"],
+                    currency:item["item"]["8. currency"],
+                    portfolioid:this.state.selectedPortfolio.id,
+                },
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
+    
+    async putAdditionPurchaseStock(item, stock){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        
+        const updateQuantity = (+this.state.quantity)+(+stock["quantity"]);
+        const updateAveragePrice = ((+this.state.averagePrice)*(+this.state.quantity)+(+stock["average_price"])*(+stock["quantity"]))/updateQuantity;
+        
+        await axios({
+                method: 'put',
+                url: '/api/stock/addition',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+                data: {
+                    id:stock["id"],
+                    symbol:item["item"]["1. symbol"],
+                    name:item["item"]["2. name"],
+                    type:item["item"]["3. type"],
+                    quantity:updateQuantity,
+                    averageprice:updateAveragePrice,
                     region:item["item"]["4. region"],
                     marketopen:item["item"]["5. marketOpen"],
                     marketclose:item["item"]["6. marketClose"],
@@ -225,14 +260,34 @@ class Main extends Component {
     
     createStock(e, item){
         e.preventDefault();
-        this.postStock(item).then(()=>{
-            this.setState({averagePrice:'', quantity:''});
-            this.getUser();
-        });
+        
+        var check = false;
+        
+        this.state.selectedPortfolio.stocks.forEach((stock)=>{
+            console.log(item["item"]["1. symbol"]);
+            if(stock["symbol"]===item["item"]["1. symbol"]){
+                this.putAdditionPurchaseStock(item, stock).then(()=>{
+                    this.setState({averagePrice:'', quantity:''});
+                    this.getUser();
+                    window.location.reload();
+                })
+                check = true;
+                return "";
+            }
+        })
+        
+        if(!check){
+            this.postStock(item).then(()=>{
+                this.setState({averagePrice:'', quantity:''});
+                this.getUser();
+                window.location.reload();
+            });
+        }
     }
     
     render() {
         console.log(JSON.stringify(this.state.currentUser, null, 2));
+        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item)=>{return Object.keys(item).length;};
         return (
             <div>
@@ -471,6 +526,11 @@ class Main extends Component {
                                 );                                
                             }))
                         }
+                        
+                        <div>
+                            <span>보유 주식</span>
+                             
+                        </div>
                     
                     </Modal.Body>
                     <Modal.Footer>
