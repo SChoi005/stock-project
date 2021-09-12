@@ -32,6 +32,7 @@ class Main extends Component {
                 portfolios: [],
             },
             selectedPortfolio: {},
+            selectedStocks:{},
         };
     }
 
@@ -216,6 +217,38 @@ class Main extends Component {
             });
     }
     
+    async putStock(item){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        await axios({
+                method: 'put',
+                url: '/api/stock',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+                data: {
+                    id:item["item"]["id"],
+                    symbol:item["item"]["symbol"],
+                    name:item["item"]["name"],
+                    type:item["item"]["type"],
+                    quantity:this.state.quantity,
+                    averageprice:this.state.averagePrice,
+                    region:item["item"]["region"],
+                    marketopen:item["item"]["market_open"],
+                    marketclose:item["item"]["market_close"],
+                    timezone:item["item"]["timezone"],
+                    currency:item["item"]["currency"],
+                    portfolioid:this.state.selectedPortfolio.id,
+                },
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
+    
     async deleteStock(item){
         const token = JSON.parse(localStorage.getItem('user')).token;
         
@@ -268,10 +301,28 @@ class Main extends Component {
         }
     }
     
+    toggleMyStock(item){
+        var map = this.state.selectedStocks;
+        var value = map.get(item["item"]["symbol"]);
+        map.set(item["item"]["symbol"], !value);
+        this.setState({selectedStocks:map});
+    }
+    
+    valueToggleMyStock(item){
+        var map = this.state.selectedStocks;
+        return map.get(item["item"]["symbol"]);
+    }
+    
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
-        this.setState({ selectedPortfolio: item });
+        this.setState({ selectedPortfolio:item });
+        
+        var map = new Map();
+        item.stocks.forEach((i)=>{
+            map.set(i["symbol"],false);
+        })
+        this.setState({ selectedStocks:map });
         this.toggle();
     }
 
@@ -334,13 +385,15 @@ class Main extends Component {
     
     updateStock(e, item){
         e.preventDefault();
+        this.putStock(item);
     }
     
     render() {
-        // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        // console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        console.log(JSON.stringify(this.state.currentUser, null, 2));
+        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item)=>{return Object.keys(item).length;};
         console.log(JSON.stringify(this.state.searchStocks));
+        console.log(this.state.selectedStocks);
         return (
             <div>
                 <div>
@@ -584,11 +637,47 @@ class Main extends Component {
                                 <div>보유 주식</div>
                                 {
                                     this.state.selectedPortfolio.stocks.map((item)=>{
-                                        return (<div key={item["symbol"]}>
+                                        return (
+                                            <div key={item["symbol"]}>
                                                 {item["symbol"]} {item["average_price"]} {item["quantity"]}
-                                                <Button>U</Button>
+                                                <Button
+                                                    variant="primary"
+                                                    onClick={() => this.toggleMyStock({item})}
+                                                    aria-controls="collapse-text"
+                                                    aria-expanded={this.valueToggleMyStock({item})} 
+                                                >U</Button>
                                                 <Button onClick={(event)=>{this.removeStock(event,{item})}}>D</Button>
-                                            </div>)
+                                                
+                                                <Collapse in={this.valueToggleMyStock({item})}>
+                                                    <div id="collapse-text">
+                                                        <Form
+                                                            onSubmit={(event)=>this.updateStock(event, {item})}
+                                                            ref={(c) => {
+                                                            this.form = c;
+                                                            }}    
+                                                        >
+                                                            <label>평균단가</label>
+                                                            <Input
+                                                                type="text"
+                                                                name="averagePrice"
+                                                                placeholder="평균단가"
+                                                                value={this.state.averagePrice}
+                                                                onChange={(e) => this.setState({ averagePrice: e.target.value })}    
+                                                            />
+                                                            <label>갯수</label>
+                                                            <Input
+                                                                type="text"
+                                                                name="quantity"
+                                                                placeholder="갯수"
+                                                                value={this.state.quantity}
+                                                                onChange={(e) => this.setState({ quantity: e.target.value })}    
+                                                            />
+                                                            <Button type="submit">수정</Button>
+                                                        </Form>
+                                                    </div>
+                                                </Collapse>
+                                            </div>
+                                        )
                                     })
                                 }
                             </div>)

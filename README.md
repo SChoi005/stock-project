@@ -24,9 +24,9 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. stock update 토글만들어야함
-2. input validation 만들기
--> main.js 다만들고 코드 정리 해야할듯
+1. input validation 만들기
+2. getUser이거 언제언제 다시 로드할지 정리해보자
+-> main.js 다만들고 코드 정리 해야할듯 => 중복되는 input값 계속 같이 입력되니까 이거 수정좀 해야할듯
 
 
 # 나중에 해야할것
