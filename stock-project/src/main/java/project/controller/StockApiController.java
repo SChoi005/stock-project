@@ -28,10 +28,10 @@ public class StockApiController{
         return ResponseEntity.ok(stockService.create(stockDto));
     }
     
-    @PutMapping("/stock/addition")
+    @PutMapping("/stock")
     public ResponseEntity<?> additionalPurchase(@RequestBody StockDto stockDto) throws Exception{
         log.info("{}", stockDto);
-        return ResponseEntity.ok(stockService.additionalUpdate(stockDto));
+        return ResponseEntity.ok(stockService.update(stockDto));
     }
     
     @DeleteMapping("/stock/{id}")

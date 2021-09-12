@@ -3693,3 +3693,741 @@ org.eclipse.jface.text.BadLocationException
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 05:28:33.766
 !MESSAGE >> document/hover
+!SESSION 2021-09-11 09:08:57.245 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-09-11 09:09:05.248
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:25.481
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:27.161
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:27.894
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:27.952
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:28.119
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:28.138
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:28.483
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:09:32.945
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:10:57.371
+!MESSAGE Workspace initialized in 89104ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:10:57.478
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:10:57.502
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:10:57.913
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:10:57.921
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:11:57.684
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:06.524
+!MESSAGE Reconciled 0. Took 8193 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:06.547
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:06.596
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.784
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.832
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.878
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.928
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.930
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.936
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.972
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.988
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:13.999
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:14.152
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:15.138
+!MESSAGE Reconciled 0. Took 1269 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.355
+!MESSAGE begin problem for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.366
+!MESSAGE 12 problems reported for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.611
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.611
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.858
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.859
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.865
+!MESSAGE Validated 3. Took 5682 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:20.888
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:21.276
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-11 09:12:21.278
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.core 2 0 2021-09-11 09:12:42.092
+!MESSAGE The Java indexing could not index /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!STACK 0
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:475)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class by: java.lang.ArrayIndexOutOfBoundsException: 32800
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.readModuleAttribute(ModuleInfo.java:129)
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.createModule(ModuleInfo.java:113)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:438)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2021-09-12 00:59:03.637 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-09-12 00:59:08.457
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:24.809
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:26.658
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:27.091
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:27.095
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:27.340
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:27.345
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:28.665
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 00:59:32.651
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:01:07.182
+!MESSAGE Workspace initialized in 99810ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:01:07.268
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:01:07.297
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:01:07.362
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:01:07.367
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:08.330
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:17.366
+!MESSAGE Reconciled 0. Took 8662 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:17.498
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:17.804
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:17.833
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:17.955
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:25.233
+!MESSAGE Reconciled 0. Took 966 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.095
+!MESSAGE begin problem for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.095
+!MESSAGE 12 problems reported for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.413
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.418
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.823
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.831
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.852
+!MESSAGE Validated 3. Took 3512 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:28.871
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:29.405
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:02:29.473
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.core 2 0 2021-09-12 01:02:35.597
+!MESSAGE The Java indexing could not index /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!STACK 0
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:475)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class by: java.lang.ArrayIndexOutOfBoundsException: 32800
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.readModuleAttribute(ModuleInfo.java:129)
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.createModule(ModuleInfo.java:113)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:438)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:20:58.071
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:20:58.757
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:01.074
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:01.256
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:03.310
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:03.367
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:03.472
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:03.483
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:03.900
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:04.366
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:04.384
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:04.999
+!MESSAGE Reconciled 0. Took 230 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:05.265
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:05.290
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:05.391
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:05.893
+!MESSAGE begin problem for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:05.894
+!MESSAGE 12 problems reported for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.105
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.105
+!MESSAGE 3 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.281
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.281
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.283
+!MESSAGE Validated 3. Took 873 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.284
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:06.982
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:07.664
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:08.653
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:08.656
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:09.049
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:09.058
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:09.526
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:09.528
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:10.224
+!MESSAGE Reconciled 0. Took 252 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.197
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.220
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.299
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.305
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.422
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.428
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.439
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.894
+!MESSAGE begin problem for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:11.895
+!MESSAGE 12 problems reported for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.030
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.038
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.218
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.219
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.220
+!MESSAGE Validated 3. Took 1546 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:12.541
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:13.009
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:13.980
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:14.383
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:15.514
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:15.518
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:19.054
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:19.062
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:19.621
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:20.185
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:25.716
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.119
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.121
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.637
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.655
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.655
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.672
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:26.722
+!MESSAGE Reconciled 0. Took 139 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:27.404
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:27.840
+!MESSAGE begin problem for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:27.840
+!MESSAGE 12 problems reported for /StockDto.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:28.084
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:28.084
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:28.351
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:28.356
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:28.375
+!MESSAGE Validated 3. Took 1196 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:29.218
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:29.339
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:30.279
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:31.385
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:31.516
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:21:32.621
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:22:38.045
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:22:38.937
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:14.575
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:14.823
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:21.037
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:21.164
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:22.794
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:23:40.969
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:26:13.498
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:30:50.778
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:33:11.155
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 01:33:13.752
+!MESSAGE >> document/hover
+!SESSION 2021-09-12 02:13:52.735 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-09-12 02:13:59.774
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:20.759
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:23.056
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:23.881
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:23.891
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:24.225
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:24.240
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:26.873
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:14:31.538
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:15:32.581
+!MESSAGE Workspace initialized in 68306ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:15:32.681
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:15:32.692
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:15:32.765
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:15:32.792
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:16:37.770
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:16:38.640
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:16:38.941
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:16:57.032
+!MESSAGE Reconciled 0. Took 6554 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:16:57.778
+!MESSAGE Reconciled 0. Took 534 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.611
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.612
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.921
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.948
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.956
+!MESSAGE Validated 2. Took 9105 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:06.975
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:07.728
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 02:17:07.762
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.core 2 0 2021-09-12 02:17:18.136
+!MESSAGE The Java indexing could not index /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!STACK 0
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:475)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class by: java.lang.ArrayIndexOutOfBoundsException: 32800
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.readModuleAttribute(ModuleInfo.java:129)
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.createModule(ModuleInfo.java:113)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:438)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2021-09-12 03:16:04.661 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-09-12 03:16:09.072
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:18.038
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:18.883
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:19.237
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:19.238
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:19.366
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:19.367
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:19.542
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:16:21.992
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:30.055
+!MESSAGE Workspace initialized in 70668ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:30.082
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:30.090
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:30.262
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:30.284
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:57.629
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:57.687
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:17:57.892
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:03.589
+!MESSAGE Reconciled 0. Took 2844 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:03.694
+!MESSAGE Reconciled 0. Took 84 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:04.968
+!MESSAGE begin problem for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:04.968
+!MESSAGE 2 problems reported for /StockApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.152
+!MESSAGE begin problem for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.152
+!MESSAGE 27 problems reported for /StockService.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.169
+!MESSAGE Validated 2. Took 1457 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.186
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.515
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-09-12 03:18:05.516
+!MESSAGE >> watchers registered

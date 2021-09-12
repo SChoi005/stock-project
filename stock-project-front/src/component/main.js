@@ -13,6 +13,8 @@ class Main extends Component {
         this.updatePortfolio = this.updatePortfolio.bind(this);
         this.searchStock = this.searchStock.bind(this);
         this.createStock = this.createStock.bind(this);
+        this.removeStock = this.removeStock.bind(this);
+        this.updateStock = this.updateStock.bind(this);
         this.state = {
             createShowHide: false,
             deleteShowHide: false,
@@ -25,6 +27,7 @@ class Main extends Component {
             quantity:'',
             keywords:'',
             stocks:[],
+            searchStocks:[],
             currentUser: {
                 portfolios: [],
             },
@@ -135,6 +138,13 @@ class Main extends Component {
             .then((res)=>{
                 this.setState({stocks:res.data});
             })
+            .then(()=>{
+                const map = new Map();
+                this.state.stocks.forEach((item)=>{
+                    map.set(item["1. symbol"],false);
+                })
+                this.setState({searchStocks:map});
+            })
             .catch((error)=>{console.log('/open-api/search/'+this.state.keywords);});
     }
     
@@ -178,7 +188,7 @@ class Main extends Component {
         
         await axios({
                 method: 'put',
-                url: '/api/stock/addition',
+                url: '/api/stock',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token,
@@ -206,6 +216,25 @@ class Main extends Component {
             });
     }
     
+    async deleteStock(item){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        
+        await axios({
+                method: 'delete',
+                url: '/api/stock/'+item["item"]["id"],
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token,
+                },
+            })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
+    
     handleCreateModalShowHide() {
         this.setState({ createShowHide: !this.state.createShowHide });
     }
@@ -222,10 +251,23 @@ class Main extends Component {
         this.setState({ isOpen: !this.state.isOpen });
     }
     
-    toggleStock() {
-        this.setState({ isOpenStock: !this.state.isOpenStock });
+    toggleStock(item) {
+        var map = this.state.searchStocks;
+        var value = map.get(item["item"]["1. symbol"]);
+        map.set(item["item"]["1. symbol"], !value);
+        this.setState({searchStocks:map});
     }
 
+    valueToggleStock(item){
+        var map = this.state.searchStocks;
+        
+        if(JSON.stringify(map)==="[]")
+            return false;
+        else{
+            return map.get(item["item"]["1. symbol"]);
+        }
+    }
+    
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
@@ -285,10 +327,20 @@ class Main extends Component {
         }
     }
     
+    removeStock(e, item){
+        e.preventDefault();
+        this.deleteStock(item);
+    }
+    
+    updateStock(e, item){
+        e.preventDefault();
+    }
+    
     render() {
-        console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        // console.log(JSON.stringify(this.state.currentUser, null, 2));
+        // console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item)=>{return Object.keys(item).length;};
+        console.log(JSON.stringify(this.state.searchStocks));
         return (
             <div>
                 <div>
@@ -489,12 +541,12 @@ class Main extends Component {
                                     <div key={item["1. symbol"]}>
                                         <Button
                                             variant="primary"
-                                            onClick={() => this.toggleStock()}
+                                            onClick={() => this.toggleStock({item})}
                                             aria-controls="collapse-text"
-                                            aria-expanded={this.state.isOpenStock}    
+                                            aria-expanded={this.valueToggleStock({item})}    
                                         >{item["1. symbol"]} ({item["2. name"]})</Button>
                                         
-                                        <Collapse in={this.state.isOpenStock}>
+                                        <Collapse in={this.valueToggleStock({item})}>
                                             <div id="collapse-text">
                                                 <Form
                                                     onSubmit={(event)=>this.createStock(event, {item})}
@@ -527,10 +579,22 @@ class Main extends Component {
                             }))
                         }
                         
-                        <div>
-                            <span>보유 주식</span>
-                             
-                        </div>
+                        {isEmpty(this.state.selectedPortfolio) !== 0 ?
+                            (<div>
+                                <div>보유 주식</div>
+                                {
+                                    this.state.selectedPortfolio.stocks.map((item)=>{
+                                        return (<div key={item["symbol"]}>
+                                                {item["symbol"]} {item["average_price"]} {item["quantity"]}
+                                                <Button>U</Button>
+                                                <Button onClick={(event)=>{this.removeStock(event,{item})}}>D</Button>
+                                            </div>)
+                                    })
+                                }
+                            </div>)
+                            :
+                            <div></div>
+                        }
                     
                     </Modal.Body>
                     <Modal.Footer>

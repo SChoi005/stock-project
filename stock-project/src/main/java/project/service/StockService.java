@@ -48,7 +48,7 @@ public class StockService{
         }
     }
     //u
-    public StockDto additionalUpdate(StockDto stockDto) throws Exception{
+    public StockDto update(StockDto stockDto) throws Exception{
         
         if(stockRepository.findBySymbolAndPortfolio(stockDto.getSymbol(), portfolioRepository.getOne(stockDto.getPortfolioid())).isPresent()){
             
