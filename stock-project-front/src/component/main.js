@@ -33,6 +33,13 @@ class Main extends Component {
             },
             selectedPortfolio: {},
             selectedStocks:{},
+            
+            postPortfolioErrorMessage:"",
+            postPortfolioCheck:false,
+            portfolioUpdateName:"",
+            portfolioUpdateCheck:false,
+            portfolioUpdateErrorMessage:"",
+            deletePortfolioErrorMessage:"",
         };
     }
 
@@ -80,6 +87,7 @@ class Main extends Component {
             })
             .catch((error) => {
                 console.log(error.message);
+                this.setState({postPortfolioErrorMessage:"중복된 포트폴리오 이름입니다."});
             });
     }
 
@@ -113,12 +121,12 @@ class Main extends Component {
                 },
                 data: {
                     id: this.state.selectedPortfolio.id,
-                    name: this.state.portfolioName,
+                    name: this.state.portfolioUpdateName,
                     userid: this.state.currentUser.id,
                 },
             })
             .then(() => {
-                this.emptyPortfolioName();
+                this.setState({ portfolioUpdateName: '' });
                 window.location.reload();
             })
             .catch((error) => {
@@ -328,21 +336,31 @@ class Main extends Component {
 
     createPortfolio(e) {
         e.preventDefault();
-        this.postPortfolio();
+        if(this.state.postPortfolioCheck)
+            this.postPortfolio();
     }
 
     removePortfolio(e) {
         e.preventDefault();
-        if (this.state.portfolioName === this.state.selectedPortfolio.name) this.deletePortfolio();
+        if (this.state.portfolioName === this.state.selectedPortfolio.name) 
+            this.deletePortfolio();
+        else{
+            this.setState({deletePortfolioErrorMessage:"해당 포트폴리오와 이름이 다릅니다."})
+        }
     }
 
     updatePortfolio(e) {
         e.preventDefault();
-        this.putPortfolio();
+        if(this.state.portfolioUpdateCheck)
+            this.putPortfolio();
     }
 
     emptyPortfolioName() {
-        this.setState({ portfolioName: '' });
+        this.setState({ 
+            portfolioName: '',
+            postPortfolioErrorMessage:"",
+            deletePortfolioErrorMessage:"",
+        });
     }
     
     /*stock*/
@@ -417,11 +435,29 @@ class Main extends Component {
                                     <Input
                                         type="text"
                                         name="portfolioName"
-                                        value={this.state.portfolioName}
+                                        value={this.state.portfolioUpdateName}
                                         placeholder={this.state.selectedPortfolio.name}
-                                        onChange={(e) =>
-                                            this.setState({ portfolioName: e.target.value })
-                                        }
+                                        onChange={(e) =>{
+                                            if(e.target.value.length > 0){
+                                                if(e.target.value === this.state.selectedPortfolio.name)
+                                                    this.setState({ 
+                                                        portfolioUpdateCheck: false ,
+                                                        portfolioUpdateErrorMessage:"동일한 이름 입니다."
+                                                    })
+                                                else{
+                                                    this.setState({ 
+                                                        portfolioUpdateCheck: true ,
+                                                        portfolioUpdateErrorMessage:""
+                                                    })
+                                                }
+                                            }
+                                            else
+                                                this.setState({ 
+                                                    portfolioUpdateCheck: false ,
+                                                    portfolioUpdateErrorMessage:"포트폴리오 이름을 입력해주십시오"
+                                                })
+                                            this.setState({ portfolioUpdateName: e.target.value })
+                                        }}
                                     />
                                 </Form>
                             ) : (
@@ -431,6 +467,8 @@ class Main extends Component {
                                 variant="primary"
                                 onClick={() => {
                                     this.setState({ isRename: !this.state.isRename });
+                                    if(!this.state.isRename)
+                                        this.setState({portfolioUpdateName:""});
                                 }}
                             >
                                 U
@@ -447,6 +485,7 @@ class Main extends Component {
                             >
                                 +
                             </Button>
+                            <div>{this.state.portfolioUpdateErrorMessage}</div>
                         </div>
                     ) : (
                         <h2>Select Portfolio!</h2>
@@ -514,6 +553,7 @@ class Main extends Component {
                                 onChange={(e) => this.setState({ portfolioName: e.target.value })}
                                 placeholder={this.state.selectedPortfolio.name}
                             />
+                            {this.state.deletePortfolioErrorMessage}
                         </Modal.Body>
                         <Modal.Footer>
                             <Button type="submit">Delete</Button>
@@ -547,8 +587,21 @@ class Main extends Component {
                                 type="text"
                                 name="portfolioName"
                                 value={this.state.portfolioName}
-                                onChange={(e) => this.setState({ portfolioName: e.target.value })}
+                                onChange={(e) => {
+                                    if(e.target.value.length > 0)
+                                        this.setState({
+                                            postPortfolioErrorMessage:"",
+                                            postPortfolioCheck:true
+                                        })
+                                    else
+                                        this.setState({
+                                            postPortfolioErrorMessage:"포트폴리오 이름을 입력해주십시오",
+                                            postPortfolioCheck:false
+                                        })
+                                    this.setState({ portfolioName: e.target.value })
+                                }}
                             />
+                            {this.state.postPortfolioErrorMessage}
                         </Modal.Body>
                         <Modal.Footer>
                             <Button type="submit">create</Button>

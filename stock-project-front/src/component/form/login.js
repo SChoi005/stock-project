@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-//import CheckButton from "react-validation/build/button";
 import AuthService from "../../service/authService";
 
 
@@ -12,7 +11,8 @@ class Login extends Component{
         this.login = this.login.bind(this);
         this.state= {
             username:"",
-            password:""
+            password:"",
+            errorMessage:""
         };
     }
     
@@ -24,6 +24,7 @@ class Login extends Component{
                             },
                             error =>{
                                 console.log(error);
+                                this.setState({errorMessage:"로그인 실패!"});
                             }
                         );
     }
@@ -61,6 +62,7 @@ class Login extends Component{
                     <div>
                         <button type="submit">Login</button>
                     </div>
+                    {this.state.errorMessage}
                 </Form>
                 <div>
                     <a href="/signup">signup</a>
