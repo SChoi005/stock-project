@@ -29,7 +29,7 @@ class SignUp extends Component{
         e.preventDefault();
         
         if(this.state.usernameCheck && this.state.passwordCheck && this.state.nicknameCheck){
-            AuthService.register(this.state.username, this.state.password, this.state.nickname)
+            AuthService.register(this.state.username, this.state.password, this.state.nickname.trim())
                 .then((res)=>{
                     console.log(res);
                     this.props.history.push("/");
@@ -58,7 +58,7 @@ class SignUp extends Component{
             }
             else{
                 this.setState({
-                    usernameMessage:"영문자(대소문자)와 숫자만 사용가능합니다 (5~16자)",
+                    usernameMessage:"영문자(대소문자)와 숫자만 사용가능합니다 (5~16자/공백불가)",
                     usernameCheck:false              
                 })
             }
@@ -83,7 +83,7 @@ class SignUp extends Component{
             }
             else{
                 this.setState({
-                    passwordMessage:"숫자, 영문, 특수문자 각 1자리 이상 (8~16자)",
+                    passwordMessage:"숫자, 영문, 특수문자 각 1자리 이상 (8~16자/공백불가)",
                     passwordCheck:false
                 })
             }
@@ -93,7 +93,7 @@ class SignUp extends Component{
     
     confirmNickname(e){
         
-        if(e.target.value.length < 1){
+        if(e.target.value.trim().length < 1){
             this.setState({
                 nicknameMessage:"닉네임을 입력하십시오.",
                 nicknameCheck:false

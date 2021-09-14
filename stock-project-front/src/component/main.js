@@ -25,9 +25,12 @@ class Main extends Component {
             portfolioName: '',
             averagePrice: '',
             quantity:'',
+            ownAveragePrice: '',
+            ownQuantity:'',
             keywords:'',
             stocks:[],
             searchStocks:[],
+            searchMessage:"",
             currentUser: {
                 portfolios: [],
             },
@@ -40,6 +43,8 @@ class Main extends Component {
             portfolioUpdateCheck:false,
             portfolioUpdateErrorMessage:"",
             deletePortfolioErrorMessage:"",
+            stockErrorMessage:"",
+            ownStockErrorMessage:"",
         };
     }
 
@@ -121,7 +126,7 @@ class Main extends Component {
                 },
                 data: {
                     id: this.state.selectedPortfolio.id,
-                    name: this.state.portfolioUpdateName,
+                    name: this.state.portfolioUpdateName.trim(),
                     userid: this.state.currentUser.id,
                 },
             })
@@ -145,6 +150,10 @@ class Main extends Component {
                 },
             })
             .then((res)=>{
+                if(JSON.stringify(res.data)==="[]")
+                    this.setState({searchMessage:"검색결과가 없습니다."});
+                else
+                    this.setState({searchMessage:""});
                 this.setState({stocks:res.data});
             })
             .then(()=>{
@@ -154,7 +163,10 @@ class Main extends Component {
                 })
                 this.setState({searchStocks:map});
             })
-            .catch((error)=>{console.log('/open-api/search/'+this.state.keywords);});
+            .catch((error)=>{
+                this.setState({searchMessage:"검색어를 입력해주십시오."});
+                this.setState({searchStocks:[]});
+            });
     }
     
     async postStock(item){
@@ -186,6 +198,7 @@ class Main extends Component {
             })
             .catch((error) => {
                 console.log(error.message);
+                this.setState({stockErrorMessage:"형식이 맞지않습니다."});
             });
     }
     
@@ -222,6 +235,7 @@ class Main extends Component {
             })
             .catch((error) => {
                 console.log(error.message);
+                this.setState({stockErrorMessage:"형식이 맞지않습니다."});
             });
     }
     
@@ -239,8 +253,8 @@ class Main extends Component {
                     symbol:item["item"]["symbol"],
                     name:item["item"]["name"],
                     type:item["item"]["type"],
-                    quantity:this.state.quantity,
-                    averageprice:this.state.averagePrice,
+                    quantity:this.state.ownQuantity,
+                    averageprice:this.state.ownAveragePrice,
                     region:item["item"]["region"],
                     marketopen:item["item"]["market_open"],
                     marketclose:item["item"]["market_close"],
@@ -254,6 +268,7 @@ class Main extends Component {
             })
             .catch((error) => {
                 console.log(error.message);
+                this.setState({ownStockErrorMessage:"형식이 맞지 않습니다."});
             });
     }
     
@@ -295,8 +310,22 @@ class Main extends Component {
     toggleStock(item) {
         var map = this.state.searchStocks;
         var value = map.get(item["item"]["1. symbol"]);
-        map.set(item["item"]["1. symbol"], !value);
-        this.setState({searchStocks:map});
+        
+        if(value){
+            map.set(item["item"]["1. symbol"], false);
+        }
+        else{
+            this.state.stocks.forEach((i)=>{
+                map.set(i["1. symbol"], false);
+            })
+            map.set(item["item"]["1. symbol"], true);
+        }
+        this.setState({
+            searchStocks:map,
+            averagePrice: '',
+            quantity:'',
+            stockErrorMessage:''
+        });
     }
 
     valueToggleStock(item){
@@ -312,8 +341,23 @@ class Main extends Component {
     toggleMyStock(item){
         var map = this.state.selectedStocks;
         var value = map.get(item["item"]["symbol"]);
+        
+        if(value){
+            map.set(item["item"]["symbol"], false);
+        }
+        else{
+            this.state.selectedPortfolio.stocks.forEach((i)=>{
+                map.set(i["symbol"], false);
+            })
+            map.set(item["item"]["symbol"], true);
+        }
         map.set(item["item"]["symbol"], !value);
-        this.setState({selectedStocks:map});
+        this.setState({
+            selectedStocks:map,
+            ownAveragePrice: '',
+            ownQuantity:'',
+            ownStockErrorMessage:''
+        });
     }
     
     valueToggleMyStock(item){
@@ -379,8 +423,6 @@ class Main extends Component {
             if(stock["symbol"]===item["item"]["1. symbol"]){
                 this.putAdditionPurchaseStock(item, stock).then(()=>{
                     this.setState({averagePrice:'', quantity:''});
-                    this.getUser();
-                    window.location.reload();
                 })
                 check = true;
                 return "";
@@ -390,8 +432,6 @@ class Main extends Component {
         if(!check){
             this.postStock(item).then(()=>{
                 this.setState({averagePrice:'', quantity:''});
-                this.getUser();
-                window.location.reload();
             });
         }
     }
@@ -438,7 +478,7 @@ class Main extends Component {
                                         value={this.state.portfolioUpdateName}
                                         placeholder={this.state.selectedPortfolio.name}
                                         onChange={(e) =>{
-                                            if(e.target.value.length > 0){
+                                            if(e.target.value.trim().length > 0){
                                                 if(e.target.value === this.state.selectedPortfolio.name)
                                                     this.setState({ 
                                                         portfolioUpdateCheck: false ,
@@ -466,9 +506,9 @@ class Main extends Component {
                             <Button
                                 variant="primary"
                                 onClick={() => {
+                                    if(this.state.isRename)
+                                        this.setState({portfolioUpdateName:"", portfolioUpdateErrorMessage:""});
                                     this.setState({ isRename: !this.state.isRename });
-                                    if(!this.state.isRename)
-                                        this.setState({portfolioUpdateName:""});
                                 }}
                             >
                                 U
@@ -638,7 +678,7 @@ class Main extends Component {
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                             />
                         </Form>
-                        
+                        {this.state.searchMessage}
                         {this.state.stocks.length === 0 ?
                             <div></div>
                             :
@@ -666,7 +706,7 @@ class Main extends Component {
                                                         name="averagePrice"
                                                         placeholder="평균단가"
                                                         value={this.state.averagePrice}
-                                                        onChange={(e) => this.setState({ averagePrice: e.target.value })}    
+                                                        onChange={(e) => this.setState({ averagePrice: e.target.value.trim() })}    
                                                     />
                                                     <label>갯수</label>
                                                     <Input
@@ -674,9 +714,10 @@ class Main extends Component {
                                                         name="quantity"
                                                         placeholder="갯수"
                                                         value={this.state.quantity}
-                                                        onChange={(e) => this.setState({ quantity: e.target.value })}    
+                                                        onChange={(e) => this.setState({ quantity: e.target.value.trim() })}    
                                                     />
                                                     <Button type="submit">매수</Button>
+                                                    {this.state.stockErrorMessage}
                                                 </Form>
                                             </div>
                                         </Collapse>
@@ -714,18 +755,19 @@ class Main extends Component {
                                                                 type="text"
                                                                 name="averagePrice"
                                                                 placeholder="평균단가"
-                                                                value={this.state.averagePrice}
-                                                                onChange={(e) => this.setState({ averagePrice: e.target.value })}    
+                                                                value={this.state.ownAveragePrice}
+                                                                onChange={(e) => this.setState({ ownAveragePrice: e.target.value.trim() })}    
                                                             />
                                                             <label>갯수</label>
                                                             <Input
                                                                 type="text"
                                                                 name="quantity"
                                                                 placeholder="갯수"
-                                                                value={this.state.quantity}
-                                                                onChange={(e) => this.setState({ quantity: e.target.value })}    
+                                                                value={this.state.ownQuantity}
+                                                                onChange={(e) => this.setState({ ownQuantity: e.target.value.trim() })}    
                                                             />
                                                             <Button type="submit">수정</Button>
+                                                            {this.state.ownStockErrorMessage}
                                                         </Form>
                                                     </div>
                                                 </Collapse>
