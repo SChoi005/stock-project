@@ -36,7 +36,6 @@ class Main extends Component {
             },
             selectedPortfolio: {},
             selectedStocks:{},
-            
             postPortfolioErrorMessage:"",
             postPortfolioCheck:false,
             portfolioUpdateName:"",
@@ -87,8 +86,23 @@ class Main extends Component {
                 },
             })
             .then(() => {
-                this.emptyPortfolioName();
-                window.location.reload();
+                // 모달끄고
+                this.handleCreateModalShowHide();
+                this.getUser().then(()=>{
+                    this.state.currentUser.portfolios.forEach((i)=>{
+                        console.log(i["name"]);
+                        console.log(this.state.portfolioName);
+                        if(i["name"]===this.state.portfolioName){
+                            this.setState({
+                                selectedPortfolio:i,
+                                selectedStocks: new Map(),
+                                isOpen : false
+                            });
+                        }
+                    })                
+                    // 초기화
+                    this.emptyPortfolioName();
+                })
             })
             .catch((error) => {
                 console.log(error.message);
@@ -107,7 +121,6 @@ class Main extends Component {
                 },
             })
             .then(() => {
-                this.emptyPortfolioName();
                 window.location.reload();
             })
             .catch((error) => {
@@ -131,8 +144,22 @@ class Main extends Component {
                 },
             })
             .then(() => {
-                this.setState({ portfolioUpdateName: '' });
-                window.location.reload();
+                this.getUser().then(()=>{
+                   this.state.currentUser.portfolios.forEach((item)=>{
+                       if(item["name"]===this.state.portfolioUpdateName.trim()){
+                           var map = new Map();
+                           item.stocks.forEach((i)=>{
+                               map.set(i["symbol"],false);
+                           })
+                           this.setState({ 
+                               selectedPortfolio:item,
+                               selectedStocks:map,
+                               portfolioUpdateName: '',
+                               isRename:false
+                           });
+                       }
+                   }) 
+                });
             })
             .catch((error) => {
                 console.log(error);
@@ -193,8 +220,22 @@ class Main extends Component {
                     portfolioid:this.state.selectedPortfolio.id,
                 },
             })
-            .then((res) => {
-                console.log(res);
+            .then(() => {
+                this.getUser().then(()=>{
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i)=>{
+                        if(i["name"]===name){
+                            var map = new Map();
+                            i.stocks.forEach((s)=>{
+                                map.set(s["symbol"],false);
+                            })
+                            this.setState({ 
+                                selectedPortfolio:i,
+                                selectedStocks:map
+                            });
+                        }
+                    })
+                })
             })
             .catch((error) => {
                 console.log(error.message);
@@ -230,8 +271,22 @@ class Main extends Component {
                     portfolioid:this.state.selectedPortfolio.id,
                 },
             })
-            .then((res) => {
-                console.log(res);
+            .then(() => {
+                this.getUser().then(()=>{
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i)=>{
+                        if(i["name"]===name){
+                            var map = new Map();
+                            i.stocks.forEach((s)=>{
+                                map.set(s["symbol"],false);
+                            })
+                            this.setState({ 
+                                selectedPortfolio:i,
+                                selectedStocks:map
+                            });
+                        }
+                    })
+                })
             })
             .catch((error) => {
                 console.log(error.message);
@@ -263,8 +318,22 @@ class Main extends Component {
                     portfolioid:this.state.selectedPortfolio.id,
                 },
             })
-            .then((res) => {
-                console.log(res);
+            .then(() => {
+                this.getUser().then(()=>{
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i)=>{
+                        if(i["name"]===name){
+                            var map = new Map();
+                            i.stocks.forEach((s)=>{
+                                map.set(s["symbol"],false);
+                            })
+                            this.setState({ 
+                                selectedPortfolio:i,
+                                selectedStocks:map
+                            });
+                        }
+                    })
+                })
             })
             .catch((error) => {
                 console.log(error.message);
@@ -283,8 +352,22 @@ class Main extends Component {
                     'Authorization': 'Bearer ' + token,
                 },
             })
-            .then((res) => {
-                console.log(res);
+            .then(() => {
+                this.getUser().then(()=>{
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i)=>{
+                        if(i["name"]===name){
+                            var map = new Map();
+                            i.stocks.forEach((s)=>{
+                                map.set(s["symbol"],false);
+                            })
+                            this.setState({ 
+                                selectedPortfolio:i,
+                                selectedStocks:map
+                            });
+                        }
+                    })
+                });
             })
             .catch((error) => {
                 console.log(error.message);
@@ -370,11 +453,17 @@ class Main extends Component {
         e.preventDefault();
         this.setState({ selectedPortfolio:item });
         
-        var map = new Map();
-        item.stocks.forEach((i)=>{
-            map.set(i["symbol"],false);
-        })
-        this.setState({ selectedStocks:map });
+        if(JSON.stringify(item)!=='{}'){
+            var map = new Map();
+            item.stocks.forEach((i)=>{
+                map.set(i["symbol"],false);
+            })
+            this.setState({ selectedStocks:map });
+        }
+        else{
+            this.setState({ selectedStocks:{} });
+        }
+        
         this.toggle();
     }
 
@@ -787,7 +876,6 @@ class Main extends Component {
                             onClick={() => {
                                 this.handleStockModalShowHide();
                                 this.setState({stocks:[], keywords:''});
-                                window.location.reload();
                             }}
                         >
                             Close

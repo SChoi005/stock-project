@@ -14,6 +14,7 @@ https://shinsunyoung.tistory.com/78
 2. 메인 화면 UI 틀 만들기
 3. 등락비율 나타내기
 4. modal
+5. BootStrap 입히기
 
 ### Server ( Springboot ) ###
 
@@ -23,9 +24,13 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-1. getUser이거 언제언제 다시 로드할지 정리해보자
--> main.js 다만들고 코드 정리 해야할듯 => 중복되는 input값 계속 같이 입력되니까 이거 수정좀 해야할듯
-==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 1차 휴식기 ! )
+==> ( 1차 휴식기 ! )
+1. component 1 제작
+2. component 1 제작
+3. component 1 제작
+4. component 1 제작
+( db 한글 수정할수있으면 하기, 항상켜두기 모드 하기 )
+==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )
 
 # 나중에 해야할것
 git token
