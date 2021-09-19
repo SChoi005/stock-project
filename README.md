@@ -29,9 +29,15 @@ https://shinsunyoung.tistory.com/78
 2. component 1 제작
 3. component 1 제작
 4. component 1 제작
-( db 한글 수정할수있으면 하기, 항상켜두기 모드 하기 )
+5. MyInfo 만들기
 ==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )
 
 # 나중에 해야할것
 git token
 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
+
+# 구름 ide 항상켜두기
+springboot => nohup
+(ps -ef  /  kill -9 PID)
+react => pm2
+( pm2 --name [작업명] start npm -- start  /  pm2 ps  /  pm2 delete [작업명] )

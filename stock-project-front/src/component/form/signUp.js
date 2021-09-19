@@ -21,13 +21,14 @@ class SignUp extends Component{
             nicknameMessage:"",
             usernameCheck:false,
             passwordCheck:false,
-            nicknameCheck:false
+            nicknameCheck:false,
+            disabled:false
         };
     }
     
     signup(e){
         e.preventDefault();
-        
+        this.setState({disabled:true});
         if(this.state.usernameCheck && this.state.passwordCheck && this.state.nicknameCheck){
             AuthService.register(this.state.username, this.state.password, this.state.nickname.trim())
                 .then((res)=>{
@@ -37,7 +38,10 @@ class SignUp extends Component{
                 })
                 .catch((error)=>{
                     console.log(error);
-                    this.setState({errorMessage:"중복된 아이디입니다."});
+                    this.setState({
+                        errorMessage:"중복된 아이디입니다.",
+                        disabled:false
+                    });
                 });
         }
     }
@@ -128,6 +132,7 @@ class SignUp extends Component{
                                 name="username" 
                                 value={this.state.username}
                                 onChange={(e)=> this.confirmUsername(e)}
+                                disabled={this.state.disabled}
                             />
                         </div>
                         {this.state.usernameMessage}
@@ -139,6 +144,7 @@ class SignUp extends Component{
                                 name="password"
                                 value={this.state.password}
                                 onChange={(e)=> this.confirmPassword(e)}
+                                disabled={this.state.disabled}
                             />
                             {this.state.passwordMessage}
                         </div>
@@ -149,11 +155,12 @@ class SignUp extends Component{
                                 name="nickname"
                                 value={this.state.nickname}
                                 onChange={(e)=> this.confirmNickname(e)}
+                                disabled={this.state.disabled}
                             />
                             {this.state.nicknameMessage}
                         </div>
                         <div>
-                            <button type="submit">signUp</button>
+                            <button type="submit" disabled={this.state.disabled}>signUp</button>
                         </div>
                         <a href="/">Login</a>
                     </Form>

@@ -52,7 +52,6 @@ public class UserApiController{
         return userDetailService.create(user);
     }
     
-    
     @PostMapping("/signin")
     public ResponseEntity<?> createAuthenticationToken(@Valid @RequestBody JwtRequest authenticationRequest) throws Exception{
         

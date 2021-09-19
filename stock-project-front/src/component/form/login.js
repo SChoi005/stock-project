@@ -12,18 +12,21 @@ class Login extends Component{
         this.state= {
             username:"",
             password:"",
-            errorMessage:""
+            errorMessage:"",
+            disabled:false,
         };
     }
     
     login(e){
         e.preventDefault();
+        this.setState({disabled:true})
         AuthService.login(this.state.username, this.state.password)
                     .then(()=>{
                                 window.location.reload();
                             },
                             error =>{
                                 console.log(error);
+                                this.setState({disabled:false});
                                 this.setState({errorMessage:"로그인 실패!"});
                             }
                         );
@@ -48,6 +51,7 @@ class Login extends Component{
                             name="username" 
                             value={this.state.username}
                             onChange={(e)=> this.setState({username:e.target.value})}
+                            disabled={this.state.disabled}
                         />
                     </div>
                     <div>
@@ -57,10 +61,11 @@ class Login extends Component{
                             name="password" 
                             value={this.state.password}
                             onChange={(e)=> this.setState({password:e.target.value})}
+                            disabled={this.state.disabled}
                         />
                     </div>
                     <div>
-                        <button type="submit">Login</button>
+                        <button type="submit" disabled={this.state.disabled}>Login</button>
                     </div>
                     {this.state.errorMessage}
                 </Form>
