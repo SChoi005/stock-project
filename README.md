@@ -24,17 +24,17 @@ https://shinsunyoung.tistory.com/78
 4. google openApi 주식 정보 가져오기
 
 # 해야할것
-==> ( 1차 휴식기 ! )
+==> ( 1차 휴식기 ! ) ( stock delete할때 확인작업 추가 )
 1. component 1 제작
-2. component 1 제작
-3. component 1 제작
-4. component 1 제작
+2. component 2 제작
+3. component 3 제작
+4. component 4 제작
 5. MyInfo 만들기
 ==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )
 
 # 나중에 해야할것
-git token
-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
+1. stock delete할때 확인작업 추가
+2. popover message
 
 # 구름 ide 항상켜두기
 springboot => nohup

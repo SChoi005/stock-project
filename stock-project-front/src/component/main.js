@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-//import PieGraph from './stock/pieGraph';
+import PieGraph from './stock/pieGraph';
 import { Button, Modal, Collapse } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
@@ -575,7 +575,7 @@ class Main extends Component {
     
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        // console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item)=>{return Object.keys(item).length;};
         // console.log(JSON.stringify(this.state.searchStocks));
         // console.log(this.state.selectedStocks);
@@ -687,21 +687,25 @@ class Main extends Component {
                     </div>
                 </Collapse>
 
-                {/* Stock Component
-                <div>
-                    <PieGraph></PieGraph>
-                    <div>
-                        <h2>Component2</h2>
-                    </div>
-                    <div>
-                        <h2>Component3</h2>
-                    </div>
-                    <div>
-                        <h2>Component4</h2>
-                    </div>
-                </div>
-                */}
-
+                {/* Stock Component*/}
+                {JSON.stringify(this.state.selectedPortfolio)!=='{}'?
+                    (<div>
+                        <PieGraph stocks={this.state.selectedPortfolio.stocks}/>
+                        {/*
+                        <div>
+                            <h2>Component2</h2>
+                        </div>
+                        <div>
+                            <h2>Component3</h2>
+                        </div>
+                        <div>
+                            <h2>Component4</h2>
+                        </div>
+                        */}
+                    </div>):
+                    (<div></div>)
+                }
+                 
                 {/*Portfolio Delete Modal*/}
                 <Modal show={this.state.deleteShowHide}>
                     <Modal.Header>
@@ -804,7 +808,7 @@ class Main extends Component {
                             <Input
                                 type="text"
                                 name="stockName"
-                                placeholder="Search Stock Name"
+                                placeholder="Search Stock Name (해외주식만 가능)"
                                 value={this.state.keywords}
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                                 disabled={this.state.disabled}
@@ -874,8 +878,8 @@ class Main extends Component {
                                                     onClick={() => this.toggleMyStock({item})}
                                                     aria-controls="collapse-text"
                                                     aria-expanded={this.valueToggleMyStock({item})} 
-                                                >U</Button>
-                                                <Button onClick={(event)=>{this.removeStock(event,{item})}}>D</Button>
+                                                >수정</Button>
+                                                <Button onClick={(event)=>{this.removeStock(event,{item})}}>삭제</Button>
                                                 
                                                 <Collapse in={this.valueToggleMyStock({item})}>
                                                     <div id="collapse-text">
@@ -903,7 +907,7 @@ class Main extends Component {
                                                                 onChange={(e) => this.setState({ ownQuantity: e.target.value.trim() })}
                                                                 disabled={this.state.disabled}
                                                             />
-                                                            <Button type="submit" disabled={this.state.disabled}>수정</Button>
+                                                            <Button type="submit" disabled={this.state.disabled}>확인</Button>
                                                             {this.state.ownStockErrorMessage}
                                                         </Form>
                                                     </div>

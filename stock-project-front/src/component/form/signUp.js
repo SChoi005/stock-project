@@ -15,12 +15,15 @@ class SignUp extends Component{
             username:"",
             password:"",
             nickname:"",
+            checkPassword:"",
             errorMessage:"",
             usernameMessage:"",
             passwordMessage:"",
+            passwordCheckMessage:"",
             nicknameMessage:"",
             usernameCheck:false,
             passwordCheck:false,
+            checkPasswordCheck:false,
             nicknameCheck:false,
             disabled:false
         };
@@ -28,8 +31,8 @@ class SignUp extends Component{
     
     signup(e){
         e.preventDefault();
-        this.setState({disabled:true});
-        if(this.state.usernameCheck && this.state.passwordCheck && this.state.nicknameCheck){
+        if(this.state.usernameCheck && this.state.passwordCheck && this.state.nicknameCheck && this.state.passwordCheck){
+            this.setState({disabled:true});
             AuthService.register(this.state.username, this.state.password, this.state.nickname.trim())
                 .then((res)=>{
                     console.log(res);
@@ -93,6 +96,27 @@ class SignUp extends Component{
             }
         }
         this.setState({password:e.target.value})
+        if(this.state.password !== this.state.passwordCheck)
+            this.setState({
+                passwordCheck:false,
+                passwordCheckMessage:"비밀번호가 일치하지 않습니다."
+            })
+    }
+    
+    confirmCheckPassword(e){
+        if(e.target.value === this.state.password){
+            this.setState({
+                passwordCheck:true,
+                passwordCheckMessage:"비밀번호가 일치합니다."
+            })
+        }
+        else{
+            this.setState({
+                passwordCheck:false,
+                passwordCheckMessage:"비밀번호가 일치하지 않습니다."
+            })
+        }
+        this.setState({checkPassword:e.target.value});
     }
     
     confirmNickname(e){
@@ -147,6 +171,17 @@ class SignUp extends Component{
                                 disabled={this.state.disabled}
                             />
                             {this.state.passwordMessage}
+                        </div>
+                        <div>
+                            <label>Check Password</label>
+                            <Input 
+                                type="password" 
+                                name="Check Password"
+                                value={this.state.checkPassword}
+                                onChange={(e)=> this.confirmCheckPassword(e)}
+                                disabled={this.state.disabled}
+                            />
+                            {this.state.passwordCheckMessage}
                         </div>
                         <div>
                             <label>nickname</label>
