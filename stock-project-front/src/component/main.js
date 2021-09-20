@@ -24,27 +24,27 @@ class Main extends Component {
             isRename: false,
             portfolioName: '',
             averagePrice: '',
-            quantity:'',
+            quantity: '',
             ownAveragePrice: '',
-            ownQuantity:'',
-            keywords:'',
-            stocks:[],
-            searchStocks:[],
-            searchMessage:"",
+            ownQuantity: '',
+            keywords: '',
+            stocks: [],
+            searchStocks: [],
+            searchMessage: '',
             currentUser: {
                 portfolios: [],
             },
             selectedPortfolio: {},
-            selectedStocks:{},
-            postPortfolioErrorMessage:"",
-            postPortfolioCheck:false,
-            portfolioUpdateName:"",
-            portfolioUpdateCheck:false,
-            portfolioUpdateErrorMessage:"",
-            deletePortfolioErrorMessage:"",
-            stockErrorMessage:"",
-            ownStockErrorMessage:"",
-            disabled:false
+            selectedStocks: {},
+            postPortfolioErrorMessage: '',
+            postPortfolioCheck: false,
+            portfolioUpdateName: '',
+            portfolioUpdateCheck: false,
+            portfolioUpdateErrorMessage: '',
+            deletePortfolioErrorMessage: '',
+            stockErrorMessage: '',
+            ownStockErrorMessage: '',
+            disabled: false,
         };
     }
 
@@ -73,344 +73,344 @@ class Main extends Component {
 
     async postPortfolio() {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({disabled:true});
+        this.setState({ disabled: true });
         await axios({
-                method: 'post',
-                url: '/api/portfolio',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer ' + token,
-                },
-                data: {
-                    id: 0,
-                    name: this.state.portfolioName,
-                    userid: this.state.currentUser.id,
-                },
-            })
+            method: 'post',
+            url: '/api/portfolio',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            data: {
+                id: 0,
+                name: this.state.portfolioName,
+                userid: this.state.currentUser.id,
+            },
+        })
             .then(() => {
                 // 모달끄고
                 this.handleCreateModalShowHide();
-                this.getUser().then(()=>{
-                    this.state.currentUser.portfolios.forEach((i)=>{
-                        if(i["name"]===this.state.portfolioName){
+                this.getUser().then(() => {
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === this.state.portfolioName) {
                             this.setState({
-                                selectedPortfolio:i,
+                                selectedPortfolio: i,
                                 selectedStocks: new Map(),
-                                isOpen : false,
-                                disabled:false
+                                isOpen: false,
+                                disabled: false,
                             });
                         }
-                    })                
+                    });
                     // 초기화
                     this.emptyPortfolioName();
-                })
+                });
             })
             .catch((error) => {
                 console.log(error.message);
                 this.setState({
-                    postPortfolioErrorMessage:"중복된 포트폴리오 이름입니다.", 
-                    disabled:false
+                    postPortfolioErrorMessage: '중복된 포트폴리오 이름입니다.',
+                    disabled: false,
                 });
             });
     }
 
     async deletePortfolio() {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({disabled:true});
+        this.setState({ disabled: true });
         await axios({
-                method: 'delete',
-                url: '/api/portfolio/' + this.state.selectedPortfolio.id,
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer ' + token,
-                },
-            })
+            method: 'delete',
+            url: '/api/portfolio/' + this.state.selectedPortfolio.id,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        })
             .then(() => {
                 window.location.reload();
             })
             .catch((error) => {
                 console.log(error.message);
-                this.setState({disabled:false});
+                this.setState({ disabled: false });
             });
     }
 
     async putPortfolio() {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({disabled:true});
+        this.setState({ disabled: true });
         await axios({
-                method: 'put',
-                url: '/api/portfolio',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-                data: {
-                    id: this.state.selectedPortfolio.id,
-                    name: this.state.portfolioUpdateName.trim(),
-                    userid: this.state.currentUser.id,
-                },
-            })
+            method: 'put',
+            url: '/api/portfolio',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            data: {
+                id: this.state.selectedPortfolio.id,
+                name: this.state.portfolioUpdateName.trim(),
+                userid: this.state.currentUser.id,
+            },
+        })
             .then(() => {
-                this.getUser().then(()=>{
-                   this.state.currentUser.portfolios.forEach((item)=>{
-                       if(item["name"]===this.state.portfolioUpdateName.trim()){
-                           var map = new Map();
-                           item.stocks.forEach((i)=>{
-                               map.set(i["symbol"],false);
-                           })
-                           this.setState({ 
-                               selectedPortfolio:item,
-                               selectedStocks:map,
-                               portfolioUpdateName: '',
-                               isRename:false,
-                               disabled:false
-                           });
-                       }
-                   }) 
+                this.getUser().then(() => {
+                    this.state.currentUser.portfolios.forEach((item) => {
+                        if (item['name'] === this.state.portfolioUpdateName.trim()) {
+                            var map = new Map();
+                            item.stocks.forEach((i) => {
+                                map.set(i['symbol'], false);
+                            });
+                            this.setState({
+                                selectedPortfolio: item,
+                                selectedStocks: map,
+                                portfolioUpdateName: '',
+                                isRename: false,
+                                disabled: false,
+                            });
+                        }
+                    });
                 });
             })
             .catch((error) => {
                 console.log(error);
-                this.setState({disabled:false});
+                this.setState({ disabled: false });
             });
     }
 
-    async searchSymbolSearch(){
+    async searchSymbolSearch() {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({disabled:true});
+        this.setState({ disabled: true });
         await axios({
-                method: 'get',
-                url: '/api/search/'+this.state.keywords,
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
+            method: 'get',
+            url: '/api/search/' + this.state.keywords,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        })
+            .then((res) => {
+                if (JSON.stringify(res.data) === '[]')
+                    this.setState({ searchMessage: '검색결과가 없습니다.' });
+                else this.setState({ searchMessage: '' });
+                this.setState({ stocks: res.data });
             })
-            .then((res)=>{
-                if(JSON.stringify(res.data)==="[]")
-                    this.setState({searchMessage:"검색결과가 없습니다."});
-                else
-                    this.setState({searchMessage:""});
-                this.setState({stocks:res.data});
-            })
-            .then(()=>{
+            .then(() => {
                 const map = new Map();
-                this.state.stocks.forEach((item)=>{
-                    map.set(item["1. symbol"],false);
-                })
+                this.state.stocks.forEach((item) => {
+                    map.set(item['1. symbol'], false);
+                });
                 this.setState({
-                    searchStocks:map,
-                    disabled:false
+                    searchStocks: map,
+                    disabled: false,
                 });
             })
-            .catch((error)=>{
+            .catch((error) => {
                 this.setState({
-                    searchMessage:"검색어를 입력해주십시오.",
-                    searchStocks:[],
-                    disabled:false
+                    searchMessage: '검색어를 입력해주십시오.',
+                    searchStocks: [],
+                    disabled: false,
                 });
             });
     }
-    
-    async postStock(item){
+
+    async postStock(item) {
         const token = JSON.parse(localStorage.getItem('user')).token;
         await axios({
-                method: 'post',
-                url: '/api/stock',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-                data: {
-                    id:0,
-                    symbol:item["item"]["1. symbol"],
-                    name:item["item"]["2. name"],
-                    type:item["item"]["3. type"],
-                    quantity:this.state.quantity,
-                    averageprice:this.state.averagePrice,
-                    region:item["item"]["4. region"],
-                    marketopen:item["item"]["5. marketOpen"],
-                    marketclose:item["item"]["6. marketClose"],
-                    timezone:item["item"]["7. timezone"],
-                    currency:item["item"]["8. currency"],
-                    portfolioid:this.state.selectedPortfolio.id,
-                },
-            })
+            method: 'post',
+            url: '/api/stock',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            data: {
+                id: 0,
+                symbol: item['item']['1. symbol'],
+                name: item['item']['2. name'],
+                type: item['item']['3. type'],
+                quantity: this.state.quantity,
+                averageprice: this.state.averagePrice,
+                region: item['item']['4. region'],
+                marketopen: item['item']['5. marketOpen'],
+                marketclose: item['item']['6. marketClose'],
+                timezone: item['item']['7. timezone'],
+                currency: item['item']['8. currency'],
+                portfolioid: this.state.selectedPortfolio.id,
+            },
+        })
             .then(() => {
-                this.getUser().then(()=>{
+                this.getUser().then(() => {
                     const name = this.state.selectedPortfolio.name;
                     var m = this.state.searchStocks;
-                    m.set(item["item"]["1. symbol"],false);
-                    this.state.currentUser.portfolios.forEach((i)=>{
-                        if(i["name"]===name){
+                    m.set(item['item']['1. symbol'], false);
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
                             var map = new Map();
-                            i.stocks.forEach((s)=>{
-                                map.set(s["symbol"],false);
-                            })
-                            this.setState({ 
-                                selectedPortfolio:i,
-                                selectedStocks:map,
-                                searchStocks:m,
-                                disabled:false
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
+                            });
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
+                                searchStocks: m,
+                                disabled: false,
                             });
                         }
-                    })
-                })
+                    });
+                });
             })
             .catch((error) => {
                 console.log(error.message);
                 this.setState({
-                    stockErrorMessage:"형식이 맞지않습니다.",
-                    disabled:false
+                    stockErrorMessage: '형식이 맞지않습니다.',
+                    disabled: false,
                 });
             });
     }
-    
-    async putAdditionPurchaseStock(item, stock){
+
+    async putAdditionPurchaseStock(item, stock) {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        
-        const updateQuantity = (+this.state.quantity)+(+stock["quantity"]);
-        const updateAveragePrice = ((+this.state.averagePrice)*(+this.state.quantity)+(+stock["average_price"])*(+stock["quantity"]))/updateQuantity;
-        
+
+        const updateQuantity = +this.state.quantity + +stock['quantity'];
+        const updateAveragePrice =
+            (+this.state.averagePrice * +this.state.quantity +
+                +stock['average_price'] * +stock['quantity']) /
+            updateQuantity;
+
         await axios({
-                method: 'put',
-                url: '/api/stock',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-                data: {
-                    id:stock["id"],
-                    symbol:item["item"]["1. symbol"],
-                    name:item["item"]["2. name"],
-                    type:item["item"]["3. type"],
-                    quantity:updateQuantity,
-                    averageprice:updateAveragePrice,
-                    region:item["item"]["4. region"],
-                    marketopen:item["item"]["5. marketOpen"],
-                    marketclose:item["item"]["6. marketClose"],
-                    timezone:item["item"]["7. timezone"],
-                    currency:item["item"]["8. currency"],
-                    portfolioid:this.state.selectedPortfolio.id,
-                },
-            })
+            method: 'put',
+            url: '/api/stock',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            data: {
+                id: stock['id'],
+                symbol: item['item']['1. symbol'],
+                name: item['item']['2. name'],
+                type: item['item']['3. type'],
+                quantity: updateQuantity,
+                averageprice: updateAveragePrice,
+                region: item['item']['4. region'],
+                marketopen: item['item']['5. marketOpen'],
+                marketclose: item['item']['6. marketClose'],
+                timezone: item['item']['7. timezone'],
+                currency: item['item']['8. currency'],
+                portfolioid: this.state.selectedPortfolio.id,
+            },
+        })
             .then(() => {
-                this.getUser().then(()=>{
+                this.getUser().then(() => {
                     const name = this.state.selectedPortfolio.name;
                     var m = this.state.searchStocks;
-                    m.set(item["item"]["1. symbol"],false);
-                    this.state.currentUser.portfolios.forEach((i)=>{
-                        if(i["name"]===name){
+                    m.set(item['item']['1. symbol'], false);
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
                             var map = new Map();
-                            i.stocks.forEach((s)=>{
-                                map.set(s["symbol"],false);
-                                
-                            })
-                            this.setState({ 
-                                selectedPortfolio:i,
-                                selectedStocks:map,
-                                searchStocks:m,
-                                disabled:false
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
                             });
-                        
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
+                                searchStocks: m,
+                                disabled: false,
+                            });
                         }
-                    })
-                })
+                    });
+                });
             })
             .catch((error) => {
                 console.log(error.message);
                 this.setState({
-                    stockErrorMessage:"형식이 맞지않습니다.",
-                    disabled:false
+                    stockErrorMessage: '형식이 맞지않습니다.',
+                    disabled: false,
                 });
             });
     }
-    
-    async putStock(item){
+
+    async putStock(item) {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({disabled:true});
+        this.setState({ disabled: true });
         await axios({
-                method: 'put',
-                url: '/api/stock',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-                data: {
-                    id:item["item"]["id"],
-                    symbol:item["item"]["symbol"],
-                    name:item["item"]["name"],
-                    type:item["item"]["type"],
-                    quantity:this.state.ownQuantity,
-                    averageprice:this.state.ownAveragePrice,
-                    region:item["item"]["region"],
-                    marketopen:item["item"]["market_open"],
-                    marketclose:item["item"]["market_close"],
-                    timezone:item["item"]["timezone"],
-                    currency:item["item"]["currency"],
-                    portfolioid:this.state.selectedPortfolio.id,
-                },
-            })
+            method: 'put',
+            url: '/api/stock',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+            data: {
+                id: item['item']['id'],
+                symbol: item['item']['symbol'],
+                name: item['item']['name'],
+                type: item['item']['type'],
+                quantity: this.state.ownQuantity,
+                averageprice: this.state.ownAveragePrice,
+                region: item['item']['region'],
+                marketopen: item['item']['market_open'],
+                marketclose: item['item']['market_close'],
+                timezone: item['item']['timezone'],
+                currency: item['item']['currency'],
+                portfolioid: this.state.selectedPortfolio.id,
+            },
+        })
             .then(() => {
-                this.getUser().then(()=>{
+                this.getUser().then(() => {
                     const name = this.state.selectedPortfolio.name;
-                    this.state.currentUser.portfolios.forEach((i)=>{
-                        if(i["name"]===name){
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
                             var map = new Map();
-                            i.stocks.forEach((s)=>{
-                                map.set(s["symbol"],false);
-                            })
-                            this.setState({ 
-                                selectedPortfolio:i,
-                                selectedStocks:map,
-                                disabled:false
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
+                            });
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
+                                disabled: false,
                             });
                         }
-                    })
-                })
+                    });
+                });
             })
             .catch((error) => {
                 console.log(error.message);
                 this.setState({
-                    ownStockErrorMessage:"형식이 맞지 않습니다.",
-                    disabled:false
+                    ownStockErrorMessage: '형식이 맞지 않습니다.',
+                    disabled: false,
                 });
             });
     }
-    
-    async deleteStock(item){
+
+    async deleteStock(item) {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        
+
         await axios({
-                method: 'delete',
-                url: '/api/stock/'+item["item"]["id"],
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token,
-                },
-            })
+            method: 'delete',
+            url: '/api/stock/' + item['item']['id'],
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        })
             .then(() => {
-                this.getUser().then(()=>{
+                this.getUser().then(() => {
                     const name = this.state.selectedPortfolio.name;
-                    this.state.currentUser.portfolios.forEach((i)=>{
-                        if(i["name"]===name){
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
                             var map = new Map();
-                            i.stocks.forEach((s)=>{
-                                map.set(s["symbol"],false);
-                            })
-                            this.setState({ 
-                                selectedPortfolio:i,
-                                selectedStocks:map
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
+                            });
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
                             });
                         }
-                    })
+                    });
                 });
             })
             .catch((error) => {
                 console.log(error.message);
             });
     }
-    
+
     handleCreateModalShowHide() {
         this.setState({ createShowHide: !this.state.createShowHide });
     }
@@ -426,157 +426,152 @@ class Main extends Component {
     toggle() {
         this.setState({ isOpen: !this.state.isOpen });
     }
-    
+
     toggleStock(item) {
         var map = this.state.searchStocks;
-        var value = map.get(item["item"]["1. symbol"]);
-        
-        if(value){
-            map.set(item["item"]["1. symbol"], false);
-        }
-        else{
-            this.state.stocks.forEach((i)=>{
-                map.set(i["1. symbol"], false);
-            })
-            map.set(item["item"]["1. symbol"], true);
+        var value = map.get(item['item']['1. symbol']);
+
+        if (value) {
+            map.set(item['item']['1. symbol'], false);
+        } else {
+            this.state.stocks.forEach((i) => {
+                map.set(i['1. symbol'], false);
+            });
+            map.set(item['item']['1. symbol'], true);
         }
         this.setState({
-            searchStocks:map,
+            searchStocks: map,
             averagePrice: '',
-            quantity:'',
-            stockErrorMessage:''
+            quantity: '',
+            stockErrorMessage: '',
         });
     }
 
-    valueToggleStock(item){
+    valueToggleStock(item) {
         var map = this.state.searchStocks;
-        
-        if(JSON.stringify(map)==="[]")
-            return false;
-        else{
-            return map.get(item["item"]["1. symbol"]);
+
+        if (JSON.stringify(map) === '[]') return false;
+        else {
+            return map.get(item['item']['1. symbol']);
         }
     }
-    
-    toggleMyStock(item){
+
+    toggleMyStock(item) {
         var map = this.state.selectedStocks;
-        var value = map.get(item["item"]["symbol"]);
-        
-        if(value){
-            map.set(item["item"]["symbol"], false);
+        var value = map.get(item['item']['symbol']);
+
+        if (value) {
+            map.set(item['item']['symbol'], false);
+        } else {
+            this.state.selectedPortfolio.stocks.forEach((i) => {
+                map.set(i['symbol'], false);
+            });
+            map.set(item['item']['symbol'], true);
         }
-        else{
-            this.state.selectedPortfolio.stocks.forEach((i)=>{
-                map.set(i["symbol"], false);
-            })
-            map.set(item["item"]["symbol"], true);
-        }
-        map.set(item["item"]["symbol"], !value);
+        map.set(item['item']['symbol'], !value);
         this.setState({
-            selectedStocks:map,
+            selectedStocks: map,
             ownAveragePrice: '',
-            ownQuantity:'',
-            ownStockErrorMessage:''
+            ownQuantity: '',
+            ownStockErrorMessage: '',
         });
     }
-    
-    valueToggleMyStock(item){
+
+    valueToggleMyStock(item) {
         var map = this.state.selectedStocks;
-        return map.get(item["item"]["symbol"]);
+        return map.get(item['item']['symbol']);
     }
-    
+
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
-        this.setState({ selectedPortfolio:item });
-        
-        if(JSON.stringify(item)!=='{}'){
+        this.setState({ selectedPortfolio: item });
+
+        if (JSON.stringify(item) !== '{}') {
             var map = new Map();
-            item.stocks.forEach((i)=>{
-                map.set(i["symbol"],false);
-            })
-            this.setState({ selectedStocks:map });
+            item.stocks.forEach((i) => {
+                map.set(i['symbol'], false);
+            });
+            this.setState({ selectedStocks: map });
+        } else {
+            this.setState({ selectedStocks: {} });
         }
-        else{
-            this.setState({ selectedStocks:{} });
-        }
-        
+
         this.toggle();
     }
 
     createPortfolio(e) {
         e.preventDefault();
-        if(this.state.postPortfolioCheck)
-            this.postPortfolio();
+        if (this.state.postPortfolioCheck) this.postPortfolio();
     }
 
     removePortfolio(e) {
         e.preventDefault();
-        if (this.state.portfolioName === this.state.selectedPortfolio.name) 
-            this.deletePortfolio();
-        else{
-            this.setState({deletePortfolioErrorMessage:"해당 포트폴리오와 이름이 다릅니다."})
+        if (this.state.portfolioName === this.state.selectedPortfolio.name) this.deletePortfolio();
+        else {
+            this.setState({ deletePortfolioErrorMessage: '해당 포트폴리오와 이름이 다릅니다.' });
         }
     }
 
     updatePortfolio(e) {
         e.preventDefault();
-        if(this.state.portfolioUpdateCheck)
-            this.putPortfolio();
+        if (this.state.portfolioUpdateCheck) this.putPortfolio();
     }
 
     emptyPortfolioName() {
-        this.setState({ 
+        this.setState({
             portfolioName: '',
-            postPortfolioErrorMessage:"",
-            deletePortfolioErrorMessage:"",
+            postPortfolioErrorMessage: '',
+            deletePortfolioErrorMessage: '',
         });
     }
-    
+
     /*stock*/
-    searchStock(e){
+    searchStock(e) {
         e.preventDefault();
         this.searchSymbolSearch();
     }
-    
-    createStock(e, item){
+
+    createStock(e, item) {
         e.preventDefault();
-        
-        this.setState({disabled:true});
-        
+
+        this.setState({ disabled: true });
+
         var check = false;
-        
-        this.state.selectedPortfolio.stocks.forEach((stock)=>{
-            if(stock["symbol"]===item["item"]["1. symbol"]){
-                this.putAdditionPurchaseStock(item, stock).then(()=>{
-                    this.setState({averagePrice:'', quantity:''});
-                })
+
+        this.state.selectedPortfolio.stocks.forEach((stock) => {
+            if (stock['symbol'] === item['item']['1. symbol']) {
+                this.putAdditionPurchaseStock(item, stock).then(() => {
+                    this.setState({ averagePrice: '', quantity: '' });
+                });
                 check = true;
-                return "";
+                return '';
             }
-        })
-        
-        if(!check){
-            this.postStock(item).then(()=>{
-                this.setState({averagePrice:'', quantity:''});
+        });
+
+        if (!check) {
+            this.postStock(item).then(() => {
+                this.setState({ averagePrice: '', quantity: '' });
             });
         }
     }
-    
-    removeStock(e, item){
+
+    removeStock(e, item) {
         e.preventDefault();
         this.deleteStock(item);
     }
-    
-    updateStock(e, item){
+
+    updateStock(e, item) {
         e.preventDefault();
         this.putStock(item);
     }
-    
+
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
         console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
-        const isEmpty = (item)=>{return Object.keys(item).length;};
+        const isEmpty = (item) => {
+            return Object.keys(item).length;
+        };
         // console.log(JSON.stringify(this.state.searchStocks));
         // console.log(this.state.selectedStocks);
         return (
@@ -604,30 +599,36 @@ class Main extends Component {
                                         name="portfolioName"
                                         value={this.state.portfolioUpdateName}
                                         placeholder={this.state.selectedPortfolio.name}
-                                        onChange={(e) =>{
-                                            if(e.target.value.trim().length > 0){
-                                                if(e.target.value === this.state.selectedPortfolio.name)
-                                                    this.setState({ 
-                                                        portfolioUpdateCheck: false ,
-                                                        portfolioUpdateErrorMessage:"동일한 이름 입니다."
-                                                    })
-                                                else{
-                                                    this.setState({ 
-                                                        portfolioUpdateCheck: true ,
-                                                        portfolioUpdateErrorMessage:""
-                                                    })
+                                        onChange={(e) => {
+                                            if (e.target.value.trim().length > 0) {
+                                                if (
+                                                    e.target.value ===
+                                                    this.state.selectedPortfolio.name
+                                                )
+                                                    this.setState({
+                                                        portfolioUpdateCheck: false,
+                                                        portfolioUpdateErrorMessage:
+                                                            '동일한 이름 입니다.',
+                                                    });
+                                                else {
+                                                    this.setState({
+                                                        portfolioUpdateCheck: true,
+                                                        portfolioUpdateErrorMessage: '',
+                                                    });
                                                 }
-                                            }
-                                            else
-                                                this.setState({ 
-                                                    portfolioUpdateCheck: false ,
-                                                    portfolioUpdateErrorMessage:"포트폴리오 이름을 입력해주십시오"
-                                                })
-                                            this.setState({ portfolioUpdateName: e.target.value })
+                                            } else
+                                                this.setState({
+                                                    portfolioUpdateCheck: false,
+                                                    portfolioUpdateErrorMessage:
+                                                        '포트폴리오 이름을 입력해주십시오',
+                                                });
+                                            this.setState({ portfolioUpdateName: e.target.value });
                                         }}
                                         disabled={this.state.disabled}
                                     />
-                                    <Button type="submit" disabled={this.state.disabled}>확인</Button>
+                                    <Button type="submit" disabled={this.state.disabled}>
+                                        확인
+                                    </Button>
                                 </Form>
                             ) : (
                                 <h2>{this.state.selectedPortfolio.name}</h2>
@@ -635,8 +636,11 @@ class Main extends Component {
                             <Button
                                 variant="primary"
                                 onClick={() => {
-                                    if(this.state.isRename)
-                                        this.setState({portfolioUpdateName:"", portfolioUpdateErrorMessage:""});
+                                    if (this.state.isRename)
+                                        this.setState({
+                                            portfolioUpdateName: '',
+                                            portfolioUpdateErrorMessage: '',
+                                        });
                                     this.setState({ isRename: !this.state.isRename });
                                 }}
                             >
@@ -688,9 +692,9 @@ class Main extends Component {
                 </Collapse>
 
                 {/* Stock Component*/}
-                {JSON.stringify(this.state.selectedPortfolio)!=='{}'?
-                    (<div>
-                        <PieGraph stocks={this.state.selectedPortfolio.stocks}/>
+                {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
+                    <div>
+                        <PieGraph stocks={this.state.selectedPortfolio.stocks} />
                         {/*
                         <div>
                             <h2>Component2</h2>
@@ -702,10 +706,11 @@ class Main extends Component {
                             <h2>Component4</h2>
                         </div>
                         */}
-                    </div>):
-                    (<div></div>)
-                }
-                 
+                    </div>
+                ) : (
+                    <div></div>
+                )}
+
                 {/*Portfolio Delete Modal*/}
                 <Modal show={this.state.deleteShowHide}>
                     <Modal.Header>
@@ -730,7 +735,9 @@ class Main extends Component {
                             {this.state.deletePortfolioErrorMessage}
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button type="submit" disabled={this.state.disabled}>Delete</Button>
+                            <Button type="submit" disabled={this.state.disabled}>
+                                Delete
+                            </Button>
                             <Button
                                 variant="secondary"
                                 onClick={() => {
@@ -762,24 +769,27 @@ class Main extends Component {
                                 name="portfolioName"
                                 value={this.state.portfolioName}
                                 onChange={(e) => {
-                                    if(e.target.value.length > 0)
+                                    if (e.target.value.length > 0)
                                         this.setState({
-                                            postPortfolioErrorMessage:"",
-                                            postPortfolioCheck:true
-                                        })
+                                            postPortfolioErrorMessage: '',
+                                            postPortfolioCheck: true,
+                                        });
                                     else
                                         this.setState({
-                                            postPortfolioErrorMessage:"포트폴리오 이름을 입력해주십시오",
-                                            postPortfolioCheck:false
-                                        })
-                                    this.setState({ portfolioName: e.target.value })
+                                            postPortfolioErrorMessage:
+                                                '포트폴리오 이름을 입력해주십시오',
+                                            postPortfolioCheck: false,
+                                        });
+                                    this.setState({ portfolioName: e.target.value });
                                 }}
                                 disabled={this.state.disabled}
                             />
                             {this.state.postPortfolioErrorMessage}
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button type="submit" disabled={this.state.disabled}>create</Button>
+                            <Button type="submit" disabled={this.state.disabled}>
+                                create
+                            </Button>
                             <Button
                                 variant="secondary"
                                 onClick={() => {
@@ -800,10 +810,12 @@ class Main extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <Form
-                            onSubmit={(event)=>{this.searchStock(event)}}
+                            onSubmit={(event) => {
+                                this.searchStock(event);
+                            }}
                             ref={(c) => {
                                 this.form = c;
-                            }}    
+                            }}
                         >
                             <Input
                                 type="text"
@@ -813,29 +825,35 @@ class Main extends Component {
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                                 disabled={this.state.disabled}
                             />
-                            <Button type="submit" disabled={this.state.disabled}>검색</Button>
+                            <Button type="submit" disabled={this.state.disabled}>
+                                검색
+                            </Button>
                         </Form>
                         {this.state.searchMessage}
-                        {this.state.stocks.length === 0 ?
+                        {this.state.stocks.length === 0 ? (
                             <div></div>
-                            :
-                            (this.state.stocks.map((item)=>{
+                        ) : (
+                            this.state.stocks.map((item) => {
                                 return (
-                                    <div key={item["1. symbol"]}>
+                                    <div key={item['1. symbol']}>
                                         <Button
                                             variant="primary"
-                                            onClick={() => this.toggleStock({item})}
+                                            onClick={() => this.toggleStock({ item })}
                                             aria-controls="collapse-text"
-                                            aria-expanded={this.valueToggleStock({item})}    
-                                        >{item["1. symbol"]} ({item["2. name"]})</Button>
-                                        
-                                        <Collapse in={this.valueToggleStock({item})}>
+                                            aria-expanded={this.valueToggleStock({ item })}
+                                        >
+                                            {item['1. symbol']} ({item['2. name']})
+                                        </Button>
+
+                                        <Collapse in={this.valueToggleStock({ item })}>
                                             <div id="collapse-text">
                                                 <Form
-                                                    onSubmit={(event)=>this.createStock(event, {item})}
+                                                    onSubmit={(event) =>
+                                                        this.createStock(event, { item })
+                                                    }
                                                     ref={(c) => {
-                                                    this.form = c;
-                                                    }}    
+                                                        this.form = c;
+                                                    }}
                                                 >
                                                     <label>평균단가</label>
                                                     <Input
@@ -843,7 +861,11 @@ class Main extends Component {
                                                         name="averagePrice"
                                                         placeholder="평균단가"
                                                         value={this.state.averagePrice}
-                                                        onChange={(e) => this.setState({ averagePrice: e.target.value.trim() })}
+                                                        onChange={(e) =>
+                                                            this.setState({
+                                                                averagePrice: e.target.value.trim(),
+                                                            })
+                                                        }
                                                         disabled={this.state.disabled}
                                                     />
                                                     <label>갯수</label>
@@ -852,82 +874,111 @@ class Main extends Component {
                                                         name="quantity"
                                                         placeholder="갯수"
                                                         value={this.state.quantity}
-                                                        onChange={(e) => this.setState({ quantity: e.target.value.trim() })}
+                                                        onChange={(e) =>
+                                                            this.setState({
+                                                                quantity: e.target.value.trim(),
+                                                            })
+                                                        }
                                                         disabled={this.state.disabled}
                                                     />
-                                                    <Button type="submit" disabled={this.state.disabled}>매수</Button>
+                                                    <Button
+                                                        type="submit"
+                                                        disabled={this.state.disabled}
+                                                    >
+                                                        매수
+                                                    </Button>
                                                     {this.state.stockErrorMessage}
                                                 </Form>
                                             </div>
                                         </Collapse>
                                     </div>
-                                );                                
-                            }))
-                        }
-                        
-                        {isEmpty(this.state.selectedPortfolio) !== 0 ?
-                            (<div>
+                                );
+                            })
+                        )}
+
+                        {isEmpty(this.state.selectedPortfolio) !== 0 ? (
+                            <div>
                                 <div>보유 주식</div>
-                                {
-                                    this.state.selectedPortfolio.stocks.map((item)=>{
-                                        return (
-                                            <div key={item["symbol"]}>
-                                                {item["symbol"]} {item["average_price"]} {item["quantity"]}
-                                                <Button
-                                                    variant="primary"
-                                                    onClick={() => this.toggleMyStock({item})}
-                                                    aria-controls="collapse-text"
-                                                    aria-expanded={this.valueToggleMyStock({item})} 
-                                                >수정</Button>
-                                                <Button onClick={(event)=>{this.removeStock(event,{item})}}>삭제</Button>
-                                                
-                                                <Collapse in={this.valueToggleMyStock({item})}>
-                                                    <div id="collapse-text">
-                                                        <Form
-                                                            onSubmit={(event)=>this.updateStock(event, {item})}
-                                                            ref={(c) => {
+                                {this.state.selectedPortfolio.stocks.map((item) => {
+                                    return (
+                                        <div key={item['symbol']}>
+                                            {item['symbol']} {item['average_price']}{' '}
+                                            {item['quantity']}
+                                            <Button
+                                                variant="primary"
+                                                onClick={() => this.toggleMyStock({ item })}
+                                                aria-controls="collapse-text"
+                                                aria-expanded={this.valueToggleMyStock({ item })}
+                                            >
+                                                수정
+                                            </Button>
+                                            <Button
+                                                onClick={(event) => {
+                                                    this.removeStock(event, { item });
+                                                }}
+                                            >
+                                                삭제
+                                            </Button>
+                                            <Collapse in={this.valueToggleMyStock({ item })}>
+                                                <div id="collapse-text">
+                                                    <Form
+                                                        onSubmit={(event) =>
+                                                            this.updateStock(event, { item })
+                                                        }
+                                                        ref={(c) => {
                                                             this.form = c;
-                                                            }}    
+                                                        }}
+                                                    >
+                                                        <label>평균단가</label>
+                                                        <Input
+                                                            type="text"
+                                                            name="averagePrice"
+                                                            placeholder="평균단가"
+                                                            value={this.state.ownAveragePrice}
+                                                            onChange={(e) =>
+                                                                this.setState({
+                                                                    ownAveragePrice: e.target.value.trim(),
+                                                                })
+                                                            }
+                                                            disabled={this.state.disabled}
+                                                        />
+                                                        <label>갯수</label>
+                                                        <Input
+                                                            type="text"
+                                                            name="quantity"
+                                                            placeholder="갯수"
+                                                            value={this.state.ownQuantity}
+                                                            onChange={(e) =>
+                                                                this.setState({
+                                                                    ownQuantity: e.target.value.trim(),
+                                                                })
+                                                            }
+                                                            disabled={this.state.disabled}
+                                                        />
+                                                        <Button
+                                                            type="submit"
+                                                            disabled={this.state.disabled}
                                                         >
-                                                            <label>평균단가</label>
-                                                            <Input
-                                                                type="text"
-                                                                name="averagePrice"
-                                                                placeholder="평균단가"
-                                                                value={this.state.ownAveragePrice}
-                                                                onChange={(e) => this.setState({ ownAveragePrice: e.target.value.trim() })}
-                                                                disabled={this.state.disabled}
-                                                            />
-                                                            <label>갯수</label>
-                                                            <Input
-                                                                type="text"
-                                                                name="quantity"
-                                                                placeholder="갯수"
-                                                                value={this.state.ownQuantity}
-                                                                onChange={(e) => this.setState({ ownQuantity: e.target.value.trim() })}
-                                                                disabled={this.state.disabled}
-                                                            />
-                                                            <Button type="submit" disabled={this.state.disabled}>확인</Button>
-                                                            {this.state.ownStockErrorMessage}
-                                                        </Form>
-                                                    </div>
-                                                </Collapse>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>)
-                            :
+                                                            확인
+                                                        </Button>
+                                                        {this.state.ownStockErrorMessage}
+                                                    </Form>
+                                                </div>
+                                            </Collapse>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        ) : (
                             <div></div>
-                        }
-                    
+                        )}
                     </Modal.Body>
                     <Modal.Footer>
                         <Button
                             variant="secondary"
                             onClick={() => {
                                 this.handleStockModalShowHide();
-                                this.setState({stocks:[], keywords:''});
+                                this.setState({ stocks: [], keywords: '' });
                             }}
                         >
                             Close
