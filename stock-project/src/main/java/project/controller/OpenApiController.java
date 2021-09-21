@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import project.stockOpenApi.StockClient;
+import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -34,6 +35,14 @@ public class OpenApiController{
         req.setKeywords(keywords);
         
         return ResponseEntity.ok(stockClient.searchSymbol(req).getBestMatches());
+    }
+    
+    @GetMapping("/overview/{symbol}")
+    public ResponseEntity<?> searchCompanyOverview(@PathVariable String symbol){
+        CompanyOverviewRequest req = new CompanyOverviewRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.searchCompanyOverview(req));
     }
     
 }

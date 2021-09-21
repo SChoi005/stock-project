@@ -3,34 +3,37 @@ import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 
 class PieGraph extends Component {
-    
-    constructor(props){
+    constructor(props) {
         super(props);
         this.assetClick = this.assetClick.bind(this);
         this.allocationClick = this.allocationClick.bind(this);
         this.clickValue = this.clickValue.bind(this);
-        this.state={
+        this.state = {
             isAssetOpen: true,
-            chartValue: '',
+            chartValue: '총 자산 : $' + this.getTotalAsset(),
             fixd: false,
             data: this.getAssetData(),
-        }
-    }
-    
-    componentDidUpdate(prevProps, prevState){
-        if(this.props.stocks !== prevProps.stocks)
-            this.setState({data: this.getAssetData()});
+        };
     }
 
-    getTotalAsset(){
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.stocks !== prevProps.stocks) {
+            this.setState({
+                data: this.getAssetData(),
+                chartValue: '총 자산 : $' + this.getTotalAsset(),
+            });
+        }
+    }
+
+    getTotalAsset() {
         var sum = 0;
         this.props.stocks.forEach((i) => {
             sum += i['average_price'] * i['quantity'];
         });
         return sum;
-    };
+    }
 
-    getAssetData(){
+    getAssetData() {
         const colors = [
             '#e2854c',
             '#698b69',
@@ -66,45 +69,43 @@ class PieGraph extends Component {
                 label: i['symbol'],
                 angle: percent,
                 color: colors[num++],
-                innerRadius:75,
-                radius:115,
+                innerRadius: 75,
+                radius: 115,
                 strokeWidth: 4,
             });
         });
         return data;
-    };
+    }
 
-    assetClick(e){
-        this.setState({ isAssetOpen: true, chartValue:'총 자산 : '+this.getTotalAsset()});
-    };
+    assetClick(e) {
+        this.setState({ isAssetOpen: true, chartValue: '총 자산 : $' + this.getTotalAsset() });
+    }
 
-    allocationClick(e){
-        this.setState({ isAssetOpen: false });
-    };
+    allocationClick(e) {
+        this.setState({ isAssetOpen: false, chartValue: '연 배당금 : $' });
+    }
 
-    clickValue(e, v){
+    clickValue(e, v) {
         var temp = this.getAssetData();
-        var newData = []
-        temp.forEach((i)=>{
-            if(i.label === v.label){
-                if(v.radius === 130){
-                    this.setState({fixed:false});
+        var newData = [];
+        temp.forEach((i) => {
+            if (i.label === v.label) {
+                if (v.radius === 130) {
+                    this.setState({ fixed: false });
                     i.radius = 115;
-                }
-                else{
-                    this.setState({fixed:true});
+                } else {
+                    this.setState({ fixed: true });
                     i.radius = 130;
                 }
                 newData.push(i);
-            }
-            else{
+            } else {
                 newData.push(i);
             }
-        })
-        
-        this.setState({data:newData});
+        });
+
+        this.setState({ data: newData });
     }
-    
+
     render() {
         return (
             <div>
@@ -124,17 +125,21 @@ class PieGraph extends Component {
                             padAngle={0.04}
                             onValueMouseOver={(v) => {
                                 if (!this.state.fixed)
-                                    this.setState({ isAssetOpen: true, chartValue: v.title, fixed: false });
+                                    this.setState({
+                                        isAssetOpen: true,
+                                        chartValue: v.title,
+                                        fixed: false,
+                                    });
                             }}
                             onValueMouseOut={(v) => {
                                 if (!this.state.fixed)
                                     this.setState({
                                         isAssetOpen: true,
-                                        chartValue: '총 자산 : '+this.getTotalAsset(),
+                                        chartValue: '총 자산 : $' + this.getTotalAsset(),
                                         fixed: false,
                                     });
                             }}
-                            onValueClick={(v,event) => {
+                            onValueClick={(v, event) => {
                                 this.clickValue(event, v);
                                 this.setState({
                                     isAssetOpen: true,
@@ -142,15 +147,15 @@ class PieGraph extends Component {
                                 });
                             }}
                         />
-                        {JSON.stringify(this.state.data)!=='[]'?
+                        {JSON.stringify(this.state.data) !== '[]' ? (
                             <div>{this.state.chartValue}</div>
-                        :
-                        <div></div>
-                        }
+                        ) : (
+                            <div></div>
+                        )}
                         <DiscreteColorLegend items={this.state.data} />
                     </div>
                 ) : (
-                    <div></div>
+                    <div>{this.state.chartValue}</div>
                 )}
             </div>
         );

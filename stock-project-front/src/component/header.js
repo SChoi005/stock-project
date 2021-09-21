@@ -15,7 +15,7 @@ class Header extends Component{
     render(){
         return (
             <div>
-                <h1>My Portfolio</h1>
+                <h1><a href="/">My Portfolio</a></h1>
                 {localStorage.getItem('user')?
                     <a href="/" onClick={this.logOut}>LogOut</a>
                     :

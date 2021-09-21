@@ -13,6 +13,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import lombok.extern.slf4j.Slf4j;
+import project.stockOpenApi.dto.CompanyOverviewRequest;
+import project.stockOpenApi.dto.CompanyOverviewResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -71,6 +73,30 @@ public class StockClient{
             responseType
         );
         
+        
+        return responseEntity.getBody();
+    }
+    
+    public CompanyOverviewResponse searchCompanyOverview(CompanyOverviewRequest companyOverviewRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(companyOverviewRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<CompanyOverviewResponse>() {};
+        
+        ResponseEntity<CompanyOverviewResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
         
         return responseEntity.getBody();
     }
