@@ -9,7 +9,7 @@ class PieGraph extends Component {
         this.allocationClick = this.allocationClick.bind(this);
         this.clickValue = this.clickValue.bind(this);
         this.state = {
-            isAssetOpen: true,
+            switch: true,
             chartValue: '총 자산 : $' + this.getTotalAsset(),
             fixd: false,
             data: this.getAssetData(),
@@ -17,10 +17,17 @@ class PieGraph extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        if (this.props.equityOverviews !== prevProps.equityOverviews) {
+            this.setState({
+                data: this.getAllocationData(),
+                switch:true
+            });
+        }
         if (this.props.stocks !== prevProps.stocks) {
             this.setState({
                 data: this.getAssetData(),
                 chartValue: '총 자산 : $' + this.getTotalAsset(),
+                switch:true
             });
         }
     }
@@ -29,6 +36,19 @@ class PieGraph extends Component {
         var sum = 0;
         this.props.stocks.forEach((i) => {
             sum += i['average_price'] * i['quantity'];
+        });
+        return sum;
+    }
+
+    getTotalAllocation() {
+        var sum = 0;
+        this.props.stocks.forEach((i) => {
+            this.props.equityOverviews.forEach((j) => {
+                if (j['Symbol'] === i['symbol']) {
+                    if(j['DividendPerShare']!=='None')
+                        sum += i['quantity'] * j['DividendPerShare'];
+                }
+            });
         });
         return sum;
     }
@@ -77,16 +97,82 @@ class PieGraph extends Component {
         return data;
     }
 
+    getAllocationData() {
+        const colors = [
+            '#e2854c',
+            '#698b69',
+            '#747ba1',
+            '#ffba77',
+            '#cdc9c9',
+            '#eee5de',
+            '#eee9bf',
+            '#698b69',
+            '#d4af37',
+            '#789048',
+            '#602b2b',
+            '#fffafa',
+            '#eee9e9',
+            '#cdc9a5',
+            '#cdcdc1',
+            '#e2854c',
+            '#4d5886',
+            '#d11141',
+        ];
+        // stock
+        // 시가배당률 DividendYield
+        // 주당배당금 DividendPerShare
+        // 배당일    DividendDate
+        // 배당락일  ExDividendDate
+        var sum = this.getTotalAllocation();
+        var data = [];
+        var num = 0;
+        this.props.stocks.forEach((i) => {
+            this.props.equityOverviews.forEach((j) => {
+                if (j['Symbol'] === i['symbol']) {
+                    if(j['DividendPerShare']!=='None'){
+                        const dividend = i['quantity'] * j['DividendPerShare'];
+                        const percent = (dividend / sum) * 100;
+                        data.push({
+                            title: j['Symbol'] + ' (' + percent.toFixed(1) + '%) $' + dividend,
+                            label: j['Symbol'],
+                            angle: percent,
+                            color: colors[num++],
+                            innerRadius: 75,
+                            radius: 115,
+                            strokeWidth: 4,
+                        });
+                    }
+                }
+            });
+        });
+
+        return data;
+
+        // etf는...
+    }
+
     assetClick(e) {
-        this.setState({ isAssetOpen: true, chartValue: '총 자산 : $' + this.getTotalAsset() });
+        this.setState({
+            switch: true,
+            chartValue: '총 자산 : $' + this.getTotalAsset(),
+            data: this.getAssetData(),
+            fixed: false,
+        });
     }
 
     allocationClick(e) {
-        this.setState({ isAssetOpen: false, chartValue: '연 배당금 : $' });
+        this.setState({
+            switch: false,
+            chartValue: '연 배당금 : $' + this.getTotalAllocation(),
+            data: this.getAllocationData(),
+            fixed: false,
+        });
     }
 
     clickValue(e, v) {
-        var temp = this.getAssetData();
+        var temp = [];
+        if (this.state.switch) temp = this.getAssetData();
+        else temp = this.getAllocationData();
         var newData = [];
         temp.forEach((i) => {
             if (i.label === v.label) {
@@ -107,12 +193,13 @@ class PieGraph extends Component {
     }
 
     render() {
+        console.log(this.props.equityOverviews);
         return (
             <div>
                 <h4>포트폴리오 구성</h4>
                 <Button onClick={this.assetClick}>자산구성</Button>
                 <Button onClick={this.allocationClick}>배당구성</Button>
-                {this.state.isAssetOpen ? (
+                {this.state.data.length !== 0 ? (
                     <div>
                         <RadialChart
                             data={this.state.data}
@@ -126,36 +213,36 @@ class PieGraph extends Component {
                             onValueMouseOver={(v) => {
                                 if (!this.state.fixed)
                                     this.setState({
-                                        isAssetOpen: true,
                                         chartValue: v.title,
                                         fixed: false,
                                     });
                             }}
                             onValueMouseOut={(v) => {
-                                if (!this.state.fixed)
-                                    this.setState({
-                                        isAssetOpen: true,
-                                        chartValue: '총 자산 : $' + this.getTotalAsset(),
-                                        fixed: false,
-                                    });
+                                if (!this.state.fixed) {
+                                    if (this.state.switch)
+                                        this.setState({
+                                            chartValue: '총 자산 : $' + this.getTotalAsset(),
+                                            fixed: false,
+                                        });
+                                    else
+                                        this.setState({
+                                            chartValue: '연 배당금 : $' + this.getTotalAllocation(),
+                                            fixed: false,
+                                        });
+                                }
                             }}
                             onValueClick={(v, event) => {
                                 this.clickValue(event, v);
                                 this.setState({
-                                    isAssetOpen: true,
                                     chartValue: v.title,
                                 });
                             }}
                         />
-                        {JSON.stringify(this.state.data) !== '[]' ? (
-                            <div>{this.state.chartValue}</div>
-                        ) : (
-                            <div></div>
-                        )}
+                        <div>{this.state.chartValue}</div>
                         <DiscreteColorLegend items={this.state.data} />
                     </div>
                 ) : (
-                    <div>{this.state.chartValue}</div>
+                    <div></div>
                 )}
             </div>
         );

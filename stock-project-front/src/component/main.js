@@ -45,6 +45,7 @@ class Main extends Component {
             stockErrorMessage: '',
             ownStockErrorMessage: '',
             disabled: false,
+            overviews:[]
         };
     }
 
@@ -69,6 +70,19 @@ class Main extends Component {
             });
 
         this.setState({ currentUser: data });
+    }
+    
+    async getStockOverview(symbol){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        
+        return await axios({
+            method: 'get',
+            url: '/api/overview/'+symbol,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        })
     }
 
     async postPortfolio() {
@@ -243,14 +257,23 @@ class Main extends Component {
                     this.state.currentUser.portfolios.forEach((i) => {
                         if (i['name'] === name) {
                             var map = new Map();
+                            var temp = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
+                                if(s['type']!=='ETF')
+                                    this.getStockOverview(s['symbol']).then((res)=>{
+                                        temp.push(res.data);            
+                                    })
+                                else{ // etf 가능하면 작성
+
+                                }
                             });
                             this.setState({
                                 selectedPortfolio: i,
                                 selectedStocks: map,
                                 searchStocks: m,
                                 disabled: false,
+                                overviews:temp
                             });
                         }
                     });
@@ -304,14 +327,23 @@ class Main extends Component {
                     this.state.currentUser.portfolios.forEach((i) => {
                         if (i['name'] === name) {
                             var map = new Map();
+                            var temp = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
+                                if(s['type']!=='ETF')
+                                    this.getStockOverview(s['symbol']).then((res)=>{
+                                        temp.push(res.data);            
+                                    })
+                                else{ // etf 가능하면 작성
+
+                                }
                             });
                             this.setState({
                                 selectedPortfolio: i,
                                 selectedStocks: map,
                                 searchStocks: m,
                                 disabled: false,
+                                overviews:temp
                             });
                         }
                     });
@@ -357,13 +389,22 @@ class Main extends Component {
                     this.state.currentUser.portfolios.forEach((i) => {
                         if (i['name'] === name) {
                             var map = new Map();
+                            var temp = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
+                                if(s['type']!=='ETF')
+                                    this.getStockOverview(s['symbol']).then((res)=>{
+                                        temp.push(res.data);            
+                                    })
+                                else{ // etf 가능하면 작성
+
+                                }
                             });
                             this.setState({
                                 selectedPortfolio: i,
                                 selectedStocks: map,
                                 disabled: false,
+                                overviews:temp
                             });
                         }
                     });
@@ -395,12 +436,21 @@ class Main extends Component {
                     this.state.currentUser.portfolios.forEach((i) => {
                         if (i['name'] === name) {
                             var map = new Map();
+                            var temp = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
+                                if(s['type']!=='ETF')
+                                    this.getStockOverview(s['symbol']).then((res)=>{
+                                        temp.push(res.data);            
+                                    })
+                                else{ // etf 가능하면 작성
+
+                                }
                             });
                             this.setState({
                                 selectedPortfolio: i,
                                 selectedStocks: map,
+                                overviews:temp
                             });
                         }
                     });
@@ -485,17 +535,27 @@ class Main extends Component {
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
-        this.setState({ selectedPortfolio: item });
-
+        
+        var temp = [];
+        
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.forEach((i) => {
                 map.set(i['symbol'], false);
+                if(i['type']!=='ETF')
+                    this.getStockOverview(i['symbol']).then((res)=>{
+                        temp.push(res.data);            
+                    })
+                else{ // etf 가능하면 작성
+                    
+                }
             });
             this.setState({ selectedStocks: map });
         } else {
             this.setState({ selectedStocks: {} });
         }
+
+        this.setState({ selectedPortfolio: item, overviews:temp });
 
         this.toggle();
     }
@@ -694,7 +754,7 @@ class Main extends Component {
                 {/* Stock Component*/}
                 {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
                     <div>
-                        <PieGraph stocks={this.state.selectedPortfolio.stocks} />
+                        <PieGraph stocks={this.state.selectedPortfolio.stocks} equityOverviews={this.state.overviews} />
                         {/*
                         <div>
                             <h2>Component2</h2>
