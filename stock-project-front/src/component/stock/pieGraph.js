@@ -20,14 +20,14 @@ class PieGraph extends Component {
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAllocationData(),
-                switch:true
+                switch: true,
             });
         }
         if (this.props.stocks !== prevProps.stocks) {
             this.setState({
                 data: this.getAssetData(),
                 chartValue: '총 자산 : $' + this.getTotalAsset(),
-                switch:true
+                switch: true,
             });
         }
     }
@@ -45,7 +45,7 @@ class PieGraph extends Component {
         this.props.stocks.forEach((i) => {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
-                    if(j['DividendPerShare']!=='None')
+                    if (j['DividendPerShare'] !== 'None')
                         sum += i['quantity'] * j['DividendPerShare'];
                 }
             });
@@ -129,7 +129,7 @@ class PieGraph extends Component {
         this.props.stocks.forEach((i) => {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
-                    if(j['DividendPerShare']!=='None'){
+                    if (j['DividendPerShare'] !== 'None') {
                         const dividend = i['quantity'] * j['DividendPerShare'];
                         const percent = (dividend / sum) * 100;
                         data.push({
@@ -196,53 +196,61 @@ class PieGraph extends Component {
         console.log(this.props.equityOverviews);
         return (
             <div>
-                <h4>포트폴리오 구성</h4>
-                <Button onClick={this.assetClick}>자산구성</Button>
-                <Button onClick={this.allocationClick}>배당구성</Button>
-                {this.state.data.length !== 0 ? (
+                {!this.props.isLoading ? (
                     <div>
-                        <RadialChart
-                            data={this.state.data}
-                            width={250}
-                            height={250}
-                            animation={'gentle'}
-                            showLabels={false}
-                            orientation="vertical"
-                            colorType="literal"
-                            padAngle={0.04}
-                            onValueMouseOver={(v) => {
-                                if (!this.state.fixed)
-                                    this.setState({
-                                        chartValue: v.title,
-                                        fixed: false,
-                                    });
-                            }}
-                            onValueMouseOut={(v) => {
-                                if (!this.state.fixed) {
-                                    if (this.state.switch)
+                        <h4>포트폴리오 구성</h4>
+                        <Button onClick={this.assetClick}>자산구성</Button>
+                        <Button onClick={this.allocationClick}>배당구성</Button>
+                        {this.state.data.length !== 0 ? (
+                            <div>
+                                <RadialChart
+                                    data={this.state.data}
+                                    width={250}
+                                    height={250}
+                                    animation={'gentle'}
+                                    showLabels={false}
+                                    orientation="vertical"
+                                    colorType="literal"
+                                    padAngle={0.04}
+                                    onValueMouseOver={(v) => {
+                                        if (!this.state.fixed)
+                                            this.setState({
+                                                chartValue: v.title,
+                                                fixed: false,
+                                            });
+                                    }}
+                                    onValueMouseOut={(v) => {
+                                        if (!this.state.fixed) {
+                                            if (this.state.switch)
+                                                this.setState({
+                                                    chartValue:
+                                                        '총 자산 : $' + this.getTotalAsset(),
+                                                    fixed: false,
+                                                });
+                                            else
+                                                this.setState({
+                                                    chartValue:
+                                                        '연 배당금 : $' + this.getTotalAllocation(),
+                                                    fixed: false,
+                                                });
+                                        }
+                                    }}
+                                    onValueClick={(v, event) => {
+                                        this.clickValue(event, v);
                                         this.setState({
-                                            chartValue: '총 자산 : $' + this.getTotalAsset(),
-                                            fixed: false,
+                                            chartValue: v.title,
                                         });
-                                    else
-                                        this.setState({
-                                            chartValue: '연 배당금 : $' + this.getTotalAllocation(),
-                                            fixed: false,
-                                        });
-                                }
-                            }}
-                            onValueClick={(v, event) => {
-                                this.clickValue(event, v);
-                                this.setState({
-                                    chartValue: v.title,
-                                });
-                            }}
-                        />
-                        <div>{this.state.chartValue}</div>
-                        <DiscreteColorLegend items={this.state.data} />
+                                    }}
+                                />
+                                <div>{this.state.chartValue}</div>
+                                <DiscreteColorLegend items={this.state.data} />
+                            </div>
+                        ) : (
+                            <div></div>
+                        )}
                     </div>
                 ) : (
-                    <div></div>
+                    <div>Loading..</div>
                 )}
             </div>
         );

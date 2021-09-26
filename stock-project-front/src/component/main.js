@@ -4,6 +4,8 @@ import PieGraph from './stock/pieGraph';
 import { Button, Modal, Collapse } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
+import PortfolioService from '../service/portfolioService';
+import StockService from '../service/stockService';
 
 class Main extends Component {
     constructor(props) {
@@ -45,7 +47,8 @@ class Main extends Component {
             stockErrorMessage: '',
             ownStockErrorMessage: '',
             disabled: false,
-            overviews:[]
+            overviews: [],
+            isLoading: false,
         };
     }
 
@@ -71,122 +74,18 @@ class Main extends Component {
 
         this.setState({ currentUser: data });
     }
-    
-    async getStockOverview(symbol){
+
+    async getStockOverview(symbol) {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        
+
         return await axios({
             method: 'get',
-            url: '/api/overview/'+symbol,
+            url: '/api/overview/' + symbol,
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + token,
             },
-        })
-    }
-
-    async postPortfolio() {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({ disabled: true });
-        await axios({
-            method: 'post',
-            url: '/api/portfolio',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-            data: {
-                id: 0,
-                name: this.state.portfolioName,
-                userid: this.state.currentUser.id,
-            },
-        })
-            .then(() => {
-                // 모달끄고
-                this.handleCreateModalShowHide();
-                this.getUser().then(() => {
-                    this.state.currentUser.portfolios.forEach((i) => {
-                        if (i['name'] === this.state.portfolioName) {
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: new Map(),
-                                isOpen: false,
-                                disabled: false,
-                            });
-                        }
-                    });
-                    // 초기화
-                    this.emptyPortfolioName();
-                });
-            })
-            .catch((error) => {
-                console.log(error.message);
-                this.setState({
-                    postPortfolioErrorMessage: '중복된 포트폴리오 이름입니다.',
-                    disabled: false,
-                });
-            });
-    }
-
-    async deletePortfolio() {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({ disabled: true });
-        await axios({
-            method: 'delete',
-            url: '/api/portfolio/' + this.state.selectedPortfolio.id,
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-        })
-            .then(() => {
-                window.location.reload();
-            })
-            .catch((error) => {
-                console.log(error.message);
-                this.setState({ disabled: false });
-            });
-    }
-
-    async putPortfolio() {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({ disabled: true });
-        await axios({
-            method: 'put',
-            url: '/api/portfolio',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-            data: {
-                id: this.state.selectedPortfolio.id,
-                name: this.state.portfolioUpdateName.trim(),
-                userid: this.state.currentUser.id,
-            },
-        })
-            .then(() => {
-                this.getUser().then(() => {
-                    this.state.currentUser.portfolios.forEach((item) => {
-                        if (item['name'] === this.state.portfolioUpdateName.trim()) {
-                            var map = new Map();
-                            item.stocks.forEach((i) => {
-                                map.set(i['symbol'], false);
-                            });
-                            this.setState({
-                                selectedPortfolio: item,
-                                selectedStocks: map,
-                                portfolioUpdateName: '',
-                                isRename: false,
-                                disabled: false,
-                            });
-                        }
-                    });
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-                this.setState({ disabled: false });
-            });
+        });
     }
 
     async searchSymbolSearch() {
@@ -225,242 +124,7 @@ class Main extends Component {
             });
     }
 
-    async postStock(item) {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        await axios({
-            method: 'post',
-            url: '/api/stock',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-            data: {
-                id: 0,
-                symbol: item['item']['1. symbol'],
-                name: item['item']['2. name'],
-                type: item['item']['3. type'],
-                quantity: this.state.quantity,
-                averageprice: this.state.averagePrice,
-                region: item['item']['4. region'],
-                marketopen: item['item']['5. marketOpen'],
-                marketclose: item['item']['6. marketClose'],
-                timezone: item['item']['7. timezone'],
-                currency: item['item']['8. currency'],
-                portfolioid: this.state.selectedPortfolio.id,
-            },
-        })
-            .then(() => {
-                this.getUser().then(() => {
-                    const name = this.state.selectedPortfolio.name;
-                    var m = this.state.searchStocks;
-                    m.set(item['item']['1. symbol'], false);
-                    this.state.currentUser.portfolios.forEach((i) => {
-                        if (i['name'] === name) {
-                            var map = new Map();
-                            var temp = [];
-                            i.stocks.forEach((s) => {
-                                map.set(s['symbol'], false);
-                                if(s['type']!=='ETF')
-                                    this.getStockOverview(s['symbol']).then((res)=>{
-                                        temp.push(res.data);            
-                                    })
-                                else{ // etf 가능하면 작성
-
-                                }
-                            });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                searchStocks: m,
-                                disabled: false,
-                                overviews:temp
-                            });
-                        }
-                    });
-                });
-            })
-            .catch((error) => {
-                console.log(error.message);
-                this.setState({
-                    stockErrorMessage: '형식이 맞지않습니다.',
-                    disabled: false,
-                });
-            });
-    }
-
-    async putAdditionPurchaseStock(item, stock) {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-
-        const updateQuantity = +this.state.quantity + +stock['quantity'];
-        const updateAveragePrice =
-            (+this.state.averagePrice * +this.state.quantity +
-                +stock['average_price'] * +stock['quantity']) /
-            updateQuantity;
-
-        await axios({
-            method: 'put',
-            url: '/api/stock',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-            data: {
-                id: stock['id'],
-                symbol: item['item']['1. symbol'],
-                name: item['item']['2. name'],
-                type: item['item']['3. type'],
-                quantity: updateQuantity,
-                averageprice: updateAveragePrice,
-                region: item['item']['4. region'],
-                marketopen: item['item']['5. marketOpen'],
-                marketclose: item['item']['6. marketClose'],
-                timezone: item['item']['7. timezone'],
-                currency: item['item']['8. currency'],
-                portfolioid: this.state.selectedPortfolio.id,
-            },
-        })
-            .then(() => {
-                this.getUser().then(() => {
-                    const name = this.state.selectedPortfolio.name;
-                    var m = this.state.searchStocks;
-                    m.set(item['item']['1. symbol'], false);
-                    this.state.currentUser.portfolios.forEach((i) => {
-                        if (i['name'] === name) {
-                            var map = new Map();
-                            var temp = [];
-                            i.stocks.forEach((s) => {
-                                map.set(s['symbol'], false);
-                                if(s['type']!=='ETF')
-                                    this.getStockOverview(s['symbol']).then((res)=>{
-                                        temp.push(res.data);            
-                                    })
-                                else{ // etf 가능하면 작성
-
-                                }
-                            });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                searchStocks: m,
-                                disabled: false,
-                                overviews:temp
-                            });
-                        }
-                    });
-                });
-            })
-            .catch((error) => {
-                console.log(error.message);
-                this.setState({
-                    stockErrorMessage: '형식이 맞지않습니다.',
-                    disabled: false,
-                });
-            });
-    }
-
-    async putStock(item) {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({ disabled: true });
-        await axios({
-            method: 'put',
-            url: '/api/stock',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-            data: {
-                id: item['item']['id'],
-                symbol: item['item']['symbol'],
-                name: item['item']['name'],
-                type: item['item']['type'],
-                quantity: this.state.ownQuantity,
-                averageprice: this.state.ownAveragePrice,
-                region: item['item']['region'],
-                marketopen: item['item']['market_open'],
-                marketclose: item['item']['market_close'],
-                timezone: item['item']['timezone'],
-                currency: item['item']['currency'],
-                portfolioid: this.state.selectedPortfolio.id,
-            },
-        })
-            .then(() => {
-                this.getUser().then(() => {
-                    const name = this.state.selectedPortfolio.name;
-                    this.state.currentUser.portfolios.forEach((i) => {
-                        if (i['name'] === name) {
-                            var map = new Map();
-                            var temp = [];
-                            i.stocks.forEach((s) => {
-                                map.set(s['symbol'], false);
-                                if(s['type']!=='ETF')
-                                    this.getStockOverview(s['symbol']).then((res)=>{
-                                        temp.push(res.data);            
-                                    })
-                                else{ // etf 가능하면 작성
-
-                                }
-                            });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                disabled: false,
-                                overviews:temp
-                            });
-                        }
-                    });
-                });
-            })
-            .catch((error) => {
-                console.log(error.message);
-                this.setState({
-                    ownStockErrorMessage: '형식이 맞지 않습니다.',
-                    disabled: false,
-                });
-            });
-    }
-
-    async deleteStock(item) {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-
-        await axios({
-            method: 'delete',
-            url: '/api/stock/' + item['item']['id'],
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-        })
-            .then(() => {
-                this.getUser().then(() => {
-                    const name = this.state.selectedPortfolio.name;
-                    this.state.currentUser.portfolios.forEach((i) => {
-                        if (i['name'] === name) {
-                            var map = new Map();
-                            var temp = [];
-                            i.stocks.forEach((s) => {
-                                map.set(s['symbol'], false);
-                                if(s['type']!=='ETF')
-                                    this.getStockOverview(s['symbol']).then((res)=>{
-                                        temp.push(res.data);            
-                                    })
-                                else{ // etf 가능하면 작성
-
-                                }
-                            });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                overviews:temp
-                            });
-                        }
-                    });
-                });
-            })
-            .catch((error) => {
-                console.log(error.message);
-            });
-    }
-
+    /*ModalShowHide*/
     handleCreateModalShowHide() {
         this.setState({ createShowHide: !this.state.createShowHide });
     }
@@ -473,6 +137,7 @@ class Main extends Component {
         this.setState({ stockShowHide: !this.state.stockShowHide });
     }
 
+    /*toggle*/
     toggle() {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -533,49 +198,115 @@ class Main extends Component {
     }
 
     /*portfolio*/
-    selectPortfolio(e, item) {
+    async selectPortfolio(e, item) {
         e.preventDefault();
-        
+        this.setState({ isLoading: true });
         var temp = [];
-        
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
-            item.stocks.forEach((i) => {
+            item.stocks.map((i) => {
                 map.set(i['symbol'], false);
-                if(i['type']!=='ETF')
-                    this.getStockOverview(i['symbol']).then((res)=>{
-                        temp.push(res.data);            
-                    })
-                else{ // etf 가능하면 작성
-                    
+                if (i['type'] !== 'ETF')
+                    this.getStockOverview(i['symbol']).then((res) => {
+                        temp.push(res.data);
+                    });
+                else {
+                    // etf 가능하면 작성
                 }
             });
-            this.setState({ selectedStocks: map });
+            this.setState({ selectedStocks: map, selectedPortfolio: item });
         } else {
-            this.setState({ selectedStocks: {} });
+            this.setState({ selectedStocks: {}, selectedPortfolio: item });
         }
 
-        this.setState({ selectedPortfolio: item, overviews:temp });
-
+        this.setState({ overviews: temp });
         this.toggle();
     }
 
     createPortfolio(e) {
         e.preventDefault();
-        if (this.state.postPortfolioCheck) this.postPortfolio();
+        if (this.state.postPortfolioCheck) {
+            this.setState({ disabled: true });
+            PortfolioService.postPortfolio(this.state.portfolioName, this.state.currentUser.id)
+                .then(() => {
+                    // 모달끄고
+                    this.handleCreateModalShowHide();
+                    this.getUser().then(() => {
+                        this.state.currentUser.portfolios.forEach((i) => {
+                            if (i['name'] === this.state.portfolioName) {
+                                this.setState({
+                                    selectedPortfolio: i,
+                                    selectedStocks: new Map(),
+                                    isOpen: false,
+                                    disabled: false,
+                                });
+                            }
+                        });
+                        // 초기화
+                        this.emptyPortfolioName();
+                    });
+                })
+                .catch((error) => {
+                    console.log(error.message);
+                    this.setState({
+                        postPortfolioErrorMessage: '중복된 포트폴리오 이름입니다.',
+                        disabled: false,
+                    });
+                });
+        }
     }
 
     removePortfolio(e) {
         e.preventDefault();
-        if (this.state.portfolioName === this.state.selectedPortfolio.name) this.deletePortfolio();
-        else {
+        if (this.state.portfolioName === this.state.selectedPortfolio.name) {
+            this.setState({ disabled: true });
+            PortfolioService.deletePortfolio(this.state.selectedPortfolio.id)
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    console.log(error.message);
+                    this.setState({ disabled: false });
+                });
+        } else {
             this.setState({ deletePortfolioErrorMessage: '해당 포트폴리오와 이름이 다릅니다.' });
         }
     }
 
     updatePortfolio(e) {
         e.preventDefault();
-        if (this.state.portfolioUpdateCheck) this.putPortfolio();
+
+        if (this.state.portfolioUpdateCheck) {
+            this.setState({ disabled: true });
+            PortfolioService.putPortfolio(
+                this.state.selectedPortfolio.id,
+                this.state.portfolioUpdateName.trim(),
+                this.state.currentUser.id
+            )
+                .then(() => {
+                    this.getUser().then(() => {
+                        this.state.currentUser.portfolios.forEach((item) => {
+                            if (item['name'] === this.state.portfolioUpdateName.trim()) {
+                                var map = new Map();
+                                item.stocks.forEach((i) => {
+                                    map.set(i['symbol'], false);
+                                });
+                                this.setState({
+                                    selectedPortfolio: item,
+                                    selectedStocks: map,
+                                    portfolioUpdateName: '',
+                                    isRename: false,
+                                    disabled: false,
+                                });
+                            }
+                        });
+                    });
+                })
+                .catch((error) => {
+                    console.log(error);
+                    this.setState({ disabled: false });
+                });
+        }
     }
 
     emptyPortfolioName() {
@@ -601,29 +332,192 @@ class Main extends Component {
 
         this.state.selectedPortfolio.stocks.forEach((stock) => {
             if (stock['symbol'] === item['item']['1. symbol']) {
-                this.putAdditionPurchaseStock(item, stock).then(() => {
-                    this.setState({ averagePrice: '', quantity: '' });
-                });
+                StockService.putAdditionPurchaseStock(
+                    item,
+                    stock,
+                    this.state.averagePrice,
+                    this.state.quantity,
+                    this.state.selectedPortfolio.id
+                )
+                    .then(() => {
+                        this.getUser().then(() => {
+                            const name = this.state.selectedPortfolio.name;
+                            var m = this.state.searchStocks;
+                            m.set(item['item']['1. symbol'], false);
+                            this.state.currentUser.portfolios.forEach((i) => {
+                                if (i['name'] === name) {
+                                    var map = new Map();
+                                    var temp = [];
+                                    i.stocks.forEach((s) => {
+                                        map.set(s['symbol'], false);
+                                        if (s['type'] !== 'ETF')
+                                            this.getStockOverview(s['symbol']).then((res) => {
+                                                temp.push(res.data);
+                                            });
+                                        else {
+                                            // etf 가능하면 작성
+                                        }
+                                    });
+                                    this.setState({
+                                        selectedPortfolio: i,
+                                        selectedStocks: map,
+                                        searchStocks: m,
+                                        overviews: temp,
+                                    });
+                                }
+                            });
+                        });
+                    })
+                    .then(() => {
+                        this.setState({ disabled: false });
+                    })
+                    .catch((error) => {
+                        console.log(error.message);
+                        this.setState({
+                            stockErrorMessage: '형식이 맞지않습니다.',
+                            disabled: false,
+                        });
+                    });
+
+                this.setState({ averagePrice: '', quantity: '' });
                 check = true;
                 return '';
             }
         });
 
         if (!check) {
-            this.postStock(item).then(() => {
-                this.setState({ averagePrice: '', quantity: '' });
-            });
+            StockService.postStock(
+                item,
+                this.state.quantity,
+                this.state.averagePrice,
+                this.state.selectedPortfolio.id
+            )
+                .then(() => {
+                    this.getUser().then(() => {
+                        const name = this.state.selectedPortfolio.name;
+                        var m = this.state.searchStocks;
+                        m.set(item['item']['1. symbol'], false);
+                        this.state.currentUser.portfolios.forEach((i) => {
+                            if (i['name'] === name) {
+                                var map = new Map();
+                                var temp = [];
+                                i.stocks.forEach((s) => {
+                                    map.set(s['symbol'], false);
+                                    if (s['type'] !== 'ETF')
+                                        this.getStockOverview(s['symbol']).then((res) => {
+                                            temp.push(res.data);
+                                        });
+                                    else {
+                                        // etf 가능하면 작성
+                                    }
+                                });
+                                this.setState({
+                                    selectedPortfolio: i,
+                                    selectedStocks: map,
+                                    searchStocks: m,
+                                    overviews: temp,
+                                });
+                            }
+                        });
+                    });
+                })
+                .then(() => {
+                    this.setState({ disabled: false, averagePrice: '', quantity: '' });
+                })
+                .catch((error) => {
+                    console.log(error.message);
+                    this.setState({
+                        stockErrorMessage: '형식이 맞지않습니다.',
+                        disabled: false,
+                    });
+                });
+            this.setState({ averagePrice: '', quantity: '' });
         }
     }
 
     removeStock(e, item) {
         e.preventDefault();
-        this.deleteStock(item);
+        this.setState({ disabled: true });
+        StockService.deleteStock(item)
+            .then(() => {
+                this.getUser().then(() => {
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
+                            var map = new Map();
+                            var temp = [];
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
+                                if (s['type'] !== 'ETF')
+                                    this.getStockOverview(s['symbol']).then((res) => {
+                                        temp.push(res.data);
+                                    });
+                                else {
+                                    // etf 가능하면 작성
+                                }
+                            });
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
+                                overviews: temp,
+                            });
+                        }
+                    });
+                });
+            })
+            .then(() => {
+                this.setState({ disabled: false });
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
     }
 
     updateStock(e, item) {
         e.preventDefault();
-        this.putStock(item);
+        this.setState({ disabled: true });
+        StockService.putStock(
+            item,
+            this.state.ownQuantity,
+            this.state.ownAveragePrice,
+            this.state.selectedPortfolio.id
+        )
+            .then(() => {
+                this.getUser().then(() => {
+                    const name = this.state.selectedPortfolio.name;
+                    this.state.currentUser.portfolios.forEach((i) => {
+                        if (i['name'] === name) {
+                            var map = new Map();
+                            var temp = [];
+                            i.stocks.forEach((s) => {
+                                map.set(s['symbol'], false);
+                                if (s['type'] !== 'ETF')
+                                    this.getStockOverview(s['symbol']).then((res) => {
+                                        temp.push(res.data);
+                                    });
+                                else {
+                                    // etf 가능하면 작성
+                                }
+                            });
+                            this.setState({
+                                selectedPortfolio: i,
+                                selectedStocks: map,
+                                overviews: temp,
+                            });
+                        }
+                    });
+                });
+            })
+            .then(() => {
+                this.setState({ disabled: false });
+            })
+            .catch((error) => {
+                console.log(error.message);
+                this.setState({
+                    ownStockErrorMessage: '형식이 맞지 않습니다.',
+                    disabled: false,
+                });
+            });
     }
 
     render() {
@@ -736,7 +630,12 @@ class Main extends Component {
                                 <li key={item.name}>
                                     <a
                                         href="/"
-                                        onClick={(event) => this.selectPortfolio(event, item)}
+                                        onClick={(event) => {
+                                            this.setState({ isLoading: true });
+                                            this.selectPortfolio(event, item).then(() => {
+                                                this.setState({ isLoading: false });
+                                            });
+                                        }}
                                     >
                                         {item.name}
                                     </a>
@@ -754,7 +653,11 @@ class Main extends Component {
                 {/* Stock Component*/}
                 {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
                     <div>
-                        <PieGraph stocks={this.state.selectedPortfolio.stocks} equityOverviews={this.state.overviews} />
+                        <PieGraph
+                            stocks={this.state.selectedPortfolio.stocks}
+                            equityOverviews={this.state.overviews}
+                            isLoading={this.state.isLoading}
+                        />
                         {/*
                         <div>
                             <h2>Component2</h2>
@@ -1040,6 +943,7 @@ class Main extends Component {
                                 this.handleStockModalShowHide();
                                 this.setState({ stocks: [], keywords: '' });
                             }}
+                            disabled={this.state.disabled}
                         >
                             Close
                         </Button>
