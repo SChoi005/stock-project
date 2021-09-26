@@ -6,6 +6,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import PortfolioService from '../service/portfolioService';
 import StockService from '../service/stockService';
+import OpenApiService from '../service/openApiService';
 
 class Main extends Component {
     constructor(props) {
@@ -73,55 +74,6 @@ class Main extends Component {
             });
 
         this.setState({ currentUser: data });
-    }
-
-    async getStockOverview(symbol) {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-
-        return await axios({
-            method: 'get',
-            url: '/api/overview/' + symbol,
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-        });
-    }
-
-    async searchSymbolSearch() {
-        const token = JSON.parse(localStorage.getItem('user')).token;
-        this.setState({ disabled: true });
-        await axios({
-            method: 'get',
-            url: '/api/search/' + this.state.keywords,
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-        })
-            .then((res) => {
-                if (JSON.stringify(res.data) === '[]')
-                    this.setState({ searchMessage: '검색결과가 없습니다.' });
-                else this.setState({ searchMessage: '' });
-                this.setState({ stocks: res.data });
-            })
-            .then(() => {
-                const map = new Map();
-                this.state.stocks.forEach((item) => {
-                    map.set(item['1. symbol'], false);
-                });
-                this.setState({
-                    searchStocks: map,
-                    disabled: false,
-                });
-            })
-            .catch((error) => {
-                this.setState({
-                    searchMessage: '검색어를 입력해주십시오.',
-                    searchStocks: [],
-                    disabled: false,
-                });
-            });
     }
 
     /*ModalShowHide*/
@@ -207,7 +159,7 @@ class Main extends Component {
             item.stocks.map((i) => {
                 map.set(i['symbol'], false);
                 if (i['type'] !== 'ETF')
-                    this.getStockOverview(i['symbol']).then((res) => {
+                    OpenApiService.getStockOverview(i['symbol']).then((res) => {
                         temp.push(res.data);
                     });
                 else {
@@ -320,7 +272,31 @@ class Main extends Component {
     /*stock*/
     searchStock(e) {
         e.preventDefault();
-        this.searchSymbolSearch();
+        this.setState({ disabled: true });
+        OpenApiService.searchSymbolSearch(this.state.keywords)
+            .then((res) => {
+                if (JSON.stringify(res.data) === '[]')
+                    this.setState({ searchMessage: '검색결과가 없습니다.' });
+                else this.setState({ searchMessage: '' });
+                this.setState({ stocks: res.data });
+            })
+            .then(() => {
+                const map = new Map();
+                this.state.stocks.forEach((item) => {
+                    map.set(item['1. symbol'], false);
+                });
+                this.setState({
+                    searchStocks: map,
+                    disabled: false,
+                });
+            })
+            .catch((error) => {
+                this.setState({
+                    searchMessage: '검색어를 입력해주십시오.',
+                    searchStocks: [],
+                    disabled: false,
+                });
+            });
     }
 
     createStock(e, item) {
@@ -351,9 +327,11 @@ class Main extends Component {
                                     i.stocks.forEach((s) => {
                                         map.set(s['symbol'], false);
                                         if (s['type'] !== 'ETF')
-                                            this.getStockOverview(s['symbol']).then((res) => {
-                                                temp.push(res.data);
-                                            });
+                                            OpenApiService.getStockOverview(s['symbol']).then(
+                                                (res) => {
+                                                    temp.push(res.data);
+                                                }
+                                            );
                                         else {
                                             // etf 가능하면 작성
                                         }
@@ -404,7 +382,7 @@ class Main extends Component {
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
-                                        this.getStockOverview(s['symbol']).then((res) => {
+                                        OpenApiService.getStockOverview(s['symbol']).then((res) => {
                                             temp.push(res.data);
                                         });
                                     else {
@@ -449,7 +427,7 @@ class Main extends Component {
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
-                                    this.getStockOverview(s['symbol']).then((res) => {
+                                    OpenApiService.getStockOverview(s['symbol']).then((res) => {
                                         temp.push(res.data);
                                     });
                                 else {
@@ -492,7 +470,7 @@ class Main extends Component {
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
-                                    this.getStockOverview(s['symbol']).then((res) => {
+                                    OpenApiService.getStockOverview(s['symbol']).then((res) => {
                                         temp.push(res.data);
                                     });
                                 else {
