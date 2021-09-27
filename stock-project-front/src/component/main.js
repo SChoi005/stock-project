@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PieGraph from './stock/pieGraph';
+import StockBalanceStatus from './stock/stockBalanceStatus';
 import { Button, Modal, Collapse } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
@@ -682,10 +683,12 @@ class Main extends Component {
                             endPoints = {this.state.endPoints}
                             isLoading={this.state.isLoading}
                         />
+                        <StockBalanceStatus
+                            stocks={this.state.selectedPortfolio.stocks}
+                            endPoints = {this.state.endPoints}
+                            isLoading={this.state.isLoading}
+                        />
                         {/*
-                        <div>
-                            <h2>Component2</h2>
-                        </div>
                         <div>
                             <h2>Component3</h2>
                         </div>
