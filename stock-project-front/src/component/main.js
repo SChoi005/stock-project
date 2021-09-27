@@ -7,6 +7,7 @@ import Input from 'react-validation/build/input';
 import PortfolioService from '../service/portfolioService';
 import StockService from '../service/stockService';
 import OpenApiService from '../service/openApiService';
+import { BarLoader } from "react-spinners";
 
 class Main extends Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class Main extends Component {
             ownStockErrorMessage: '',
             disabled: false,
             overviews: [],
+            endPoints: [],
             isLoading: false,
         };
     }
@@ -150,28 +152,45 @@ class Main extends Component {
     }
 
     /*portfolio*/
-    async selectPortfolio(e, item) {
+    selectPortfolio(e, item) {
         e.preventDefault();
         this.setState({ isLoading: true });
-        var temp = [];
+        var tempOverview = [];
+        var tempEndPoint = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.map((i) => {
                 map.set(i['symbol'], false);
-                if (i['type'] !== 'ETF')
-                    OpenApiService.getStockOverview(i['symbol']).then((res) => {
-                        temp.push(res.data);
-                    });
+                if (i['type'] !== 'ETF') {
+                    tempOverview.push(OpenApiService.getStockOverview(i['symbol']));
+                }
                 else {
                     // etf 가능하면 작성
                 }
+                tempEndPoint.push(OpenApiService.getQuoteEndpoint(i['symbol']));
             });
             this.setState({ selectedStocks: map, selectedPortfolio: item });
         } else {
             this.setState({ selectedStocks: {}, selectedPortfolio: item });
         }
 
-        this.setState({ overviews: temp });
+        Promise.all(tempEndPoint).then((res)=>{
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+            this.setState({ endPoints: arr});
+        })
+        .then(()=>{
+            Promise.all(tempOverview).then((res) => {
+                var arr = [];
+                res.forEach((i) => {
+                    arr.push(i.data);
+                });
+                this.setState({ overviews: arr, isLoading: false });
+            });
+        })
+        
         this.toggle();
     }
 
@@ -323,31 +342,31 @@ class Main extends Component {
                             this.state.currentUser.portfolios.forEach((i) => {
                                 if (i['name'] === name) {
                                     var map = new Map();
-                                    var temp = [];
+                                    var tempOverview = [];
                                     i.stocks.forEach((s) => {
                                         map.set(s['symbol'], false);
                                         if (s['type'] !== 'ETF')
-                                            OpenApiService.getStockOverview(s['symbol']).then(
-                                                (res) => {
-                                                    temp.push(res.data);
-                                                }
-                                            );
+                                            tempOverview.push(OpenApiService.getStockOverview(s['symbol']));
                                         else {
                                             // etf 가능하면 작성
                                         }
                                     });
-                                    this.setState({
-                                        selectedPortfolio: i,
-                                        selectedStocks: map,
-                                        searchStocks: m,
-                                        overviews: temp,
+                                    Promise.all(tempOverview).then((res) => {
+                                        var arr = [];
+                                        res.forEach((i) => {
+                                            arr.push(i.data);
+                                        });
+                                        this.setState({
+                                            selectedPortfolio: i,
+                                            selectedStocks: map,
+                                            searchStocks: m,
+                                            overviews: arr,
+                                            disabled: false,
+                                        });
                                     });
                                 }
                             });
                         });
-                    })
-                    .then(() => {
-                        this.setState({ disabled: false });
                     })
                     .catch((error) => {
                         console.log(error.message);
@@ -378,29 +397,42 @@ class Main extends Component {
                         this.state.currentUser.portfolios.forEach((i) => {
                             if (i['name'] === name) {
                                 var map = new Map();
-                                var temp = [];
+                                var tempOverview = [];
+                                var tempEndPoint = [];
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
-                                        OpenApiService.getStockOverview(s['symbol']).then((res) => {
-                                            temp.push(res.data);
-                                        });
+                                        tempOverview.push(OpenApiService.getStockOverview(s['symbol']));
                                     else {
                                         // etf 가능하면 작성
                                     }
+                                    tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                                 });
-                                this.setState({
-                                    selectedPortfolio: i,
-                                    selectedStocks: map,
-                                    searchStocks: m,
-                                    overviews: temp,
-                                });
+                                Promise.all(tempEndPoint).then((res)=>{
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({endPoints:arr});
+                                })
+                                .then(()=>{
+                                    Promise.all(tempOverview).then((res) => {
+                                        var arr = [];
+                                        res.forEach((i) => {
+                                            arr.push(i.data);
+                                        });
+                                        this.setState({
+                                            selectedPortfolio: i,
+                                            selectedStocks: map,
+                                            searchStocks: m,
+                                            overviews: arr,
+                                            disabled: false,
+                                        });
+                                    });
+                                })
                             }
                         });
                     });
-                })
-                .then(() => {
-                    this.setState({ disabled: false, averagePrice: '', quantity: '' });
                 })
                 .catch((error) => {
                     console.log(error.message);
@@ -423,28 +455,41 @@ class Main extends Component {
                     this.state.currentUser.portfolios.forEach((i) => {
                         if (i['name'] === name) {
                             var map = new Map();
-                            var temp = [];
+                            var tempOverview = [];
+                            var tempEndPoint = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
-                                    OpenApiService.getStockOverview(s['symbol']).then((res) => {
-                                        temp.push(res.data);
-                                    });
+                                    tempOverview.push(OpenApiService.getStockOverview(s['symbol']));
                                 else {
                                     // etf 가능하면 작성
                                 }
+                                tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                             });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                overviews: temp,
-                            });
+                            Promise.all(tempEndPoint).then((res)=>{
+                                var arr = [];
+                                res.forEach((i)=>{
+                                    arr.push(i.data);
+                                })
+                                this.setState({endPoints:arr});
+                            })
+                            .then(()=>{
+                                Promise.all(tempOverview).then((res)=>{
+                                    var arr = [];
+                                    res.forEach((i)=>{
+                                        arr.push(i.data);
+                                    })
+                                    this.setState({
+                                        selectedPortfolio: i,
+                                        selectedStocks: map,
+                                        overviews: arr,
+                                        disabled: false
+                                    });
+                                })  
+                            })
                         }
                     });
                 });
-            })
-            .then(() => {
-                this.setState({ disabled: false });
             })
             .catch((error) => {
                 console.log(error.message);
@@ -470,24 +515,26 @@ class Main extends Component {
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
-                                    OpenApiService.getStockOverview(s['symbol']).then((res) => {
-                                        temp.push(res.data);
-                                    });
+                                    temp.push(OpenApiService.getStockOverview(s['symbol']));
                                 else {
                                     // etf 가능하면 작성
                                 }
                             });
-                            this.setState({
-                                selectedPortfolio: i,
-                                selectedStocks: map,
-                                overviews: temp,
-                            });
+                            Promise.all(temp).then((res)=>{
+                                var arr = [];
+                                res.forEach((i)=>{
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    selectedPortfolio: i,
+                                    selectedStocks: map,
+                                    overviews: arr,
+                                    disabled: false
+                                });
+                            })
                         }
                     });
                 });
-            })
-            .then(() => {
-                this.setState({ disabled: false });
             })
             .catch((error) => {
                 console.log(error.message);
@@ -610,9 +657,7 @@ class Main extends Component {
                                         href="/"
                                         onClick={(event) => {
                                             this.setState({ isLoading: true });
-                                            this.selectPortfolio(event, item).then(() => {
-                                                this.setState({ isLoading: false });
-                                            });
+                                            this.selectPortfolio(event, item);
                                         }}
                                     >
                                         {item.name}
@@ -634,6 +679,7 @@ class Main extends Component {
                         <PieGraph
                             stocks={this.state.selectedPortfolio.stocks}
                             equityOverviews={this.state.overviews}
+                            endPoints = {this.state.endPoints}
                             isLoading={this.state.isLoading}
                         />
                         {/*
@@ -782,6 +828,7 @@ class Main extends Component {
                                             onClick={() => this.toggleStock({ item })}
                                             aria-controls="collapse-text"
                                             aria-expanded={this.valueToggleStock({ item })}
+                                            disabled={this.state.disabled}
                                         >
                                             {item['1. symbol']} ({item['2. name']})
                                         </Button>
@@ -850,6 +897,7 @@ class Main extends Component {
                                                 onClick={() => this.toggleMyStock({ item })}
                                                 aria-controls="collapse-text"
                                                 aria-expanded={this.valueToggleMyStock({ item })}
+                                                disabled={this.state.disabled}
                                             >
                                                 수정
                                             </Button>
@@ -857,6 +905,7 @@ class Main extends Component {
                                                 onClick={(event) => {
                                                     this.removeStock(event, { item });
                                                 }}
+                                                disabled={this.state.disabled}
                                             >
                                                 삭제
                                             </Button>

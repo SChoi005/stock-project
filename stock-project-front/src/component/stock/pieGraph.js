@@ -1,7 +1,7 @@
 import { RadialChart, DiscreteColorLegend } from 'react-vis';
 import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
-
+import { PulseLoader } from "react-spinners";
 class PieGraph extends Component {
     constructor(props) {
         super(props);
@@ -14,12 +14,14 @@ class PieGraph extends Component {
             fixd: false,
             data: this.getAssetData(),
         };
-    }
-
+    }    
+    
     componentDidUpdate(prevProps, prevState) {
+        
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
-                data: this.getAllocationData(),
+                data: this.getAssetData(),
+                chartValue: '총 자산 : $' + this.getTotalAsset(),
                 switch: true,
             });
         }
@@ -35,9 +37,12 @@ class PieGraph extends Component {
     getTotalAsset() {
         var sum = 0;
         this.props.stocks.forEach((i) => {
-            sum += i['average_price'] * i['quantity'];
+            this.props.endPoints.forEach((j)=>{
+                if(j['01. symbol']===i['symbol'])
+                    sum += j['05. price'] * i['quantity'];
+            })
         });
-        return sum;
+        return sum.toFixed(4);
     }
 
     getTotalAllocation() {
@@ -50,7 +55,7 @@ class PieGraph extends Component {
                 }
             });
         });
-        return sum;
+        return sum.toFixed(2);
     }
 
     getAssetData() {
@@ -74,25 +79,27 @@ class PieGraph extends Component {
             '#4d5886',
             '#d11141',
         ];
-        var sum = 0;
+        var sum = this.getTotalAsset();
         var data = [];
-        this.props.stocks.forEach((i) => {
-            sum += i['average_price'] * i['quantity'];
-        });
 
         var num = 0;
         this.props.stocks.forEach((i) => {
-            const price = i['average_price'] * i['quantity'];
-            const percent = (price / sum) * 100;
-            data.push({
-                title: i['symbol'] + ' (' + percent.toFixed(1) + '%) $' + price,
-                label: i['symbol'],
-                angle: percent,
-                color: colors[num++],
-                innerRadius: 75,
-                radius: 115,
-                strokeWidth: 4,
-            });
+            this.props.endPoints.forEach((j)=>{
+                if(j['01. symbol']===i['symbol']){
+                    const price = j['05. price'] * i['quantity'];
+                    const percent = (price / sum) * 100;
+                    data.push({
+                        title: i['symbol'] + ' (' + percent.toFixed(1) + '%) $' + price.toFixed(4),
+                        label: i['symbol'],
+                        angle: percent,
+                        color: colors[num++],
+                        innerRadius: 75,
+                        radius: 115,
+                        strokeWidth: 4,
+                    });
+                }
+            })
+            
         });
         return data;
     }
@@ -133,7 +140,7 @@ class PieGraph extends Component {
                         const dividend = i['quantity'] * j['DividendPerShare'];
                         const percent = (dividend / sum) * 100;
                         data.push({
-                            title: j['Symbol'] + ' (' + percent.toFixed(1) + '%) $' + dividend,
+                            title: j['Symbol'] + ' (' + percent.toFixed(1) + '%) $' + dividend.toFixed(2),
                             label: j['Symbol'],
                             angle: percent,
                             color: colors[num++],
@@ -193,7 +200,6 @@ class PieGraph extends Component {
     }
 
     render() {
-        console.log(this.props.equityOverviews);
         return (
             <div>
                 {!this.props.isLoading ? (
@@ -250,7 +256,7 @@ class PieGraph extends Component {
                         )}
                     </div>
                 ) : (
-                    <div>Loading..</div>
+                    <PulseLoader color="#36D7B7" speedMultiplier={1}/>
                 )}
             </div>
         );
