@@ -51,7 +51,7 @@ class PieGraph extends Component {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
                     if (j['DividendPerShare'] !== 'None')
-                        sum += i['quantity'] * j['DividendPerShare'];
+                        sum += i['quantity'] * j['DividendPerShare']*0.86;
                 }
             });
         });
@@ -137,7 +137,7 @@ class PieGraph extends Component {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
                     if (j['DividendPerShare'] !== 'None') {
-                        const dividend = i['quantity'] * j['DividendPerShare'];
+                        const dividend = i['quantity'] * j['DividendPerShare']*0.86;
                         const percent = (dividend / sum) * 100;
                         data.push({
                             title: j['Symbol'] + ' (' + percent.toFixed(1) + '%) $' + dividend.toFixed(2),

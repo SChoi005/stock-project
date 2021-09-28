@@ -27,7 +27,7 @@ https://shinsunyoung.tistory.com/78
 ==> ( 1차 휴식기 ! ) ( stock delete할때 확인작업 추가 )
 1. stock 음수 validation
 2. react-spinners barloader적용
-3. component 2 제작
+3. component 3 제작
 * etf api 가져오는게 문제.. (아 이거 좀 개에반디)
 
 ==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )
@@ -35,7 +35,6 @@ https://shinsunyoung.tistory.com/78
 # 나중에 해야할것
 1. stock delete할때 확인작업 추가
 2. popover message
-4. component 3 제작
 5. component 4 제작
 6. MyInfo 만들기
 # 구름 ide 항상켜두기
