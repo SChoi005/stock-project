@@ -201,7 +201,7 @@ class PieGraph extends Component {
 
     render() {
         return (
-            <div>
+            <div className="col-12 col-lg-6 col-xl-6 widget">
                 {!this.props.isLoading ? (
                     <div>
                         <h4>포트폴리오 구성</h4>
@@ -210,6 +210,7 @@ class PieGraph extends Component {
                         {this.state.data.length !== 0 ? (
                             <div>
                                 <RadialChart
+                                    className="radialChart"
                                     data={this.state.data}
                                     width={250}
                                     height={250}
@@ -248,7 +249,7 @@ class PieGraph extends Component {
                                         });
                                     }}
                                 />
-                                <div>{this.state.chartValue}</div>
+                                <div className="chartValue">{this.state.chartValue}</div>
                                 <DiscreteColorLegend items={this.state.data} />
                             </div>
                         ) : (

@@ -143,68 +143,74 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <div>Sign Up</div>
-                    <Form
-                        onSubmit={this.signup}
-                        ref={(c) => {
-                            this.form = c;
-                        }}
-                    >
-                        <div>
-                            <label>Username</label>
-                            <Input
-                                type="text"
-                                name="username"
-                                value={this.state.username}
-                                onChange={(e) => this.confirmUsername(e)}
-                                disabled={this.state.disabled}
-                            />
-                        </div>
-                        {this.state.usernameMessage}
-                        {this.state.errorMessage}
-                        <div>
-                            <label>Password</label>
-                            <Input
-                                type="password"
-                                name="password"
-                                value={this.state.password}
-                                onChange={(e) => this.confirmPassword(e)}
-                                disabled={this.state.disabled}
-                            />
-                            {this.state.passwordMessage}
-                        </div>
-                        <div>
-                            <label>Check Password</label>
-                            <Input
-                                type="password"
-                                name="Check Password"
-                                value={this.state.checkPassword}
-                                onChange={(e) => this.confirmCheckPassword(e)}
-                                disabled={this.state.disabled}
-                            />
-                            {this.state.passwordCheckMessage}
-                        </div>
-                        <div>
-                            <label>nickname</label>
-                            <Input
-                                type="text"
-                                name="nickname"
-                                value={this.state.nickname}
-                                onChange={(e) => this.confirmNickname(e)}
-                                disabled={this.state.disabled}
-                            />
-                            {this.state.nicknameMessage}
-                        </div>
-                        <div>
-                            <button type="submit" disabled={this.state.disabled}>
-                                signUp
-                            </button>
-                        </div>
-                        <a href="/">Login</a>
-                    </Form>
+            <div className="splash-container">
+                <div className="card card-border-color card-border-color-primary">
+                    <div className="card-header">My Portfolio</div>
+                    <div className="card-body">
+                        <Form
+                            onSubmit={this.signup}
+                            ref={(c) => {
+                                this.form = c;
+                            }}
+                        >
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    placeholder="Username"
+                                    type="text"
+                                    name="username"
+                                    value={this.state.username}
+                                    onChange={(e) => this.confirmUsername(e)}
+                                    disabled={this.state.disabled}
+                                />
+                                <div className="validation">{this.state.usernameMessage}</div>
+                                <div className="validation">{this.state.errorMessage}</div>
+                            </div>
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    placeholder="Password"
+                                    type="password"
+                                    name="password"
+                                    value={this.state.password}
+                                    onChange={(e) => this.confirmPassword(e)}
+                                    disabled={this.state.disabled}
+                                />
+                                <div className="validation">{this.state.passwordMessage}</div>
+                            </div>
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    placeholder="Check Password"
+                                    type="password"
+                                    name="Check Password"
+                                    value={this.state.checkPassword}
+                                    onChange={(e) => this.confirmCheckPassword(e)}
+                                    disabled={this.state.disabled}
+                                />
+                                <div className="validation">{this.state.passwordCheckMessage}</div>
+                            </div>
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    placeholder="Nickname"
+                                    type="text"
+                                    name="nickname"
+                                    value={this.state.nickname}
+                                    onChange={(e) => this.confirmNickname(e)}
+                                    disabled={this.state.disabled}
+                                />
+                                <div className="validation">{this.state.nicknameMessage}</div>
+                            </div>
+                            <div className="form-group login-submit">
+                                <button className="btn btn-primary btn-xl" type="submit" disabled={this.state.disabled}>
+                                    Sign Up
+                                </button>
+                            </div>
+                        </Form>
+                    </div>
                 </div>
+                <div className="splash-footer"><a href="/">Login</a></div>
             </div>
         );
     }

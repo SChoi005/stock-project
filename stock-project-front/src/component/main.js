@@ -555,9 +555,10 @@ class Main extends Component {
         // console.log(JSON.stringify(this.state.searchStocks));
         // console.log(this.state.selectedStocks);
         return (
-            <div>
+            <div className="container">
                 <div>
                     <Button
+                        style={{float:"left"}}
                         variant="primary"
                         onClick={() => this.toggle()}
                         aria-controls="collapse-text"
@@ -575,6 +576,7 @@ class Main extends Component {
                                     }}
                                 >
                                     <Input
+                                        style={{float:"left"}}
                                         type="text"
                                         name="portfolioName"
                                         value={this.state.portfolioUpdateName}
@@ -606,14 +608,15 @@ class Main extends Component {
                                         }}
                                         disabled={this.state.disabled}
                                     />
-                                    <Button type="submit" disabled={this.state.disabled}>
+                                    <Button style={{float:"left"}} type="submit" disabled={this.state.disabled}>
                                         확인
                                     </Button>
                                 </Form>
                             ) : (
-                                <h2>{this.state.selectedPortfolio.name}</h2>
+                                <h2 style={{float:"left"}}>{this.state.selectedPortfolio.name}</h2>
                             )}
                             <Button
+                                style={{float:"left"}}
                                 variant="primary"
                                 onClick={() => {
                                     if (this.state.isRename)
@@ -627,12 +630,14 @@ class Main extends Component {
                                 수정
                             </Button>
                             <Button
+                                style={{float:"left"}}
                                 variant="primary"
                                 onClick={() => this.handleDeleteModalShowHide()}
                             >
                                 삭제
                             </Button>
                             <Button
+                                style={{float:"left"}}
                                 variant="primary"
                                 onClick={() => this.handleStockModalShowHide()}
                             >
@@ -641,13 +646,14 @@ class Main extends Component {
                             <div>{this.state.portfolioUpdateErrorMessage}</div>
                         </div>
                     ) : (
-                        <h2>Select Portfolio!</h2>
+                        <h2 style={{float:"left"}}>Select Portfolio!</h2>
                     )}
-                    <Button variant="primary" onClick={() => this.handleCreateModalShowHide()}>
+                    <Button style={{float:"left"}} className="bi bi-plus-square" variant="primary" onClick={() => this.handleCreateModalShowHide()}>
                         추가
                     </Button>
                 </div>
-
+                <div style={{clear:"both"}}></div>
+                
                 {/* folding */}
                 <Collapse in={this.state.isOpen}>
                     <div id="collapse-text">
@@ -676,7 +682,7 @@ class Main extends Component {
 
                 {/* Stock Component*/}
                 {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
-                    <div>
+                    <div className="row">
                         <PieGraph
                             stocks={this.state.selectedPortfolio.stocks}
                             equityOverviews={this.state.overviews}
@@ -688,14 +694,6 @@ class Main extends Component {
                             endPoints = {this.state.endPoints}
                             isLoading={this.state.isLoading}
                         />
-                        {/*
-                        <div>
-                            <h2>Component3</h2>
-                        </div>
-                        <div>
-                            <h2>Component4</h2>
-                        </div>
-                        */}
                     </div>
                 ) : (
                     <div></div>

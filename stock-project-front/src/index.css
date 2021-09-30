@@ -1,0 +1,87 @@
+body{
+    font-family: 'Roboto','Arial','Noto Sans KR', sans-serif;
+    background-color:#eee;
+    padding-top: 75px;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: #4285f4;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.splash-footer{
+    text-align: center;
+}
+
+.splash-container{
+    max-width: 401px;
+    margin: 50px auto;
+    
+}
+
+.form-group {
+    margin-bottom: 1.538rem;
+}
+
+.btn-xl {
+    padding: 0 12px;
+    font-size: 1.1538rem;
+    line-height: 43px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4285f4;
+    border-color: #4285f4;
+}
+
+.login-submit .btn{
+    width: 100%;
+}
+
+.validation{
+    color:#dc143c;
+    font-size:14px;
+    float: left;
+}
+
+.be-top-header {
+    background-color: #fff;
+    border: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+}
+
+.widget {
+    max-width:600px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 3px;
+    font-size:14px;
+}
+
+.loading{
+    padding:0 auto;
+}
+
+.radialChart-wrapper{
+}
+
+.radialChart{
+}
+
+.chartValue{
+}
+

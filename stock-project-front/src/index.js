@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Header from './component/header';
-import Clock from './component/clock';
 import FormRouter from './router/formRouter';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import './index.css';
 
 
 ReactDOM.render(
@@ -14,12 +12,6 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <Clock />,
-    document.getElementById('clock')
-);
-
-ReactDOM.render(
     <FormRouter/>,
     document.getElementById('content')
 );
-//reportWebVitals();

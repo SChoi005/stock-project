@@ -1,4 +1,4 @@
-import { RadialChart, DiscreteColorLegend } from 'react-vis';
+import { DiscreteColorLegend } from 'react-vis';
 import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 import { PulseLoader } from 'react-spinners';
@@ -72,7 +72,7 @@ class StockBalanceStatus extends Component {
 
     render() {
         return (
-            <div>
+            <div className="col-12 col-lg-6 col-xl-6 widget">
                 {!this.props.isLoading ? (
                     <div>
                         <h4>주식잔고 현황</h4>
@@ -116,7 +116,7 @@ class StockBalanceStatus extends Component {
                         </table>
                     </div>
                 ) : (
-                    <PulseLoader color="#36D7B7" speedMultiplier={1}/>
+                    <PulseLoader className="loading" color="#36D7B7" speedMultiplier={1}/>
                 )}
             </div>
         );

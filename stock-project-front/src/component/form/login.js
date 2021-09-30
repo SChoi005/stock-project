@@ -32,43 +32,53 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-                <div>Login</div>
-                <Form
-                    onSubmit={this.login}
-                    ref={(c) => {
-                        this.form = c;
-                    }}
-                >
-                    <div>
-                        <label>Username</label>
-                        <Input
-                            type="text"
-                            name="username"
-                            value={this.state.username}
-                            onChange={(e) => this.setState({ username: e.target.value })}
-                            disabled={this.state.disabled}
-                        />
+            <div className="splash-container">
+                <div className="card card-border-color card-border-color-primary">
+                    <div className="card-header">My Portfolio</div>
+                    <div className="card-body">
+                        <Form
+                            onSubmit={this.login}
+                            ref={(c) => {
+                                this.form = c;
+                            }}
+                        >
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    type="text"
+                                    name="username"
+                                    placeholder="Username"
+                                    value={this.state.username}
+                                    onChange={(e) => this.setState({ username: e.target.value })}
+                                    disabled={this.state.disabled}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={(e) => this.setState({ password: e.target.value })}
+                                    disabled={this.state.disabled}
+                                />
+                                <div className="validation">{this.state.errorMessage}</div>
+                            </div>
+                            <div className="form-group login-submit">
+                                <button
+                                    className="btn btn-primary btn-xl"
+                                    type="submit"
+                                    disabled={this.state.disabled}
+                                >
+                                    Login
+                                </button>
+                            </div>
+                        </Form>
                     </div>
-                    <div>
-                        <label>Password</label>
-                        <Input
-                            type="password"
-                            name="password"
-                            value={this.state.password}
-                            onChange={(e) => this.setState({ password: e.target.value })}
-                            disabled={this.state.disabled}
-                        />
-                    </div>
-                    <div>
-                        <button type="submit" disabled={this.state.disabled}>
-                            Login
-                        </button>
-                    </div>
-                    {this.state.errorMessage}
-                </Form>
-                <div>
-                    <a href="/signup">signup</a>
+                </div>
+                <div className="splash-footer">
+                    Don't have an account? <a href="/signup">Sign Up</a>
                 </div>
             </div>
         );
