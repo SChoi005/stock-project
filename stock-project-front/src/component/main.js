@@ -564,7 +564,7 @@ class Main extends Component {
                         aria-controls="collapse-text"
                         aria-expanded={this.state.isOpen}
                     >
-                        목록
+                        <img src="list.png" alt="list" width="20px"/>
                     </Button>
                     {isEmpty(this.state.selectedPortfolio) !== 0 ? (
                         <div>

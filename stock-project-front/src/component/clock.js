@@ -21,7 +21,7 @@ class Clock extends Component {
         const minute = this.state.currentTime.getMinutes();
         const second = this.state.currentTime.getSeconds();
         return (
-            <div>
+            <div className="clock">
                 현재시간 : {hour} : {minute} : {second}
             </div>
         );

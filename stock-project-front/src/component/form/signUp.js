@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import AuthService from '../../service/authService';
+import { BarLoader } from 'react-spinners';
 
 class SignUp extends Component {
     constructor(props) {
@@ -145,7 +146,15 @@ class SignUp extends Component {
         return (
             <div className="splash-container">
                 <div className="card card-border-color card-border-color-primary">
-                    <div className="card-header">My Portfolio</div>
+                    {this.state.disabled ? (
+                        <BarLoader width="100%" color="#4285f4" />
+                    ) : (
+                        <BarLoader width="100%" color="#fff" />
+                    )}
+                    <div className="card-header">
+                        <img src="banking.png" alt="My Portfolio" width="40px"/>
+                        My Portfolio
+                    </div>
                     <div className="card-body">
                         <Form
                             onSubmit={this.signup}

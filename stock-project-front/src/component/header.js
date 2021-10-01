@@ -15,18 +15,20 @@ class Header extends Component {
     render() {
         return (
             <div className="navbar navbar-expand fixed-top be-top-header">
-                <div className="container">
+                <div className="container-fluid">
+                    <div>
                     <h1>
-                        <a href="/"><img src="banking.png" alt="My Portfolio" width="40"/> My Portfolio</a>
+                        <a href="/"><img src="banking.png" alt="My Portfolio" width="25px"/> My Portfolio</a>
                     </h1>
-                    <Clock/>
                     {localStorage.getItem('user') ? (
-                        <a href="/" onClick={this.logOut}>
-                            LogOut
+                        <a href="/" onClick={this.logOut} className="logOut">
+                            Logout
                         </a>
                     ) : (
                         ''
                     )}
+                        </div>
+                    <Clock/>
                 </div>
             </div>
         );

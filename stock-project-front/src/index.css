@@ -17,14 +17,53 @@ a {
     background-color: transparent;
 }
 
+.container-fluid h1{
+    font-size:25px;
+    display: inline-block;
+}
+
+.container-fluid{
+    padding:5px 10px;
+}
+
+.splash-container .card .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    color: #5a5a5a;
+}
+
+.card-header{
+    font-size: 25px;
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.5384rem;
+    margin: 0 1.538rem;
+    border-bottom-width: 0;
+    border-radius: 3px 3px 0 0;
+    background-color: transparent;
+}
+
+.barloader{
+    float:center;
+}
+
 .splash-footer{
     text-align: center;
 }
 
 .splash-container{
     max-width: 401px;
+    min-height:1000px;
     margin: 50px auto;
-    
+    padding:10px;
+}
+
+.logOut{
+    font-size: 14px;
+    margin-left:10px;
 }
 
 .form-group {
@@ -72,8 +111,8 @@ a {
     font-size:14px;
 }
 
-.loading{
-    padding:0 auto;
+.clock{
+    font-size:14px;
 }
 
 .radialChart-wrapper{
