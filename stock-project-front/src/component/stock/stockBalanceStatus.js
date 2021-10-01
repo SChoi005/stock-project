@@ -1,12 +1,7 @@
-import { DiscreteColorLegend } from 'react-vis';
-import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 import { PulseLoader } from 'react-spinners';
 
 class StockBalanceStatus extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     getTotalAsset() {
         var sum = 0;
@@ -72,11 +67,14 @@ class StockBalanceStatus extends Component {
 
     render() {
         return (
-            <div className="col-12 col-lg-6 col-xl-6 widget">
+            <div className="col-12 col-lg-6 col-xl-6 card card-border-color card-border-color-primary">
                 {!this.props.isLoading ? (
                     <div>
+                        <div className="card-header">
                         <h4>주식잔고 현황</h4>
-                        <table>
+                        </div>
+                        <div className="card-body">
+                        <table className="table">
                             <thead>
                                 <tr>
                                     <th>주식명</th>
@@ -114,6 +112,7 @@ class StockBalanceStatus extends Component {
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 ) : (
                     <PulseLoader className="loading" color="#36D7B7" speedMultiplier={1}/>

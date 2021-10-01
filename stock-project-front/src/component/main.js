@@ -558,6 +558,7 @@ class Main extends Component {
             <div className="container">
                 <div>
                     <Button
+                        className="icon-button"
                         style={{float:"left"}}
                         variant="primary"
                         onClick={() => this.toggle()}
@@ -704,6 +705,11 @@ class Main extends Component {
                     <Modal.Header>
                         <Modal.Title>포트폴리오 삭제</Modal.Title>
                     </Modal.Header>
+                    {this.state.disabled ? (
+                        <BarLoader width="100%" color="#4285f4" />
+                    ) : (
+                        <BarLoader width="100%" color="#fff" />
+                    )}
                     <Form
                         onSubmit={this.removePortfolio}
                         ref={(c) => {
@@ -744,6 +750,11 @@ class Main extends Component {
                     <Modal.Header>
                         <Modal.Title>포트폴리오 추가</Modal.Title>
                     </Modal.Header>
+                    {this.state.disabled ? (
+                        <BarLoader width="100%" color="#4285f4" />
+                    ) : (
+                        <BarLoader width="100%" color="#fff" />
+                    )}
                     <Form
                         onSubmit={this.createPortfolio}
                         ref={(c) => {
@@ -796,6 +807,11 @@ class Main extends Component {
                     <Modal.Header>
                         <Modal.Title>주식 추가/삭제</Modal.Title>
                     </Modal.Header>
+                    {this.state.disabled ? (
+                        <BarLoader width="100%" color="#4285f4" />
+                    ) : (
+                        <BarLoader width="100%" color="#fff" />
+                    )}
                     <Modal.Body>
                         <Form
                             onSubmit={(event) => {

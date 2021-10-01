@@ -53,7 +53,7 @@ class Login extends Component {
                         >
                             <div className="form-group">
                                 <Input
-                                    className="form-control"
+                                    className="form-control form-floating"
                                     type="text"
                                     name="username"
                                     placeholder="Username"

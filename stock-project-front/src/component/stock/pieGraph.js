@@ -1,7 +1,7 @@
 import { RadialChart, DiscreteColorLegend } from 'react-vis';
 import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
-import { PulseLoader } from "react-spinners";
+import { PulseLoader } from 'react-spinners';
 class PieGraph extends Component {
     constructor(props) {
         super(props);
@@ -14,10 +14,9 @@ class PieGraph extends Component {
             fixd: false,
             data: this.getAssetData(),
         };
-    }    
-    
+    }
+
     componentDidUpdate(prevProps, prevState) {
-        
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAssetData(),
@@ -37,10 +36,9 @@ class PieGraph extends Component {
     getTotalAsset() {
         var sum = 0;
         this.props.stocks.forEach((i) => {
-            this.props.endPoints.forEach((j)=>{
-                if(j['01. symbol']===i['symbol'])
-                    sum += j['05. price'] * i['quantity'];
-            })
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol']) sum += j['05. price'] * i['quantity'];
+            });
         });
         return sum.toFixed(4);
     }
@@ -51,7 +49,7 @@ class PieGraph extends Component {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
                     if (j['DividendPerShare'] !== 'None')
-                        sum += i['quantity'] * j['DividendPerShare']*0.86;
+                        sum += i['quantity'] * j['DividendPerShare'] * 0.86;
                 }
             });
         });
@@ -84,8 +82,8 @@ class PieGraph extends Component {
 
         var num = 0;
         this.props.stocks.forEach((i) => {
-            this.props.endPoints.forEach((j)=>{
-                if(j['01. symbol']===i['symbol']){
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol']) {
                     const price = j['05. price'] * i['quantity'];
                     const percent = (price / sum) * 100;
                     data.push({
@@ -98,8 +96,7 @@ class PieGraph extends Component {
                         strokeWidth: 4,
                     });
                 }
-            })
-            
+            });
         });
         return data;
     }
@@ -137,10 +134,15 @@ class PieGraph extends Component {
             this.props.equityOverviews.forEach((j) => {
                 if (j['Symbol'] === i['symbol']) {
                     if (j['DividendPerShare'] !== 'None') {
-                        const dividend = i['quantity'] * j['DividendPerShare']*0.86;
+                        const dividend = i['quantity'] * j['DividendPerShare'] * 0.86;
                         const percent = (dividend / sum) * 100;
                         data.push({
-                            title: j['Symbol'] + ' (' + percent.toFixed(1) + '%) $' + dividend.toFixed(2),
+                            title:
+                                j['Symbol'] +
+                                ' (' +
+                                percent.toFixed(1) +
+                                '%) $' +
+                                dividend.toFixed(2),
                             label: j['Symbol'],
                             angle: percent,
                             color: colors[num++],
@@ -201,14 +203,16 @@ class PieGraph extends Component {
 
     render() {
         return (
-            <div className="col-12 col-lg-6 col-xl-6 widget">
+            <div className="col-12 col-lg-6 col-xl-6 card card-border-color card-border-color-primary">
                 {!this.props.isLoading ? (
                     <div>
-                        <h4>포트폴리오 구성</h4>
-                        <Button onClick={this.assetClick}>자산구성</Button>
-                        <Button onClick={this.allocationClick}>배당구성</Button>
+                        <div className="card-header">
+                            <h4>포트폴리오 구성</h4>
+                            <Button onClick={this.assetClick}>자산구성</Button>
+                            <Button onClick={this.allocationClick}>배당구성</Button>
+                        </div>
                         {this.state.data.length !== 0 ? (
-                            <div>
+                            <div className="card-body">
                                 <RadialChart
                                     className="radialChart"
                                     data={this.state.data}
@@ -253,11 +257,11 @@ class PieGraph extends Component {
                                 <DiscreteColorLegend items={this.state.data} />
                             </div>
                         ) : (
-                            <div></div>
+                            <div className="card-body"></div>
                         )}
                     </div>
                 ) : (
-                    <PulseLoader color="#36D7B7" speedMultiplier={1}/>
+                    <PulseLoader color="#36D7B7" speedMultiplier={1} />
                 )}
             </div>
         );

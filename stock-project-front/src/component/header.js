@@ -18,7 +18,7 @@ class Header extends Component {
                 <div className="container-fluid">
                     <div>
                     <h1>
-                        <a href="/"><img src="banking.png" alt="My Portfolio" width="25px"/> My Portfolio</a>
+                        <a href="/"><img src="banking.png" alt="My Portfolio" width="27px"/> My Portfolio</a>
                     </h1>
                     {localStorage.getItem('user') ? (
                         <a href="/" onClick={this.logOut} className="logOut">

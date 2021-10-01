@@ -17,6 +17,11 @@ a {
     background-color: transparent;
 }
 
+.form-control{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
 .container-fluid h1{
     font-size:25px;
     display: inline-block;
@@ -56,14 +61,13 @@ a {
 
 .splash-container{
     max-width: 401px;
-    min-height:1000px;
     margin: 50px auto;
     padding:10px;
 }
 
 .logOut{
     font-size: 14px;
-    margin-left:10px;
+    margin-left:5px;
 }
 
 .form-group {
@@ -102,13 +106,8 @@ a {
     padding: 0;
 }
 
-.widget {
-    max-width:600px;
-    background-color: #fff;
-    padding: 20px;
-    margin: 25px;
-    border-radius: 3px;
-    font-size:14px;
+.card{
+    margin-bottom:25px;
 }
 
 .clock{
@@ -124,3 +123,9 @@ a {
 .chartValue{
 }
 
+.icon-button{
+    background-color:rgba(255,255,255,0);
+    border-color:#eee;
+    padding:4px 0;
+    width:30px;
+}
