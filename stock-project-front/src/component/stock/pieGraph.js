@@ -203,65 +203,90 @@ class PieGraph extends Component {
 
     render() {
         return (
-            <div className="col-12 col-lg-6 col-xl-6 card card-border-color card-border-color-primary">
+            <div className="col-12 col-lg-5 col-xl-5">
                 {!this.props.isLoading ? (
-                    <div>
+                    <div className="h-100 card">
                         <div className="card-header">
-                            <h4>포트폴리오 구성</h4>
-                            <Button onClick={this.assetClick}>자산구성</Button>
-                            <Button onClick={this.allocationClick}>배당구성</Button>
+                            <h2 className="card-heading">📊포트폴리오 구성</h2>
                         </div>
                         {this.state.data.length !== 0 ? (
                             <div className="card-body">
-                                <RadialChart
-                                    className="radialChart"
-                                    data={this.state.data}
-                                    width={250}
-                                    height={250}
-                                    animation={'gentle'}
-                                    showLabels={false}
-                                    orientation="vertical"
-                                    colorType="literal"
-                                    padAngle={0.04}
-                                    onValueMouseOver={(v) => {
-                                        if (!this.state.fixed)
-                                            this.setState({
-                                                chartValue: v.title,
-                                                fixed: false,
-                                            });
-                                    }}
-                                    onValueMouseOut={(v) => {
-                                        if (!this.state.fixed) {
-                                            if (this.state.switch)
+                                <div className="btn-group btn-toggle">
+                                    <Button onClick={this.assetClick}>자산구성</Button>
+                                    <Button onClick={this.allocationClick}>배당구성</Button>
+                                </div>
+                                <div className="row">
+                                    <div className="radialChart col-12 col-lg-6 col-xl-6">
+                                        <RadialChart
+                                            className="radial"
+                                            data={this.state.data}
+                                            width={250}
+                                            height={250}
+                                            animation={'gentle'}
+                                            showLabels={false}
+                                            orientation="vertical"
+                                            colorType="literal"
+                                            padAngle={0.04}
+                                            onValueMouseOver={(v) => {
+                                                if (!this.state.fixed)
+                                                    this.setState({
+                                                        chartValue: v.title,
+                                                        fixed: false,
+                                                    });
+                                            }}
+                                            onValueMouseOut={(v) => {
+                                                if (!this.state.fixed) {
+                                                    if (this.state.switch)
+                                                        this.setState({
+                                                            chartValue:
+                                                                '총 자산 : $' +
+                                                                this.getTotalAsset(),
+                                                            fixed: false,
+                                                        });
+                                                    else
+                                                        this.setState({
+                                                            chartValue:
+                                                                '연 배당금 : $' +
+                                                                this.getTotalAllocation(),
+                                                            fixed: false,
+                                                        });
+                                                }
+                                            }}
+                                            onValueClick={(v, event) => {
+                                                this.clickValue(event, v);
                                                 this.setState({
-                                                    chartValue:
-                                                        '총 자산 : $' + this.getTotalAsset(),
-                                                    fixed: false,
+                                                    chartValue: v.title,
                                                 });
-                                            else
-                                                this.setState({
-                                                    chartValue:
-                                                        '연 배당금 : $' + this.getTotalAllocation(),
-                                                    fixed: false,
-                                                });
-                                        }
-                                    }}
-                                    onValueClick={(v, event) => {
-                                        this.clickValue(event, v);
-                                        this.setState({
-                                            chartValue: v.title,
-                                        });
-                                    }}
-                                />
-                                <div className="chartValue">{this.state.chartValue}</div>
-                                <DiscreteColorLegend items={this.state.data} />
+                                            }}
+                                        />
+                                        <div className="chartValue">{this.state.chartValue}</div>
+                                    </div>
+                                    <DiscreteColorLegend
+                                        className="col-12 col-lg-6 col-xl-6"
+                                        items={this.state.data}
+                                    />
+                                </div>
                             </div>
                         ) : (
-                            <div className="card-body"></div>
+                            <div className="card-body">
+                                <div className="btn-group btn-toggle">
+                                    <Button onClick={this.assetClick}>자산구성</Button>
+                                    <Button onClick={this.allocationClick}>배당구성</Button>
+                                </div>
+                            </div>
                         )}
                     </div>
                 ) : (
-                    <PulseLoader color="#36D7B7" speedMultiplier={1} />
+                    <div className="empty-component">
+                        <div className="h-100 card">
+                            <div className="card-header">
+                                <h2 className="card-heading">📊포트폴리오 구성</h2>
+                            </div>
+                            <div className="card-body">
+                                <PulseLoader className="loading" color="#4285f4" speedMultiplier={1} />
+                            </div>
+                        </div>
+                    </div>
                 )}
             </div>
         );

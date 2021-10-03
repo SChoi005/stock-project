@@ -28,7 +28,7 @@ class SignUp extends Component {
             disabled: false,
         };
     }
-
+    
     signup(e) {
         e.preventDefault();
         if (
@@ -145,7 +145,7 @@ class SignUp extends Component {
     render() {
         return (
             <div className="splash-container">
-                <div className="card card-border-color card-border-color-primary">
+                <div className="card">
                     {this.state.disabled ? (
                         <BarLoader width="100%" color="#4285f4" />
                     ) : (

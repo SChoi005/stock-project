@@ -34,7 +34,7 @@ class Login extends Component {
     render() {
         return (
             <div className="splash-container">
-                <div className="card card-border-color card-border-color-primary">
+                <div className="card">
                     {this.state.disabled ? (
                         <BarLoader width="100%" color="#4285f4" />
                     ) : (
@@ -53,7 +53,7 @@ class Login extends Component {
                         >
                             <div className="form-group">
                                 <Input
-                                    className="form-control form-floating"
+                                    className="form-control"
                                     type="text"
                                     name="username"
                                     placeholder="Username"

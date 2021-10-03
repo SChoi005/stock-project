@@ -8,7 +8,7 @@ import Input from 'react-validation/build/input';
 import PortfolioService from '../service/portfolioService';
 import StockService from '../service/stockService';
 import OpenApiService from '../service/openApiService';
-import { BarLoader } from "react-spinners";
+import { BarLoader } from 'react-spinners';
 
 class Main extends Component {
     constructor(props) {
@@ -164,8 +164,7 @@ class Main extends Component {
                 map.set(i['symbol'], false);
                 if (i['type'] !== 'ETF') {
                     tempOverview.push(OpenApiService.getStockOverview(i['symbol']));
-                }
-                else {
+                } else {
                     // etf 가능하면 작성
                 }
                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(i['symbol']));
@@ -175,23 +174,24 @@ class Main extends Component {
             this.setState({ selectedStocks: {}, selectedPortfolio: item });
         }
 
-        Promise.all(tempEndPoint).then((res)=>{
-            var arr = [];
-            res.forEach((i) => {
-                arr.push(i.data);
-            });
-            this.setState({ endPoints: arr});
-        })
-        .then(()=>{
-            Promise.all(tempOverview).then((res) => {
+        Promise.all(tempEndPoint)
+            .then((res) => {
                 var arr = [];
                 res.forEach((i) => {
                     arr.push(i.data);
                 });
-                this.setState({ overviews: arr, isLoading: false });
+                this.setState({ endPoints: arr });
+            })
+            .then(() => {
+                Promise.all(tempOverview).then((res) => {
+                    var arr = [];
+                    res.forEach((i) => {
+                        arr.push(i.data);
+                    });
+                    this.setState({ overviews: arr, isLoading: false });
+                });
             });
-        })
-        
+
         this.toggle();
     }
 
@@ -347,7 +347,9 @@ class Main extends Component {
                                     i.stocks.forEach((s) => {
                                         map.set(s['symbol'], false);
                                         if (s['type'] !== 'ETF')
-                                            tempOverview.push(OpenApiService.getStockOverview(s['symbol']));
+                                            tempOverview.push(
+                                                OpenApiService.getStockOverview(s['symbol'])
+                                            );
                                         else {
                                             // etf 가능하면 작성
                                         }
@@ -403,34 +405,37 @@ class Main extends Component {
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
-                                        tempOverview.push(OpenApiService.getStockOverview(s['symbol']));
+                                        tempOverview.push(
+                                            OpenApiService.getStockOverview(s['symbol'])
+                                        );
                                     else {
                                         // etf 가능하면 작성
                                     }
                                     tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                                 });
-                                Promise.all(tempEndPoint).then((res)=>{
-                                    var arr = [];
-                                    res.forEach((i) => {
-                                        arr.push(i.data);
-                                    });
-                                    this.setState({endPoints:arr});
-                                })
-                                .then(()=>{
-                                    Promise.all(tempOverview).then((res) => {
+                                Promise.all(tempEndPoint)
+                                    .then((res) => {
                                         var arr = [];
                                         res.forEach((i) => {
                                             arr.push(i.data);
                                         });
-                                        this.setState({
-                                            selectedPortfolio: i,
-                                            selectedStocks: map,
-                                            searchStocks: m,
-                                            overviews: arr,
-                                            disabled: false,
+                                        this.setState({ endPoints: arr });
+                                    })
+                                    .then(() => {
+                                        Promise.all(tempOverview).then((res) => {
+                                            var arr = [];
+                                            res.forEach((i) => {
+                                                arr.push(i.data);
+                                            });
+                                            this.setState({
+                                                selectedPortfolio: i,
+                                                selectedStocks: map,
+                                                searchStocks: m,
+                                                overviews: arr,
+                                                disabled: false,
+                                            });
                                         });
                                     });
-                                })
                             }
                         });
                     });
@@ -467,27 +472,28 @@ class Main extends Component {
                                 }
                                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                             });
-                            Promise.all(tempEndPoint).then((res)=>{
-                                var arr = [];
-                                res.forEach((i)=>{
-                                    arr.push(i.data);
-                                })
-                                this.setState({endPoints:arr});
-                            })
-                            .then(()=>{
-                                Promise.all(tempOverview).then((res)=>{
+                            Promise.all(tempEndPoint)
+                                .then((res) => {
                                     var arr = [];
-                                    res.forEach((i)=>{
+                                    res.forEach((i) => {
                                         arr.push(i.data);
-                                    })
-                                    this.setState({
-                                        selectedPortfolio: i,
-                                        selectedStocks: map,
-                                        overviews: arr,
-                                        disabled: false
                                     });
-                                })  
-                            })
+                                    this.setState({ endPoints: arr });
+                                })
+                                .then(() => {
+                                    Promise.all(tempOverview).then((res) => {
+                                        var arr = [];
+                                        res.forEach((i) => {
+                                            arr.push(i.data);
+                                        });
+                                        this.setState({
+                                            selectedPortfolio: i,
+                                            selectedStocks: map,
+                                            overviews: arr,
+                                            disabled: false,
+                                        });
+                                    });
+                                });
                         }
                     });
                 });
@@ -521,18 +527,18 @@ class Main extends Component {
                                     // etf 가능하면 작성
                                 }
                             });
-                            Promise.all(temp).then((res)=>{
+                            Promise.all(temp).then((res) => {
                                 var arr = [];
-                                res.forEach((i)=>{
+                                res.forEach((i) => {
                                     arr.push(i.data);
                                 });
                                 this.setState({
                                     selectedPortfolio: i,
                                     selectedStocks: map,
                                     overviews: arr,
-                                    disabled: false
+                                    disabled: false,
                                 });
-                            })
+                            });
                         }
                     });
                 });
@@ -556,105 +562,111 @@ class Main extends Component {
         // console.log(this.state.selectedStocks);
         return (
             <div className="container">
-                <div>
-                    <Button
-                        className="icon-button"
-                        style={{float:"left"}}
-                        variant="primary"
-                        onClick={() => this.toggle()}
-                        aria-controls="collapse-text"
-                        aria-expanded={this.state.isOpen}
-                    >
-                        <img src="list.png" alt="list" width="20px"/>
-                    </Button>
-                    {isEmpty(this.state.selectedPortfolio) !== 0 ? (
-                        <div>
-                            {this.state.isRename ? (
-                                <Form
-                                    onSubmit={this.updatePortfolio}
-                                    ref={(c) => {
-                                        this.form = c;
-                                    }}
+                <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+                    <div className="h-100 card">
+                        <div className="card-body">
+                            <div>
+                                <Button
+                                    className="icon-button"
+                                    variant="primary"
+                                    onClick={() => this.toggle()}
+                                    aria-controls="collapse-text"
+                                    aria-expanded={this.state.isOpen}
                                 >
-                                    <Input
-                                        style={{float:"left"}}
-                                        type="text"
-                                        name="portfolioName"
-                                        value={this.state.portfolioUpdateName}
-                                        placeholder={this.state.selectedPortfolio.name}
-                                        onChange={(e) => {
-                                            if (e.target.value.trim().length > 0) {
-                                                if (
-                                                    e.target.value ===
-                                                    this.state.selectedPortfolio.name
-                                                )
+                                    <img src="list.png" alt="list" width="20px" />
+                                </Button>
+                            </div>
+                            {isEmpty(this.state.selectedPortfolio) !== 0 ? (
+                                <div>
+                                    {this.state.isRename ? (
+                                        <Form
+                                            onSubmit={this.updatePortfolio}
+                                            ref={(c) => {
+                                                this.form = c;
+                                            }}
+                                        >
+                                            <Input
+                                                type="text"
+                                                name="portfolioName"
+                                                value={this.state.portfolioUpdateName}
+                                                placeholder={this.state.selectedPortfolio.name}
+                                                onChange={(e) => {
+                                                    if (e.target.value.trim().length > 0) {
+                                                        if (
+                                                            e.target.value ===
+                                                            this.state.selectedPortfolio.name
+                                                        )
+                                                            this.setState({
+                                                                portfolioUpdateCheck: false,
+                                                                portfolioUpdateErrorMessage:
+                                                                    '동일한 이름 입니다.',
+                                                            });
+                                                        else {
+                                                            this.setState({
+                                                                portfolioUpdateCheck: true,
+                                                                portfolioUpdateErrorMessage: '',
+                                                            });
+                                                        }
+                                                    } else
+                                                        this.setState({
+                                                            portfolioUpdateCheck: false,
+                                                            portfolioUpdateErrorMessage:
+                                                                '포트폴리오 이름을 입력해주십시오',
+                                                        });
                                                     this.setState({
-                                                        portfolioUpdateCheck: false,
-                                                        portfolioUpdateErrorMessage:
-                                                            '동일한 이름 입니다.',
+                                                        portfolioUpdateName: e.target.value,
                                                     });
-                                                else {
-                                                    this.setState({
-                                                        portfolioUpdateCheck: true,
-                                                        portfolioUpdateErrorMessage: '',
-                                                    });
-                                                }
-                                            } else
+                                                }}
+                                                disabled={this.state.disabled}
+                                            />
+                                            <Button type="submit" disabled={this.state.disabled}>
+                                                확인
+                                            </Button>
+                                        </Form>
+                                    ) : (
+                                        <h2>{this.state.selectedPortfolio.name}</h2>
+                                    )}
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => {
+                                            if (this.state.isRename)
                                                 this.setState({
-                                                    portfolioUpdateCheck: false,
-                                                    portfolioUpdateErrorMessage:
-                                                        '포트폴리오 이름을 입력해주십시오',
+                                                    portfolioUpdateName: '',
+                                                    portfolioUpdateErrorMessage: '',
                                                 });
-                                            this.setState({ portfolioUpdateName: e.target.value });
+                                            this.setState({ isRename: !this.state.isRename });
                                         }}
-                                        disabled={this.state.disabled}
-                                    />
-                                    <Button style={{float:"left"}} type="submit" disabled={this.state.disabled}>
-                                        확인
+                                    >
+                                        수정
                                     </Button>
-                                </Form>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => this.handleDeleteModalShowHide()}
+                                    >
+                                        삭제
+                                    </Button>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => this.handleStockModalShowHide()}
+                                    >
+                                        주식추가
+                                    </Button>
+                                    <div>{this.state.portfolioUpdateErrorMessage}</div>
+                                </div>
                             ) : (
-                                <h2 style={{float:"left"}}>{this.state.selectedPortfolio.name}</h2>
+                                <h2>Select Portfolio!</h2>
                             )}
                             <Button
-                                style={{float:"left"}}
+                                className="bi bi-plus-square"
                                 variant="primary"
-                                onClick={() => {
-                                    if (this.state.isRename)
-                                        this.setState({
-                                            portfolioUpdateName: '',
-                                            portfolioUpdateErrorMessage: '',
-                                        });
-                                    this.setState({ isRename: !this.state.isRename });
-                                }}
+                                onClick={() => this.handleCreateModalShowHide()}
                             >
-                                수정
+                                추가
                             </Button>
-                            <Button
-                                style={{float:"left"}}
-                                variant="primary"
-                                onClick={() => this.handleDeleteModalShowHide()}
-                            >
-                                삭제
-                            </Button>
-                            <Button
-                                style={{float:"left"}}
-                                variant="primary"
-                                onClick={() => this.handleStockModalShowHide()}
-                            >
-                                주식추가
-                            </Button>
-                            <div>{this.state.portfolioUpdateErrorMessage}</div>
                         </div>
-                    ) : (
-                        <h2 style={{float:"left"}}>Select Portfolio!</h2>
-                    )}
-                    <Button style={{float:"left"}} className="bi bi-plus-square" variant="primary" onClick={() => this.handleCreateModalShowHide()}>
-                        추가
-                    </Button>
+                    </div>
                 </div>
-                <div style={{clear:"both"}}></div>
-                
+
                 {/* folding */}
                 <Collapse in={this.state.isOpen}>
                     <div id="collapse-text">
@@ -667,6 +679,7 @@ class Main extends Component {
                                             this.setState({ isLoading: true });
                                             this.selectPortfolio(event, item);
                                         }}
+                                        role="button"
                                     >
                                         {item.name}
                                     </a>
@@ -687,17 +700,34 @@ class Main extends Component {
                         <PieGraph
                             stocks={this.state.selectedPortfolio.stocks}
                             equityOverviews={this.state.overviews}
-                            endPoints = {this.state.endPoints}
+                            endPoints={this.state.endPoints}
                             isLoading={this.state.isLoading}
                         />
                         <StockBalanceStatus
                             stocks={this.state.selectedPortfolio.stocks}
-                            endPoints = {this.state.endPoints}
+                            endPoints={this.state.endPoints}
                             isLoading={this.state.isLoading}
                         />
                     </div>
                 ) : (
-                    <div></div>
+                    <div className="row empty-component">
+                        <div className="col-12 col-lg-5 col-xl-5">
+                            <div className="h-100 card">
+                                <div className="card-header">
+                                    <h2 className="card-heading">📊포트폴리오 구성</h2>
+                                </div>
+                                <div className="card-body"></div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-7 col-xl-7">
+                            <div className="h-100 card">
+                                <div className="card-header">
+                                    <h2 className="card-heading">💰주식잔고 현황</h2>
+                                </div>
+                                <div className="card-body"></div>
+                            </div>
+                        </div>
+                    </div>
                 )}
 
                 {/*Portfolio Delete Modal*/}
@@ -719,6 +749,7 @@ class Main extends Component {
                         <Modal.Body>
                             <label>삭제할 포트폴리오를 입력해주십시오.</label>
                             <Input
+                                className="form-control"
                                 type="text"
                                 name="portfolioName"
                                 value={this.state.portfolioName}
@@ -764,6 +795,7 @@ class Main extends Component {
                         <Modal.Body>
                             <label>Portfolio Name</label>
                             <Input
+                                className="form-control"
                                 type="text"
                                 name="portfolioName"
                                 value={this.state.portfolioName}
@@ -805,7 +837,7 @@ class Main extends Component {
                 {/*Stock Modal*/}
                 <Modal show={this.state.stockShowHide}>
                     <Modal.Header>
-                        <Modal.Title>주식 추가/삭제</Modal.Title>
+                        <Modal.Title className="card-heading">💸주식 추가/삭제</Modal.Title>
                     </Modal.Header>
                     {this.state.disabled ? (
                         <BarLoader width="100%" color="#4285f4" />
@@ -814,6 +846,7 @@ class Main extends Component {
                     )}
                     <Modal.Body>
                         <Form
+                            className="form-inline"
                             onSubmit={(event) => {
                                 this.searchStock(event);
                             }}
@@ -821,15 +854,22 @@ class Main extends Component {
                                 this.form = c;
                             }}
                         >
-                            <Input
-                                type="text"
-                                name="stockName"
-                                placeholder="Search Stock Name (해외주식만 가능)"
-                                value={this.state.keywords}
-                                onChange={(e) => this.setState({ keywords: e.target.value })}
+                            <div className="form-group">
+                                <Input
+                                    className="form-control"
+                                    type="text"
+                                    name="stockName"
+                                    placeholder="Search Stock Name (해외주식만 가능)"
+                                    value={this.state.keywords}
+                                    onChange={(e) => this.setState({ keywords: e.target.value })}
+                                    disabled={this.state.disabled}
+                                />
+                            </div>
+                            <Button
+                                className="form-group btn btn-primary btn-xl"
+                                type="submit"
                                 disabled={this.state.disabled}
-                            />
-                            <Button type="submit" disabled={this.state.disabled}>
+                            >
                                 검색
                             </Button>
                         </Form>

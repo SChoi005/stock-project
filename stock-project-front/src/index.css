@@ -17,6 +17,25 @@ a {
     background-color: transparent;
 }
 
+.card-heading {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: .2em;
+}
+
+.empty-component{
+    
+}
+
+.h-100{
+    border-radius: 1rem;
+}
+
+.row>*{
+    margin-bottom:25px;
+}
+
 .form-control{
     padding-top:10px;
     padding-bottom:10px;
@@ -92,6 +111,16 @@ a {
     width: 100%;
 }
 
+.form-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+
 .validation{
     color:#dc143c;
     font-size:14px;
@@ -104,23 +133,30 @@ a {
     margin-bottom: 0;
     border-bottom: 1px solid #e6e6e6;
     padding: 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
 }
 
 .card{
     margin-bottom:25px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 .clock{
     font-size:14px;
 }
 
-.radialChart-wrapper{
-}
-
 .radialChart{
 }
 
+.radialChart path{
+    cursor:pointer;
+}
+
 .chartValue{
+    position:relative;
+    bottom:50%;
+    text-align:center;
+    font-weight:bolder;
 }
 
 .icon-button{

@@ -2,45 +2,43 @@ import React, { Component } from 'react';
 import { PulseLoader } from 'react-spinners';
 
 class StockBalanceStatus extends Component {
-
     getTotalAsset() {
         var sum = 0;
         this.props.stocks.forEach((i) => {
-            this.props.endPoints.forEach((j)=>{
-                if(j['01. symbol']===i['symbol'])
-                    sum += j['05. price'] * i['quantity'];
-            })
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol']) sum += j['05. price'] * i['quantity'];
+            });
         });
         return sum.toFixed(4);
     }
-    
-    getInvestment(){
+
+    getInvestment() {
         var sum = 0;
-        
-        this.props.stocks.forEach((i)=>{
-            sum += (i['quantity']*i['average_price']);
-        })
-        
+
+        this.props.stocks.forEach((i) => {
+            sum += i['quantity'] * i['average_price'];
+        });
+
         return sum.toFixed(4);
     }
-    
-    getYield(){
-        var investment = this.getInvestment()
-        return ((this.getTotalAsset()-investment)*100/investment).toFixed(2)+"%";        
+
+    getYield() {
+        var investment = this.getInvestment();
+        return (((this.getTotalAsset() - investment) * 100) / investment).toFixed(2) + '%';
     }
-    
-    getPreviousDayYield(){
+
+    getPreviousDayYield() {
         var previous = 0;
         this.props.stocks.forEach((i) => {
-            this.props.endPoints.forEach((j)=>{
-                if(j['01. symbol']===i['symbol'])
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol'])
                     previous += j['08. previous close'] * i['quantity'];
-            })
+            });
         });
-        
-        return ((this.getTotalAsset()-previous)*100/previous).toFixed(2)+"%";
+
+        return (((this.getTotalAsset() - previous) * 100) / previous).toFixed(2) + '%';
     }
-    
+
     getData() {
         var data = [];
 
@@ -49,14 +47,18 @@ class StockBalanceStatus extends Component {
                 if (i['symbol'] === j['01. symbol']) {
                     var per = j['05. price'] - i['average_price'];
                     per = ((100 * per) / i['average_price']).toFixed(2) + '%';
-                    
+
                     data.push({
                         symbol: i['symbol'],
-                        price: "$"+j['05. price'],
-                        averagePrice: "$"+i['average_price'],
+                        price: '$' + j['05. price'],
+                        averagePrice: '$' + i['average_price'],
                         quantity: i['quantity'],
                         percent: per,
-                        previousDayPricePercent: j['10. change percent'].substring(0,j['10. change percent'].length-3)+'%'
+                        previousDayPricePercent:
+                            j['10. change percent'].substring(
+                                0,
+                                j['10. change percent'].length - 3
+                            ) + '%',
                     });
                 }
             });
@@ -67,55 +69,122 @@ class StockBalanceStatus extends Component {
 
     render() {
         return (
-            <div className="col-12 col-lg-6 col-xl-6 card card-border-color card-border-color-primary">
+            <div className="col-12 col-lg-7 col-xl-7">
                 {!this.props.isLoading ? (
-                    <div>
+                    <div className="h-100 card">
                         <div className="card-header">
-                        <h4>주식잔고 현황</h4>
+                            <h2 className="card-heading">💰주식잔고 현황</h2>
                         </div>
-                        <div className="card-body">
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>주식명</th>
-                                    <th>현재가</th>
-                                    <th>평균단가</th>
-                                    <th>수량</th>
-                                    <th>수익률</th>
-                                    <th>전일대비</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {this.getData().map((i) => {
-                                    return (
-                                        <tr key={i['symbol']}>
-                                            <td>{i['symbol']}</td>
-                                            <td>{i['price']}</td>
-                                            <td>{i['averagePrice']}</td>
-                                            <td>{i['quantity']}</td>
-                                            <td>{i['percent']}</td>
-                                            <td>{i['previousDayPricePercent']}</td>
+                        {this.props.stocks.length !== 0 ? (
+                            <div className="card-body table-responsive">
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th>주식명</th>
+                                            <th>현재가</th>
+                                            <th>평균단가</th>
+                                            <th>수량</th>
+                                            <th>수익률</th>
+                                            <th>전일대비</th>
                                         </tr>
-                                    );
-                                })}
-                                <tr style={{fontWeight:"bold"}}>
-                                    <td colSpan='2'>총자산</td>
-                                    <td colSpan='2'>투자자산</td>
-                                    <td>수익률</td>
-                                    <td>전일대비</td>
-                                </tr>
-                                <tr>
-                                    <td colSpan='2'>{"$"+this.getTotalAsset()}</td>
-                                    <td colSpan='2'>{"$"+this.getInvestment()}</td>
-                                    <td>{this.getYield()}</td>
-                                    <td>{this.getPreviousDayYield()}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
+                                    </thead>
+                                    <tbody>
+                                        {this.getData().map((i) => {
+                                            return (
+                                                <tr key={i['symbol']}>
+                                                    <td>{i['symbol']}</td>
+
+                                                    {i['previousDayPricePercent'][0] === '-' ? (
+                                                        <td style={{ color: '#4285f4' }}>
+                                                            {i['price']}
+                                                        </td>
+                                                    ) : (
+                                                        <td style={{ color: '#dc143c' }}>
+                                                            {i['price']}
+                                                        </td>
+                                                    )}
+                                                    <td>{i['averagePrice']}</td>
+                                                    <td>{i['quantity']}</td>
+                                                    {i['percent'][0] === '-' ? (
+                                                        <td style={{ color: '#4285f4' }}>
+                                                            {i['percent']}
+                                                        </td>
+                                                    ) : (
+                                                        <td style={{ color: '#dc143c' }}>
+                                                            {i['percent']}
+                                                        </td>
+                                                    )}
+
+                                                    {i['previousDayPricePercent'][0] === '-' ? (
+                                                        <td style={{ color: '#4285f4' }}>
+                                                            {i['previousDayPricePercent']}
+                                                        </td>
+                                                    ) : (
+                                                        <td style={{ color: '#dc143c' }}>
+                                                            {i['previousDayPricePercent']}
+                                                        </td>
+                                                    )}
+                                                </tr>
+                                            );
+                                        })}
+                                        <tr style={{ fontWeight: 'bold' }}>
+                                            <td colSpan="2">총자산</td>
+                                            <td colSpan="2">투자자산</td>
+                                            <td>수익률</td>
+                                            <td>전일대비</td>
+                                        </tr>
+                                        <tr>
+                                            {this.getPreviousDayYield()[0] === '-' ? (
+                                                <td colSpan="2" style={{ color: '#4285f4' }}>
+                                                    {'$' + this.getTotalAsset()}
+                                                </td>
+                                            ) : (
+                                                <td colSpan="2" style={{ color: '#dc143c' }}>
+                                                    {'$' + this.getTotalAsset()}
+                                                </td>
+                                            )}
+                                            <td colSpan="2">{'$' + this.getInvestment()}</td>
+                                            {this.getYield()[0] === '-' ? (
+                                                <td style={{ color: '#4285f4' }}>
+                                                    {this.getYield()}
+                                                </td>
+                                            ) : (
+                                                <td style={{ color: '#dc143c' }}>
+                                                    {this.getYield()}
+                                                </td>
+                                            )}
+                                            {this.getPreviousDayYield()[0] === '-' ? (
+                                                <td style={{ color: '#4285f4' }}>
+                                                    {this.getPreviousDayYield()}
+                                                </td>
+                                            ) : (
+                                                <td style={{ color: '#dc143c' }}>
+                                                    {this.getPreviousDayYield()}
+                                                </td>
+                                            )}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <div className="card-body"></div>
+                        )}
                     </div>
                 ) : (
-                    <PulseLoader className="loading" color="#36D7B7" speedMultiplier={1}/>
+                    <div className="empty-component">
+                        <div className="h-100 card">
+                            <div className="card-header">
+                                <h2 className="card-heading">💰주식잔고 현황</h2>
+                            </div>
+                            <div className="card-body">
+                                <PulseLoader
+                                    className="loading"
+                                    color="#4285f4"
+                                    speedMultiplier={1}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 )}
             </div>
         );
