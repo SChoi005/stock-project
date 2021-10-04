@@ -10,7 +10,7 @@ class PieGraph extends Component {
         this.clickValue = this.clickValue.bind(this);
         this.state = {
             switch: true,
-            chartValue: '총 자산 : $' + this.getTotalAsset(),
+            chartValue: '총 자산\n$' + this.getTotalAsset(),
             fixd: false,
             data: this.getAssetData(),
         };
@@ -20,14 +20,14 @@ class PieGraph extends Component {
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산 : $' + this.getTotalAsset(),
+                chartValue: '총 자산\n$' + this.getTotalAsset(),
                 switch: true,
             });
         }
         if (this.props.stocks !== prevProps.stocks) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산 : $' + this.getTotalAsset(),
+                chartValue: '총 자산\n$' + this.getTotalAsset(),
                 switch: true,
             });
         }
@@ -87,7 +87,7 @@ class PieGraph extends Component {
                     const price = j['05. price'] * i['quantity'];
                     const percent = (price / sum) * 100;
                     data.push({
-                        title: i['symbol'] + ' (' + percent.toFixed(1) + '%) $' + price.toFixed(4),
+                        title: i['symbol'] + ' (' + percent.toFixed(1) + '%)\n$' + price.toFixed(4),
                         label: i['symbol'],
                         angle: percent,
                         color: colors[num++],
@@ -141,7 +141,7 @@ class PieGraph extends Component {
                                 j['Symbol'] +
                                 ' (' +
                                 percent.toFixed(1) +
-                                '%) $' +
+                                '%)\n$' +
                                 dividend.toFixed(2),
                             label: j['Symbol'],
                             angle: percent,
@@ -163,7 +163,7 @@ class PieGraph extends Component {
     assetClick(e) {
         this.setState({
             switch: true,
-            chartValue: '총 자산 : $' + this.getTotalAsset(),
+            chartValue: '총 자산\n$' + this.getTotalAsset(),
             data: this.getAssetData(),
             fixed: false,
         });
@@ -172,7 +172,7 @@ class PieGraph extends Component {
     allocationClick(e) {
         this.setState({
             switch: false,
-            chartValue: '연 배당금 : $' + this.getTotalAllocation(),
+            chartValue: '연 배당금\n$' + this.getTotalAllocation(),
             data: this.getAllocationData(),
             fixed: false,
         });
@@ -211,12 +211,27 @@ class PieGraph extends Component {
                         </div>
                         {this.state.data.length !== 0 ? (
                             <div className="card-body">
-                                <div className="btn-group btn-toggle">
-                                    <Button onClick={this.assetClick}>자산구성</Button>
-                                    <Button onClick={this.allocationClick}>배당구성</Button>
-                                </div>
+                                {this.state.switch ? (
+                                    <div className="btn-group btn-toggle">
+                                        <Button variant="primary" onClick={this.assetClick}>
+                                            자산구성
+                                        </Button>
+                                        <Button variant="secondary" onClick={this.allocationClick}>
+                                            배당구성
+                                        </Button>
+                                    </div>
+                                ) : (
+                                    <div className="btn-group btn-toggle">
+                                        <Button variant="secondary" onClick={this.assetClick}>
+                                            자산구성
+                                        </Button>
+                                        <Button variant="primary" onClick={this.allocationClick}>
+                                            배당구성
+                                        </Button>
+                                    </div>
+                                )}
                                 <div className="row">
-                                    <div className="radialChart col-12 col-lg-6 col-xl-6">
+                                    <div className="radialChart col-12 col-md-6 col-lg-8 col-xl-6">
                                         <RadialChart
                                             className="radial"
                                             data={this.state.data}
@@ -239,14 +254,13 @@ class PieGraph extends Component {
                                                     if (this.state.switch)
                                                         this.setState({
                                                             chartValue:
-                                                                '총 자산 : $' +
-                                                                this.getTotalAsset(),
+                                                                '총 자산\n$' + this.getTotalAsset(),
                                                             fixed: false,
                                                         });
                                                     else
                                                         this.setState({
                                                             chartValue:
-                                                                '연 배당금 : $' +
+                                                                '연 배당금\n$' +
                                                                 this.getTotalAllocation(),
                                                             fixed: false,
                                                         });
@@ -258,11 +272,14 @@ class PieGraph extends Component {
                                                     chartValue: v.title,
                                                 });
                                             }}
-                                        />
-                                        <div className="chartValue">{this.state.chartValue}</div>
+                                        >
+                                            <div className="chartValue">
+                                                {this.state.chartValue}
+                                            </div>
+                                        </RadialChart>
                                     </div>
                                     <DiscreteColorLegend
-                                        className="col-12 col-lg-6 col-xl-6"
+                                        className="col-12 col-md-6 col-lg-4 col-xl-6"
                                         items={this.state.data}
                                     />
                                 </div>
@@ -270,8 +287,31 @@ class PieGraph extends Component {
                         ) : (
                             <div className="card-body">
                                 <div className="btn-group btn-toggle">
-                                    <Button onClick={this.assetClick}>자산구성</Button>
-                                    <Button onClick={this.allocationClick}>배당구성</Button>
+                                    {this.state.switch ? (
+                                        <div className="btn-group btn-toggle">
+                                            <Button variant="primary" onClick={this.assetClick}>
+                                                자산구성
+                                            </Button>
+                                            <Button
+                                                variant="secondary"
+                                                onClick={this.allocationClick}
+                                            >
+                                                배당구성
+                                            </Button>
+                                        </div>
+                                    ) : (
+                                        <div className="btn-group btn-toggle">
+                                            <Button variant="secondary" onClick={this.assetClick}>
+                                                자산구성
+                                            </Button>
+                                            <Button
+                                                variant="primary"
+                                                onClick={this.allocationClick}
+                                            >
+                                                배당구성
+                                            </Button>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         )}
@@ -283,7 +323,11 @@ class PieGraph extends Component {
                                 <h2 className="card-heading">📊포트폴리오 구성</h2>
                             </div>
                             <div className="card-body">
-                                <PulseLoader className="loading" color="#4285f4" speedMultiplier={1} />
+                                <PulseLoader
+                                    className="loading"
+                                    color="#4285f4"
+                                    speedMultiplier={1}
+                                />
                             </div>
                         </div>
                     </div>

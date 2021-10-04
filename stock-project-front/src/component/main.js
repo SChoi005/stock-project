@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PieGraph from './stock/pieGraph';
 import StockBalanceStatus from './stock/stockBalanceStatus';
+import News from './stock/news';
 import { Button, Modal, Collapse } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
@@ -324,6 +325,16 @@ class Main extends Component {
 
         this.setState({ disabled: true });
 
+        if(this.state.averagePrice<=0||this.state.quantity<=0){
+            this.setState({
+                averagePrice: '', 
+                quantity: '',
+                stockErrorMessage: '형식이 맞지않습니다.',
+                disabled: false,
+            });
+            return "";
+        }
+        
         var check = false;
 
         this.state.selectedPortfolio.stocks.forEach((stock) => {
@@ -506,6 +517,18 @@ class Main extends Component {
     updateStock(e, item) {
         e.preventDefault();
         this.setState({ disabled: true });
+        
+        if(this.state.ownQuantity<=0||this.state.ownAveragePrice<=0){
+            this.setState({
+                ownAveragePrice: '',
+                ownQuantity: '',
+                ownStockErrorMessage: '형식이 맞지 않습니다.',
+                disabled: false,
+            });
+            return "";
+        }
+        
+        
         StockService.putStock(
             item,
             this.state.ownQuantity,
@@ -565,104 +588,170 @@ class Main extends Component {
                 <div className="col-12 col-md-4 col-lg-4 col-xl-4">
                     <div className="h-100 card">
                         <div className="card-body">
-                            <div>
+                            <div className="navbar">
                                 <Button
-                                    className="icon-button"
-                                    variant="primary"
                                     onClick={() => this.toggle()}
                                     aria-controls="collapse-text"
                                     aria-expanded={this.state.isOpen}
                                 >
-                                    <img src="list.png" alt="list" width="20px" />
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        className="bi bi-list-ul"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                                        />
+                                    </svg>
                                 </Button>
-                            </div>
-                            {isEmpty(this.state.selectedPortfolio) !== 0 ? (
-                                <div>
-                                    {this.state.isRename ? (
-                                        <Form
-                                            onSubmit={this.updatePortfolio}
-                                            ref={(c) => {
-                                                this.form = c;
-                                            }}
-                                        >
-                                            <Input
-                                                type="text"
-                                                name="portfolioName"
-                                                value={this.state.portfolioUpdateName}
-                                                placeholder={this.state.selectedPortfolio.name}
-                                                onChange={(e) => {
-                                                    if (e.target.value.trim().length > 0) {
-                                                        if (
-                                                            e.target.value ===
-                                                            this.state.selectedPortfolio.name
-                                                        )
+
+                                {isEmpty(this.state.selectedPortfolio) !== 0 ? (
+                                    <div>
+                                        {this.state.isRename ? (
+                                            <Form
+                                                onSubmit={this.updatePortfolio}
+                                                ref={(c) => {
+                                                    this.form = c;
+                                                }}
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name="portfolioName"
+                                                    value={this.state.portfolioUpdateName}
+                                                    placeholder={this.state.selectedPortfolio.name}
+                                                    onChange={(e) => {
+                                                        if (e.target.value.trim().length > 0) {
+                                                            if (
+                                                                e.target.value ===
+                                                                this.state.selectedPortfolio.name
+                                                            )
+                                                                this.setState({
+                                                                    portfolioUpdateCheck: false,
+                                                                    portfolioUpdateErrorMessage:
+                                                                        '동일한 이름 입니다.',
+                                                                });
+                                                            else {
+                                                                this.setState({
+                                                                    portfolioUpdateCheck: true,
+                                                                    portfolioUpdateErrorMessage: '',
+                                                                });
+                                                            }
+                                                        } else
                                                             this.setState({
                                                                 portfolioUpdateCheck: false,
                                                                 portfolioUpdateErrorMessage:
-                                                                    '동일한 이름 입니다.',
+                                                                    '포트폴리오 이름을 입력해주십시오',
                                                             });
-                                                        else {
-                                                            this.setState({
-                                                                portfolioUpdateCheck: true,
-                                                                portfolioUpdateErrorMessage: '',
-                                                            });
-                                                        }
-                                                    } else
                                                         this.setState({
-                                                            portfolioUpdateCheck: false,
-                                                            portfolioUpdateErrorMessage:
-                                                                '포트폴리오 이름을 입력해주십시오',
+                                                            portfolioUpdateName: e.target.value,
+                                                        });
+                                                    }}
+                                                    disabled={this.state.disabled}
+                                                />
+                                                <Button
+                                                    type="submit"
+                                                    disabled={this.state.disabled}
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        className="bi bi-check-square"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                                                    </svg>
+                                                </Button>
+                                            </Form>
+                                        ) : (
+                                            <h2 className="card-heading">
+                                                {this.state.selectedPortfolio.name}
+                                            </h2>
+                                        )}
+                                        <div>
+                                            <Button
+                                                onClick={() => {
+                                                    if (this.state.isRename)
+                                                        this.setState({
+                                                            portfolioUpdateName: '',
+                                                            portfolioUpdateErrorMessage: '',
                                                         });
                                                     this.setState({
-                                                        portfolioUpdateName: e.target.value,
+                                                        isRename: !this.state.isRename,
                                                     });
                                                 }}
-                                                disabled={this.state.disabled}
-                                            />
-                                            <Button type="submit" disabled={this.state.disabled}>
-                                                확인
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    className="bi bi-pencil-square"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+                                                    />
+                                                </svg>
                                             </Button>
-                                        </Form>
-                                    ) : (
-                                        <h2>{this.state.selectedPortfolio.name}</h2>
-                                    )}
-                                    <Button
-                                        variant="primary"
-                                        onClick={() => {
-                                            if (this.state.isRename)
-                                                this.setState({
-                                                    portfolioUpdateName: '',
-                                                    portfolioUpdateErrorMessage: '',
-                                                });
-                                            this.setState({ isRename: !this.state.isRename });
-                                        }}
+                                            <Button onClick={() => this.handleStockModalShowHide()}>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    className="bi bi-currency-dollar"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                                                </svg>
+                                            </Button>
+                                            <Button
+                                                variant="primary"
+                                                onClick={() => this.handleDeleteModalShowHide()}
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    className="bi bi-x-square"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </Button>
+                                        </div>
+                                        <div className="validation">
+                                            {this.state.portfolioUpdateErrorMessage}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <h2 className="card-heading">Select Portfolio!</h2>
+                                )}
+                                <Button onClick={() => this.handleCreateModalShowHide()}>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        className="bi bi-plus-square"
+                                        viewBox="0 0 16 16"
                                     >
-                                        수정
-                                    </Button>
-                                    <Button
-                                        variant="primary"
-                                        onClick={() => this.handleDeleteModalShowHide()}
-                                    >
-                                        삭제
-                                    </Button>
-                                    <Button
-                                        variant="primary"
-                                        onClick={() => this.handleStockModalShowHide()}
-                                    >
-                                        주식추가
-                                    </Button>
-                                    <div>{this.state.portfolioUpdateErrorMessage}</div>
-                                </div>
-                            ) : (
-                                <h2>Select Portfolio!</h2>
-                            )}
-                            <Button
-                                className="bi bi-plus-square"
-                                variant="primary"
-                                onClick={() => this.handleCreateModalShowHide()}
-                            >
-                                추가
-                            </Button>
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -696,35 +785,52 @@ class Main extends Component {
 
                 {/* Stock Component*/}
                 {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
-                    <div className="row">
-                        <PieGraph
-                            stocks={this.state.selectedPortfolio.stocks}
-                            equityOverviews={this.state.overviews}
-                            endPoints={this.state.endPoints}
-                            isLoading={this.state.isLoading}
-                        />
-                        <StockBalanceStatus
-                            stocks={this.state.selectedPortfolio.stocks}
-                            endPoints={this.state.endPoints}
-                            isLoading={this.state.isLoading}
-                        />
+                    <div>
+                        <div className="row">
+                            <PieGraph
+                                stocks={this.state.selectedPortfolio.stocks}
+                                equityOverviews={this.state.overviews}
+                                endPoints={this.state.endPoints}
+                                isLoading={this.state.isLoading}
+                            />
+                            <StockBalanceStatus
+                                stocks={this.state.selectedPortfolio.stocks}
+                                endPoints={this.state.endPoints}
+                                isLoading={this.state.isLoading}
+                            />
+                        </div>
+                        <div className="row">
+                            <News />
+                        </div>
                     </div>
                 ) : (
-                    <div className="row empty-component">
-                        <div className="col-12 col-lg-5 col-xl-5">
-                            <div className="h-100 card">
-                                <div className="card-header">
-                                    <h2 className="card-heading">📊포트폴리오 구성</h2>
+                    <div>
+                        <div className="row empty-component">
+                            <div className="col-12 col-lg-5 col-xl-5">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">📊포트폴리오 구성</h2>
+                                    </div>
+                                    <div className="card-body"></div>
                                 </div>
-                                <div className="card-body"></div>
+                            </div>
+                            <div className="col-12 col-lg-7 col-xl-7">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">💰주식잔고 현황</h2>
+                                    </div>
+                                    <div className="card-body"></div>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-7 col-xl-7">
-                            <div className="h-100 card">
-                                <div className="card-header">
-                                    <h2 className="card-heading">💰주식잔고 현황</h2>
+                        <div className="row">
+                            <div className="col-12 col-lg-7 col-xl-7">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">📰나만의 뉴스</h2>
+                                    </div>
+                                    <div className="card-body"></div>
                                 </div>
-                                <div className="card-body"></div>
                             </div>
                         </div>
                     </div>
@@ -733,7 +839,7 @@ class Main extends Component {
                 {/*Portfolio Delete Modal*/}
                 <Modal show={this.state.deleteShowHide}>
                     <Modal.Header>
-                        <Modal.Title>포트폴리오 삭제</Modal.Title>
+                        <Modal.Title>⚠️포트폴리오 삭제</Modal.Title>
                     </Modal.Header>
                     {this.state.disabled ? (
                         <BarLoader width="100%" color="#4285f4" />
@@ -779,7 +885,7 @@ class Main extends Component {
                 {/*Portfolio Create Modal*/}
                 <Modal show={this.state.createShowHide}>
                     <Modal.Header>
-                        <Modal.Title>포트폴리오 추가</Modal.Title>
+                        <Modal.Title>💡포트폴리오 추가</Modal.Title>
                     </Modal.Header>
                     {this.state.disabled ? (
                         <BarLoader width="100%" color="#4285f4" />

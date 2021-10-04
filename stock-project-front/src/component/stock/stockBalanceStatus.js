@@ -39,6 +39,19 @@ class StockBalanceStatus extends Component {
         return (((this.getTotalAsset() - previous) * 100) / previous).toFixed(2) + '%';
     }
 
+    getTotalPlusAndLoss() {
+        var sum = 0;
+
+        this.props.stocks.forEach((i) => {
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol'])
+                    sum += (j['05. price'] - i['average_price']) * i['quantity'];
+            });
+        });
+
+        return sum.toFixed(4);
+    }
+
     getData() {
         var data = [];
 
@@ -59,6 +72,10 @@ class StockBalanceStatus extends Component {
                                 0,
                                 j['10. change percent'].length - 3
                             ) + '%',
+                        plusAndLoss: (
+                            (j['05. price'] - i['average_price']) *
+                            i['quantity']
+                        ).toFixed(4),
                     });
                 }
             });
@@ -77,7 +94,7 @@ class StockBalanceStatus extends Component {
                         </div>
                         {this.props.stocks.length !== 0 ? (
                             <div className="card-body table-responsive">
-                                <table className="table">
+                                <table className="table table-sm">
                                     <thead>
                                         <tr>
                                             <th>주식명</th>
@@ -86,6 +103,7 @@ class StockBalanceStatus extends Component {
                                             <th>수량</th>
                                             <th>수익률</th>
                                             <th>전일대비</th>
+                                            <th>평가손익</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -124,26 +142,42 @@ class StockBalanceStatus extends Component {
                                                             {i['previousDayPricePercent']}
                                                         </td>
                                                     )}
+                                                    {i['percent'][0] === '-' ? (
+                                                        <td style={{ color: '#4285f4' }}>
+                                                            -${i['plusAndLoss']}
+                                                        </td>
+                                                    ) : (
+                                                        <td style={{ color: '#dc143c' }}>
+                                                            ${i['plusAndLoss']}
+                                                        </td>
+                                                    )}
                                                 </tr>
                                             );
                                         })}
+                                    </tbody>
+                                </table>
+                                <table className="table table-sm">
+                                    <thead>
                                         <tr style={{ fontWeight: 'bold' }}>
-                                            <td colSpan="2">총자산</td>
-                                            <td colSpan="2">투자자산</td>
-                                            <td>수익률</td>
-                                            <td>전일대비</td>
+                                            <th>총자산</th>
+                                            <th>투자자산</th>
+                                            <th>수익률</th>
+                                            <th>전일대비</th>
+                                            <th>평가손익</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             {this.getPreviousDayYield()[0] === '-' ? (
-                                                <td colSpan="2" style={{ color: '#4285f4' }}>
+                                                <td style={{ color: '#4285f4' }}>
                                                     {'$' + this.getTotalAsset()}
                                                 </td>
                                             ) : (
-                                                <td colSpan="2" style={{ color: '#dc143c' }}>
+                                                <td style={{ color: '#dc143c' }}>
                                                     {'$' + this.getTotalAsset()}
                                                 </td>
                                             )}
-                                            <td colSpan="2">{'$' + this.getInvestment()}</td>
+                                            <td>{'$' + this.getInvestment()}</td>
                                             {this.getYield()[0] === '-' ? (
                                                 <td style={{ color: '#4285f4' }}>
                                                     {this.getYield()}
@@ -160,6 +194,15 @@ class StockBalanceStatus extends Component {
                                             ) : (
                                                 <td style={{ color: '#dc143c' }}>
                                                     {this.getPreviousDayYield()}
+                                                </td>
+                                            )}
+                                            {this.getYield()[0] === '-' ? (
+                                                <td style={{ color: '#4285f4' }}>
+                                                    -${this.getTotalPlusAndLoss()}
+                                                </td>
+                                            ) : (
+                                                <td style={{ color: '#dc143c' }}>
+                                                    ${this.getTotalPlusAndLoss()}
                                                 </td>
                                             )}
                                         </tr>

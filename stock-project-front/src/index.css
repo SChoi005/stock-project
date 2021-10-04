@@ -1,10 +1,14 @@
-body{
-    font-family: 'Roboto','Arial','Noto Sans KR', sans-serif;
-    background-color:#eee;
+body {
+    font-family: 'Roboto', 'Arial', 'Noto Sans KR', sans-serif;
+    background-color: #eee;
     padding-top: 75px;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
@@ -21,33 +25,33 @@ a {
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
 }
 
-.empty-component{
-    
+.navbar button {
+    position: relative;
 }
 
-.h-100{
+.h-100 {
     border-radius: 1rem;
 }
 
-.row>*{
-    margin-bottom:25px;
+.row > * {
+    margin-bottom: 25px;
 }
 
-.form-control{
-    padding-top:10px;
-    padding-bottom:10px;
+.form-control {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.container-fluid h1{
-    font-size:25px;
+.container-fluid h1 {
+    font-size: 25px;
     display: inline-block;
 }
 
-.container-fluid{
-    padding:5px 10px;
+.container-fluid {
+    padding: 5px 10px;
 }
 
 .splash-container .card .card-header {
@@ -58,7 +62,7 @@ a {
     color: #5a5a5a;
 }
 
-.card-header{
+.card-header {
     font-size: 25px;
     font-weight: 300;
     padding-left: 0;
@@ -70,23 +74,23 @@ a {
     background-color: transparent;
 }
 
-.barloader{
-    float:center;
+.barloader {
+    float: center;
 }
 
-.splash-footer{
+.splash-footer {
     text-align: center;
 }
 
-.splash-container{
+.splash-container {
     max-width: 401px;
     margin: 50px auto;
-    padding:10px;
+    padding: 10px;
 }
 
-.logOut{
+.logOut {
     font-size: 14px;
-    margin-left:5px;
+    margin-left: 5px;
 }
 
 .form-group {
@@ -107,7 +111,7 @@ a {
     border-color: #4285f4;
 }
 
-.login-submit .btn{
+.login-submit .btn {
     width: 100%;
 }
 
@@ -120,10 +124,9 @@ a {
     align-items: center;
 }
 
-
-.validation{
-    color:#dc143c;
-    font-size:14px;
+.validation {
+    color: #dc143c;
+    font-size: 14px;
     float: left;
 }
 
@@ -136,32 +139,53 @@ a {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
 }
 
-.card{
-    margin-bottom:25px;
+.card {
+    margin-bottom: 25px;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
-.clock{
-    font-size:14px;
+.clock {
+    font-size: 14px;
 }
 
-.radialChart{
+.radialChart path {
+    cursor: pointer;
 }
 
-.radialChart path{
-    cursor:pointer;
+.chartValue {
+    font-size: 14px;
+    position: relative;
+    bottom: 58%;
+    text-align: center;
+    font-weight: bolder;
+    white-space: pre-line;
 }
 
-.chartValue{
-    position:relative;
-    bottom:50%;
-    text-align:center;
-    font-weight:bolder;
+.icon-button {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #eee;
+    padding: 4px 0;
+    width: 30px;
 }
 
-.icon-button{
-    background-color:rgba(255,255,255,0);
-    border-color:#eee;
-    padding:4px 0;
-    width:30px;
+td,
+th {
+    min-width: 75px;
+    text-align: left;
+}
+
+.btn-group .btn {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.btn-primary:focus {
+    background-color: #4285f4;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
