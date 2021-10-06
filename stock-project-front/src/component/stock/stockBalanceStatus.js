@@ -144,7 +144,7 @@ class StockBalanceStatus extends Component {
                                                     )}
                                                     {i['percent'][0] === '-' ? (
                                                         <td style={{ color: '#4285f4' }}>
-                                                            -${i['plusAndLoss']}
+                                                            ${i['plusAndLoss']}
                                                         </td>
                                                     ) : (
                                                         <td style={{ color: '#dc143c' }}>
@@ -198,7 +198,7 @@ class StockBalanceStatus extends Component {
                                             )}
                                             {this.getYield()[0] === '-' ? (
                                                 <td style={{ color: '#4285f4' }}>
-                                                    -${this.getTotalPlusAndLoss()}
+                                                    ${this.getTotalPlusAndLoss()}
                                                 </td>
                                             ) : (
                                                 <td style={{ color: '#dc143c' }}>

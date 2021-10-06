@@ -21,6 +21,11 @@ a {
     background-color: transparent;
 }
 
+.card-body .card-heading{
+    margin-top:11px;
+    margin-bottom:11px;
+}
+
 .card-heading {
     margin-bottom: 0;
     font-size: 20px;
@@ -127,7 +132,6 @@ a {
 .validation {
     color: #dc143c;
     font-size: 14px;
-    float: left;
 }
 
 .be-top-header {
@@ -173,10 +177,11 @@ th {
     min-width: 75px;
     text-align: left;
 }
-
-.btn-group .btn {
+.radial .btn-group{
+    margin-left:10px;
+}
+.radial .btn-group .btn {
     font-size: 14px;
-    margin-left: 10px;
 }
 
 .btn-primary:focus {

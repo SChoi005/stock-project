@@ -210,7 +210,7 @@ class PieGraph extends Component {
                             <h2 className="card-heading">📊포트폴리오 구성</h2>
                         </div>
                         {this.state.data.length !== 0 ? (
-                            <div className="card-body">
+                            <div className="card-body radial">
                                 {this.state.switch ? (
                                     <div className="btn-group btn-toggle">
                                         <Button variant="primary" onClick={this.assetClick}>
@@ -233,7 +233,6 @@ class PieGraph extends Component {
                                 <div className="row">
                                     <div className="radialChart col-12 col-md-6 col-lg-8 col-xl-6">
                                         <RadialChart
-                                            className="radial"
                                             data={this.state.data}
                                             width={250}
                                             height={250}

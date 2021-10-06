@@ -29,8 +29,7 @@ https://shinsunyoung.tistory.com/78
 
 # 해야할것
 ==> ( 1차 휴식기 ! ) ( stock delete할때 확인작업 추가 )
-1. nav바 css 
-2. 뉴스 제작
+1. 뉴스 제작
 * etf api 가져오는게 문제.. 
 
 ==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )
