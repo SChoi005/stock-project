@@ -21,9 +21,41 @@ a {
     background-color: transparent;
 }
 
-.card-body .card-heading{
-    margin-top:11px;
-    margin-bottom:11px;
+h2{
+    line-height: 1.75;
+}
+
+.dropdown{
+    width:40px;
+    float:left;
+}
+
+.dropdown + div .input-group{
+}
+
+.dropdown button,
+.dropdown button:focus,
+.dropdown button:hover,
+.show>.btn-primary.dropdown-toggle,
+.btn-menu .btn,
+.btn-menu .btn:focus
+{
+    border-style: none;
+    color: #4285f4;
+    background-color: transparent;
+    border-color: #4285f4;
+    box-shadow: none;
+}
+
+
+.sub-title{
+    font-size:14px;
+    color: #5a5a5a;
+    letter-spacing: 0;
+}
+
+.card-body .card-heading {
+    margin-bottom: 11px;
 }
 
 .card-heading {
@@ -177,8 +209,8 @@ th {
     min-width: 75px;
     text-align: left;
 }
-.radial .btn-group{
-    margin-left:10px;
+.radial .btn-group {
+    margin-left: 10px;
 }
 .radial .btn-group .btn {
     font-size: 14px;

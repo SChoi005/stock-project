@@ -156,7 +156,7 @@ class Main extends Component {
         var tempEndPoint = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
-            item.stocks.map((i) => {
+            item.stocks.forEach((i) => {
                 map.set(i['symbol'], false);
                 if (i['type'] !== 'ETF') {
                     tempOverview.push(OpenApiService.getStockOverview(i['symbol']));
@@ -187,7 +187,6 @@ class Main extends Component {
                     this.setState({ overviews: arr, isLoading: false });
                 });
             });
-
     }
 
     createPortfolio(e) {
@@ -319,16 +318,16 @@ class Main extends Component {
 
         this.setState({ disabled: true });
 
-        if(this.state.averagePrice<=0||this.state.quantity<=0){
+        if (this.state.averagePrice <= 0 || this.state.quantity <= 0) {
             this.setState({
-                averagePrice: '', 
+                averagePrice: '',
                 quantity: '',
                 stockErrorMessage: '형식이 맞지않습니다.',
                 disabled: false,
             });
-            return "";
+            return '';
         }
-        
+
         var check = false;
 
         this.state.selectedPortfolio.stocks.forEach((stock) => {
@@ -511,18 +510,17 @@ class Main extends Component {
     updateStock(e, item) {
         e.preventDefault();
         this.setState({ disabled: true });
-        
-        if(this.state.ownQuantity<=0||this.state.ownAveragePrice<=0){
+
+        if (this.state.ownQuantity <= 0 || this.state.ownAveragePrice <= 0) {
             this.setState({
                 ownAveragePrice: '',
                 ownQuantity: '',
                 ownStockErrorMessage: '형식이 맞지 않습니다.',
                 disabled: false,
             });
-            return "";
+            return '';
         }
-        
-        
+
         StockService.putStock(
             item,
             this.state.ownQuantity,
@@ -579,7 +577,7 @@ class Main extends Component {
         // console.log(this.state.selectedStocks);
         return (
             <div className="container">
-                <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+                <div className="col-12 col-md-5 col-lg-5 col-xl-4">
                     <div className="h-100 card">
                         <div className="card-body">
                             <div>
@@ -588,24 +586,29 @@ class Main extends Component {
                                         return (
                                             <Dropdown.Item
                                                 href="/"
-                                                    onClick={(event) => {
-                                                        this.setState({ isLoading: true });
-                                                        this.selectPortfolio(event, item);
-                                                    }}
-                                                    role="button"    
+                                                onClick={(event) => {
+                                                    this.setState({ isLoading: true });
+                                                    this.selectPortfolio(event, item);
+                                                }}
+                                                role="button"
+                                                key={item.name}
                                             >
-                                                    {item.name}
+                                                {item.name}
                                             </Dropdown.Item>
                                         );
                                     })}
                                     <Dropdown.Divider />
-                                    <Dropdown.Item href="/" onClick={(event) => this.selectPortfolio(event, {})}>Select Portfolio!</Dropdown.Item>
+                                    <Dropdown.Item
+                                        href="/"
+                                        onClick={(event) => this.selectPortfolio(event, {})}
+                                    >
+                                        Select Portfolio!
+                                    </Dropdown.Item>
                                 </DropdownButton>
-                                
                                 {isEmpty(this.state.selectedPortfolio) !== 0 ? (
                                     <div>
                                         {this.state.isRename ? (
-                                            <div>
+                                            <div style={{marginLeft:'40px'}}>
                                                 <Form
                                                     onSubmit={this.updatePortfolio}
                                                     ref={(c) => {
@@ -618,12 +621,15 @@ class Main extends Component {
                                                         type="text"
                                                         name="portfolioName"
                                                         value={this.state.portfolioUpdateName}
-                                                        placeholder={this.state.selectedPortfolio.name}
+                                                        placeholder={
+                                                            this.state.selectedPortfolio.name
+                                                        }
                                                         onChange={(e) => {
                                                             if (e.target.value.trim().length > 0) {
                                                                 if (
                                                                     e.target.value ===
-                                                                    this.state.selectedPortfolio.name
+                                                                    this.state.selectedPortfolio
+                                                                        .name
                                                                 )
                                                                     this.setState({
                                                                         portfolioUpdateCheck: false,
@@ -633,7 +639,8 @@ class Main extends Component {
                                                                 else {
                                                                     this.setState({
                                                                         portfolioUpdateCheck: true,
-                                                                        portfolioUpdateErrorMessage: '',
+                                                                        portfolioUpdateErrorMessage:
+                                                                            '',
                                                                     });
                                                                 }
                                                             } else
@@ -667,16 +674,17 @@ class Main extends Component {
                                                     </Button>
                                                 </Form>
                                                 <div className="validation">
-                                                        {this.state.portfolioUpdateErrorMessage}
+                                                    {this.state.portfolioUpdateErrorMessage}
                                                 </div>
                                             </div>
                                         ) : (
-                                            <h2 className="card-heading">
+                                            <h2 style={{marginLeft:'40px'}} className="card-heading">
                                                 {this.state.selectedPortfolio.name}
                                             </h2>
                                         )}
-                                        <div className="btn-group">
+                                        <div className="btn-group btn-menu">
                                             <Button
+                                                variant="outline-primary"
                                                 onClick={() => {
                                                     if (this.state.isRename)
                                                         this.setState({
@@ -703,7 +711,7 @@ class Main extends Component {
                                                     />
                                                 </svg>
                                             </Button>
-                                            <Button onClick={() => this.handleStockModalShowHide()}>
+                                            <Button variant="outline-primary" onClick={() => this.handleStockModalShowHide()}>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="16"
@@ -716,7 +724,7 @@ class Main extends Component {
                                                 </svg>
                                             </Button>
                                             <Button
-                                                variant="primary"
+                                                variant="outline-primary"
                                                 onClick={() => this.handleDeleteModalShowHide()}
                                             >
                                                 <svg
@@ -731,7 +739,10 @@ class Main extends Component {
                                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                 </svg>
                                             </Button>
-                                            <Button onClick={() => this.handleCreateModalShowHide()}>
+                                            <Button
+                                                variant="outline-primary"
+                                                onClick={() => this.handleCreateModalShowHide()}
+                                            >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="16"
@@ -747,25 +758,25 @@ class Main extends Component {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div>
-                                    <h2 className="card-heading">Select Portfolio!</h2>
-                                    <Button onClick={() => this.handleCreateModalShowHide()}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            fill="currentColor"
-                                            className="bi bi-plus-square"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                        </svg>
-                                    </Button>
-                                        </div>
+                                    <div className="btn-menu">
+                                        <h2 style={{marginLeft:'40px'}} className="card-heading">Select Portfolio!</h2>
+                                        <Button variant="outline-primary" onClick={() => this.handleCreateModalShowHide()}>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                                className="bi bi-plus-square"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg>
+                                        </Button>
+                                    </div>
                                 )}
-                                
                             </div>
+                            <div style={{clear:"both"}}></div>
                         </div>
                     </div>
                 </div>
@@ -804,7 +815,7 @@ class Main extends Component {
                             <div className="col-12 col-lg-7 col-xl-7">
                                 <div className="h-100 card">
                                     <div className="card-header">
-                                        <h2 className="card-heading">💰주식잔고 현황</h2>
+                                        <h2 className="card-heading">💰주식잔고 현황<span className="sub-title">전일기준</span></h2>
                                     </div>
                                     <div className="card-body"></div>
                                 </div>
@@ -850,7 +861,9 @@ class Main extends Component {
                                 placeholder={this.state.selectedPortfolio.name}
                                 disabled={this.state.disabled}
                             />
-                            <div className="validation">{this.state.deletePortfolioErrorMessage}</div>
+                            <div className="validation">
+                                {this.state.deletePortfolioErrorMessage}
+                            </div>
                         </Modal.Body>
                         <Modal.Footer>
                             <Button type="submit" disabled={this.state.disabled}>
