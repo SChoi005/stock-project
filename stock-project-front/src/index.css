@@ -25,6 +25,15 @@ h2{
     line-height: 1.75;
 }
 
+label{
+    color:#5a5a5a;
+}
+
+.search-company-name{
+    font-size:13px;
+    color:#5a5a5a;
+}
+
 .dropdown{
     width:40px;
     float:left;
@@ -162,8 +171,10 @@ h2{
 }
 
 .validation {
-    color: #dc143c;
-    font-size: 14px;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
 }
 
 .be-top-header {

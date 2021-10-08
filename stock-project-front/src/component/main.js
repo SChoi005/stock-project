@@ -608,7 +608,7 @@ class Main extends Component {
                                 {isEmpty(this.state.selectedPortfolio) !== 0 ? (
                                     <div>
                                         {this.state.isRename ? (
-                                            <div style={{marginLeft:'40px'}}>
+                                            <div style={{ marginLeft: '40px' }}>
                                                 <Form
                                                     onSubmit={this.updatePortfolio}
                                                     ref={(c) => {
@@ -616,7 +616,7 @@ class Main extends Component {
                                                     }}
                                                     className="input-group"
                                                 >
-                                                    <Input
+                                                    <input
                                                         className="form-control"
                                                         type="text"
                                                         name="portfolioName"
@@ -678,7 +678,10 @@ class Main extends Component {
                                                 </div>
                                             </div>
                                         ) : (
-                                            <h2 style={{marginLeft:'40px'}} className="card-heading">
+                                            <h2
+                                                style={{ marginLeft: '40px' }}
+                                                className="card-heading text-truncate"
+                                            >
                                                 {this.state.selectedPortfolio.name}
                                             </h2>
                                         )}
@@ -711,7 +714,10 @@ class Main extends Component {
                                                     />
                                                 </svg>
                                             </Button>
-                                            <Button variant="outline-primary" onClick={() => this.handleStockModalShowHide()}>
+                                            <Button
+                                                variant="outline-primary"
+                                                onClick={() => this.handleStockModalShowHide()}
+                                            >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="16"
@@ -759,8 +765,13 @@ class Main extends Component {
                                     </div>
                                 ) : (
                                     <div className="btn-menu">
-                                        <h2 style={{marginLeft:'40px'}} className="card-heading">Select Portfolio!</h2>
-                                        <Button variant="outline-primary" onClick={() => this.handleCreateModalShowHide()}>
+                                        <h2 style={{ marginLeft: '40px' }} className="card-heading">
+                                            Select Portfolio!
+                                        </h2>
+                                        <Button
+                                            variant="outline-primary"
+                                            onClick={() => this.handleCreateModalShowHide()}
+                                        >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="16"
@@ -776,7 +787,7 @@ class Main extends Component {
                                     </div>
                                 )}
                             </div>
-                            <div style={{clear:"both"}}></div>
+                            <div style={{ clear: 'both' }}></div>
                         </div>
                     </div>
                 </div>
@@ -815,7 +826,10 @@ class Main extends Component {
                             <div className="col-12 col-lg-7 col-xl-7">
                                 <div className="h-100 card">
                                     <div className="card-header">
-                                        <h2 className="card-heading">💰주식잔고 현황<span className="sub-title">전일기준</span></h2>
+                                        <h2 className="card-heading">
+                                            💰주식잔고 현황
+                                            <span className="sub-title">전일기준</span>
+                                        </h2>
                                     </div>
                                     <div className="card-body"></div>
                                 </div>
@@ -953,7 +967,7 @@ class Main extends Component {
                     )}
                     <Modal.Body>
                         <Form
-                            className="form-inline"
+                            className="input-group"
                             onSubmit={(event) => {
                                 this.searchStock(event);
                             }}
@@ -961,91 +975,104 @@ class Main extends Component {
                                 this.form = c;
                             }}
                         >
-                            <div className="form-group">
-                                <Input
-                                    className="form-control"
-                                    type="text"
-                                    name="stockName"
-                                    placeholder="Search Stock Name (해외주식만 가능)"
-                                    value={this.state.keywords}
-                                    onChange={(e) => this.setState({ keywords: e.target.value })}
-                                    disabled={this.state.disabled}
-                                />
-                            </div>
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="stockName"
+                                placeholder="Search Stock Name (미국주식만 가능)"
+                                value={this.state.keywords}
+                                onChange={(e) => this.setState({ keywords: e.target.value })}
+                                disabled={this.state.disabled}
+                            />
                             <Button
-                                className="form-group btn btn-primary btn-xl"
+                                variant="secondary"
                                 type="submit"
                                 disabled={this.state.disabled}
                             >
-                                검색
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-search"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
                             </Button>
                         </Form>
-                        {this.state.searchMessage}
+                        <div className="validation">{this.state.searchMessage}</div>
                         {this.state.stocks.length === 0 ? (
                             <div></div>
                         ) : (
-                            this.state.stocks.map((item) => {
-                                return (
-                                    <div key={item['1. symbol']}>
-                                        <Button
-                                            variant="primary"
-                                            onClick={() => this.toggleStock({ item })}
-                                            aria-controls="collapse-text"
-                                            aria-expanded={this.valueToggleStock({ item })}
-                                            disabled={this.state.disabled}
-                                        >
-                                            {item['1. symbol']} ({item['2. name']})
-                                        </Button>
+                            <div className="list-group mb-3">
+                                {this.state.stocks.map((item) => {
+                                    if (item['4. region'] !== 'United States') return;
+                                    return (
+                                        <div key={item['1. symbol']}>
+                                            <button
+                                                className="list-group-item list-group-item-action"
+                                                onClick={() => this.toggleStock({ item })}
+                                                aria-controls="collapse-text"
+                                                aria-expanded={this.valueToggleStock({ item })}
+                                                disabled={this.state.disabled}
+                                            >
+                                                <span>{item['1. symbol']}</span>{' '}
+                                                <span className="search-company-name">
+                                                    ({item['2. name']})
+                                                </span>
+                                            </button>
 
-                                        <Collapse in={this.valueToggleStock({ item })}>
-                                            <div id="collapse-text">
-                                                <Form
-                                                    onSubmit={(event) =>
-                                                        this.createStock(event, { item })
-                                                    }
-                                                    ref={(c) => {
-                                                        this.form = c;
-                                                    }}
-                                                >
-                                                    <label>평균단가</label>
-                                                    <Input
-                                                        type="text"
-                                                        name="averagePrice"
-                                                        placeholder="평균단가"
-                                                        value={this.state.averagePrice}
-                                                        onChange={(e) =>
-                                                            this.setState({
-                                                                averagePrice: e.target.value.trim(),
-                                                            })
+                                            <Collapse in={this.valueToggleStock({ item })}>
+                                                <div id="collapse-text">
+                                                    <Form
+                                                        onSubmit={(event) =>
+                                                            this.createStock(event, { item })
                                                         }
-                                                        disabled={this.state.disabled}
-                                                    />
-                                                    <label>갯수</label>
-                                                    <Input
-                                                        type="text"
-                                                        name="quantity"
-                                                        placeholder="갯수"
-                                                        value={this.state.quantity}
-                                                        onChange={(e) =>
-                                                            this.setState({
-                                                                quantity: e.target.value.trim(),
-                                                            })
-                                                        }
-                                                        disabled={this.state.disabled}
-                                                    />
-                                                    <Button
-                                                        type="submit"
-                                                        disabled={this.state.disabled}
+                                                        ref={(c) => {
+                                                            this.form = c;
+                                                        }}
                                                     >
-                                                        매수
-                                                    </Button>
-                                                    {this.state.stockErrorMessage}
-                                                </Form>
-                                            </div>
-                                        </Collapse>
-                                    </div>
-                                );
-                            })
+                                                        <label>평균단가</label>
+                                                        <Input
+                                                            type="text"
+                                                            name="averagePrice"
+                                                            placeholder="평균단가"
+                                                            value={this.state.averagePrice}
+                                                            onChange={(e) =>
+                                                                this.setState({
+                                                                    averagePrice: e.target.value.trim(),
+                                                                })
+                                                            }
+                                                            disabled={this.state.disabled}
+                                                        />
+                                                        <label>갯수</label>
+                                                        <Input
+                                                            type="text"
+                                                            name="quantity"
+                                                            placeholder="갯수"
+                                                            value={this.state.quantity}
+                                                            onChange={(e) =>
+                                                                this.setState({
+                                                                    quantity: e.target.value.trim(),
+                                                                })
+                                                            }
+                                                            disabled={this.state.disabled}
+                                                        />
+                                                        <Button
+                                                            type="submit"
+                                                            disabled={this.state.disabled}
+                                                        >
+                                                            매수
+                                                        </Button>
+                                                        {this.state.stockErrorMessage}
+                                                    </Form>
+                                                </div>
+                                            </Collapse>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         )}
 
                         {isEmpty(this.state.selectedPortfolio) !== 0 ? (

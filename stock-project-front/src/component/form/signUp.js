@@ -28,14 +28,14 @@ class SignUp extends Component {
             disabled: false,
         };
     }
-    
+
     signup(e) {
         e.preventDefault();
         if (
             this.state.usernameCheck &&
             this.state.passwordCheck &&
             this.state.nicknameCheck &&
-            this.state.passwordCheck
+            this.state.checkPasswordCheck
         ) {
             this.setState({ disabled: true });
             AuthService.register(
@@ -105,22 +105,17 @@ class SignUp extends Component {
             }
         }
         this.setState({ password: e.target.value });
-        if (this.state.password !== this.state.passwordCheck)
-            this.setState({
-                passwordCheck: false,
-                passwordCheckMessage: '비밀번호가 일치하지 않습니다.',
-            });
     }
 
     confirmCheckPassword(e) {
         if (e.target.value === this.state.password) {
             this.setState({
-                passwordCheck: true,
+                checkPasswordCheck: true,
                 passwordCheckMessage: '비밀번호가 일치합니다.',
             });
         } else {
             this.setState({
-                passwordCheck: false,
+                checkPasswordCheck: false,
                 passwordCheckMessage: '비밀번호가 일치하지 않습니다.',
             });
         }
@@ -152,7 +147,7 @@ class SignUp extends Component {
                         <BarLoader width="100%" color="#fff" />
                     )}
                     <div className="card-header">
-                        <img src="banking.png" alt="My Portfolio" width="40px"/>
+                        <img src="banking.png" alt="My Portfolio" width="40px" />
                         My Portfolio
                     </div>
                     <div className="card-body">
@@ -162,64 +157,138 @@ class SignUp extends Component {
                                 this.form = c;
                             }}
                         >
-                            <div className="form-group">
-                                <Input
-                                    className="form-control"
-                                    placeholder="Username"
-                                    type="text"
-                                    name="username"
-                                    value={this.state.username}
-                                    onChange={(e) => this.confirmUsername(e)}
-                                    disabled={this.state.disabled}
-                                />
-                                <div className="validation">{this.state.usernameMessage}</div>
+                            <div className="form-group form-floating mb-3">
+                                {this.state.usernameCheck ? (
+                                    <input
+                                        id="floatingUsername"
+                                        className="form-control is-valid"
+                                        placeholder="Username"
+                                        type="text"
+                                        name="username"
+                                        value={this.state.username}
+                                        onChange={(e) => this.confirmUsername(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                ) : (
+                                    <input
+                                        id="floatingUsername"
+                                        className="form-control is-invalid"
+                                        placeholder="Username"
+                                        type="text"
+                                        name="username"
+                                        value={this.state.username}
+                                        onChange={(e) => this.confirmUsername(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                )}
+                                <label for="floatingUsername">Username</label>
+                                <div className="invalid-feedback">{this.state.usernameMessage}</div>
                                 <div className="validation">{this.state.errorMessage}</div>
                             </div>
-                            <div className="form-group">
-                                <Input
-                                    className="form-control"
-                                    placeholder="Password"
-                                    type="password"
-                                    name="password"
-                                    value={this.state.password}
-                                    onChange={(e) => this.confirmPassword(e)}
-                                    disabled={this.state.disabled}
-                                />
-                                <div className="validation">{this.state.passwordMessage}</div>
+                            <div className="form-group form-floating mb-3">
+                                {this.state.passwordCheck ? (
+                                    <input
+                                        id="floatingPassword"
+                                        className="form-control is-valid"
+                                        placeholder="Password"
+                                        type="password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={(e) => this.confirmPassword(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                ) : (
+                                    <input
+                                        id="floatingPassword"
+                                        className="form-control is-invalid"
+                                        placeholder="Password"
+                                        type="password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={(e) => this.confirmPassword(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                )}
+                                <label for="floatingPassword">Password</label>
+                                <div className="invalid-feedback">{this.state.passwordMessage}</div>
                             </div>
-                            <div className="form-group">
-                                <Input
-                                    className="form-control"
-                                    placeholder="Check Password"
-                                    type="password"
-                                    name="Check Password"
-                                    value={this.state.checkPassword}
-                                    onChange={(e) => this.confirmCheckPassword(e)}
-                                    disabled={this.state.disabled}
-                                />
-                                <div className="validation">{this.state.passwordCheckMessage}</div>
-                            </div>
-                            <div className="form-group">
-                                <Input
-                                    className="form-control"
-                                    placeholder="Nickname"
-                                    type="text"
-                                    name="nickname"
-                                    value={this.state.nickname}
-                                    onChange={(e) => this.confirmNickname(e)}
-                                    disabled={this.state.disabled}
-                                />
-                                <div className="validation">{this.state.nicknameMessage}</div>
+                                {this.state.checkPasswordCheck ? (
+                                    <div className="form-group form-floating mb-3">
+                                        <input
+                                            id="floatingCheckPassword"
+                                            className="form-control is-valid"
+                                            placeholder="Check Password"
+                                            type="password"
+                                            name="Check Password"
+                                            value={this.state.checkPassword}
+                                            onChange={(e) => this.confirmCheckPassword(e)}
+                                            disabled={this.state.disabled}
+                                        />
+                                        <label for="floatingCheckPassword">Check Password</label>
+                                        <div className="valid-feedback">
+                                            {this.state.passwordCheckMessage}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="form-group form-floating mb-3">
+                                        <input
+                                            id="floatingCheckPassword"
+                                            className="form-control is-invalid"
+                                            placeholder="Check Password"
+                                            type="password"
+                                            name="Check Password"
+                                            value={this.state.checkPassword}
+                                            onChange={(e) => this.confirmCheckPassword(e)}
+                                            disabled={this.state.disabled}
+                                        />
+                                        <label for="floatingCheckPassword">Check Password</label>
+                                        <div className="invalid-feedback">
+                                            {this.state.passwordCheckMessage}
+                                        </div>
+                                    </div>
+                                )}
+                            <div className="form-group form-floating">
+                                {this.state.nicknameCheck ? (
+                                    <input
+                                        id="floatingNickname"
+                                        className="form-control is-valid"
+                                        placeholder="Nickname"
+                                        type="text"
+                                        name="nickname"
+                                        value={this.state.nickname}
+                                        onChange={(e) => this.confirmNickname(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                ) : (
+                                    <input
+                                        id="floatingNickname"
+                                        className="form-control is-invalid"
+                                        placeholder="Nickname"
+                                        type="text"
+                                        name="nickname"
+                                        value={this.state.nickname}
+                                        onChange={(e) => this.confirmNickname(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                )}
+                                <label for="floatingNickname">Nickname</label>
+                                <div className="invalid-feedback">{this.state.nicknameMessage}</div>
                             </div>
                             <div className="form-group login-submit">
-                                <button className="btn btn-primary btn-xl" type="submit" disabled={this.state.disabled}>
+                                <button
+                                    className="btn btn-primary btn-xl"
+                                    type="submit"
+                                    disabled={this.state.disabled}
+                                >
                                     Sign Up
                                 </button>
                             </div>
                         </Form>
                     </div>
                 </div>
-                <div className="splash-footer"><a href="/">Login</a></div>
+                <div className="splash-footer">
+                    <a href="/">Login</a>
+                </div>
             </div>
         );
     }

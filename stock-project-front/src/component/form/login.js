@@ -3,7 +3,6 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import AuthService from '../../service/authService';
 import { BarLoader } from 'react-spinners';
-
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -51,19 +50,22 @@ class Login extends Component {
                                 this.form = c;
                             }}
                         >
-                            <div className="form-group">
-                                <Input
+                            <div className="form-group form-floating mb-3">
+                                <input
+                                    id="floatingInput"
                                     className="form-control"
+                                    placeholder="Username"
                                     type="text"
                                     name="username"
-                                    placeholder="Username"
                                     value={this.state.username}
                                     onChange={(e) => this.setState({ username: e.target.value })}
                                     disabled={this.state.disabled}
                                 />
+                                <label for="floatingInput">Username</label>
                             </div>
-                            <div className="form-group">
-                                <Input
+                            <div className="form-group form-floating">
+                                <input
+                                    id="floatingPassword"
                                     className="form-control"
                                     type="password"
                                     name="password"
@@ -72,6 +74,7 @@ class Login extends Component {
                                     onChange={(e) => this.setState({ password: e.target.value })}
                                     disabled={this.state.disabled}
                                 />
+                                <label for="floatingPassword">Password</label>
                                 <div className="validation">{this.state.errorMessage}</div>
                             </div>
                             <div className="form-group login-submit">
