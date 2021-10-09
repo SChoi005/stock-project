@@ -103,6 +103,19 @@ class SignUp extends Component {
                 });
             }
         }
+
+        if (e.target.value !== this.state.checkPassword) {
+            this.setState({
+                checkPasswordCheck: false,
+                passwordCheckMessage: '비밀번호가 일치하지 않습니다.',
+            });
+        } else {
+            this.setState({
+                checkPasswordCheck: true,
+                passwordCheckMessage: '비밀번호가 일치합니다.',
+            });
+        }
+
         this.setState({ password: e.target.value });
     }
 
@@ -211,41 +224,41 @@ class SignUp extends Component {
                                 <label for="floatingPassword">Password</label>
                                 <div className="invalid-feedback">{this.state.passwordMessage}</div>
                             </div>
-                                {this.state.checkPasswordCheck ? (
-                                    <div className="form-group form-floating mb-3">
-                                        <input
-                                            id="floatingCheckPassword"
-                                            className="form-control is-valid"
-                                            placeholder="Check Password"
-                                            type="password"
-                                            name="Check Password"
-                                            value={this.state.checkPassword}
-                                            onChange={(e) => this.confirmCheckPassword(e)}
-                                            disabled={this.state.disabled}
-                                        />
-                                        <label for="floatingCheckPassword">Check Password</label>
-                                        <div className="valid-feedback">
-                                            {this.state.passwordCheckMessage}
-                                        </div>
+                            {this.state.checkPasswordCheck ? (
+                                <div className="form-group form-floating mb-3">
+                                    <input
+                                        id="floatingCheckPassword"
+                                        className="form-control is-valid"
+                                        placeholder="Check Password"
+                                        type="password"
+                                        name="Check Password"
+                                        value={this.state.checkPassword}
+                                        onChange={(e) => this.confirmCheckPassword(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                    <label for="floatingCheckPassword">Check Password</label>
+                                    <div className="valid-feedback">
+                                        {this.state.passwordCheckMessage}
                                     </div>
-                                ) : (
-                                    <div className="form-group form-floating mb-3">
-                                        <input
-                                            id="floatingCheckPassword"
-                                            className="form-control is-invalid"
-                                            placeholder="Check Password"
-                                            type="password"
-                                            name="Check Password"
-                                            value={this.state.checkPassword}
-                                            onChange={(e) => this.confirmCheckPassword(e)}
-                                            disabled={this.state.disabled}
-                                        />
-                                        <label for="floatingCheckPassword">Check Password</label>
-                                        <div className="invalid-feedback">
-                                            {this.state.passwordCheckMessage}
-                                        </div>
+                                </div>
+                            ) : (
+                                <div className="form-group form-floating mb-3">
+                                    <input
+                                        id="floatingCheckPassword"
+                                        className="form-control is-invalid"
+                                        placeholder="Check Password"
+                                        type="password"
+                                        name="Check Password"
+                                        value={this.state.checkPassword}
+                                        onChange={(e) => this.confirmCheckPassword(e)}
+                                        disabled={this.state.disabled}
+                                    />
+                                    <label for="floatingCheckPassword">Check Password</label>
+                                    <div className="invalid-feedback">
+                                        {this.state.passwordCheckMessage}
                                     </div>
-                                )}
+                                </div>
+                            )}
                             <div className="form-group form-floating">
                                 {this.state.nicknameCheck ? (
                                     <input

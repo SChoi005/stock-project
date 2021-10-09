@@ -227,7 +227,6 @@ class StockBalanceStatus extends Component {
                             </div>
                             <div className="card-body">
                                 <PulseLoader
-                                    className="loading"
                                     color="#4285f4"
                                     speedMultiplier={1}
                                 />

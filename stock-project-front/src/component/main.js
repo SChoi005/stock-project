@@ -5,7 +5,6 @@ import StockBalanceStatus from './stock/stockBalanceStatus';
 import News from './stock/news';
 import { Button, Modal, Collapse, Dropdown, DropdownButton } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
-import Input from 'react-validation/build/input';
 import PortfolioService from '../service/portfolioService';
 import StockService from '../service/stockService';
 import OpenApiService from '../service/openApiService';
@@ -559,7 +558,6 @@ class Main extends Component {
                 });
             })
             .catch((error) => {
-                console.log(error.message);
                 this.setState({
                     ownStockErrorMessage: '형식이 맞지 않습니다.',
                     disabled: false,
@@ -963,7 +961,7 @@ class Main extends Component {
                 </Modal>
 
                 {/*Stock Modal*/}
-                <Modal show={this.state.stockShowHide}>
+                <Modal show={this.state.stockShowHide} scrollable={true}>
                     <Modal.Header>
                         <Modal.Title className="card-heading">💸주식 추가/삭제</Modal.Title>
                     </Modal.Header>
@@ -972,7 +970,7 @@ class Main extends Component {
                     ) : (
                         <BarLoader width="100%" color="#fff" />
                     )}
-                    <Modal.Body>
+                    <Modal.Body >
                         <Form
                             className="input-group"
                             onSubmit={(event) => {
@@ -986,7 +984,7 @@ class Main extends Component {
                                 className="form-control"
                                 type="text"
                                 name="stockName"
-                                placeholder="Search Stock Name (미국주식만 가능)"
+                                placeholder="Search Stock (미국상장 주식만 가능)"
                                 value={this.state.keywords}
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
                                 disabled={this.state.disabled}
@@ -1010,7 +1008,7 @@ class Main extends Component {
                         </Form>
                         <div className="validation">{this.state.searchMessage}</div>
                         {this.state.stocks.length === 0 ? (
-                            <div></div>
+                            <div className="mb-3"></div>
                         ) : (
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
@@ -1031,7 +1029,7 @@ class Main extends Component {
                                             </button>
 
                                             <Collapse in={this.valueToggleStock({ item })}>
-                                                <div className="list-group-item list-group-item-action" id="collapse-text">
+                                                <div className="list-group-item" id="collapse-text">
                                                     <Form
                                                         onSubmit={(event) =>
                                                             this.createStock(event, { item })
@@ -1040,7 +1038,7 @@ class Main extends Component {
                                                             this.form = c;
                                                         }}
                                                     >
-                                                            <div className="form-group form-floating">
+                                                            <div className="form-group form-floating mb-3">
                                                                 <input
                                                                     id="floatingAveragePrice"
                                                                     className="form-control"
@@ -1057,7 +1055,7 @@ class Main extends Component {
                                                                 />
                                                                 <label for="floatingAveragePrice">평균단가 ex) 123.5</label>
                                                             </div>
-                                                            <div className="form-group form-floating">
+                                                            <div className="form-group form-floating mb-3">
                                                                 <input
                                                                     id="floatingQuantity"
                                                                     className="form-control"
@@ -1092,36 +1090,36 @@ class Main extends Component {
 
                         {isEmpty(this.state.selectedPortfolio) !== 0 ? (
                             <div>
-                                <div>보유 주식</div>
+                                <div className="mb-2">💳보유 주식</div>
                                 {this.state.selectedPortfolio.stocks.map((item) => {
                                     return (
-                                        <div>
-                                            <div className="d-flex" key={item['symbol']}>
-                                                <div className="p-2 justify-content-start">{item['symbol']}</div>
-                                                <div className="p-2 justify-content-between">{item['average_price']}</div>
-                                                <div className="p-2">{item['quantity']}</div>
-                                                <Button
-                                                    className="p-2"
-                                                    variant="primary"
-                                                    onClick={() => this.toggleMyStock({ item })}
-                                                    aria-controls="collapse-text"
-                                                    aria-expanded={this.valueToggleMyStock({ item })}
-                                                    disabled={this.state.disabled}
-                                                >
-                                                    수정
-                                                </Button>
-                                                <Button
-                                                    className="p-2"
-                                                    onClick={(event) => {
-                                                        this.removeStock(event, { item });
-                                                    }}
-                                                    disabled={this.state.disabled}
-                                                >
-                                                    삭제
-                                                </Button>
+                                        <div className="list-group-item">
+                                            <div key={item['symbol']}>
+                                                <div>주식명 : {item['name']} ( {item['symbol']} )</div>
+                                                <div>평균단가 : ${item['average_price']}</div>
+                                                <div>수량 : {item['quantity']}</div>
+                                                <div className="btn-group mb-3">
+                                                    <Button
+                                                        onClick={() => this.toggleMyStock({ item })}
+                                                        aria-controls="collapse-text"
+                                                        aria-expanded={this.valueToggleMyStock({ item })}
+                                                        disabled={this.state.disabled}
+                                                    >
+                                                        수정
+                                                    </Button>
+                                                    <Button
+                                                        variant="secondary"
+                                                        onClick={(event) => {
+                                                            this.removeStock(event, { item });
+                                                        }}
+                                                        disabled={this.state.disabled}
+                                                    >
+                                                        삭제
+                                                    </Button>
+                                                </div>
                                             </div>
                                             <Collapse in={this.valueToggleMyStock({ item })}>
-                                                <div id="collapse-text">
+                                                <div className="list-group-item" id="collapse-text">
                                                     <Form
                                                         onSubmit={(event) =>
                                                             this.updateStock(event, { item })
@@ -1130,39 +1128,47 @@ class Main extends Component {
                                                             this.form = c;
                                                         }}
                                                     >
-                                                        <label>평균단가</label>
-                                                        <Input
-                                                            type="text"
-                                                            name="averagePrice"
-                                                            placeholder="평균단가"
-                                                            value={this.state.ownAveragePrice}
-                                                            onChange={(e) =>
-                                                                this.setState({
-                                                                    ownAveragePrice: e.target.value.trim(),
-                                                                })
-                                                            }
-                                                            disabled={this.state.disabled}
-                                                        />
-                                                        <label>갯수</label>
-                                                        <Input
-                                                            type="text"
-                                                            name="quantity"
-                                                            placeholder="갯수"
-                                                            value={this.state.ownQuantity}
-                                                            onChange={(e) =>
-                                                                this.setState({
-                                                                    ownQuantity: e.target.value.trim(),
-                                                                })
-                                                            }
-                                                            disabled={this.state.disabled}
-                                                        />
+                                                        <div className="form-group form-floating mb-3">
+                                                            <input
+                                                                id="floatingOwnAveragePrice"
+                                                                className="form-control"
+                                                                type="text"
+                                                                name="averagePrice"
+                                                                placeholder="평균단가"
+                                                                value={this.state.ownAveragePrice}
+                                                                onChange={(e) =>
+                                                                    this.setState({
+                                                                        ownAveragePrice: e.target.value.trim(),
+                                                                    })
+                                                                }
+                                                                disabled={this.state.disabled}
+                                                            />
+                                                            <label for="floatingOwnAveragePrice">평균단가 ex) 123.5</label>
+                                                        </div>
+                                                        <div className="form-group form-floating mb-3">
+                                                            <input
+                                                                id="floatingOwnQuantity"
+                                                                className="form-control"
+                                                                type="text"
+                                                                name="quantity"
+                                                                placeholder="갯수"
+                                                                value={this.state.ownQuantity}
+                                                                onChange={(e) =>
+                                                                    this.setState({
+                                                                        ownQuantity: e.target.value.trim(),
+                                                                    })
+                                                                }
+                                                                disabled={this.state.disabled}
+                                                            />
+                                                            <label for="floatingOwnQuantity">갯수 ex) 10</label>
+                                                        </div>
                                                         <Button
                                                             type="submit"
                                                             disabled={this.state.disabled}
                                                         >
                                                             확인
                                                         </Button>
-                                                        {this.state.ownStockErrorMessage}
+                                                        <div className="validation">{this.state.ownStockErrorMessage}</div>
                                                     </Form>
                                                 </div>
                                             </Collapse>
