@@ -569,7 +569,7 @@ class Main extends Component {
 
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
@@ -828,7 +828,6 @@ class Main extends Component {
                                     <div className="card-header">
                                         <h2 className="card-heading">
                                             💰주식잔고 현황
-                                            <span className="sub-title">전일기준</span>
                                         </h2>
                                     </div>
                                     <div className="card-body"></div>
@@ -865,18 +864,22 @@ class Main extends Component {
                         }}
                     >
                         <Modal.Body>
-                            <label>삭제할 포트폴리오를 입력해주십시오.</label>
-                            <Input
-                                className="form-control"
-                                type="text"
-                                name="portfolioName"
-                                value={this.state.portfolioName}
-                                onChange={(e) => this.setState({ portfolioName: e.target.value })}
-                                placeholder={this.state.selectedPortfolio.name}
-                                disabled={this.state.disabled}
-                            />
+                            <div className="mb-2">삭제할 포트폴리오를 입력해주십시오.</div>
+                            <div className="form-group form-floating mb-3">
+                                <input
+                                    id="floatingInput"
+                                    className="form-control"
+                                    type="text"
+                                    name="portfolioName"
+                                    value={this.state.portfolioName}
+                                    onChange={(e) => this.setState({ portfolioName: e.target.value })}
+                                    placeholder={this.state.selectedPortfolio.name}
+                                    disabled={this.state.disabled}
+                                />
+                                <label for="floatingInput">{this.state.selectedPortfolio.name}</label>
+                            </div>
                             <div className="validation">
-                                {this.state.deletePortfolioErrorMessage}
+                                    {this.state.deletePortfolioErrorMessage}
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
@@ -913,29 +916,33 @@ class Main extends Component {
                         }}
                     >
                         <Modal.Body>
-                            <label>Portfolio Name</label>
-                            <Input
-                                placeholder="생성할 포트폴리오 이름을 입력하십시오."
-                                className="form-control"
-                                type="text"
-                                name="portfolioName"
-                                value={this.state.portfolioName}
-                                onChange={(e) => {
-                                    if (e.target.value.length > 0)
-                                        this.setState({
-                                            postPortfolioErrorMessage: '',
-                                            postPortfolioCheck: true,
-                                        });
-                                    else
-                                        this.setState({
-                                            postPortfolioErrorMessage:
-                                                '포트폴리오 이름을 입력해주십시오',
-                                            postPortfolioCheck: false,
-                                        });
-                                    this.setState({ portfolioName: e.target.value });
-                                }}
-                                disabled={this.state.disabled}
-                            />
+                            <div className="mb-2">생성할 포트폴리오 이름을 입력하십시오.</div>
+                            <div className="form-group form-floating mb-3">
+                                <input
+                                    id="floatingInput"
+                                    placeholder="Portfolio Name"
+                                    className="form-control"
+                                    type="text"
+                                    name="portfolioName"
+                                    value={this.state.portfolioName}
+                                    onChange={(e) => {
+                                        if (e.target.value.length > 0)
+                                            this.setState({
+                                                postPortfolioErrorMessage: '',
+                                                postPortfolioCheck: true,
+                                            });
+                                        else
+                                            this.setState({
+                                                postPortfolioErrorMessage:
+                                                    '포트폴리오 이름을 입력해주십시오',
+                                                postPortfolioCheck: false,
+                                            });
+                                        this.setState({ portfolioName: e.target.value });
+                                    }}
+                                    disabled={this.state.disabled}
+                                />
+                                <label for="floatingInput">Portfolio Name</label>
+                            </div>
                             <div className="validation">{this.state.postPortfolioErrorMessage}</div>
                         </Modal.Body>
                         <Modal.Footer>
@@ -1024,7 +1031,7 @@ class Main extends Component {
                                             </button>
 
                                             <Collapse in={this.valueToggleStock({ item })}>
-                                                <div id="collapse-text">
+                                                <div className="list-group-item list-group-item-action" id="collapse-text">
                                                     <Form
                                                         onSubmit={(event) =>
                                                             this.createStock(event, { item })
@@ -1033,39 +1040,47 @@ class Main extends Component {
                                                             this.form = c;
                                                         }}
                                                     >
-                                                        <label>평균단가</label>
-                                                        <Input
-                                                            type="text"
-                                                            name="averagePrice"
-                                                            placeholder="평균단가"
-                                                            value={this.state.averagePrice}
-                                                            onChange={(e) =>
-                                                                this.setState({
-                                                                    averagePrice: e.target.value.trim(),
-                                                                })
-                                                            }
-                                                            disabled={this.state.disabled}
-                                                        />
-                                                        <label>갯수</label>
-                                                        <Input
-                                                            type="text"
-                                                            name="quantity"
-                                                            placeholder="갯수"
-                                                            value={this.state.quantity}
-                                                            onChange={(e) =>
-                                                                this.setState({
-                                                                    quantity: e.target.value.trim(),
-                                                                })
-                                                            }
-                                                            disabled={this.state.disabled}
-                                                        />
-                                                        <Button
-                                                            type="submit"
-                                                            disabled={this.state.disabled}
-                                                        >
-                                                            매수
-                                                        </Button>
-                                                        {this.state.stockErrorMessage}
+                                                            <div className="form-group form-floating">
+                                                                <input
+                                                                    id="floatingAveragePrice"
+                                                                    className="form-control"
+                                                                    type="text"
+                                                                    name="averagePrice"
+                                                                    placeholder="평균단가"
+                                                                    value={this.state.averagePrice}
+                                                                    onChange={(e) =>
+                                                                        this.setState({
+                                                                            averagePrice: e.target.value.trim(),
+                                                                        })
+                                                                    }
+                                                                    disabled={this.state.disabled}
+                                                                />
+                                                                <label for="floatingAveragePrice">평균단가 ex) 123.5</label>
+                                                            </div>
+                                                            <div className="form-group form-floating">
+                                                                <input
+                                                                    id="floatingQuantity"
+                                                                    className="form-control"
+                                                                    type="text"
+                                                                    name="quantity"
+                                                                    placeholder="갯수"
+                                                                    value={this.state.quantity}
+                                                                    onChange={(e) =>
+                                                                        this.setState({
+                                                                            quantity: e.target.value.trim(),
+                                                                        })
+                                                                    }
+                                                                    disabled={this.state.disabled}
+                                                                />
+                                                                <label for="floatingQuantity">갯수 ex) 10</label>
+                                                            </div>
+                                                            <Button
+                                                                type="submit"
+                                                                disabled={this.state.disabled}
+                                                            >
+                                                                매수
+                                                            </Button>
+                                                        <div className="validation">{this.state.stockErrorMessage}</div>
                                                     </Form>
                                                 </div>
                                             </Collapse>
@@ -1080,26 +1095,31 @@ class Main extends Component {
                                 <div>보유 주식</div>
                                 {this.state.selectedPortfolio.stocks.map((item) => {
                                     return (
-                                        <div key={item['symbol']}>
-                                            {item['symbol']} {item['average_price']}{' '}
-                                            {item['quantity']}
-                                            <Button
-                                                variant="primary"
-                                                onClick={() => this.toggleMyStock({ item })}
-                                                aria-controls="collapse-text"
-                                                aria-expanded={this.valueToggleMyStock({ item })}
-                                                disabled={this.state.disabled}
-                                            >
-                                                수정
-                                            </Button>
-                                            <Button
-                                                onClick={(event) => {
-                                                    this.removeStock(event, { item });
-                                                }}
-                                                disabled={this.state.disabled}
-                                            >
-                                                삭제
-                                            </Button>
+                                        <div>
+                                            <div className="d-flex" key={item['symbol']}>
+                                                <div className="p-2 justify-content-start">{item['symbol']}</div>
+                                                <div className="p-2 justify-content-between">{item['average_price']}</div>
+                                                <div className="p-2">{item['quantity']}</div>
+                                                <Button
+                                                    className="p-2"
+                                                    variant="primary"
+                                                    onClick={() => this.toggleMyStock({ item })}
+                                                    aria-controls="collapse-text"
+                                                    aria-expanded={this.valueToggleMyStock({ item })}
+                                                    disabled={this.state.disabled}
+                                                >
+                                                    수정
+                                                </Button>
+                                                <Button
+                                                    className="p-2"
+                                                    onClick={(event) => {
+                                                        this.removeStock(event, { item });
+                                                    }}
+                                                    disabled={this.state.disabled}
+                                                >
+                                                    삭제
+                                                </Button>
+                                            </div>
                                             <Collapse in={this.valueToggleMyStock({ item })}>
                                                 <div id="collapse-text">
                                                     <Form

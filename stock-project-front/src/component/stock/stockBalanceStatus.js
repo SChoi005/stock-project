@@ -90,7 +90,13 @@ class StockBalanceStatus extends Component {
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">
-                            <h2 className="card-heading">💰주식잔고 현황<span className="sub-title">전일기준</span></h2>
+                            <h2 className="card-heading">💰주식잔고 현황
+                                {this.props.endPoints.length !== 0?
+                                    <span className="sub-title">{this.props.endPoints[0]['07. latest trading day']} 기준</span>
+                                    :
+                                    <span className="sub-title"></span>
+                                }
+                            </h2>
                         </div>
                         {this.props.stocks.length !== 0 ? (
                             <div className="card-body table-responsive">

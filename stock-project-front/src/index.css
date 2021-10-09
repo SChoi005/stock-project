@@ -34,6 +34,10 @@ label{
     color:#5a5a5a;
 }
 
+.search-button{
+    margin:0 auto;
+}
+
 .dropdown{
     width:40px;
     float:left;

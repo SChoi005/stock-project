@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Form from 'react-validation/build/form';
-import Input from 'react-validation/build/input';
 import AuthService from '../../service/authService';
 import { BarLoader } from 'react-spinners';
 
