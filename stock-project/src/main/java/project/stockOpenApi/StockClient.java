@@ -15,6 +15,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.CompanyOverviewResponse;
+import project.stockOpenApi.dto.ExchangeRateRequest;
+import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -92,6 +94,30 @@ public class StockClient{
         ParameterizedTypeReference responseType = new ParameterizedTypeReference<CompanyOverviewResponse>() {};
         
         ResponseEntity<CompanyOverviewResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public ExchangeRateResponse getExchangeRate(ExchangeRateRequest exchangeRateRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(exchangeRateRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<ExchangeRateResponse>() {};
+        
+        ResponseEntity<ExchangeRateResponse> responseEntity = new RestTemplate().exchange(
             uri,
             HttpMethod.GET,
             httpEntity,

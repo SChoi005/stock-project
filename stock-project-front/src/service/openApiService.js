@@ -36,6 +36,18 @@ class OpenApiService {
             },
         });
     }
+    
+    async getExchangeRate(){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        return axios({
+            method: 'get',
+            url: '/api/exchangeRate/',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 }
 
 export default new OpenApiService();

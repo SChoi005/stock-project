@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import project.stockOpenApi.StockClient;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
+import project.stockOpenApi.dto.ExchangeRateRequest;
+import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -43,6 +45,13 @@ public class OpenApiController{
         req.setSymbol(symbol);
         
         return ResponseEntity.ok(stockClient.searchCompanyOverview(req));
+    }
+    
+    @GetMapping("/exchangeRate")
+    public ResponseEntity<?> getExchangeRate(){
+        ExchangeRateRequest req = new ExchangeRateRequest();
+        
+        return ResponseEntity.ok(stockClient.getExchangeRate(req));
     }
     
 }

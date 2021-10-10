@@ -12,6 +12,19 @@ class StockBalanceStatus extends Component {
         return sum.toFixed(4);
     }
 
+    getTotalWonAsset() {
+        var sum = 0;
+        this.props.stocks.forEach((i) => {
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol']) sum += j['05. price'] * i['quantity'];
+            });
+        });
+
+        sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
+
+        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+    }
+
     getInvestment() {
         var sum = 0;
 
@@ -20,6 +33,18 @@ class StockBalanceStatus extends Component {
         });
 
         return sum.toFixed(4);
+    }
+
+    getWonInvestment() {
+        var sum = 0;
+
+        this.props.stocks.forEach((i) => {
+            sum += i['quantity'] * i['average_price'];
+        });
+
+        sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
+
+        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
     }
 
     getYield() {
@@ -50,6 +75,20 @@ class StockBalanceStatus extends Component {
         });
 
         return sum.toFixed(4);
+    }
+
+    getWonTotalPlusAndLoss() {
+        var sum = 0;
+
+        this.props.stocks.forEach((i) => {
+            this.props.endPoints.forEach((j) => {
+                if (j['01. symbol'] === i['symbol'])
+                    sum += (j['05. price'] - i['average_price']) * i['quantity'];
+            });
+        });
+        sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
+
+        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
     }
 
     getData() {
@@ -90,12 +129,15 @@ class StockBalanceStatus extends Component {
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">
-                            <h2 className="card-heading">💰주식잔고 현황
-                                {this.props.endPoints.length !== 0?
-                                    <span className="sub-title">{this.props.endPoints[0]['07. latest trading day']} 기준</span>
-                                    :
+                            <h2 className="card-heading">
+                                💰주식잔고 현황
+                                {this.props.endPoints.length !== 0 ? (
+                                    <span className="sub-title">
+                                        {this.props.endPoints[0]['07. latest trading day']} 기준
+                                    </span>
+                                ) : (
                                     <span className="sub-title"></span>
-                                }
+                                )}
                             </h2>
                         </div>
                         {this.props.stocks.length !== 0 ? (
@@ -212,6 +254,28 @@ class StockBalanceStatus extends Component {
                                                 </td>
                                             )}
                                         </tr>
+                                        <tr>
+                                            {this.getPreviousDayYield()[0] === '-' ? (
+                                                <td style={{ color: '#4285f4' }}>
+                                                    {'₩' + this.getTotalWonAsset()}
+                                                </td>
+                                            ) : (
+                                                <td style={{ color: '#dc143c' }}>
+                                                    {'₩' + this.getTotalWonAsset()}
+                                                </td>
+                                            )}
+                                            <td>{'₩' + this.getWonInvestment()}</td>
+                                            <td colSpan="2"></td>
+                                            {this.getYield()[0] === '-' ? (
+                                                <td style={{ color: '#4285f4' }}>
+                                                    ₩{this.getWonTotalPlusAndLoss()}
+                                                </td>
+                                            ) : (
+                                                <td style={{ color: '#dc143c' }}>
+                                                    ₩{this.getWonTotalPlusAndLoss()}
+                                                </td>
+                                            )}
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -226,10 +290,7 @@ class StockBalanceStatus extends Component {
                                 <h2 className="card-heading">💰주식잔고 현황</h2>
                             </div>
                             <div className="card-body">
-                                <PulseLoader
-                                    color="#4285f4"
-                                    speedMultiplier={1}
-                                />
+                                <PulseLoader color="#4285f4" speedMultiplier={1} />
                             </div>
                         </div>
                     </div>
