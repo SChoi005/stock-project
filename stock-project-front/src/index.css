@@ -29,6 +29,10 @@ label{
     color:#5a5a5a;
 }
 
+.sr-only{
+    visibility:hidden;
+}
+
 .css-1xdhyk6 {
     margin-left:10px;
 }
@@ -113,6 +117,11 @@ label{
     padding-top: 40px;
     padding-bottom: 0;
     color: #5a5a5a;
+}
+
+.carousel-body{
+    overflow: auto;
+    max-height:480px;
 }
 
 .card-header {

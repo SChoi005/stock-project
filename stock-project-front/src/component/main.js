@@ -54,6 +54,8 @@ class Main extends Component {
             endPoints: [],
             isLoading: false,
             exchangeLoading: true,
+            news: [],
+            newsLoading: false,
         };
     }
 
@@ -158,9 +160,11 @@ class Main extends Component {
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
-        this.setState({ isLoading: true });
+        this.setState({ isLoading: true, newsLoading: true });
+
         var tempOverview = [];
         var tempEndPoint = [];
+        var tempNews = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.forEach((i) => {
@@ -170,6 +174,7 @@ class Main extends Component {
                 } else {
                     // etf 가능하면 작성
                 }
+                tempNews.push(OpenApiService.searchNews(i['name']));
                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(i['symbol']));
             });
             this.setState({ selectedStocks: map, selectedPortfolio: item });
@@ -194,6 +199,15 @@ class Main extends Component {
                     this.setState({ overviews: arr, isLoading: false });
                 });
             });
+
+        Promise.all(tempNews).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+
+            this.setState({ news: arr, newsLoading: false });
+        });
     }
 
     createPortfolio(e) {
@@ -413,6 +427,7 @@ class Main extends Component {
                                 var map = new Map();
                                 var tempOverview = [];
                                 var tempEndPoint = [];
+                                var tempNews = [];
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
@@ -423,6 +438,7 @@ class Main extends Component {
                                         // etf 가능하면 작성
                                     }
                                     tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
+                                    tempNews.push(OpenApiService.searchNews(s['name']));
                                 });
                                 Promise.all(tempEndPoint)
                                     .then((res) => {
@@ -431,6 +447,15 @@ class Main extends Component {
                                             arr.push(i.data);
                                         });
                                         this.setState({ endPoints: arr });
+                                    })
+                                    .then(() => {
+                                        Promise.all(tempNews).then((res) => {
+                                            var arr = [];
+                                            res.forEach((i) => {
+                                                arr.push(i.data);
+                                            });
+                                            this.setState({ news: arr });
+                                        });
                                     })
                                     .then(() => {
                                         Promise.all(tempOverview).then((res) => {
@@ -474,6 +499,7 @@ class Main extends Component {
                             var map = new Map();
                             var tempOverview = [];
                             var tempEndPoint = [];
+                            var tempNews = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
@@ -482,6 +508,7 @@ class Main extends Component {
                                     // etf 가능하면 작성
                                 }
                                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
+                                tempNews.push(OpenApiService.searchNews(s['name']));
                             });
                             Promise.all(tempEndPoint)
                                 .then((res) => {
@@ -490,6 +517,15 @@ class Main extends Component {
                                         arr.push(i.data);
                                     });
                                     this.setState({ endPoints: arr });
+                                })
+                                .then(() => {
+                                    Promise.all(tempNews).then((res) => {
+                                        var arr = [];
+                                        res.forEach((i) => {
+                                            arr.push(i.data);
+                                        });
+                                        this.setState({ news: arr });
+                                    });
                                 })
                                 .then(() => {
                                     Promise.all(tempOverview).then((res) => {
@@ -575,7 +611,7 @@ class Main extends Component {
 
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
@@ -816,7 +852,7 @@ class Main extends Component {
                             />
                         </div>
                         <div className="row">
-                            <News />
+                            <News news={this.state.news} isLoading={this.state.newsLoading} />
                         </div>
                     </div>
                 ) : (
@@ -883,7 +919,7 @@ class Main extends Component {
                                     placeholder={this.state.selectedPortfolio.name}
                                     disabled={this.state.disabled}
                                 />
-                                <label for="floatingInput">
+                                <label htmlFor="floatingInput">
                                     {this.state.selectedPortfolio.name}
                                 </label>
                             </div>
@@ -950,7 +986,7 @@ class Main extends Component {
                                     }}
                                     disabled={this.state.disabled}
                                 />
-                                <label for="floatingInput">Portfolio Name</label>
+                                <label htmlFor="floatingInput">Portfolio Name</label>
                             </div>
                             <div className="validation">{this.state.postPortfolioErrorMessage}</div>
                         </Modal.Body>
@@ -1064,7 +1100,7 @@ class Main extends Component {
                                                                 }
                                                                 disabled={this.state.disabled}
                                                             />
-                                                            <label for="floatingAveragePrice">
+                                                            <label htmlFor="floatingAveragePrice">
                                                                 평균단가 ex) 123.5
                                                             </label>
                                                         </div>
@@ -1083,7 +1119,7 @@ class Main extends Component {
                                                                 }
                                                                 disabled={this.state.disabled}
                                                             />
-                                                            <label for="floatingQuantity">
+                                                            <label htmlFor="floatingQuantity">
                                                                 갯수 ex) 10
                                                             </label>
                                                         </div>
@@ -1164,7 +1200,7 @@ class Main extends Component {
                                                                 }
                                                                 disabled={this.state.disabled}
                                                             />
-                                                            <label for="floatingOwnAveragePrice">
+                                                            <label htmlFor="floatingOwnAveragePrice">
                                                                 평균단가 ex) 123.5
                                                             </label>
                                                         </div>
@@ -1183,7 +1219,7 @@ class Main extends Component {
                                                                 }
                                                                 disabled={this.state.disabled}
                                                             />
-                                                            <label for="floatingOwnQuantity">
+                                                            <label htmlFor="floatingOwnQuantity">
                                                                 갯수 ex) 10
                                                             </label>
                                                         </div>

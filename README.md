@@ -8,7 +8,7 @@ URL => https://my-portfolio.run.goorm.io/
 # 해야할것
 ==> ( 1차 휴식기 ! ) ( stock delete할때 확인작업 추가 )
 1. signup 뒤로가기 제어
-2. 뉴스 제작
+2. 차트, 배당캘린더
 * etf api 가져오는게 문제.. 
 
 ==> 이거 다하고 며칠 쉽시당 ~!~!~!~!~! ( 2차 휴식기 ! )

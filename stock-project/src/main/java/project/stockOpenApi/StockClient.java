@@ -17,6 +17,8 @@ import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.CompanyOverviewResponse;
 import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
+import project.stockOpenApi.dto.NewsSearchRequest;
+import project.stockOpenApi.dto.NewsSearchResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -27,6 +29,12 @@ import project.stockOpenApi.dto.SymbolSearchResponse;
 public class StockClient{
     
     private String stockUrl = "https://www.alphavantage.co/query";
+    
+    private String naverClientId = "fDvg3Sqxa5NCpgpo0lg0";
+    
+    private String naverClientSecret = "1ulnLa5PxL";
+    
+    private String naverNewsSearchUrl = "https://openapi.naver.com/v1/search/news.json";
     
     public QuoteEndpointResponse searchQuoteEndpoint(QuoteEndpointRequest quoteEndpointRequest){
         
@@ -126,4 +134,36 @@ public class StockClient{
         
         return responseEntity.getBody();
     }
+    
+    public NewsSearchResponse searchNews(NewsSearchRequest newsSearchRequest){
+        //uri 작성
+        URI uri = UriComponentsBuilder.fromUriString(naverNewsSearchUrl)
+            .queryParams(newsSearchRequest.toMultiValueMap())
+            .build()
+            .encode()
+            .toUri();
+        
+        //header 작성
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("X-Naver-Client-Id", naverClientId);
+        headers.set("X-Naver-Client-Secret",naverClientSecret);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<NewsSearchResponse>() {};
+        
+        ResponseEntity<NewsSearchResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        responseEntity.getBody().setSymbol(newsSearchRequest.getQuery());        
+        
+        return responseEntity.getBody();
+    }
+    
 }

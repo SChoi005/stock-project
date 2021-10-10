@@ -12,6 +12,7 @@ import project.stockOpenApi.StockClient;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
+import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
@@ -52,6 +53,14 @@ public class OpenApiController{
         ExchangeRateRequest req = new ExchangeRateRequest();
         
         return ResponseEntity.ok(stockClient.getExchangeRate(req));
+    }
+    
+    @GetMapping("/news/{symbol}")
+    public ResponseEntity<?> searchNews(@PathVariable String symbol){
+        NewsSearchRequest req = new NewsSearchRequest();
+        req.setQuery(symbol);
+        
+        return ResponseEntity.ok(stockClient.searchNews(req));
     }
     
 }

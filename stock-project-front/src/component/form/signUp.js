@@ -193,7 +193,7 @@ class SignUp extends Component {
                                         disabled={this.state.disabled}
                                     />
                                 )}
-                                <label for="floatingUsername">Username</label>
+                                <label htmlFor="floatingUsername">Username</label>
                                 <div className="invalid-feedback">{this.state.usernameMessage}</div>
                                 <div className="validation">{this.state.errorMessage}</div>
                             </div>
@@ -221,7 +221,7 @@ class SignUp extends Component {
                                         disabled={this.state.disabled}
                                     />
                                 )}
-                                <label for="floatingPassword">Password</label>
+                                <label htmlFor="floatingPassword">Password</label>
                                 <div className="invalid-feedback">{this.state.passwordMessage}</div>
                             </div>
                             {this.state.checkPasswordCheck ? (
@@ -236,7 +236,7 @@ class SignUp extends Component {
                                         onChange={(e) => this.confirmCheckPassword(e)}
                                         disabled={this.state.disabled}
                                     />
-                                    <label for="floatingCheckPassword">Check Password</label>
+                                    <label htmlFor="floatingCheckPassword">Check Password</label>
                                     <div className="valid-feedback">
                                         {this.state.passwordCheckMessage}
                                     </div>
@@ -253,7 +253,7 @@ class SignUp extends Component {
                                         onChange={(e) => this.confirmCheckPassword(e)}
                                         disabled={this.state.disabled}
                                     />
-                                    <label for="floatingCheckPassword">Check Password</label>
+                                    <label htmlFor="floatingCheckPassword">Check Password</label>
                                     <div className="invalid-feedback">
                                         {this.state.passwordCheckMessage}
                                     </div>
@@ -283,7 +283,7 @@ class SignUp extends Component {
                                         disabled={this.state.disabled}
                                     />
                                 )}
-                                <label for="floatingNickname">Nickname</label>
+                                <label htmlFor="floatingNickname">Nickname</label>
                                 <div className="invalid-feedback">{this.state.nicknameMessage}</div>
                             </div>
                             <div className="form-group login-submit">

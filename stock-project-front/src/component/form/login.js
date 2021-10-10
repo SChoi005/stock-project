@@ -60,7 +60,7 @@ class Login extends Component {
                                     onChange={(e) => this.setState({ username: e.target.value })}
                                     disabled={this.state.disabled}
                                 />
-                                <label for="floatingInput">Username</label>
+                                <label htmlFor="floatingInput">Username</label>
                             </div>
                             <div className="form-group form-floating">
                                 <input
@@ -73,7 +73,7 @@ class Login extends Component {
                                     onChange={(e) => this.setState({ password: e.target.value })}
                                     disabled={this.state.disabled}
                                 />
-                                <label for="floatingPassword">Password</label>
+                                <label htmlFor="floatingPassword">Password</label>
                                 <div className="validation">{this.state.errorMessage}</div>
                             </div>
                             <div className="form-group login-submit">
