@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class NewsSearchRequest{
     private String query ="";
-    private int display = 10;
+    private int display = 15;
     private int start = 1;
     private String sort = "date";
     

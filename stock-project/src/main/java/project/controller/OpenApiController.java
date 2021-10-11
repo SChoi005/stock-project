@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.StockClient;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.ExchangeRateRequest;
@@ -16,9 +17,11 @@ import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
+import project.stockOpenApi.dto.TimeSeriesRequest;
 
 @RestController
 @RequestMapping("/api")
+@Slf4j
 public class OpenApiController{
     
     @Autowired
@@ -61,6 +64,25 @@ public class OpenApiController{
         req.setQuery(symbol);
         
         return ResponseEntity.ok(stockClient.searchNews(req));
+    }
+    
+    @GetMapping("/time-series/{function}/{symbol}")
+    public ResponseEntity<?> getTimeSeries(@PathVariable String function, @PathVariable String symbol){
+        
+        TimeSeriesRequest req = new TimeSeriesRequest();
+        req.setFunction(function);
+        req.setSymbol(symbol); 
+        
+        if(function.equals("TIME_SERIES_MONTHLY_ADJUSTED")){
+            return ResponseEntity.ok(stockClient.getMonthlyTimeSeries(req));
+        }
+        else if(function.equals("TIME_SERIES_WEEKLY_ADJUSTED")){
+            return ResponseEntity.ok(stockClient.getWeeklyTimeSeries(req));
+        }
+        else{
+            return ResponseEntity.ok(stockClient.getDailyTimeSeries(req));
+        }
+        
     }
     
 }

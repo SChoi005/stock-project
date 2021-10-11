@@ -121,7 +121,7 @@ label{
 
 .carousel-body{
     overflow: auto;
-    max-height:480px;
+    height:480px;
 }
 
 .card-header {

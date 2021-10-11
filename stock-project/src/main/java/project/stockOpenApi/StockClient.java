@@ -23,6 +23,10 @@ import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 import project.stockOpenApi.dto.SymbolSearchResponse;
+import project.stockOpenApi.dto.TimeSeriesDailyResponse;
+import project.stockOpenApi.dto.TimeSeriesMonthlyResponse;
+import project.stockOpenApi.dto.TimeSeriesRequest;
+import project.stockOpenApi.dto.TimeSeriesWeeklyResponse;
 
 @Slf4j
 @Component
@@ -166,4 +170,75 @@ public class StockClient{
         return responseEntity.getBody();
     }
     
+    public TimeSeriesMonthlyResponse getMonthlyTimeSeries(TimeSeriesRequest timeSeriesRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(timeSeriesRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<TimeSeriesMonthlyResponse>() {};
+        
+        ResponseEntity<TimeSeriesMonthlyResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public TimeSeriesWeeklyResponse getWeeklyTimeSeries(TimeSeriesRequest timeSeriesRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(timeSeriesRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<TimeSeriesWeeklyResponse>() {};
+        
+        ResponseEntity<TimeSeriesWeeklyResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public TimeSeriesDailyResponse getDailyTimeSeries(TimeSeriesRequest timeSeriesRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(timeSeriesRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<TimeSeriesDailyResponse>() {};
+        
+        ResponseEntity<TimeSeriesDailyResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
 }

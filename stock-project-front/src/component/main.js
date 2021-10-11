@@ -3,6 +3,7 @@ import axios from 'axios';
 import PieGraph from './stock/pieGraph';
 import StockBalanceStatus from './stock/stockBalanceStatus';
 import News from './stock/news';
+import Chart from './stock/chart';
 import { Button, Modal, Collapse, Dropdown, DropdownButton } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import PortfolioService from '../service/portfolioService';
@@ -853,6 +854,7 @@ class Main extends Component {
                         </div>
                         <div className="row">
                             <News news={this.state.news} isLoading={this.state.newsLoading} />
+                            <Chart/>
                         </div>
                     </div>
                 ) : (
@@ -880,6 +882,14 @@ class Main extends Component {
                                 <div className="h-100 card">
                                     <div className="card-header">
                                         <h2 className="card-heading">📰나만의 뉴스</h2>
+                                    </div>
+                                    <div className="card-body"></div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-lg-5 col-xl-5">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">📈보유주식 차트</h2>
                                     </div>
                                     <div className="card-body"></div>
                                 </div>
@@ -1059,7 +1069,7 @@ class Main extends Component {
                         ) : (
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
-                                    if (item['4. region'] !== 'United States') return;
+                                    if (item['4. region'] !== 'United States') return <div></div>;
                                     return (
                                         <div key={item['1. symbol']}>
                                             <button

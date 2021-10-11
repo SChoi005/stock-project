@@ -278,6 +278,15 @@ class StockBalanceStatus extends Component {
                                         </tr>
                                     </tbody>
                                 </table>
+                                <span className="sub-title">
+                                    {this.props.exchangeRate['6. Last Refreshed'].substring(0, 11)}
+                                    기준 / 1 USD :{' '}
+                                    {this.props.exchangeRate['5. Exchange Rate'].substring(
+                                        0,
+                                        7
+                                    )}{' '}
+                                    KRW
+                                </span>
                             </div>
                         ) : (
                             <div className="card-body"></div>

@@ -25,7 +25,7 @@ class News extends Component {
                                                             className="list-group-item"
                                                         >
                                                             <div className="sub-title">
-                                                                {i['pub_date']}
+                                                                {i['pub_date'].substring(0,16)}
                                                             </div>
                                                             <h6>
                                                                 <a
