@@ -1,4 +1,5 @@
 import { RadialChart, DiscreteColorLegend } from 'react-vis';
+import 'react-vis/dist/style.css';
 import { Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 import { PulseLoader } from 'react-spinners';
@@ -31,6 +32,13 @@ class PieGraph extends Component {
                 switch: true,
             });
         }
+    }
+
+    dollarString(str, a) {
+        return (
+            str.substring(0, str.length - a - 1).replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
+            str.substring(str.length - a - 1, str.length)
+        );
     }
 
     getTotalAsset() {
@@ -87,7 +95,12 @@ class PieGraph extends Component {
                     const price = j['05. price'] * i['quantity'];
                     const percent = (price / sum) * 100;
                     data.push({
-                        title: i['symbol'] + ' (' + percent.toFixed(1) + '%)\n$' + price.toFixed(4),
+                        title:
+                            i['symbol'] +
+                            ' (' +
+                            percent.toFixed(1) +
+                            '%)\n$' +
+                            this.dollarString(price.toFixed(4), 4),
                         label: i['symbol'],
                         angle: percent,
                         color: colors[num++],
@@ -142,7 +155,7 @@ class PieGraph extends Component {
                                 ' (' +
                                 percent.toFixed(1) +
                                 '%)\n$' +
-                                dividend.toFixed(2),
+                                this.dollarString(dividend.toFixed(2), 2),
                             label: j['Symbol'],
                             angle: percent,
                             color: colors[num++],
@@ -271,11 +284,10 @@ class PieGraph extends Component {
                                                     chartValue: v.title,
                                                 });
                                             }}
-                                        >
-                                            <div className="chartValue">
-                                                {this.state.chartValue}
-                                            </div>
-                                        </RadialChart>
+                                        />
+                                        <div className="chartValue">
+                                            {this.state.chartValue}
+                                        </div>
                                     </div>
                                     <DiscreteColorLegend
                                         className="col-12 col-md-6 col-lg-4 col-xl-6"
@@ -322,10 +334,7 @@ class PieGraph extends Component {
                                 <h2 className="card-heading">📊포트폴리오 구성</h2>
                             </div>
                             <div className="card-body">
-                                <PulseLoader
-                                    color="#4285f4"
-                                    speedMultiplier={1}
-                                />
+                                <PulseLoader color="#4285f4" speedMultiplier={1} />
                             </div>
                         </div>
                     </div>

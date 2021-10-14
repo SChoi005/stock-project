@@ -60,6 +60,18 @@ class OpenApiService {
             },
         });
     }
+    
+    async getTimeSeries(func, symbol){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        return axios({
+            method: 'get',
+            url: '/api/time-series/'+func+'/'+symbol,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 }
 
 export default new OpenApiService();

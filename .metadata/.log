@@ -17974,3 +17974,222 @@ Java Model Exception: Java Model Status [Index out of bounds]
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:11:27.669
 !MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:13:08.234
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:13:26.600
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:13:36.565
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:13:37.883
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:13:38.952
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:14:00.493
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:14:01.031
+!MESSAGE >> document/hover
+!SESSION 2021-10-11 08:54:13.855 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-10-11 08:54:17.523
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:24.134
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:24.705
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:24.957
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:24.958
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:25.134
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:25.134
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:25.358
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:28.215
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:36.679
+!MESSAGE Workspace initialized in 11486ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:36.752
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:36.757
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:36.859
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:36.869
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:50.565
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:50.605
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:50.776
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:50.802
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:50.869
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:52.616
+!MESSAGE Reconciled 0. Took 1749 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:52.622
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:52.663
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:56.058
+!MESSAGE Reconciled 0. Took 197 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:56.659
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:56.662
+!MESSAGE 8 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:56.969
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:56.969
+!MESSAGE 41 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.272
+!MESSAGE begin problem for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.272
+!MESSAGE 0 problems reported for /SecurityConfig.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.277
+!MESSAGE Validated 3. Took 1198 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.298
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.524
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 08:54:57.525
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:07:17.977
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:08:24.118
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:08:24.689
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:08:25.006
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:08:25.354
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-11 09:08:47.404
+!MESSAGE >> document/hover
+!SESSION 2021-10-12 13:11:29.502 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-10-12 13:11:38.340
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.107
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.737
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.879
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.888
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.970
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:51.971
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:52.081
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:11:56.124
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:12:47.194
+!MESSAGE Workspace initialized in 55193ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:12:47.207
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:12:47.219
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:12:47.289
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:12:47.305
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:14.555
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:24.340
+!MESSAGE Reconciled 0. Took 2579 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.318
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.320
+!MESSAGE 8 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.329
+!MESSAGE Validated 1. Took 1919 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.346
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.907
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:13:26.911
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-12 13:14:23.669
+!MESSAGE >> document/hover

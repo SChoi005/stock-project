@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { PulseLoader } from 'react-spinners';
 
 class StockBalanceStatus extends Component {
+    dollarString(str) {
+        return (
+            str.substring(0, str.length - 5).replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
+            str.substring(str.length - 5, str.length)
+        );
+    }
+
     getTotalAsset() {
         var sum = 0;
         this.props.stocks.forEach((i) => {
@@ -9,6 +16,7 @@ class StockBalanceStatus extends Component {
                 if (j['01. symbol'] === i['symbol']) sum += j['05. price'] * i['quantity'];
             });
         });
+
         return sum.toFixed(4);
     }
 
@@ -22,7 +30,7 @@ class StockBalanceStatus extends Component {
 
         sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
 
-        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+        return sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
     getInvestment() {
@@ -44,7 +52,7 @@ class StockBalanceStatus extends Component {
 
         sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
 
-        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+        return sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
     getYield() {
@@ -88,7 +96,7 @@ class StockBalanceStatus extends Component {
         });
         sum = (sum * this.props.exchangeRate['5. Exchange Rate']).toFixed(0);
 
-        return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+        return sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
     getData() {
@@ -102,8 +110,8 @@ class StockBalanceStatus extends Component {
 
                     data.push({
                         symbol: i['symbol'],
-                        price: '$' + j['05. price'],
-                        averagePrice: '$' + i['average_price'],
+                        price: j['05. price'],
+                        averagePrice: i['average_price'],
                         quantity: i['quantity'],
                         percent: per,
                         previousDayPricePercent:
@@ -162,14 +170,19 @@ class StockBalanceStatus extends Component {
 
                                                     {i['previousDayPricePercent'][0] === '-' ? (
                                                         <td style={{ color: '#4285f4' }}>
-                                                            {i['price']}
+                                                            ${this.dollarString(i['price'])}
                                                         </td>
                                                     ) : (
                                                         <td style={{ color: '#dc143c' }}>
-                                                            {i['price']}
+                                                            ${this.dollarString(i['price'])}
                                                         </td>
                                                     )}
-                                                    <td>{i['averagePrice']}</td>
+                                                    <td>
+                                                        $
+                                                        {this.dollarString(
+                                                            i['averagePrice'].toFixed(4)
+                                                        )}
+                                                    </td>
                                                     <td>{i['quantity']}</td>
                                                     {i['percent'][0] === '-' ? (
                                                         <td style={{ color: '#4285f4' }}>
@@ -192,11 +205,11 @@ class StockBalanceStatus extends Component {
                                                     )}
                                                     {i['percent'][0] === '-' ? (
                                                         <td style={{ color: '#4285f4' }}>
-                                                            ${i['plusAndLoss']}
+                                                            ${this.dollarString(i['plusAndLoss'])}
                                                         </td>
                                                     ) : (
                                                         <td style={{ color: '#dc143c' }}>
-                                                            ${i['plusAndLoss']}
+                                                            ${this.dollarString(i['plusAndLoss'])}
                                                         </td>
                                                     )}
                                                 </tr>
@@ -218,14 +231,14 @@ class StockBalanceStatus extends Component {
                                         <tr>
                                             {this.getPreviousDayYield()[0] === '-' ? (
                                                 <td style={{ color: '#4285f4' }}>
-                                                    {'$' + this.getTotalAsset()}
+                                                    {'$' + this.dollarString(this.getTotalAsset())}
                                                 </td>
                                             ) : (
                                                 <td style={{ color: '#dc143c' }}>
-                                                    {'$' + this.getTotalAsset()}
+                                                    {'$' + this.dollarString(this.getTotalAsset())}
                                                 </td>
                                             )}
-                                            <td>{'$' + this.getInvestment()}</td>
+                                            <td>{'$' + this.dollarString(this.getInvestment())}</td>
                                             {this.getYield()[0] === '-' ? (
                                                 <td style={{ color: '#4285f4' }}>
                                                     {this.getYield()}
@@ -246,11 +259,11 @@ class StockBalanceStatus extends Component {
                                             )}
                                             {this.getYield()[0] === '-' ? (
                                                 <td style={{ color: '#4285f4' }}>
-                                                    ${this.getTotalPlusAndLoss()}
+                                                    ${this.dollarString(this.getTotalPlusAndLoss())}
                                                 </td>
                                             ) : (
                                                 <td style={{ color: '#dc143c' }}>
-                                                    ${this.getTotalPlusAndLoss()}
+                                                    ${this.dollarString(this.getTotalPlusAndLoss())}
                                                 </td>
                                             )}
                                         </tr>

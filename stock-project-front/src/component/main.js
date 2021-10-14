@@ -57,6 +57,12 @@ class Main extends Component {
             exchangeLoading: true,
             news: [],
             newsLoading: false,
+            timeSeriesMonthly: [],
+            timeSeriesWeekly: [],
+            timeSeriesDaily: [],
+            timeSeriesMonthlyLoading: false,
+            timeSeriesWeeklyLoading: false,
+            timeSeriesDailyLoading: false,
         };
     }
 
@@ -161,11 +167,20 @@ class Main extends Component {
     /*portfolio*/
     selectPortfolio(e, item) {
         e.preventDefault();
-        this.setState({ isLoading: true, newsLoading: true });
+        this.setState({
+            isLoading: true,
+            newsLoading: true,
+            timeSeriesMonthlyLoading: true,
+            timeSeriesWeeklyLoading: true,
+            timeSeriesDailyLoading: true,
+        });
 
         var tempOverview = [];
         var tempEndPoint = [];
         var tempNews = [];
+        var tempTimeSeriesMonthly = [];
+        var tempTimeSeriesWeekly = [];
+        var tempTimeSeriesDaily = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.forEach((i) => {
@@ -177,6 +192,15 @@ class Main extends Component {
                 }
                 tempNews.push(OpenApiService.searchNews(i['name']));
                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(i['symbol']));
+                tempTimeSeriesMonthly.push(
+                    OpenApiService.getTimeSeries('TIME_SERIES_MONTHLY_ADJUSTED', i['symbol'])
+                );
+                tempTimeSeriesWeekly.push(
+                    OpenApiService.getTimeSeries('TIME_SERIES_WEEKLY_ADJUSTED', i['symbol'])
+                );
+                tempTimeSeriesDaily.push(
+                    OpenApiService.getTimeSeries('TIME_SERIES_DAILY_ADJUSTED', i['symbol'])
+                );
             });
             this.setState({ selectedStocks: map, selectedPortfolio: item });
         } else {
@@ -208,6 +232,32 @@ class Main extends Component {
             });
 
             this.setState({ news: arr, newsLoading: false });
+        });
+
+        Promise.all(tempTimeSeriesMonthly).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+
+            this.setState({ timeSeriesMonthly: arr, timeSeriesMonthlyLoading: false });
+        });
+
+        Promise.all(tempTimeSeriesWeekly).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+
+            this.setState({ timeSeriesWeekly: arr, timeSeriesWeeklyLoading: false });
+        });
+
+        Promise.all(tempTimeSeriesDaily).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+            this.setState({ timeSeriesDaily: arr, timeSeriesDailyLoading: false });
         });
     }
 
@@ -450,28 +500,29 @@ class Main extends Component {
                                         this.setState({ endPoints: arr });
                                     })
                                     .then(() => {
-                                        Promise.all(tempNews).then((res) => {
-                                            var arr = [];
-                                            res.forEach((i) => {
-                                                arr.push(i.data);
+                                        Promise.all(tempNews)
+                                            .then((res) => {
+                                                var arr = [];
+                                                res.forEach((i) => {
+                                                    arr.push(i.data);
+                                                });
+                                                this.setState({ news: arr });
+                                            })
+                                            .then(() => {
+                                                Promise.all(tempOverview).then((res) => {
+                                                    var arr = [];
+                                                    res.forEach((i) => {
+                                                        arr.push(i.data);
+                                                    });
+                                                    this.setState({
+                                                        selectedPortfolio: i,
+                                                        selectedStocks: map,
+                                                        searchStocks: m,
+                                                        overviews: arr,
+                                                        disabled: false,
+                                                    });
+                                                });
                                             });
-                                            this.setState({ news: arr });
-                                        });
-                                    })
-                                    .then(() => {
-                                        Promise.all(tempOverview).then((res) => {
-                                            var arr = [];
-                                            res.forEach((i) => {
-                                                arr.push(i.data);
-                                            });
-                                            this.setState({
-                                                selectedPortfolio: i,
-                                                selectedStocks: map,
-                                                searchStocks: m,
-                                                overviews: arr,
-                                                disabled: false,
-                                            });
-                                        });
                                     });
                             }
                         });
@@ -520,27 +571,28 @@ class Main extends Component {
                                     this.setState({ endPoints: arr });
                                 })
                                 .then(() => {
-                                    Promise.all(tempNews).then((res) => {
-                                        var arr = [];
-                                        res.forEach((i) => {
-                                            arr.push(i.data);
+                                    Promise.all(tempNews)
+                                        .then((res) => {
+                                            var arr = [];
+                                            res.forEach((i) => {
+                                                arr.push(i.data);
+                                            });
+                                            this.setState({ news: arr });
+                                        })
+                                        .then(() => {
+                                            Promise.all(tempOverview).then((res) => {
+                                                var arr = [];
+                                                res.forEach((i) => {
+                                                    arr.push(i.data);
+                                                });
+                                                this.setState({
+                                                    selectedPortfolio: i,
+                                                    selectedStocks: map,
+                                                    overviews: arr,
+                                                    disabled: false,
+                                                });
+                                            });
                                         });
-                                        this.setState({ news: arr });
-                                    });
-                                })
-                                .then(() => {
-                                    Promise.all(tempOverview).then((res) => {
-                                        var arr = [];
-                                        res.forEach((i) => {
-                                            arr.push(i.data);
-                                        });
-                                        this.setState({
-                                            selectedPortfolio: i,
-                                            selectedStocks: map,
-                                            overviews: arr,
-                                            disabled: false,
-                                        });
-                                    });
                                 });
                         }
                     });
@@ -854,7 +906,17 @@ class Main extends Component {
                         </div>
                         <div className="row">
                             <News news={this.state.news} isLoading={this.state.newsLoading} />
-                            <Chart/>
+                            <Chart
+                                portfolio={this.state.selectedPortfolio}
+                                monthly={this.state.timeSeriesMonthly}
+                                weekly={this.state.timeSeriesWeekly}
+                                daily={this.state.timeSeriesDaily}
+                                isLoading={
+                                    this.state.timeSeriesMonthlyLoading ||
+                                    this.state.timeSeriesWeeklyLoading ||
+                                    this.state.timeSeriesDailyLoading
+                                }
+                            />
                         </div>
                     </div>
                 ) : (
@@ -1069,7 +1131,7 @@ class Main extends Component {
                         ) : (
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
-                                    if (item['4. region'] !== 'United States') return <div></div>;
+                                    if (item['4. region'] !== 'United States') return <div key={item['1. symbol']}></div>;
                                     return (
                                         <div key={item['1. symbol']}>
                                             <button
@@ -1156,8 +1218,8 @@ class Main extends Component {
                                 <div className="mb-2">💳보유 주식</div>
                                 {this.state.selectedPortfolio.stocks.map((item) => {
                                     return (
-                                        <div className="list-group-item">
-                                            <div key={item['symbol']}>
+                                        <div key={item['symbol']} className="list-group-item">
+                                            <div>
                                                 <div>
                                                     주식명 : {item['name']} ( {item['symbol']} )
                                                 </div>

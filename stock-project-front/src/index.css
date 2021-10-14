@@ -216,9 +216,10 @@ label{
 }
 
 .chartValue {
+    width:250px;
     font-size: 14px;
     position: relative;
-    bottom: 58%;
+    bottom: 50%;
     text-align: center;
     font-weight: bolder;
     white-space: pre-line;
