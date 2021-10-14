@@ -15,7 +15,7 @@ URL => https://my-portfolio.run.goorm.io/
 1. popover message
 2. MyInfo 만들기
 3. 포트폴리오 누르고 정보올때까지는 다른포트폴리오 선택 못하도록 하기
-4. stock 추가 삭제할때 chart 업데이트하기 
+4. stock 추가 삭제할때 chart 업데이트하기 => 코드를 수정해야할듯 그냥 로딩했던걸로 disable 조정
 
 # 구름 ide 항상켜두기
 springboot => nohup

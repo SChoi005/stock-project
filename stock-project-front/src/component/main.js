@@ -479,6 +479,9 @@ class Main extends Component {
                                 var tempOverview = [];
                                 var tempEndPoint = [];
                                 var tempNews = [];
+                                var tempTimeSeriesMonthly = [];
+                                var tempTimeSeriesWeekly = [];
+                                var tempTimeSeriesDaily = [];
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
@@ -490,6 +493,15 @@ class Main extends Component {
                                     }
                                     tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                                     tempNews.push(OpenApiService.searchNews(s['name']));
+                                    tempTimeSeriesMonthly.push(
+                                        OpenApiService.getTimeSeries('TIME_SERIES_MONTHLY_ADJUSTED', s['symbol'])
+                                    );
+                                    tempTimeSeriesWeekly.push(
+                                        OpenApiService.getTimeSeries('TIME_SERIES_WEEKLY_ADJUSTED', s['symbol'])
+                                    );
+                                    tempTimeSeriesDaily.push(
+                                        OpenApiService.getTimeSeries('TIME_SERIES_DAILY_ADJUSTED', s['symbol'])
+                                    );
                                 });
                                 Promise.all(tempEndPoint)
                                     .then((res) => {
@@ -509,18 +521,19 @@ class Main extends Component {
                                                 this.setState({ news: arr });
                                             })
                                             .then(() => {
-                                                Promise.all(tempOverview).then((res) => {
-                                                    var arr = [];
-                                                    res.forEach((i) => {
-                                                        arr.push(i.data);
-                                                    });
-                                                    this.setState({
-                                                        selectedPortfolio: i,
-                                                        selectedStocks: map,
-                                                        searchStocks: m,
-                                                        overviews: arr,
-                                                        disabled: false,
-                                                    });
+                                                Promise.all(tempOverview)
+                                                    .then((res) => {
+                                                        var arr = [];
+                                                        res.forEach((i) => {
+                                                            arr.push(i.data);
+                                                        });
+                                                        this.setState({
+                                                            selectedPortfolio: i,
+                                                            selectedStocks: map,
+                                                            searchStocks: m,
+                                                            overviews: arr,
+                                                            disabled: false,
+                                                    })
                                                 });
                                             });
                                     });

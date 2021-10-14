@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 import { PulseLoader } from 'react-spinners';
 import {
-    FlexibleXYPlot ,
+    FlexibleXYPlot,
     LineSeries,
     VerticalGridLines,
     HorizontalGridLines,
     XAxis,
     YAxis,
+    Hint,
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
@@ -15,17 +16,26 @@ class Chart extends Component {
     constructor(props) {
         super(props);
         this.setSymbol = this.setSymbol.bind(this);
+        this.mouseOver = this.mouseOver.bind(this);
+        this.mouseOut = this.mouseOut.bind(this);
         this.state = {
             type: 'daily',
             symbol: '',
+            hint: '',
+            hintHover: false,
         };
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.monthly !== this.props.monthly) {
             if (this.props.monthly.length !== 0)
-                this.setState({ symbol: this.props.monthly[0]['Meta Data']['2. Symbol'] });
-            else this.setState({ symbol: '' });
+                this.setState({
+                    symbol: this.props.monthly[0]['Meta Data']['2. Symbol'],
+                    type: 'daily',
+                    hint: '',
+                    hintHover: false,
+                });
+            else this.setState({ symbol: '', type: 'daily', hint: '', hintHover: false });
         }
     }
 
@@ -85,6 +95,33 @@ class Chart extends Component {
         return data;
     }
 
+    getHintSection(isHintVisible) {
+        return isHintVisible ? (
+            <Hint value={this.state.hint}>
+                <div className="card">
+                    <div className="card-body">
+                        {this.state.hint.x.toString().substring(0, 16)}
+                        <br />
+                        ${this.state.hint.y}
+                    </div>
+                </div>
+            </Hint>
+        ) : null;
+    }
+
+    mouseOver(datapoint) {
+        this.setState({ hint: datapoint, hintHover: true });
+    }
+
+    mouseOut() {
+        this.setState({ hintHover: false });
+    }
+
+    getVariant(type) {
+        if (this.state.type === type) return 'primary';
+        else return 'secondary';
+    }
+
     render() {
         return (
             <div className="col-12 col-lg-6 col-xl-6">
@@ -114,10 +151,11 @@ class Chart extends Component {
                                         );
                                     })}
                                 </DropdownButton>
-                                <div>{this.state.symbol}</div>
+                                <div className="card-heading">{this.state.symbol}</div>
                             </div>
                             <div className="btn-group">
                                 <Button
+                                    variant={this.getVariant('daily')}
                                     onClick={() => {
                                         this.setType('daily');
                                     }}
@@ -125,6 +163,7 @@ class Chart extends Component {
                                     D
                                 </Button>
                                 <Button
+                                    variant={this.getVariant('weekly')}
                                     onClick={() => {
                                         this.setType('weekly');
                                     }}
@@ -132,6 +171,7 @@ class Chart extends Component {
                                     W
                                 </Button>
                                 <Button
+                                    variant={this.getVariant('monthly')}
                                     onClick={() => {
                                         this.setType('monthly');
                                     }}
@@ -140,11 +180,15 @@ class Chart extends Component {
                                 </Button>
                             </div>
                             {this.props.monthly.length !== 0 ? (
-                                <FlexibleXYPlot height={500}>
+                                <FlexibleXYPlot
+                                    height={500}
+                                    xType="time"
+                                    onMouseLeave={this.mouseOut}
+                                >
                                     <VerticalGridLines />
                                     <HorizontalGridLines />
-                                    <XAxis title="Date"/>
-                                    <YAxis title="Price"/>
+                                    <XAxis title="Date" />
+                                    <YAxis title="Price" />
                                     <LineSeries
                                         data={this.getData()}
                                         className="linemark-series-example"
@@ -152,8 +196,12 @@ class Chart extends Component {
                                             strokeWidth: '2px',
                                         }}
                                         stroke="#4285f4"
+                                        onNearestX={(datapoint, event) => {
+                                            this.mouseOver(datapoint);
+                                        }}
                                     />
-                                </FlexibleXYPlot >
+                                    {this.getHintSection(this.state.hintHover)}
+                                </FlexibleXYPlot>
                             ) : (
                                 <div></div>
                             )}
