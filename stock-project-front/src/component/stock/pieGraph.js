@@ -12,12 +12,20 @@ class PieGraph extends Component {
         this.state = {
             switch: true,
             chartValue: '총 자산\n$' + this.getTotalAsset(),
-            fixd: false,
+            fixed: false,
             data: this.getAssetData(),
         };
     }
 
     componentDidUpdate(prevProps, prevState) {
+        
+        if(this.props.isLoading !== prevProps.isLoading && this.props.isLoading===false){
+            this.setState({
+                data: this.getAssetData(),
+                chartValue: '총 자산\n$' + this.getTotalAsset(),
+                switch: true,
+            });
+        }
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAssetData(),

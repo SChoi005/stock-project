@@ -53,7 +53,8 @@ class Main extends Component {
             disabled: false,
             overviews: [],
             endPoints: [],
-            isLoading: false,
+            endPointLoading: false,
+            overviewLoading: false,
             exchangeLoading: true,
             news: [],
             newsLoading: false,
@@ -168,7 +169,8 @@ class Main extends Component {
     selectPortfolio(e, item) {
         e.preventDefault();
         this.setState({
-            isLoading: true,
+            overviewLoading: true,
+            endPointLoading: true,
             newsLoading: true,
             timeSeriesMonthlyLoading: true,
             timeSeriesWeeklyLoading: true,
@@ -207,23 +209,20 @@ class Main extends Component {
             this.setState({ selectedStocks: {}, selectedPortfolio: item });
         }
 
-        Promise.all(tempEndPoint)
-            .then((res) => {
-                var arr = [];
-                res.forEach((i) => {
-                    arr.push(i.data);
-                });
-                this.setState({ endPoints: arr });
-            })
-            .then(() => {
-                Promise.all(tempOverview).then((res) => {
-                    var arr = [];
-                    res.forEach((i) => {
-                        arr.push(i.data);
-                    });
-                    this.setState({ overviews: arr, isLoading: false });
-                });
+        Promise.all(tempEndPoint).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
             });
+            this.setState({ endPoints: arr, endPointLoading: false });
+        });
+        Promise.all(tempOverview).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+            this.setState({ overviews: arr, overviewLoading: false });
+        });
 
         Promise.all(tempNews).then((res) => {
             var arr = [];
@@ -388,14 +387,26 @@ class Main extends Component {
     createStock(e, item) {
         e.preventDefault();
 
-        this.setState({ disabled: true });
+        this.setState({
+            endPointLoading: true,
+            overviewLoading: true,
+            newsLoading: true,
+            timeSeriesDailyLoading: true,
+            timeSeriesWeeklyLoading: true,
+            timeSeriesMonthlyLoading: true,
+        });
 
         if (this.state.averagePrice <= 0 || this.state.quantity <= 0) {
             this.setState({
                 averagePrice: '',
                 quantity: '',
                 stockErrorMessage: '형식이 맞지않습니다.',
-                disabled: false,
+                endPointLoading: false,
+                overviewLoading: false,
+                newsLoading: false,
+                timeSeriesDailyLoading: false,
+                timeSeriesWeeklyLoading: false,
+                timeSeriesMonthlyLoading: false,
             });
             return '';
         }
@@ -440,7 +451,12 @@ class Main extends Component {
                                             selectedStocks: map,
                                             searchStocks: m,
                                             overviews: arr,
-                                            disabled: false,
+                                            endPointLoading: false,
+                                            overviewLoading: false,
+                                            newsLoading: false,
+                                            timeSeriesDailyLoading: false,
+                                            timeSeriesWeeklyLoading: false,
+                                            timeSeriesMonthlyLoading: false,
                                         });
                                     });
                                 }
@@ -451,7 +467,12 @@ class Main extends Component {
                         console.log(error.message);
                         this.setState({
                             stockErrorMessage: '형식이 맞지않습니다.',
-                            disabled: false,
+                            endPointLoading: false,
+                            overviewLoading: false,
+                            newsLoading: false,
+                            timeSeriesDailyLoading: false,
+                            timeSeriesWeeklyLoading: false,
+                            timeSeriesMonthlyLoading: false,
                         });
                     });
 
@@ -494,49 +515,84 @@ class Main extends Component {
                                     tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                                     tempNews.push(OpenApiService.searchNews(s['name']));
                                     tempTimeSeriesMonthly.push(
-                                        OpenApiService.getTimeSeries('TIME_SERIES_MONTHLY_ADJUSTED', s['symbol'])
+                                        OpenApiService.getTimeSeries(
+                                            'TIME_SERIES_MONTHLY_ADJUSTED',
+                                            s['symbol']
+                                        )
                                     );
                                     tempTimeSeriesWeekly.push(
-                                        OpenApiService.getTimeSeries('TIME_SERIES_WEEKLY_ADJUSTED', s['symbol'])
+                                        OpenApiService.getTimeSeries(
+                                            'TIME_SERIES_WEEKLY_ADJUSTED',
+                                            s['symbol']
+                                        )
                                     );
                                     tempTimeSeriesDaily.push(
-                                        OpenApiService.getTimeSeries('TIME_SERIES_DAILY_ADJUSTED', s['symbol'])
+                                        OpenApiService.getTimeSeries(
+                                            'TIME_SERIES_DAILY_ADJUSTED',
+                                            s['symbol']
+                                        )
                                     );
                                 });
-                                Promise.all(tempEndPoint)
-                                    .then((res) => {
-                                        var arr = [];
-                                        res.forEach((i) => {
-                                            arr.push(i.data);
-                                        });
-                                        this.setState({ endPoints: arr });
-                                    })
-                                    .then(() => {
-                                        Promise.all(tempNews)
-                                            .then((res) => {
-                                                var arr = [];
-                                                res.forEach((i) => {
-                                                    arr.push(i.data);
-                                                });
-                                                this.setState({ news: arr });
-                                            })
-                                            .then(() => {
-                                                Promise.all(tempOverview)
-                                                    .then((res) => {
-                                                        var arr = [];
-                                                        res.forEach((i) => {
-                                                            arr.push(i.data);
-                                                        });
-                                                        this.setState({
-                                                            selectedPortfolio: i,
-                                                            selectedStocks: map,
-                                                            searchStocks: m,
-                                                            overviews: arr,
-                                                            disabled: false,
-                                                    })
-                                                });
-                                            });
+                                Promise.all(tempEndPoint).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
                                     });
+                                    this.setState({
+                                        endPoints: arr,
+                                        selectedPortfolio: i,
+                                        selectedStocks: map,
+                                        searchStocks: m,
+                                        endPointLoading: false,
+                                    });
+                                });
+                                Promise.all(tempNews).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({ news: arr, newsLoading: false });
+                                });
+                                Promise.all(tempOverview).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        overviews: arr,
+                                        overviewLoading: false,
+                                    });
+                                });
+                                Promise.all(tempTimeSeriesDaily).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        timeSeriesDaily: arr,
+                                        timeSeriesDailyLoading: false,
+                                    });
+                                });
+                                Promise.all(tempTimeSeriesWeekly).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        timeSeriesWeekly: arr,
+                                        timeSeriesWeeklyLoading: false,
+                                    });
+                                });
+                                Promise.all(tempTimeSeriesMonthly).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        timeSeriesMonthly: arr,
+                                        timeSeriesMonthlyLoading: false,
+                                    });
+                                });
                             }
                         });
                     });
@@ -545,7 +601,12 @@ class Main extends Component {
                     console.log(error.message);
                     this.setState({
                         stockErrorMessage: '형식이 맞지않습니다.',
-                        disabled: false,
+                        endPointLoading: false,
+                        overviewLoading: false,
+                        newsLoading: false,
+                        timeSeriesDailyLoading: false,
+                        timeSeriesWeeklyLoading: false,
+                        timeSeriesMonthlyLoading: false,
                     });
                 });
             this.setState({ averagePrice: '', quantity: '' });
@@ -554,7 +615,15 @@ class Main extends Component {
 
     removeStock(e, item) {
         e.preventDefault();
-        this.setState({ disabled: true });
+        this.setState({
+            endPointLoading: true,
+            overviewLoading: true,
+            newsLoading: true,
+            timeSeriesDailyLoading: true,
+            timeSeriesWeeklyLoading: true,
+            timeSeriesMonthlyLoading: true,
+        });
+
         StockService.deleteStock(item)
             .then(() => {
                 this.getUser().then(() => {
@@ -565,6 +634,9 @@ class Main extends Component {
                             var tempOverview = [];
                             var tempEndPoint = [];
                             var tempNews = [];
+                            var tempTimeSeriesMonthly = [];
+                            var tempTimeSeriesWeekly = [];
+                            var tempTimeSeriesDaily = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
@@ -574,39 +646,84 @@ class Main extends Component {
                                 }
                                 tempEndPoint.push(OpenApiService.getQuoteEndpoint(s['symbol']));
                                 tempNews.push(OpenApiService.searchNews(s['name']));
+                                tempTimeSeriesMonthly.push(
+                                    OpenApiService.getTimeSeries(
+                                        'TIME_SERIES_MONTHLY_ADJUSTED',
+                                        s['symbol']
+                                    )
+                                );
+                                tempTimeSeriesWeekly.push(
+                                    OpenApiService.getTimeSeries(
+                                        'TIME_SERIES_WEEKLY_ADJUSTED',
+                                        s['symbol']
+                                    )
+                                );
+                                tempTimeSeriesDaily.push(
+                                    OpenApiService.getTimeSeries(
+                                        'TIME_SERIES_DAILY_ADJUSTED',
+                                        s['symbol']
+                                    )
+                                );
                             });
-                            Promise.all(tempEndPoint)
-                                .then((res) => {
-                                    var arr = [];
-                                    res.forEach((i) => {
-                                        arr.push(i.data);
-                                    });
-                                    this.setState({ endPoints: arr });
-                                })
-                                .then(() => {
-                                    Promise.all(tempNews)
-                                        .then((res) => {
-                                            var arr = [];
-                                            res.forEach((i) => {
-                                                arr.push(i.data);
-                                            });
-                                            this.setState({ news: arr });
-                                        })
-                                        .then(() => {
-                                            Promise.all(tempOverview).then((res) => {
-                                                var arr = [];
-                                                res.forEach((i) => {
-                                                    arr.push(i.data);
-                                                });
-                                                this.setState({
-                                                    selectedPortfolio: i,
-                                                    selectedStocks: map,
-                                                    overviews: arr,
-                                                    disabled: false,
-                                                });
-                                            });
-                                        });
+                            Promise.all(tempEndPoint).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
                                 });
+                                this.setState({
+                                    endPoints: arr,
+                                    selectedPortfolio: i,
+                                    selectedStocks: map,
+                                    endPointLoading: false,
+                                });
+                            });
+                            Promise.all(tempNews).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({ news: arr, newsLoading: false });
+                            });
+                            Promise.all(tempOverview).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    overviews: arr,
+                                    overviewLoading: false,
+                                });
+                            });
+                            Promise.all(tempTimeSeriesDaily).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    timeSeriesDaily: arr,
+                                    timeSeriesDailyLoading: false,
+                                });
+                            });
+                            Promise.all(tempTimeSeriesWeekly).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    timeSeriesWeekly: arr,
+                                    timeSeriesWeeklyLoading: false,
+                                });
+                            });
+                            Promise.all(tempTimeSeriesMonthly).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    timeSeriesMonthly: arr,
+                                    timeSeriesMonthlyLoading: false,
+                                });
+                            });
                         }
                     });
                 });
@@ -681,6 +798,15 @@ class Main extends Component {
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
+
+        var loading =
+            this.state.disabled ||
+            this.state.endPointLoading ||
+            this.state.overviewLoading ||
+            this.state.newsLoading ||
+            this.state.timeSeriesDailyLoading ||
+            this.state.timeSeriesWeeklyLoading ||
+            this.state.timeSeriesMonthlyLoading;
         // console.log(JSON.stringify(this.state.searchStocks));
         // console.log(this.state.selectedStocks);
         return (
@@ -695,11 +821,11 @@ class Main extends Component {
                                             <Dropdown.Item
                                                 href="/"
                                                 onClick={(event) => {
-                                                    this.setState({ isLoading: true });
                                                     this.selectPortfolio(event, item);
                                                 }}
                                                 role="button"
                                                 key={item.name}
+                                                disabled={loading}
                                             >
                                                 {item.name}
                                             </Dropdown.Item>
@@ -709,6 +835,7 @@ class Main extends Component {
                                     <Dropdown.Item
                                         href="/"
                                         onClick={(event) => this.selectPortfolio(event, {})}
+                                        disabled={loading}
                                     >
                                         Select Portfolio!
                                     </Dropdown.Item>
@@ -761,12 +888,12 @@ class Main extends Component {
                                                                 portfolioUpdateName: e.target.value,
                                                             });
                                                         }}
-                                                        disabled={this.state.disabled}
+                                                        disabled={loading}
                                                     />
                                                     <Button
                                                         variant="secondary"
                                                         type="submit"
-                                                        disabled={this.state.disabled}
+                                                        disabled={loading}
                                                     >
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
@@ -806,6 +933,7 @@ class Main extends Component {
                                                         isRename: !this.state.isRename,
                                                     });
                                                 }}
+                                                disabled={loading}
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -825,6 +953,7 @@ class Main extends Component {
                                             <Button
                                                 variant="outline-primary"
                                                 onClick={() => this.handleStockModalShowHide()}
+                                                disabled={loading}
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -840,6 +969,7 @@ class Main extends Component {
                                             <Button
                                                 variant="outline-primary"
                                                 onClick={() => this.handleDeleteModalShowHide()}
+                                                disabled={loading}
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -856,6 +986,7 @@ class Main extends Component {
                                             <Button
                                                 variant="outline-primary"
                                                 onClick={() => this.handleCreateModalShowHide()}
+                                                disabled={loading}
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -879,6 +1010,7 @@ class Main extends Component {
                                         <Button
                                             variant="outline-primary"
                                             onClick={() => this.handleCreateModalShowHide()}
+                                            disabled={loading}
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -908,13 +1040,13 @@ class Main extends Component {
                                 stocks={this.state.selectedPortfolio.stocks}
                                 equityOverviews={this.state.overviews}
                                 endPoints={this.state.endPoints}
-                                isLoading={this.state.isLoading}
+                                isLoading={this.state.overviewLoading || this.state.endPointLoading}
                             />
                             <StockBalanceStatus
                                 stocks={this.state.selectedPortfolio.stocks}
                                 exchangeRate={this.state.exchangeRate}
                                 endPoints={this.state.endPoints}
-                                isLoading={this.state.isLoading || this.state.exchangeLoading}
+                                isLoading={this.state.endPointLoading || this.state.exchangeLoading}
                             />
                         </div>
                         <div className="row">
@@ -1119,13 +1251,9 @@ class Main extends Component {
                                 placeholder="Search Stock (미국상장 주식만 가능)"
                                 value={this.state.keywords}
                                 onChange={(e) => this.setState({ keywords: e.target.value })}
-                                disabled={this.state.disabled}
+                                disabled={loading}
                             />
-                            <Button
-                                variant="secondary"
-                                type="submit"
-                                disabled={this.state.disabled}
-                            >
+                            <Button variant="secondary" type="submit" disabled={loading}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
@@ -1144,7 +1272,8 @@ class Main extends Component {
                         ) : (
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
-                                    if (item['4. region'] !== 'United States') return <div key={item['1. symbol']}></div>;
+                                    if (item['4. region'] !== 'United States')
+                                        return <div key={item['1. symbol']}></div>;
                                     return (
                                         <div key={item['1. symbol']}>
                                             <button
@@ -1152,7 +1281,7 @@ class Main extends Component {
                                                 onClick={() => this.toggleStock({ item })}
                                                 aria-controls="collapse-text"
                                                 aria-expanded={this.valueToggleStock({ item })}
-                                                disabled={this.state.disabled}
+                                                disabled={loading}
                                             >
                                                 <span>{item['1. symbol']}</span>{' '}
                                                 <span className="search-company-name">
@@ -1183,7 +1312,7 @@ class Main extends Component {
                                                                         averagePrice: e.target.value.trim(),
                                                                     })
                                                                 }
-                                                                disabled={this.state.disabled}
+                                                                disabled={loading}
                                                             />
                                                             <label htmlFor="floatingAveragePrice">
                                                                 평균단가 ex) 123.5
@@ -1202,16 +1331,13 @@ class Main extends Component {
                                                                         quantity: e.target.value.trim(),
                                                                     })
                                                                 }
-                                                                disabled={this.state.disabled}
+                                                                disabled={loading}
                                                             />
                                                             <label htmlFor="floatingQuantity">
                                                                 갯수 ex) 10
                                                             </label>
                                                         </div>
-                                                        <Button
-                                                            type="submit"
-                                                            disabled={this.state.disabled}
-                                                        >
+                                                        <Button type="submit" disabled={loading}>
                                                             매수
                                                         </Button>
                                                         <div className="validation">
@@ -1245,7 +1371,7 @@ class Main extends Component {
                                                         aria-expanded={this.valueToggleMyStock({
                                                             item,
                                                         })}
-                                                        disabled={this.state.disabled}
+                                                        disabled={loading}
                                                     >
                                                         수정
                                                     </Button>
@@ -1254,7 +1380,7 @@ class Main extends Component {
                                                         onClick={(event) => {
                                                             this.removeStock(event, { item });
                                                         }}
-                                                        disabled={this.state.disabled}
+                                                        disabled={loading}
                                                     >
                                                         삭제
                                                     </Button>
@@ -1283,7 +1409,7 @@ class Main extends Component {
                                                                         ownAveragePrice: e.target.value.trim(),
                                                                     })
                                                                 }
-                                                                disabled={this.state.disabled}
+                                                                disabled={loading}
                                                             />
                                                             <label htmlFor="floatingOwnAveragePrice">
                                                                 평균단가 ex) 123.5
@@ -1302,16 +1428,13 @@ class Main extends Component {
                                                                         ownQuantity: e.target.value.trim(),
                                                                     })
                                                                 }
-                                                                disabled={this.state.disabled}
+                                                                disabled={loading}
                                                             />
                                                             <label htmlFor="floatingOwnQuantity">
                                                                 갯수 ex) 10
                                                             </label>
                                                         </div>
-                                                        <Button
-                                                            type="submit"
-                                                            disabled={this.state.disabled}
-                                                        >
+                                                        <Button type="submit" disabled={loading}>
                                                             확인
                                                         </Button>
                                                         <div className="validation">
@@ -1335,7 +1458,7 @@ class Main extends Component {
                                 this.handleStockModalShowHide();
                                 this.setState({ stocks: [], keywords: '' });
                             }}
-                            disabled={this.state.disabled}
+                            disabled={loading}
                         >
                             닫기
                         </Button>

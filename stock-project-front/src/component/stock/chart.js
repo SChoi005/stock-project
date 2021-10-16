@@ -9,6 +9,7 @@ import {
     XAxis,
     YAxis,
     Hint,
+    MarkSeries
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 
@@ -57,6 +58,7 @@ class Chart extends Component {
                         data.push({
                             x: new Date(i),
                             y: parseFloat(s['Time Series (Daily)']['series'][i]['4. close']),
+                            volume : s['Time Series (Daily)']['series'][i]['6. volume']
                         });
                     }
                 }
@@ -70,6 +72,7 @@ class Chart extends Component {
                             y: parseFloat(
                                 s['Weekly Adjusted Time Series']['series'][i]['4. close']
                             ),
+                            volume : s['Weekly Adjusted Time Series']['series'][i]['6. volume']
                         });
                     }
                 }
@@ -83,6 +86,7 @@ class Chart extends Component {
                             y: parseFloat(
                                 s['Monthly Adjusted Time Series']['series'][i]['4. close']
                             ),
+                            volume : s['Monthly Adjusted Time Series']['series'][i]['6. volume']
                         });
                     }
                 }
@@ -98,11 +102,13 @@ class Chart extends Component {
     getHintSection(isHintVisible) {
         return isHintVisible ? (
             <Hint value={this.state.hint}>
-                <div className="card">
+                <div className="card" style={{opacity:'0.9',color:'#dc3545'}}>
                     <div className="card-body">
                         {this.state.hint.x.toString().substring(0, 16)}
                         <br />
-                        ${this.state.hint.y}
+                        가격 : ${this.state.hint.y}
+                        <br />
+                        거래량 : {this.state.hint.volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     </div>
                 </div>
             </Hint>
@@ -200,6 +206,7 @@ class Chart extends Component {
                                             this.mouseOver(datapoint);
                                         }}
                                     />
+                                    {this.state.hintHover && <MarkSeries  color="grey" data={[this.state.hint]}/> }
                                     {this.getHintSection(this.state.hintHover)}
                                 </FlexibleXYPlot>
                             ) : (
