@@ -4,6 +4,7 @@ import PieGraph from './stock/pieGraph';
 import StockBalanceStatus from './stock/stockBalanceStatus';
 import News from './stock/news';
 import Chart from './stock/chart';
+import Indicator from './stock/indicator';
 import { Button, Modal, Collapse, Dropdown, DropdownButton } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import PortfolioService from '../service/portfolioService';
@@ -794,7 +795,7 @@ class Main extends Component {
 
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
@@ -1050,7 +1051,6 @@ class Main extends Component {
                             />
                         </div>
                         <div className="row">
-                            <News news={this.state.news} isLoading={this.state.newsLoading} />
                             <Chart
                                 portfolio={this.state.selectedPortfolio}
                                 monthly={this.state.timeSeriesMonthly}
@@ -1062,6 +1062,10 @@ class Main extends Component {
                                     this.state.timeSeriesDailyLoading
                                 }
                             />
+                            <Indicator stocks={this.state.selectedPortfolio.stocks}/>
+                        </div>
+                        <div className="row">
+                            <News news={this.state.news} isLoading={this.state.newsLoading} />
                         </div>
                     </div>
                 ) : (
@@ -1085,18 +1089,28 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-lg-7 col-xl-7">
+                            <div className="col-12 col-lg-6 col-xl-6">
                                 <div className="h-100 card">
                                     <div className="card-header">
-                                        <h2 className="card-heading">📰나만의 뉴스</h2>
+                                        <h2 className="card-heading">📈보유주식 차트</h2>
                                     </div>
                                     <div className="card-body"></div>
                                 </div>
                             </div>
-                            <div className="col-12 col-lg-5 col-xl-5">
+                            <div className="col-12 col-lg-6 col-xl-6">
                                 <div className="h-100 card">
                                     <div className="card-header">
-                                        <h2 className="card-heading">📈보유주식 차트</h2>
+                                        <h2 className="card-heading">🛠️기술 지표</h2>
+                                    </div>
+                                    <div className="card-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-12 col-lg-12 col-xl-12">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">📰나만의 뉴스</h2>
                                     </div>
                                     <div className="card-body"></div>
                                 </div>
@@ -1273,7 +1287,7 @@ class Main extends Component {
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
                                     if (item['4. region'] !== 'United States')
-                                        return <div key={item['1. symbol']}></div>;
+                                        return null;
                                     return (
                                         <div key={item['1. symbol']}>
                                             <button

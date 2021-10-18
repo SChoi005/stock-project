@@ -9,9 +9,11 @@ import {
     XAxis,
     YAxis,
     Hint,
-    MarkSeries
+    MarkSeries,
 } from 'react-vis';
 import 'react-vis/dist/style.css';
+import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from 'react-datepicker';
 
 class Chart extends Component {
     constructor(props) {
@@ -24,6 +26,8 @@ class Chart extends Component {
             symbol: '',
             hint: '',
             hintHover: false,
+            startDate: new Date(2010, 1, 1),
+            endDate: new Date(),
         };
     }
 
@@ -58,7 +62,7 @@ class Chart extends Component {
                         data.push({
                             x: new Date(i),
                             y: parseFloat(s['Time Series (Daily)']['series'][i]['4. close']),
-                            volume : s['Time Series (Daily)']['series'][i]['6. volume']
+                            volume: s['Time Series (Daily)']['series'][i]['6. volume'],
                         });
                     }
                 }
@@ -72,7 +76,7 @@ class Chart extends Component {
                             y: parseFloat(
                                 s['Weekly Adjusted Time Series']['series'][i]['4. close']
                             ),
-                            volume : s['Weekly Adjusted Time Series']['series'][i]['6. volume']
+                            volume: s['Weekly Adjusted Time Series']['series'][i]['6. volume'],
                         });
                     }
                 }
@@ -86,7 +90,7 @@ class Chart extends Component {
                             y: parseFloat(
                                 s['Monthly Adjusted Time Series']['series'][i]['4. close']
                             ),
-                            volume : s['Monthly Adjusted Time Series']['series'][i]['6. volume']
+                            volume: s['Monthly Adjusted Time Series']['series'][i]['6. volume'],
                         });
                     }
                 }
@@ -96,19 +100,33 @@ class Chart extends Component {
         data.sort(function (a, b) {
             return new Date(a.x) - new Date(b.x);
         });
-        return data;
+
+        var start = -1,
+            end = -1;
+        var i = 0;
+
+        data.map((d) => {
+            if (start === -1 && this.state.startDate.getTime() <= d.x.getTime()) start = i;
+            if (end === -1 && this.state.endDate.getTime() <= d.x.getTime()) end = i;
+            i++;
+        });
+
+        if (end === -1) end = data.length;
+
+        return data.slice(start, end);
     }
 
     getHintSection(isHintVisible) {
         return isHintVisible ? (
             <Hint value={this.state.hint}>
-                <div className="card" style={{opacity:'0.9',color:'#dc3545'}}>
+                <div className="card" style={{ opacity: '0.9', color: '#dc3545' }}>
                     <div className="card-body">
                         {this.state.hint.x.toString().substring(0, 16)}
                         <br />
                         가격 : ${this.state.hint.y}
                         <br />
-                        거래량 : {this.state.hint.volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        거래량 :{' '}
+                        {this.state.hint.volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     </div>
                 </div>
             </Hint>
@@ -134,7 +152,13 @@ class Chart extends Component {
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">
-                            <h2 className="card-heading">📈보유주식 차트</h2>
+                            <h2 className="card-heading">
+                                📈보유주식 차트
+                                <br />
+                                <span className="sub-title">
+                                    # 일일단위는 최대 100일까지만 가능합니다.
+                                </span>
+                            </h2>
                         </div>
                         <div className="card-body">
                             <div>
@@ -185,9 +209,34 @@ class Chart extends Component {
                                     M
                                 </Button>
                             </div>
+                            <div>
+                                <div>
+                                    <span>시작일 : </span>
+                                    <DatePicker
+                                        selected={this.state.startDate}
+                                        onChange={(date) =>
+                                            this.setState({ startDate: new Date(date) })
+                                        }
+                                        selectsStart
+                                        startDate={this.state.startDate}
+                                        endDate={this.state.endDate}
+                                    />
+                                </div>
+                                <div>
+                                    <span>종료일 : </span>
+                                    <DatePicker
+                                        selected={this.state.endDate}
+                                        onChange={(date) => this.setState({ endDate: new Date(date) })}
+                                        selectsEnd
+                                        startDate={this.state.startDate}
+                                        endDate={this.state.endDate}
+                                        minDate={this.state.startDate}
+                                    />
+                                </div>
+                            </div>
                             {this.props.monthly.length !== 0 ? (
                                 <FlexibleXYPlot
-                                    height={500}
+                                    height={400}
                                     xType="time"
                                     onMouseLeave={this.mouseOut}
                                 >
@@ -206,7 +255,9 @@ class Chart extends Component {
                                             this.mouseOver(datapoint);
                                         }}
                                     />
-                                    {this.state.hintHover && <MarkSeries  color="grey" data={[this.state.hint]}/> }
+                                    {this.state.hintHover && (
+                                        <MarkSeries color="grey" data={[this.state.hint]} />
+                                    )}
                                     {this.getHintSection(this.state.hintHover)}
                                 </FlexibleXYPlot>
                             ) : (

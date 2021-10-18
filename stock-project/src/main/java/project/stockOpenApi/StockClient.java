@@ -15,12 +15,16 @@ import org.springframework.web.util.UriComponentsBuilder;
 import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.CompanyOverviewResponse;
+import project.stockOpenApi.dto.ETFOverviewRequest;
+import project.stockOpenApi.dto.ETFOverviewResponse;
 import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.NewsSearchResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
+import project.stockOpenApi.dto.RSIRequest;
+import project.stockOpenApi.dto.RSIResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 import project.stockOpenApi.dto.SymbolSearchResponse;
 import project.stockOpenApi.dto.TimeSeriesDailyResponse;
@@ -233,6 +237,54 @@ public class StockClient{
         ParameterizedTypeReference responseType = new ParameterizedTypeReference<TimeSeriesDailyResponse>() {};
         
         ResponseEntity<TimeSeriesDailyResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public ETFOverviewResponse getETFOverview(ETFOverviewRequest etfOverviewRequest){
+        
+        URI uri = UriComponentsBuilder.fromUriString("https://api.stock.naver.com/etf/SPYG.K/basic")
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<ETFOverviewResponse>() {};
+        
+        ResponseEntity<ETFOverviewResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public RSIResponse getRSI(RSIRequest resRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(resRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<RSIResponse>() {};
+        
+        ResponseEntity<RSIResponse> responseEntity = new RestTemplate().exchange(
             uri,
             HttpMethod.GET,
             httpEntity,

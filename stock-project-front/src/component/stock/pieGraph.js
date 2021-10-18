@@ -228,7 +228,7 @@ class PieGraph extends Component {
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">
-                            <h2 className="card-heading">📊포트폴리오 구성</h2>
+                            <h2 className="card-heading">📊포트폴리오 구성<br/><span className="sub-title"># ETF의 배당률은 현재 준비중입니다.</span></h2>
                         </div>
                         {this.state.data.length !== 0 ? (
                             <div className="card-body radial">

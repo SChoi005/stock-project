@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.StockClient;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
+import project.stockOpenApi.dto.ETFOverviewRequest;
 import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
+import project.stockOpenApi.dto.RSIRequest;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 import project.stockOpenApi.dto.TimeSeriesRequest;
 
@@ -51,6 +53,14 @@ public class OpenApiController{
         return ResponseEntity.ok(stockClient.searchCompanyOverview(req));
     }
     
+    @GetMapping("/overview/etf/{symbol}")
+    public ResponseEntity<?> searchETFOverview(@PathVariable String symbol){
+        ETFOverviewRequest req = new ETFOverviewRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.getETFOverview(req));
+    }
+    
     @GetMapping("/exchangeRate")
     public ResponseEntity<?> getExchangeRate(){
         ExchangeRateRequest req = new ExchangeRateRequest();
@@ -82,7 +92,13 @@ public class OpenApiController{
         else{
             return ResponseEntity.ok(stockClient.getDailyTimeSeries(req));
         }
-        
     }
     
+    @GetMapping("/rsi/{symbol}")
+    public ResponseEntity<?> getRSI(@PathVariable String symbol){
+        RSIRequest req = new RSIRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.getRSI(req));
+    }
 }

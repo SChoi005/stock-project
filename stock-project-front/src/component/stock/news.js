@@ -5,7 +5,7 @@ import { PulseLoader } from 'react-spinners';
 class News extends Component {
     render() {
         return (
-            <div className="col-12 col-lg-6 col-xl-6">
+            <div className="col-12 col-lg-12 col-xl-12">
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">

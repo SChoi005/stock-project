@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AuthService from '../service/authService';
-import Clock from './clock';
 
 class Header extends Component {
     constructor(props) {
@@ -28,7 +27,6 @@ class Header extends Component {
                         ''
                     )}
                         </div>
-                    <Clock/>
                 </div>
             </div>
         );

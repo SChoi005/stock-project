@@ -6,10 +6,12 @@ URL => https://my-portfolio.run.goorm.io/
 2. user create할때 column 값 제한된값받도록 수정 back
 
 # 해야할것
-1. signup 뒤로가기 제어
-2. 차트, 배당캘린더
-* etf api 가져오는게 문제.. 
+1. rsi차트 만들기
 
+1. signup 뒤로가기 제어
+2. 배당캘린더
+* etf api 가져오는게 문제.. 
+etf가져오는 곳 정함
 
 # 나중에 해야할것
 1. popover message
