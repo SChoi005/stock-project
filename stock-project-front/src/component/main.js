@@ -67,6 +67,8 @@ class Main extends Component {
             timeSeriesDailyLoading: false,
             rsi: [],
             rsiLoading: false,
+            cci:[],
+            cciLoading:false,
         };
     }
 
@@ -179,6 +181,7 @@ class Main extends Component {
             timeSeriesWeeklyLoading: true,
             timeSeriesDailyLoading: true,
             rsiLoading:true,
+            cciLoading:true,
         });
 
         var tempOverview = [];
@@ -188,6 +191,7 @@ class Main extends Component {
         var tempTimeSeriesWeekly = [];
         var tempTimeSeriesDaily = [];
         var tempRSI = [];
+        var tempCCI = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.forEach((i) => {
@@ -209,6 +213,7 @@ class Main extends Component {
                     OpenApiService.getTimeSeries('TIME_SERIES_DAILY_ADJUSTED', i['symbol'])
                 );
                 tempRSI.push(OpenApiService.getRSI(i['symbol']));
+                tempCCI.push(OpenApiService.getCCI(i['symbol']));
             });
             this.setState({ selectedStocks: map, selectedPortfolio: item });
         } else {
@@ -271,6 +276,14 @@ class Main extends Component {
                 arr.push(i.data);
             });
             this.setState({ rsi: arr, rsiLoading: false });
+        });
+        
+        Promise.all(tempCCI).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+            this.setState({ cci: arr, cciLoading: false });
         });
     }
 
@@ -408,6 +421,8 @@ class Main extends Component {
             timeSeriesDailyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesMonthlyLoading: true,
+            rsiLoading:true,
+            cciLoading:true,
         });
 
         if (this.state.averagePrice <= 0 || this.state.quantity <= 0) {
@@ -421,6 +436,8 @@ class Main extends Component {
                 timeSeriesDailyLoading: false,
                 timeSeriesWeeklyLoading: false,
                 timeSeriesMonthlyLoading: false,
+                rsiLoading:false,
+                cciLoading:false,
             });
             return '';
         }
@@ -471,6 +488,8 @@ class Main extends Component {
                                             timeSeriesDailyLoading: false,
                                             timeSeriesWeeklyLoading: false,
                                             timeSeriesMonthlyLoading: false,
+                                            rsiLoading:false,
+                                            cciLoading:false,
                                         });
                                     });
                                 }
@@ -487,6 +506,8 @@ class Main extends Component {
                             timeSeriesDailyLoading: false,
                             timeSeriesWeeklyLoading: false,
                             timeSeriesMonthlyLoading: false,
+                            rsiLoading:false,
+                            cciLoading:false,
                         });
                     });
 
@@ -517,6 +538,8 @@ class Main extends Component {
                                 var tempTimeSeriesMonthly = [];
                                 var tempTimeSeriesWeekly = [];
                                 var tempTimeSeriesDaily = [];
+                                var tempRSI = [];
+                                var tempCCI = [];
                                 i.stocks.forEach((s) => {
                                     map.set(s['symbol'], false);
                                     if (s['type'] !== 'ETF')
@@ -546,6 +569,8 @@ class Main extends Component {
                                             s['symbol']
                                         )
                                     );
+                                    tempRSI.push(OpenApiService.getRSI(s['symbol']));
+                                    tempCCI.push(OpenApiService.getCCI(s['symbol']));
                                 });
                                 Promise.all(tempEndPoint).then((res) => {
                                     var arr = [];
@@ -607,6 +632,26 @@ class Main extends Component {
                                         timeSeriesMonthlyLoading: false,
                                     });
                                 });
+                                Promise.all(tempRSI).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        rsi: arr,
+                                        rsiLoading: false,
+                                    });
+                                });
+                                Promise.all(tempCCI).then((res) => {
+                                    var arr = [];
+                                    res.forEach((i) => {
+                                        arr.push(i.data);
+                                    });
+                                    this.setState({
+                                        cci: arr,
+                                        cciLoading: false,
+                                    });
+                                });
                             }
                         });
                     });
@@ -621,6 +666,8 @@ class Main extends Component {
                         timeSeriesDailyLoading: false,
                         timeSeriesWeeklyLoading: false,
                         timeSeriesMonthlyLoading: false,
+                        rsiLoading:false,
+                        cciLoading:false,
                     });
                 });
             this.setState({ averagePrice: '', quantity: '' });
@@ -636,6 +683,8 @@ class Main extends Component {
             timeSeriesDailyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesMonthlyLoading: true,
+            rsiLoading:true,
+            cciLoading:true,
         });
 
         StockService.deleteStock(item)
@@ -651,6 +700,8 @@ class Main extends Component {
                             var tempTimeSeriesMonthly = [];
                             var tempTimeSeriesWeekly = [];
                             var tempTimeSeriesDaily = [];
+                            var tempRSI = [];
+                            var tempCCI = [];
                             i.stocks.forEach((s) => {
                                 map.set(s['symbol'], false);
                                 if (s['type'] !== 'ETF')
@@ -678,6 +729,8 @@ class Main extends Component {
                                         s['symbol']
                                     )
                                 );
+                                tempRSI.push(OpenApiService.getRSI(s['symbol']));
+                                tempCCI.push(OpenApiService.getCCI(s['symbol']));
                             });
                             Promise.all(tempEndPoint).then((res) => {
                                 var arr = [];
@@ -736,6 +789,26 @@ class Main extends Component {
                                 this.setState({
                                     timeSeriesMonthly: arr,
                                     timeSeriesMonthlyLoading: false,
+                                });
+                            });
+                            Promise.all(tempRSI).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    rsi: arr,
+                                    rsiLoading: false,
+                                });
+                            });
+                            Promise.all(tempCCI).then((res) => {
+                                var arr = [];
+                                res.forEach((i) => {
+                                    arr.push(i.data);
+                                });
+                                this.setState({
+                                    cci: arr,
+                                    cciLoading: false,
                                 });
                             });
                         }
@@ -820,7 +893,9 @@ class Main extends Component {
             this.state.newsLoading ||
             this.state.timeSeriesDailyLoading ||
             this.state.timeSeriesWeeklyLoading ||
-            this.state.timeSeriesMonthlyLoading;
+            this.state.timeSeriesMonthlyLoading ||
+            this.state.rsiLoading ||
+            this.state.cciLoading;
         // console.log(JSON.stringify(this.state.searchStocks));
         // console.log(this.state.selectedStocks);
         return (
@@ -1076,8 +1151,9 @@ class Main extends Component {
                                 }
                             />
                             <Indicator 
-                                isLoading={this.state.rsiLoading}
+                                isLoading={this.state.rsiLoading || this.state.cciLoading}
                                 rsi = {this.state.rsi}
+                                cci = {this.state.cci}
                                 stocks={this.state.selectedPortfolio.stocks}
                             />
                         </div>

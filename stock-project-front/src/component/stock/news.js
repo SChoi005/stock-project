@@ -29,6 +29,7 @@ class News extends Component {
                                                             </div>
                                                             <h6>
                                                                 <a
+                                                                    style={{display:"block"}}
                                                                     href={i['link']}
                                                                     target="_blank"
                                                                     rel="noreferrer"

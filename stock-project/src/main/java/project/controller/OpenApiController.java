@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 import project.stockOpenApi.StockClient;
+import project.stockOpenApi.dto.CCIRequest;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.ETFOverviewRequest;
 import project.stockOpenApi.dto.ExchangeRateRequest;
@@ -100,5 +101,13 @@ public class OpenApiController{
         req.setSymbol(symbol);
         
         return ResponseEntity.ok(stockClient.getRSI(req));
+    }
+    
+    @GetMapping("/cci/{symbol}")
+    public ResponseEntity<?> getCCI(@PathVariable String symbol){
+        CCIRequest req = new CCIRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.getCCI(req));
     }
 }

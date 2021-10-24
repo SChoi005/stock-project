@@ -23,8 +23,9 @@ class Indicator extends Component {
         this.mouseOut = this.mouseOut.bind(this);
         this.state = {
             symbol: '',
+            yTitle:'Percent',
             indicator: 'RSI',
-            indicatorDescription: '# 상대 강도 지수(RSI)는 주식 또는 기타 자산 가격의 과매수 또는 과매도 상태를 평가하기 위해 최근 가격 변동의 규모를 측정하는 모멘텀 지표를 설명합니다.',
+            indicatorDescription: '# 상대 강도 지수 (RSI)는 주식 또는 기타 자산 가격의 과매수 또는 과매도 상태를 평가하기 위해 최근 가격 변동의 규모를 측정하는 모멘텀 지표를 설명합니다. (설정기간 : 14일)',
             hint: '',
             hintHover: false,
             startDate: new Date(2021, 1, 1),
@@ -52,9 +53,9 @@ class Indicator extends Component {
     setIndicator(indicator) {
         // RSI,
         if(indicator === "RSI")
-            this.setState({ indicator: indicator, indicatorDescription: '# 상대 강도 지수(RSI)는 주식 또는 기타 자산 가격의 과매수 또는 과매도 상태를 평가하기 위해 최근 가격 변동의 규모를 측정하는 모멘텀 지표를 설명합니다.', referenceUrl:"https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp" });
+            this.setState({ indicator: indicator, indicatorDescription: '# 상대 강도 지수 (RSI)는 주식 또는 기타 자산 가격의 과매수 또는 과매도 상태를 평가하기 위해 최근 가격 변동의 규모를 측정하는 모멘텀 지표를 설명합니다. (설정기간 : 14일)', referenceUrl:"https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp", yTitle:'Percent' });
         if(indicator === "CCI")
-            this.setState({ indicator: indicator, indicatorDescription: '# 상품 채널 지수 (CCI)는 투자 수단이 과매수 또는 과매도 상태에 도달하는 시기를 판단하는 데 사용되는 모멘텀 기반 오실레이터입니다.', referenceUrl:"https://www.investopedia.com/investing/timing-trades-with-commodity-channel-index/" });
+            this.setState({ indicator: indicator, indicatorDescription: '# 상품 채널 지수 (CCI)는 투자 수단이 과매수 또는 과매도 상태에 도달하는 시기를 판단하는 데 사용되는 모멘텀 기반 오실레이터입니다. (설정기간 : 20일)', referenceUrl:"https://www.investopedia.com/investing/timing-trades-with-commodity-channel-index/", yTitle:'Value' });
         if(indicator === "STOCH")
             this.setState({ indicator: indicator, indicatorDescription: '# 스토캐스틱 오실레이터 (STOCH)는 증권의 특정 종가를 특정 기간 동안의 가격 범위와 비교하는 모멘텀 지표입니다.', referenceUrl:"https://www.investopedia.com/terms/s/stochasticoscillator.asp" });
         if(indicator === "OBV")
@@ -84,6 +85,19 @@ class Indicator extends Component {
                 }
             });
         }
+        else if (this.state.indicator === 'CCI') {
+            this.props.cci.forEach((r) => {
+                if (r['Meta Data']['1: Symbol'] === this.state.symbol) {
+                    for (var i in r['Technical Analysis: CCI']['series']) {
+                        data.push({
+                            x: new Date(i),
+                            y: parseFloat(r['Technical Analysis: CCI']['series'][i]['CCI']),
+                        });
+                    }
+                }
+            });
+        }
+        
 
         data.sort(function (a, b) {
             return new Date(a.x) - new Date(b.x);
@@ -232,7 +246,7 @@ class Indicator extends Component {
                                     <VerticalGridLines />
                                     <HorizontalGridLines />
                                     <XAxis title="Date" />
-                                    <YAxis title="Percent" />
+                                    <YAxis title={this.state.yTitle} />
                                     <LineSeries
                                         data={this.getData()}
                                         className="linemark-series-example"

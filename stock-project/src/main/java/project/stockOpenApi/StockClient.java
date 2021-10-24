@@ -13,6 +13,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import lombok.extern.slf4j.Slf4j;
+import project.stockOpenApi.dto.CCIRequest;
+import project.stockOpenApi.dto.CCIResponse;
 import project.stockOpenApi.dto.CompanyOverviewRequest;
 import project.stockOpenApi.dto.CompanyOverviewResponse;
 import project.stockOpenApi.dto.ETFOverviewRequest;
@@ -285,6 +287,30 @@ public class StockClient{
         ParameterizedTypeReference responseType = new ParameterizedTypeReference<RSIResponse>() {};
         
         ResponseEntity<RSIResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public CCIResponse getCCI(CCIRequest cciRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(cciRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<CCIResponse>() {};
+        
+        ResponseEntity<CCIResponse> responseEntity = new RestTemplate().exchange(
             uri,
             HttpMethod.GET,
             httpEntity,

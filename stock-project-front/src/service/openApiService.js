@@ -84,6 +84,17 @@ class OpenApiService {
             },
         });
     }
+    async getCCI(symbol){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        return axios({
+            method: 'get',
+            url: '/api/cci/'+symbol,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 }
 
 export default new OpenApiService();
