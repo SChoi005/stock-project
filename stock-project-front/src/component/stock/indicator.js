@@ -86,6 +86,7 @@ class Indicator extends Component {
                 indicatorDescription:
                     '# 균형 거래량 (OBV)은 양수 및 음수 거래량 흐름을 측정하는 모멘텀 지표입니다.',
                 referenceUrl: 'https://www.investopedia.com/articles/technical/100801.asp',
+                yTitle: 'Value',
             });
     }
     setSymbol(e, symbol) {
@@ -133,6 +134,17 @@ class Indicator extends Component {
                     }
                 }
             });
+        }else if(this.state.indicator === 'OBV'){
+            this.props.obv.forEach((r)=>{
+                if (r['Meta Data']['1: Symbol'] === this.state.symbol){
+                    for (var i in r['Technical Analysis: OBV']['series']) {
+                        data.push({
+                            x: new Date(i),
+                            y: parseFloat(r['Technical Analysis: OBV']['series'][i]['OBV']),
+                        });
+                    }
+                }
+            })
         }
 
         data.sort(function (a, b) {

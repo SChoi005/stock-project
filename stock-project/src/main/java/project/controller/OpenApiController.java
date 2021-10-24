@@ -16,6 +16,7 @@ import project.stockOpenApi.dto.ETFOverviewRequest;
 import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.NewsSearchRequest;
+import project.stockOpenApi.dto.OBVRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.RSIRequest;
@@ -118,5 +119,13 @@ public class OpenApiController{
         req.setSymbol(symbol);
         
         return ResponseEntity.ok(stockClient.getSTOCH(req));
+    }
+    
+    @GetMapping("/obv/{symbol}")
+    public ResponseEntity<?> getOBV(@PathVariable String symbol){
+        OBVRequest req = new OBVRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.getOBV(req));
     }
 }

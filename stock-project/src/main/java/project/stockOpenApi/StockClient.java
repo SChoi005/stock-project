@@ -23,6 +23,8 @@ import project.stockOpenApi.dto.ExchangeRateRequest;
 import project.stockOpenApi.dto.ExchangeRateResponse;
 import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.NewsSearchResponse;
+import project.stockOpenApi.dto.OBVRequest;
+import project.stockOpenApi.dto.OBVResponse;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.RSIRequest;
@@ -337,6 +339,30 @@ public class StockClient{
         ParameterizedTypeReference responseType = new ParameterizedTypeReference<STOCHResponse>() {};
         
         ResponseEntity<STOCHResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public OBVResponse getOBV(OBVRequest obvRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(obvRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<OBVResponse>() {};
+        
+        ResponseEntity<OBVResponse> responseEntity = new RestTemplate().exchange(
             uri,
             HttpMethod.GET,
             httpEntity,

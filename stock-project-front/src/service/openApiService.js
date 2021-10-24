@@ -106,6 +106,17 @@ class OpenApiService {
             },
         });
     }
+    async getOBV(symbol){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        return axios({
+            method: 'get',
+            url: '/api/obv/'+symbol,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 }
 
 export default new OpenApiService();

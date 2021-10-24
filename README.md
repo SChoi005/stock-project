@@ -5,6 +5,7 @@ URL => https://my-portfolio.run.goorm.io/
 1. stock음수 값 받는거 수정 back
 2. user create할때 column 값 제한된값받도록 수정 back
 3. 포트폴리오 create하고 차트 부분이 초기화되도록 수정
+4. hint 단위 % 때에 따라 바뀌도록 수정
 
 # 해야할것
 
