@@ -18,7 +18,7 @@ public class RSIRequest{
     
     private String interval="daily";
         
-    private int timePeriod= 14;
+    private String timePeriod= "14";
     
     private String seriesType ="open";
     

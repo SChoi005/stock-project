@@ -270,9 +270,9 @@ public class StockClient{
         return responseEntity.getBody();
     }
     
-    public RSIResponse getRSI(RSIRequest resRequest){
+    public RSIResponse getRSI(RSIRequest rsiRequest){
         URI uri = UriComponentsBuilder.fromUriString(stockUrl)
-                                      .queryParams(resRequest.toMultiValueMap())
+                                      .queryParams(rsiRequest.toMultiValueMap())
                                       .build()
                                       .encode()
                                       .toUri();

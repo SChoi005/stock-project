@@ -72,6 +72,18 @@ class OpenApiService {
             },
         });
     }
+    
+    async getRSI(symbol){
+        const token = JSON.parse(localStorage.getItem('user')).token;
+        return axios({
+            method: 'get',
+            url: '/api/rsi/'+symbol,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 }
 
 export default new OpenApiService();

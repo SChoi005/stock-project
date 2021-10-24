@@ -48,8 +48,8 @@ public class RSIResponse{
     @NoArgsConstructor
     @AllArgsConstructor
     public static class MetaData{
-        @JsonProperty("1: Information")
-        private String information;
+        @JsonProperty("1: Symbol")
+        private String symbol;
         @JsonProperty("2: Indicator")
         private String indicator;
         @JsonProperty("3: Last Refreshed")

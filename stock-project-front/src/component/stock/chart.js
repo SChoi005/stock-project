@@ -261,7 +261,7 @@ class Chart extends Component {
                                     {this.getHintSection(this.state.hintHover)}
                                 </FlexibleXYPlot>
                             ) : (
-                                <div></div>
+                                null
                             )}
                         </div>
                     </div>

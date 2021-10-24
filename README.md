@@ -4,9 +4,9 @@ URL => https://my-portfolio.run.goorm.io/
 # back front 서로 맞춰야할 것
 1. stock음수 값 받는거 수정 back
 2. user create할때 column 값 제한된값받도록 수정 back
+3. 포트폴리오 create하고 차트 부분이 초기화되도록 수정
 
 # 해야할것
-1. rsi차트 만들기
 
 1. signup 뒤로가기 제어
 2. 배당캘린더

@@ -65,6 +65,8 @@ class Main extends Component {
             timeSeriesMonthlyLoading: false,
             timeSeriesWeeklyLoading: false,
             timeSeriesDailyLoading: false,
+            rsi: [],
+            rsiLoading: false,
         };
     }
 
@@ -176,6 +178,7 @@ class Main extends Component {
             timeSeriesMonthlyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesDailyLoading: true,
+            rsiLoading:true,
         });
 
         var tempOverview = [];
@@ -184,6 +187,7 @@ class Main extends Component {
         var tempTimeSeriesMonthly = [];
         var tempTimeSeriesWeekly = [];
         var tempTimeSeriesDaily = [];
+        var tempRSI = [];
         if (JSON.stringify(item) !== '{}') {
             var map = new Map();
             item.stocks.forEach((i) => {
@@ -204,6 +208,7 @@ class Main extends Component {
                 tempTimeSeriesDaily.push(
                     OpenApiService.getTimeSeries('TIME_SERIES_DAILY_ADJUSTED', i['symbol'])
                 );
+                tempRSI.push(OpenApiService.getRSI(i['symbol']));
             });
             this.setState({ selectedStocks: map, selectedPortfolio: item });
         } else {
@@ -258,6 +263,14 @@ class Main extends Component {
                 arr.push(i.data);
             });
             this.setState({ timeSeriesDaily: arr, timeSeriesDailyLoading: false });
+        });
+        
+        Promise.all(tempRSI).then((res) => {
+            var arr = [];
+            res.forEach((i) => {
+                arr.push(i.data);
+            });
+            this.setState({ rsi: arr, rsiLoading: false });
         });
     }
 
@@ -1062,7 +1075,11 @@ class Main extends Component {
                                     this.state.timeSeriesDailyLoading
                                 }
                             />
-                            <Indicator stocks={this.state.selectedPortfolio.stocks}/>
+                            <Indicator 
+                                isLoading={this.state.rsiLoading}
+                                rsi = {this.state.rsi}
+                                stocks={this.state.selectedPortfolio.stocks}
+                            />
                         </div>
                         <div className="row">
                             <News news={this.state.news} isLoading={this.state.newsLoading} />
