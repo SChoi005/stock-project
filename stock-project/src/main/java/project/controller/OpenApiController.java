@@ -19,6 +19,7 @@ import project.stockOpenApi.dto.NewsSearchRequest;
 import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.RSIRequest;
+import project.stockOpenApi.dto.STOCHRequest;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 import project.stockOpenApi.dto.TimeSeriesRequest;
 
@@ -109,5 +110,13 @@ public class OpenApiController{
         req.setSymbol(symbol);
         
         return ResponseEntity.ok(stockClient.getCCI(req));
+    }
+    
+    @GetMapping("/stoch/{symbol}")
+    public ResponseEntity<?> getSTOCH(@PathVariable String symbol){
+        STOCHRequest req = new STOCHRequest();
+        req.setSymbol(symbol);
+        
+        return ResponseEntity.ok(stockClient.getSTOCH(req));
     }
 }

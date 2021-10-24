@@ -27,6 +27,8 @@ import project.stockOpenApi.dto.QuoteEndpointRequest;
 import project.stockOpenApi.dto.QuoteEndpointResponse;
 import project.stockOpenApi.dto.RSIRequest;
 import project.stockOpenApi.dto.RSIResponse;
+import project.stockOpenApi.dto.STOCHRequest;
+import project.stockOpenApi.dto.STOCHResponse;
 import project.stockOpenApi.dto.SymbolSearchRequest;
 import project.stockOpenApi.dto.SymbolSearchResponse;
 import project.stockOpenApi.dto.TimeSeriesDailyResponse;
@@ -311,6 +313,30 @@ public class StockClient{
         ParameterizedTypeReference responseType = new ParameterizedTypeReference<CCIResponse>() {};
         
         ResponseEntity<CCIResponse> responseEntity = new RestTemplate().exchange(
+            uri,
+            HttpMethod.GET,
+            httpEntity,
+            responseType
+        );
+        
+        return responseEntity.getBody();
+    }
+    
+    public STOCHResponse getSTOCH(STOCHRequest stochRequest){
+        URI uri = UriComponentsBuilder.fromUriString(stockUrl)
+                                      .queryParams(stochRequest.toMultiValueMap())
+                                      .build()
+                                      .encode()
+                                      .toUri();
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        HttpEntity httpEntity = new HttpEntity<>(headers);
+        
+        ParameterizedTypeReference responseType = new ParameterizedTypeReference<STOCHResponse>() {};
+        
+        ResponseEntity<STOCHResponse> responseEntity = new RestTemplate().exchange(
             uri,
             HttpMethod.GET,
             httpEntity,

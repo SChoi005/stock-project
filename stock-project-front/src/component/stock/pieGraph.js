@@ -11,7 +11,7 @@ class PieGraph extends Component {
         this.clickValue = this.clickValue.bind(this);
         this.state = {
             switch: true,
-            chartValue: '총 자산\n$' + this.getTotalAsset(),
+            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
             fixed: false,
             data: this.getAssetData(),
         };
@@ -22,21 +22,21 @@ class PieGraph extends Component {
         if(this.props.isLoading !== prevProps.isLoading && this.props.isLoading===false){
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.getTotalAsset(),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
                 switch: true,
             });
         }
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.getTotalAsset(),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
                 switch: true,
             });
         }
         if (this.props.stocks !== prevProps.stocks) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.getTotalAsset(),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
                 switch: true,
             });
         }
@@ -184,7 +184,7 @@ class PieGraph extends Component {
     assetClick(e) {
         this.setState({
             switch: true,
-            chartValue: '총 자산\n$' + this.getTotalAsset(),
+            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
             data: this.getAssetData(),
             fixed: false,
         });
@@ -193,7 +193,7 @@ class PieGraph extends Component {
     allocationClick(e) {
         this.setState({
             switch: false,
-            chartValue: '연 배당금\n$' + this.getTotalAllocation(),
+            chartValue: '연 배당금\n$' + this.dollarString(String(this.getTotalAllocation()),2),
             data: this.getAllocationData(),
             fixed: false,
         });
@@ -274,14 +274,14 @@ class PieGraph extends Component {
                                                     if (this.state.switch)
                                                         this.setState({
                                                             chartValue:
-                                                                '총 자산\n$' + this.getTotalAsset(),
+                                                                '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
                                                             fixed: false,
                                                         });
                                                     else
                                                         this.setState({
                                                             chartValue:
                                                                 '연 배당금\n$' +
-                                                                this.getTotalAllocation(),
+                                                                this.dollarString(String(this.getTotalAllocation()),2),
                                                             fixed: false,
                                                         });
                                                 }

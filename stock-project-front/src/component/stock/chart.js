@@ -26,7 +26,7 @@ class Chart extends Component {
             symbol: '',
             hint: '',
             hintHover: false,
-            startDate: new Date(2010, 1, 1),
+            startDate: new Date(2010, 0, 1),
             endDate: new Date(),
         };
     }
@@ -105,7 +105,7 @@ class Chart extends Component {
             end = -1;
         var i = 0;
 
-        data.map((d) => {
+        data.forEach((d) => {
             if (start === -1 && this.state.startDate.getTime() <= d.x.getTime()) start = i;
             if (end === -1 && this.state.endDate.getTime() <= d.x.getTime()) end = i;
             i++;

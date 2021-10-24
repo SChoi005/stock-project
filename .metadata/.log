@@ -18422,3 +18422,5025 @@ Command-line arguments:  -data /workspace
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 05:45:20.671
 !MESSAGE >> document/hover
+!SESSION 2021-10-24 13:09:02.575 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-10-24 13:09:06.358
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:12.903
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:13.496
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:13.893
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:13.909
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:13.960
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:13.961
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:14.069
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:16.246
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:53.163
+!MESSAGE Workspace initialized in 39170ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:09:53.224
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:14.874
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:14.875
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:14.938
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:15.037
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:15.052
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:17.760
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:17.935
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:18.003
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:24.993
+!MESSAGE Reconciled 0. Took 1396 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.001
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.025
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.039
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.081
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.128
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.132
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.157
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.178
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.202
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.238
+!MESSAGE Reconciled 0. Took 189 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.275
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.345
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.398
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.405
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.420
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.434
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.505
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.510
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.513
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.560
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.564
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.603
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.627
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.779
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.863
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.876
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.883
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:25.903
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.003
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.032
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.033
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.035
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.141
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.150
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.458
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.487
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.550
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.587
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.746
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.749
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.757
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.766
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.773
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.780
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.782
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.833
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.884
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:26.886
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.031
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.092
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.196
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.283
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.389
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.510
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.716
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.810
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:27.892
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:29.111
+!MESSAGE Reconciled 0. Took 1774 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.298
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.306
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.383
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.389
+!MESSAGE 7 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.529
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.535
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.580
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.585
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.589
+!MESSAGE Validated 4. Took 2764 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:41.613
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:42.206
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:10:42.207
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.core 2 0 2021-10-24 13:10:50.802
+!MESSAGE The Java indexing could not index /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+!STACK 0
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:475)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/asm-all-repackaged/2.5.0-b42/3afd5d4f63116e8c00b430f32092282e5e475ce8/asm-all-repackaged-2.5.0-b42.jar|module-info.class by: java.lang.ArrayIndexOutOfBoundsException: 32800
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.readModuleAttribute(ModuleInfo.java:129)
+	at org.eclipse.jdt.internal.compiler.classfmt.ModuleInfo.createModule(ModuleInfo.java:113)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:438)
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:179)
+	at org.eclipse.jdt.internal.core.search.indexing.BinaryIndexer.indexDocument(BinaryIndexer.java:652)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:73)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:545)
+	at org.eclipse.jdt.internal.core.search.indexing.AddJarFileToIndex.execute(AddJarFileToIndex.java:244)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:401)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:11.467
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:11.983
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:12.168
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:12.435
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:12.483
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:12.583
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:12.943
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.268
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.658
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.660
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.726
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.726
+!MESSAGE 7 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.795
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:13.873
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.249
+!MESSAGE Reconciled 0. Took 35 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.418
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.817
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.853
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.853
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.883
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.893
+!MESSAGE 7 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.980
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:14.982
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:15.033
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:15.034
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:15.034
+!MESSAGE Validated 4. Took 367 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:19.730
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:19.866
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.411
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.415
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.587
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.592
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.657
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.836
+!MESSAGE Reconciled 0. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:20.998
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.487
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.493
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.517
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.517
+!MESSAGE 7 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.557
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.558
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.576
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.579
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.580
+!MESSAGE Validated 4. Took 293 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:21.972
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.033
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.378
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.477
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.713
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.836
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:23.917
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.381
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.381
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.401
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.404
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.429
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.430
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.453
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.453
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.454
+!MESSAGE Validated 4. Took 168 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:24.833
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:25.173
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:25.367
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:25.569
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:26.104
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:26.850
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:26.970
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:27.301
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:27.340
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:11:27.751
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:21.315
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:21.714
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:23.384
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:23.850
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:26.633
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:27.901
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:29.383
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:30.319
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:31.483
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:33.300
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:35.480
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:42.684
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:42.687
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.167
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.169
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.560
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.660
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.950
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:43.986
+!MESSAGE Reconciled 0. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.523
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.523
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.532
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.533
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.547
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.547
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.556
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.556
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.557
+!MESSAGE Validated 4. Took 120 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:44.748
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:45.500
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:47.533
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:47.545
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:48.272
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:48.373
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:48.704
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:48.773
+!MESSAGE Reconciled 0. Took 49 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:48.930
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.347
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.353
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.369
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.373
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.401
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.402
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.427
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.431
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:49.432
+!MESSAGE Validated 4. Took 209 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:50.114
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:50.357
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:50.534
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:50.918
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:51.116
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:51.559
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:51.662
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.020
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.488
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.488
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.510
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.510
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.534
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.537
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.551
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.555
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:52.563
+!MESSAGE Validated 4. Took 142 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:53.064
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:53.069
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:53.077
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:53.164
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:53.524
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.082
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.083
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.112
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.114
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.150
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.151
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.196
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.196
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.200
+!MESSAGE Validated 4. Took 221 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.239
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.633
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:54.778
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:55.083
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:56.750
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:57.650
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:59.048
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:12:59.934
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:01.882
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:02.947
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:02.950
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:03.549
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:04.848
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:05.165
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:05.863
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:05.866
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.378
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.568
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.570
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.579
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.784
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:06.927
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.026
+!MESSAGE Reconciled 0. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.660
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.671
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.686
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.689
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.750
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.754
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.776
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.800
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:07.803
+!MESSAGE Validated 4. Took 376 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:08.036
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:10.549
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:11.647
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:13.231
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:15.297
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:19.482
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:20.766
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:21.731
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:21.734
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:22.414
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:22.417
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:23.170
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:25.033
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:25.848
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:25.849
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.247
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.249
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.557
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.559
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.599
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.655
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:26.766
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.023
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.820
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.845
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.875
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.900
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.943
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.944
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.974
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.974
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:27.975
+!MESSAGE Validated 4. Took 544 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:28.081
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:29.066
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:30.499
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:32.298
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:32.713
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:32.717
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:33.455
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:33.457
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.091
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.370
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.888
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.889
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.898
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:34.981
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:35.313
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:35.440
+!MESSAGE Reconciled 0. Took 101 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:35.724
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:35.965
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.050
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.060
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.075
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.083
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.152
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.157
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.184
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.209
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.210
+!MESSAGE Validated 4. Took 318 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.956
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.957
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:36.966
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.057
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.377
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.419
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.942
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.947
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.960
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.963
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:37.999
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.000
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.023
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.023
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.025
+!MESSAGE Validated 4. Took 154 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.239
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.894
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.895
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.911
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:38.994
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:39.357
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:39.813
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:39.815
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:39.825
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:39.913
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.272
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.281
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.294
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.314
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.374
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:40.753
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.134
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.280
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.392
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.392
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.435
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.436
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.451
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.452
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.458
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.459
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:41.461
+!MESSAGE Validated 4. Took 256 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:43.230
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:44.015
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:45.366
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:46.997
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:48.697
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:49.464
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:49.468
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:50.163
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:50.166
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:50.648
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:51.038
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:52.481
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:52.882
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:53.466
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:53.850
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.113
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.115
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.530
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.538
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.847
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.848
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.853
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:55.948
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.259
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.663
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.771
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.772
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.779
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.780
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.790
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.790
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.798
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.798
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:56.798
+!MESSAGE Validated 4. Took 88 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:57.116
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:57.117
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:57.468
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:58.282
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:58.285
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:58.863
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:58.865
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:59.582
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:59.888
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:59.889
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:59.895
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:13:59.988
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.352
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.730
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.882
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.882
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.894
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.895
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.943
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.949
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:00.952
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.006
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.007
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.028
+!MESSAGE Validated 4. Took 209 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.182
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.687
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.694
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:01.758
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.164
+!MESSAGE Reconciled 0. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.633
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.696
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.696
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.729
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.731
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.766
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.768
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.787
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.787
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:02.791
+!MESSAGE Validated 4. Took 177 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.272
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.273
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.277
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.369
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.679
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.931
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.933
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:03.952
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.031
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.360
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.862
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.863
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.881
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.882
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.900
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.900
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.914
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.914
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:04.916
+!MESSAGE Validated 4. Took 145 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:05.696
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:07.264
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:07.674
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:08.188
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:08.420
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:08.702
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:08.703
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.198
+!MESSAGE Reconciled 0. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.319
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.330
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.335
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.337
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.729
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.729
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.747
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.747
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.792
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.792
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.817
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.817
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:09.818
+!MESSAGE Validated 4. Took 175 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:10.216
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:11.533
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:12.500
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:15.230
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:16.249
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:14:16.782
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:11.898
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:12.121
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:12.930
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:14.179
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:14.181
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:14.613
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:14.615
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:15.063
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:15.412
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:15.848
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:15.976
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:16.566
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:16.668
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:17.022
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:17.222
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:17.321
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:17.688
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.195
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.202
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.247
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.247
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.287
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.296
+!MESSAGE 3 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.441
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.441
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:18.442
+!MESSAGE Validated 4. Took 303 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:20.265
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:20.695
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:21.695
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:21.699
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:22.165
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:24.146
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:24.847
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:24.847
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.311
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.314
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.621
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.625
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.632
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.721
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:25.945
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.053
+!MESSAGE Reconciled 0. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.666
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.666
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.697
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.697
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.716
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.716
+!MESSAGE 3 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.751
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.751
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.754
+!MESSAGE Validated 4. Took 250 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:26.975
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:27.761
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:27.764
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:29.078
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.135
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.342
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.343
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.348
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.443
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.645
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:30.802
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.352
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.354
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.368
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.368
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.381
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.381
+!MESSAGE 4 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.389
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.390
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.391
+!MESSAGE Validated 4. Took 138 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.546
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:31.870
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:32.065
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:32.522
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:32.878
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:32.879
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:32.883
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.339
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.812
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.869
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.869
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.882
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.889
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.921
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.924
+!MESSAGE 4 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.941
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.941
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:33.946
+!MESSAGE Validated 4. Took 156 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:35.424
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:35.425
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:35.430
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:35.522
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:35.882
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.214
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.372
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.372
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.387
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.387
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.412
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.412
+!MESSAGE 3 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.426
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.426
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:36.427
+!MESSAGE Validated 4. Took 144 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:37.644
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:37.644
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:37.651
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:37.744
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.100
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.677
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.678
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.717
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.721
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.743
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.743
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.758
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.759
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:38.759
+!MESSAGE Validated 4. Took 209 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:52.505
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:55.162
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:55.895
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:57.323
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:58.079
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:15:59.153
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:01.662
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:02.545
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:02.549
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:03.077
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:03.254
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:04.379
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:05.561
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:05.564
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:05.944
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:05.948
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.332
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.333
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.339
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.427
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.551
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:06.788
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.003
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.215
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.328
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.328
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.338
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.338
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.358
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.358
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.370
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.370
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:07.370
+!MESSAGE Validated 4. Took 132 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:08.230
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:08.795
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:08.796
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:09.813
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.104
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.106
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.110
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.204
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.464
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:10.567
+!MESSAGE Reconciled 0. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.052
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.052
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.060
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.060
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.129
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.129
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.134
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.134
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.134
+!MESSAGE Validated 4. Took 114 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.225
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.414
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.956
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.957
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:11.960
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.057
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.362
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.842
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.842
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.853
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.853
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.872
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.873
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.879
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.880
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.881
+!MESSAGE Validated 4. Took 68 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:12.911
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:14.678
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.134
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.510
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.511
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.514
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.611
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:15.969
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.220
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.505
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.540
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.540
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.551
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.551
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.575
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.575
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.590
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.590
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:16.595
+!MESSAGE Validated 4. Took 176 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:18.645
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:19.428
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:20.696
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:21.312
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:21.812
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:22.214
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:22.862
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:23.894
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:23.897
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:24.660
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:24.661
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:25.344
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:25.711
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:25.848
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:26.412
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:26.512
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:26.868
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.409
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.409
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.425
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.426
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.449
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.449
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.460
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.461
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:27.466
+!MESSAGE Validated 4. Took 147 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:28.929
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:30.445
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:30.447
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:30.885
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:30.888
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:32.278
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:32.658
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.177
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.178
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.565
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.566
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.570
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:33.666
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.022
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.503
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.503
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.509
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.509
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.518
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.518
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.526
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.526
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:34.527
+!MESSAGE Validated 4. Took 53 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:35.062
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:35.065
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:35.585
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:35.746
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:36.528
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:36.530
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:36.861
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:36.863
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:37.395
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:37.396
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.047
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.478
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.749
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.751
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.756
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:38.850
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.078
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.209
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.670
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.670
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.680
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.681
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.706
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.757
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.757
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.774
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.774
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.775
+!MESSAGE Validated 4. Took 164 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:39.844
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:40.342
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:40.886
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:40.886
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:40.903
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.343
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.487
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.848
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.848
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.861
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.861
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.879
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.880
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.897
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.898
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:41.898
+!MESSAGE Validated 4. Took 98 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:42.065
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:42.066
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:42.076
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:42.166
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:42.526
+!MESSAGE Reconciled 0. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.015
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.018
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.036
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.038
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.061
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.062
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.077
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.077
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.080
+!MESSAGE Validated 4. Took 151 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.123
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:43.595
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:44.003
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:47.294
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:48.012
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:48.529
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:52.996
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.087
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.312
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.733
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.734
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.737
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:53.830
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:54.189
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:54.529
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:54.629
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:54.939
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.411
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.412
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.416
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.417
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.429
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.429
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.436
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.436
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:55.437
+!MESSAGE Validated 4. Took 48 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:56.095
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:56.101
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:57.061
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:57.333
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:57.820
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:57.920
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.232
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.710
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.710
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.716
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.716
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.730
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.730
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.736
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.736
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:58.737
+!MESSAGE Validated 4. Took 55 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:16:59.448
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:00.127
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:00.845
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:01.995
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:01.997
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:03.263
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:04.331
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:04.845
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:04.845
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.250
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.251
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.254
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.353
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.705
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:05.712
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.163
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.163
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.171
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.171
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.218
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.218
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.225
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.226
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:06.227
+!MESSAGE Validated 4. Took 121 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:07.661
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:07.951
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:08.129
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:08.990
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:08.991
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.148
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.151
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.396
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.710
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.805
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.831
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.831
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.837
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.837
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.866
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.867
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.885
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.885
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:09.886
+!MESSAGE Validated 4. Took 81 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:10.551
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:11.395
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:13.593
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:14.537
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:14.537
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.004
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.422
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.423
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.436
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.526
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:15.882
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.365
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.366
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.376
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.376
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.393
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.393
+!MESSAGE 1 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.398
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.405
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.406
+!MESSAGE Validated 4. Took 72 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.494
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.646
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:16.849
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:17.257
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:17.258
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:17.262
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:17.713
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:17.988
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.204
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.204
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.208
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.209
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.222
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.222
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.231
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.231
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.233
+!MESSAGE Validated 4. Took 69 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.781
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.782
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.785
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:18.879
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.237
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.478
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.542
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.666
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.666
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.674
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.674
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.682
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.682
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.691
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.692
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:19.693
+!MESSAGE Validated 4. Took 55 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:21.561
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:22.862
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:23.561
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:26.520
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:28.132
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:28.980
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:29.977
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:30.327
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:31.647
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:33.114
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:37.010
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:37.562
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:38.497
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:39.047
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:39.244
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:40.251
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:40.252
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:40.255
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:40.351
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:40.707
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.199
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.199
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.242
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.243
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.308
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.309
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.349
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.349
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.351
+!MESSAGE Validated 4. Took 193 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.618
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.620
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.624
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.908
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.909
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:41.912
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.008
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.366
+!MESSAGE Reconciled 0. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.494
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.759
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.807
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.807
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.823
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.823
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.855
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.855
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.893
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.894
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:42.897
+!MESSAGE Validated 4. Took 129 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:43.293
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:43.656
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:44.211
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:44.705
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:45.632
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.245
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.516
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.516
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.539
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.640
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:46.971
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.060
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.061
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.070
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.161
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.518
+!MESSAGE Reconciled 0. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:47.595
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.003
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.003
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.012
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.017
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.029
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.030
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.038
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.040
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.040
+!MESSAGE Validated 4. Took 71 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.281
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.283
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.293
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.480
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.654
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:48.687
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.146
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.160
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.160
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.166
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.174
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.187
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.188
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.194
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.194
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.195
+!MESSAGE Validated 4. Took 57 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:49.960
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:50.011
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:50.976
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:51.182
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:51.961
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:52.124
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:53.111
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:53.382
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:54.525
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:55.554
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:55.961
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:56.196
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:56.595
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:57.860
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:58.976
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:58.979
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:59.403
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:17:59.578
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:00.812
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.176
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.541
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.543
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.552
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.640
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.726
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:02.951
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.475
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.483
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.498
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.529
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.575
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:03.892
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.151
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.319
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.319
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.336
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.337
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.355
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.356
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.367
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.367
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.367
+!MESSAGE Validated 4. Took 72 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.378
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.908
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.909
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:04.917
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.005
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.363
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.765
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.827
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.828
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.837
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.837
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.888
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.889
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.913
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.913
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:05.926
+!MESSAGE Validated 4. Took 130 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:06.828
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:06.830
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:07.294
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:07.543
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:08.347
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:08.448
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:08.804
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:08.867
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.273
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.274
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.278
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.279
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.287
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.287
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.293
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.293
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:09.293
+!MESSAGE Validated 4. Took 39 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:10.746
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:12.211
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:12.594
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:13.359
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:13.360
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:13.709
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:14.061
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:15.394
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:15.931
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:15.932
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:15.935
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.031
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.387
+!MESSAGE Reconciled 0. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.713
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.860
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.860
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.865
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.865
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.874
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.875
+!MESSAGE 2 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.879
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.880
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:16.881
+!MESSAGE Validated 4. Took 43 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.243
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.488
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.490
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.493
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.591
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.792
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:17.901
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.244
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.372
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.373
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.377
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.377
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.385
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.385
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.390
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.391
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:18.391
+!MESSAGE Validated 4. Took 40 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:19.820
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.282
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.283
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.288
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.381
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.688
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.926
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:20.976
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.194
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.195
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.209
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.210
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.236
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.236
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.260
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.260
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.260
+!MESSAGE Validated 4. Took 122 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:21.779
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:22.236
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:22.795
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:22.967
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:23.779
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:25.086
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:26.794
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:29.393
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:29.894
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:30.459
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:33.141
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:33.150
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:33.733
+!MESSAGE Reconciled 0. Took 181 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.279
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.366
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.373
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.415
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.417
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.475
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.481
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.504
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.505
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.668
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.673
+!MESSAGE 56 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:34.675
+!MESSAGE Validated 5. Took 489 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:37.393
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:38.361
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:38.954
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:39.651
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:39.748
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.194
+!MESSAGE Reconciled 0. Took 91 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.718
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.718
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.723
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.723
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.731
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.731
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.736
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.736
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.750
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.751
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.907
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:40.908
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:41.241
+!MESSAGE Reconciled 0. Took 78 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:41.382
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:41.905
+!MESSAGE Reconciled 0. Took 72 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.059
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.060
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.111
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.157
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.490
+!MESSAGE Reconciled 0. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.631
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.632
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.758
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:42.766
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.110
+!MESSAGE Reconciled 0. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.708
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.708
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.728
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.728
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.746
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.746
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.752
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.752
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.832
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.832
+!MESSAGE 59 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:43.837
+!MESSAGE Validated 5. Took 275 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:44.776
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:44.777
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:44.837
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:44.875
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:45.335
+!MESSAGE Reconciled 0. Took 147 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:45.711
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:45.805
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.241
+!MESSAGE Reconciled 0. Took 126 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.285
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.286
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.357
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.381
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.796
+!MESSAGE Reconciled 0. Took 107 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.829
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.831
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.877
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:46.926
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:47.340
+!MESSAGE Reconciled 0. Took 108 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:47.518
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:47.525
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:47.600
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:47.620
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:48.013
+!MESSAGE Reconciled 0. Took 37 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:48.268
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:48.276
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:48.373
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:48.711
+!MESSAGE Reconciled 0. Took 41 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.215
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.215
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.226
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.226
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.244
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.244
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.256
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.256
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.362
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.369
+!MESSAGE 58 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.373
+!MESSAGE Validated 5. Took 261 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.853
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.854
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.896
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:49.953
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:50.307
+!MESSAGE Reconciled 0. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:50.588
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:50.589
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:50.619
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:50.687
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.068
+!MESSAGE Reconciled 0. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.568
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.568
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.592
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.593
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.613
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.614
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.625
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.625
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.764
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.766
+!MESSAGE 59 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.768
+!MESSAGE Validated 5. Took 298 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.879
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.880
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.968
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:51.968
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.372
+!MESSAGE Reconciled 0. Took 45 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.887
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.888
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.894
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.897
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.931
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.931
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.941
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:52.941
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.011
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.011
+!MESSAGE 59 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.012
+!MESSAGE Validated 5. Took 190 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.144
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.229
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:53.689
+!MESSAGE Reconciled 0. Took 142 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:54.071
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:54.072
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:54.130
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:54.167
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:54.560
+!MESSAGE Reconciled 0. Took 87 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.074
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.075
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.136
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.153
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.501
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.776
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.777
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:55.791
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:56.115
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:56.292
+!MESSAGE Reconciled 0. Took 111 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:56.795
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:56.896
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.268
+!MESSAGE Reconciled 0. Took 22 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.316
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.762
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.762
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.767
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.768
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.777
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.777
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.784
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.784
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.872
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.872
+!MESSAGE 57 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:57.874
+!MESSAGE Validated 5. Took 155 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:58.322
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:58.505
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:58.606
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.000
+!MESSAGE Reconciled 0. Took 44 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.444
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.445
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.450
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.450
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.458
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.458
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.465
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.466
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.506
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.506
+!MESSAGE 57 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:18:59.507
+!MESSAGE Validated 5. Took 106 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:01.543
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:01.543
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:02.245
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:02.887
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:03.641
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:03.740
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:03.948
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.046
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.261
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.444
+!MESSAGE Reconciled 0. Took 44 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.952
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.954
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.971
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:04.972
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.003
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.007
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.026
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.026
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.143
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.152
+!MESSAGE 63 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.159
+!MESSAGE Validated 5. Took 314 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:05.842
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:06.457
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:06.711
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:07.094
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:07.654
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:08.587
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:08.588
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:08.642
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:08.686
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:08.745
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.210
+!MESSAGE Reconciled 0. Took 170 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.243
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.709
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.710
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.714
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.715
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.723
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.723
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.729
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.730
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.772
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.772
+!MESSAGE 62 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:09.773
+!MESSAGE Validated 5. Took 109 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:10.208
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:10.456
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:11.202
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:11.635
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:11.635
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:11.672
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:11.732
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.152
+!MESSAGE Reconciled 0. Took 67 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.307
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.573
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.574
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.594
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.671
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:12.749
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.090
+!MESSAGE Reconciled 0. Took 66 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.360
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.645
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.645
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.650
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.650
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.659
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.659
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.664
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.664
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.701
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.764
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.764
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:13.777
+!MESSAGE Validated 5. Took 237 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:14.050
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:15.460
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:16.109
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:16.263
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:16.844
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:16.944
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:17.660
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:17.793
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:18.991
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:20.360
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:20.927
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:25.352
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:25.360
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:25.696
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:25.802
+!MESSAGE Reconciled 0. Took 39 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.296
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.488
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.488
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.497
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.498
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.512
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.513
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.572
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.572
+!MESSAGE 11 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.581
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.581
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.683
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.684
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:26.685
+!MESSAGE Validated 6. Took 432 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:27.224
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:27.398
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:28.119
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:28.463
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:28.697
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:28.698
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.197
+!MESSAGE Reconciled 0. Took 48 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.443
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.447
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.451
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.452
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.531
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.543
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:29.916
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:30.450
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:30.549
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:30.914
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.450
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.450
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.455
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.456
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.459
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.464
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.464
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.508
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.514
+!MESSAGE 11 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.523
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.523
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.683
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.696
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:31.701
+!MESSAGE Validated 6. Took 336 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:32.743
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:32.745
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:33.343
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:33.688
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:33.961
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:34.100
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:34.323
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:34.427
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:34.432
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:34.798
+!MESSAGE Reconciled 0. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.372
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.373
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.377
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.378
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.399
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.399
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.428
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.428
+!MESSAGE 14 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.434
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.434
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.517
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.517
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.519
+!MESSAGE Validated 6. Took 271 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.614
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:35.813
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:36.744
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:36.745
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:36.753
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:36.842
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.215
+!MESSAGE Reconciled 0. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.668
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.669
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.709
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.709
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.717
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.718
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.738
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.739
+!MESSAGE 14 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.746
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.746
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.787
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.787
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:37.789
+!MESSAGE Validated 6. Took 173 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:38.093
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:39.460
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:40.827
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:42.108
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:42.444
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:42.626
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:42.809
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:43.775
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:43.776
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:43.801
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.243
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.425
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.426
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.433
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.527
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:44.890
+!MESSAGE Reconciled 0. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.276
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.396
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.461
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.468
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.473
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.476
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.490
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.490
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.542
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.542
+!MESSAGE 12 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.562
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.562
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.650
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.650
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:45.651
+!MESSAGE Validated 6. Took 311 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:46.044
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:47.769
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:47.974
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:48.126
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:48.910
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:48.911
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:48.940
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:49.008
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:49.379
+!MESSAGE Reconciled 0. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:49.935
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:49.936
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:49.988
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.171
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.171
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.186
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.588
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.633
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.634
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.677
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:50.737
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.105
+!MESSAGE Reconciled 0. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.504
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.505
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.520
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.603
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:51.919
+!MESSAGE Reconciled 0. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.342
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.452
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.452
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.466
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.466
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.492
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.492
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.555
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.555
+!MESSAGE 14 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.569
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.570
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.665
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.666
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.674
+!MESSAGE Validated 6. Took 353 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:52.781
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.144
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.498
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.500
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.840
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.840
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.841
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:53.960
+!MESSAGE Reconciled 0. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.488
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.488
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.508
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.508
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.527
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.529
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.542
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.577
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.578
+!MESSAGE 13 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.591
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.592
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.683
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.683
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:54.684
+!MESSAGE Validated 6. Took 274 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:55.691
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:56.249
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:56.508
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:56.642
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:57.419
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:57.420
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:57.488
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:57.519
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:57.886
+!MESSAGE Reconciled 0. Took 16 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.073
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.546
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.546
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.564
+!MESSAGE begin problem for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.570
+!MESSAGE 6 problems reported for /STOCHRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.607
+!MESSAGE begin problem for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.607
+!MESSAGE 0 problems reported for /STOCHResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.646
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.647
+!MESSAGE 12 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.652
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.652
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.698
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.698
+!MESSAGE 61 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.700
+!MESSAGE Validated 6. Took 364 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:58.845
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:59.029
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:59.692
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:19:59.801
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:00.359
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:30.276
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:31.658
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:33.387
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:46.369
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:46.550
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:47.793
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:48.990
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:50.043
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:20:50.732
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:07.477
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:08.561
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:09.323
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:09.758
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:11.207
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:11.993
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:13.041
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 13:22:14.963
+!MESSAGE >> document/hover
