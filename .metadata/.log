@@ -26909,3 +26909,138 @@ Caused in /root/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/as
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-24 14:00:38.076
 !MESSAGE >> document/hover
+!SESSION 2021-10-26 12:57:35.812 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-10-26 12:57:43.458
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:01.448
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:03.509
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:03.888
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:03.889
+!MESSAGE Initializing Java Language Server 0.50.0.202002181206
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:04.008
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:04.013
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.getSettings, java.project.updateSourceAttachment, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.isTestFile, java.project.getClasspaths, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:04.792
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:58:07.295
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:23.459
+!MESSAGE Workspace initialized in 79426ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:23.543
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:23.577
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:23.857
+!MESSAGE >> New configuration: {}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:23.925
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:58.142
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:58.229
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:58.325
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:58.335
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 12:59:58.374
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:05.439
+!MESSAGE Reconciled 0. Took 6671 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:05.452
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:05.502
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:10.035
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:10.279
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:10.314
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:10.349
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:11.355
+!MESSAGE Reconciled 0. Took 986 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:14.982
+!MESSAGE begin problem for /OBVResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:14.988
+!MESSAGE 0 problems reported for /OBVResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.100
+!MESSAGE begin problem for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.101
+!MESSAGE 0 problems reported for /CCIResponse.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.178
+!MESSAGE begin problem for /OBVRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.178
+!MESSAGE 6 problems reported for /OBVRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.755
+!MESSAGE begin problem for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.777
+!MESSAGE 13 problems reported for /OpenApiController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.871
+!MESSAGE begin problem for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:15.894
+!MESSAGE 7 problems reported for /CCIRequest.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:16.904
+!MESSAGE begin problem for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:16.917
+!MESSAGE 66 problems reported for /StockClient.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:16.956
+!MESSAGE Validated 6. Took 5577 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:16.980
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:17.339
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2021-10-26 13:00:17.342
+!MESSAGE >> watchers registered

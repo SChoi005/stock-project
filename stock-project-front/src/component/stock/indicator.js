@@ -10,6 +10,7 @@ import {
     YAxis,
     Hint,
     MarkSeries,
+    Crosshair,
 } from 'react-vis';
 import 'react-vis/dist/style.css';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -28,11 +29,13 @@ class Indicator extends Component {
             indicatorDescription:
                 '# 상대 강도 지수 (RSI)는 주식 또는 기타 자산 가격의 과매수 또는 과매도 상태를 평가하기 위해 최근 가격 변동의 규모를 측정하는 모멘텀 지표를 설명합니다. (설정기간 : 14일)',
             hint: '',
+            hintSlowD: '',
             hintHover: false,
             startDate: new Date(2021, 0, 1),
             endDate: new Date(),
             referenceUrl:
                 'https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp',
+            stochValues: [],
         };
     }
 
@@ -44,6 +47,19 @@ class Indicator extends Component {
                     indicator: 'RSI',
                 });
             else this.setState({ symbol: '', indicator: 'RSI' });
+        }
+
+        if (prevState.indicator !== this.state.indicator) {
+            if (this.state.indicator === 'STOCH') this.setState({ stochValues: [] });
+        }
+
+        if (this.state.indicator === 'STOCH') {
+            if (
+                this.state.startDate !== prevState.startDate ||
+                this.state.endDate !== prevState.endDate
+            ) {
+                this.setState({ stochValues: [] });
+            }
         }
     }
 
@@ -134,9 +150,9 @@ class Indicator extends Component {
                     }
                 }
             });
-        }else if(this.state.indicator === 'OBV'){
-            this.props.obv.forEach((r)=>{
-                if (r['Meta Data']['1: Symbol'] === this.state.symbol){
+        } else if (this.state.indicator === 'OBV') {
+            this.props.obv.forEach((r) => {
+                if (r['Meta Data']['1: Symbol'] === this.state.symbol) {
                     for (var i in r['Technical Analysis: OBV']['series']) {
                         data.push({
                             x: new Date(i),
@@ -144,7 +160,7 @@ class Indicator extends Component {
                         });
                     }
                 }
-            })
+            });
         }
 
         data.sort(function (a, b) {
@@ -162,6 +178,8 @@ class Indicator extends Component {
         });
 
         if (end === -1) end = data.length;
+
+        console.log(data.slice(start, end));
 
         return data.slice(start, end);
     }
@@ -200,25 +218,50 @@ class Indicator extends Component {
     }
 
     getHintSection(isHintVisible) {
-        return isHintVisible ? (
-            <Hint value={this.state.hint}>
-                <div className="card" style={{ opacity: '0.9', color: '#dc3545' }}>
-                    <div className="card-body">
-                        {this.state.hint.x.toString().substring(0, 16)}
-                        <br />
-                        {this.state.indicator} : {this.state.hint.y} %
-                        <br />
+        if (this.state.indicator !== 'STOCH') {
+            return isHintVisible ? (
+                <Hint value={this.state.hint}>
+                    <div className="card" style={{ opacity: '0.9', color: '#dc3545' }}>
+                        <div className="card-body">
+                            {this.state.hint.x.toString().substring(0, 16)}
+                            <br />
+                            {this.state.indicator} : {this.state.hint.y}{' '}
+                            {this.state.indicator === 'RSI' ? '%' : null}
+                            <br />
+                        </div>
                     </div>
-                </div>
-            </Hint>
-        ) : null;
+                </Hint>
+            ) : null;
+        } else {
+            return isHintVisible ? (
+                <Crosshair values={this.state.stochValues}>
+                    <div className="card" style={{ opacity: '0.9', color: '#dc3545', width:'140px' }}>
+                        <div className="card-body">
+                            {this.state.hint.x.toString().substring(0, 16)}
+                            <br />
+                            <span style={{ color: '#4285f4' }}>SlowK : {this.state.hint.y} %</span>
+                            <br />
+                            <span style={{ color: '#dc3545' }}>
+                                SlowD : {this.state.hintSlowD.y} %
+                            </span>
+                        </div>
+                    </div>
+                </Crosshair>
+            ) : null;
+        }
     }
 
     mouseOver(datapoint) {
         this.setState({ hint: datapoint, hintHover: true });
     }
 
+    mouseOverSlowD(datapoint) {
+        this.setState({ hintSlowD: datapoint });
+    }
+
     mouseOut() {
+        if (this.state.indicator === 'STOCH') this.setState({ stochValues: [] });
+
         this.setState({ hintHover: false });
     }
 
@@ -343,6 +386,9 @@ class Indicator extends Component {
                                                 strokeWidth: '2px',
                                             }}
                                             stroke="#dc3545"
+                                            onNearestX={(datapoint, event) => {
+                                                this.mouseOverSlowD(datapoint);
+                                            }}
                                         />
                                     ) : null}
                                     <LineSeries
@@ -353,10 +399,15 @@ class Indicator extends Component {
                                         }}
                                         stroke="#4285f4"
                                         onNearestX={(datapoint, event) => {
+                                            if (this.state.indicator === 'STOCH') {
+                                                var arr = [];
+                                                arr.push(datapoint);
+                                                this.setState({ stochValues: arr });
+                                            }
                                             this.mouseOver(datapoint);
                                         }}
                                     />
-                                    {this.state.hintHover && (
+                                    {this.state.hintHover && this.state.indicator !== 'STOCH' && (
                                         <MarkSeries color="grey" data={[this.state.hint]} />
                                     )}
                                     {this.getHintSection(this.state.hintHover)}
