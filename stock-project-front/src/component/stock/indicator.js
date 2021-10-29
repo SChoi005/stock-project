@@ -178,9 +178,6 @@ class Indicator extends Component {
         });
 
         if (end === -1) end = data.length;
-
-        console.log(data.slice(start, end));
-
         return data.slice(start, end);
     }
 
@@ -235,7 +232,10 @@ class Indicator extends Component {
         } else {
             return isHintVisible ? (
                 <Crosshair values={this.state.stochValues}>
-                    <div className="card" style={{ opacity: '0.9', color: '#dc3545', width:'140px' }}>
+                    <div
+                        className="card"
+                        style={{ opacity: '0.9', color: '#dc3545', width: '140px' }}
+                    >
                         <div className="card-body">
                             {this.state.hint.x.toString().substring(0, 16)}
                             <br />
@@ -377,7 +377,19 @@ class Indicator extends Component {
                                     <VerticalGridLines />
                                     <HorizontalGridLines />
                                     <XAxis title="Date" />
-                                    <YAxis title={this.state.yTitle} />
+                                    <YAxis
+                                        title={this.state.yTitle}
+                                        tickFormat={(v) => {
+                                            if (this.state.indicator === 'OBV') {
+                                                return v.toString().substring(0, 4);
+                                            } else if (
+                                                this.state.indicator === 'RSI' ||
+                                                this.state.indicator === 'STOCH'
+                                            )
+                                                return v + '%';
+                                            else return v;
+                                        }}
+                                    />
                                     {this.state.indicator === 'STOCH' ? (
                                         <LineSeries
                                             data={this.getSlowD()}

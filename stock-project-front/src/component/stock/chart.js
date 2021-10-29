@@ -226,7 +226,9 @@ class Chart extends Component {
                                     <span>종료일 : </span>
                                     <DatePicker
                                         selected={this.state.endDate}
-                                        onChange={(date) => this.setState({ endDate: new Date(date) })}
+                                        onChange={(date) =>
+                                            this.setState({ endDate: new Date(date) })
+                                        }
                                         selectsEnd
                                         startDate={this.state.startDate}
                                         endDate={this.state.endDate}
@@ -243,7 +245,12 @@ class Chart extends Component {
                                     <VerticalGridLines />
                                     <HorizontalGridLines />
                                     <XAxis title="Date" />
-                                    <YAxis title="Price" />
+                                    <YAxis
+                                        title="Price"
+                                        tickFormat={(v) => {
+                                            return '$' + v;
+                                        }}
+                                    />
                                     <LineSeries
                                         data={this.getData()}
                                         className="linemark-series-example"
@@ -260,9 +267,7 @@ class Chart extends Component {
                                     )}
                                     {this.getHintSection(this.state.hintHover)}
                                 </FlexibleXYPlot>
-                            ) : (
-                                null
-                            )}
+                            ) : null}
                         </div>
                     </div>
                 ) : (

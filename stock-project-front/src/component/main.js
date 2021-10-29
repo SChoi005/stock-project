@@ -5,6 +5,7 @@ import StockBalanceStatus from './stock/stockBalanceStatus';
 import News from './stock/news';
 import Chart from './stock/chart';
 import Indicator from './stock/indicator';
+import AllocationCalendar from './stock/allocationCalendar';
 import { Button, Modal, Collapse, Dropdown, DropdownButton } from 'react-bootstrap';
 import Form from 'react-validation/build/form';
 import PortfolioService from '../service/portfolioService';
@@ -67,12 +68,12 @@ class Main extends Component {
             timeSeriesDailyLoading: false,
             rsi: [],
             rsiLoading: false,
-            cci:[],
-            cciLoading:false,
-            stoch:[],
-            stochLoading:false,
+            cci: [],
+            cciLoading: false,
+            stoch: [],
+            stochLoading: false,
             obv: [],
-            obvLoading:false,
+            obvLoading: false,
         };
     }
 
@@ -184,10 +185,10 @@ class Main extends Component {
             timeSeriesMonthlyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesDailyLoading: true,
-            rsiLoading:true,
-            cciLoading:true,
-            stochLoading:true,
-            obvLoading:true,
+            rsiLoading: true,
+            cciLoading: true,
+            stochLoading: true,
+            obvLoading: true,
         });
 
         var tempOverview = [];
@@ -279,7 +280,7 @@ class Main extends Component {
             });
             this.setState({ timeSeriesDaily: arr, timeSeriesDailyLoading: false });
         });
-        
+
         Promise.all(tempRSI).then((res) => {
             var arr = [];
             res.forEach((i) => {
@@ -287,7 +288,7 @@ class Main extends Component {
             });
             this.setState({ rsi: arr, rsiLoading: false });
         });
-        
+
         Promise.all(tempCCI).then((res) => {
             var arr = [];
             res.forEach((i) => {
@@ -445,10 +446,10 @@ class Main extends Component {
             timeSeriesDailyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesMonthlyLoading: true,
-            rsiLoading:true,
-            cciLoading:true,
-            stochLoading:true,
-            obvLoading:true,
+            rsiLoading: true,
+            cciLoading: true,
+            stochLoading: true,
+            obvLoading: true,
         });
 
         if (this.state.averagePrice <= 0 || this.state.quantity <= 0) {
@@ -462,10 +463,10 @@ class Main extends Component {
                 timeSeriesDailyLoading: false,
                 timeSeriesWeeklyLoading: false,
                 timeSeriesMonthlyLoading: false,
-                rsiLoading:false,
-                cciLoading:false,
-                stochLoading:false,
-                obvLoading:false,
+                rsiLoading: false,
+                cciLoading: false,
+                stochLoading: false,
+                obvLoading: false,
             });
             return '';
         }
@@ -516,10 +517,10 @@ class Main extends Component {
                                             timeSeriesDailyLoading: false,
                                             timeSeriesWeeklyLoading: false,
                                             timeSeriesMonthlyLoading: false,
-                                            rsiLoading:false,
-                                            cciLoading:false,
-                                            stochLoading:false,
-                                            obvLoading:false,
+                                            rsiLoading: false,
+                                            cciLoading: false,
+                                            stochLoading: false,
+                                            obvLoading: false,
                                         });
                                     });
                                 }
@@ -536,10 +537,10 @@ class Main extends Component {
                             timeSeriesDailyLoading: false,
                             timeSeriesWeeklyLoading: false,
                             timeSeriesMonthlyLoading: false,
-                            rsiLoading:false,
-                            cciLoading:false,
-                            stochLoading:false,
-                            obvLoading:false,
+                            rsiLoading: false,
+                            cciLoading: false,
+                            stochLoading: false,
+                            obvLoading: false,
                         });
                     });
 
@@ -722,10 +723,10 @@ class Main extends Component {
                         timeSeriesDailyLoading: false,
                         timeSeriesWeeklyLoading: false,
                         timeSeriesMonthlyLoading: false,
-                        rsiLoading:false,
-                        cciLoading:false,
-                        stochLoading:false,
-                        obvLoading:false,
+                        rsiLoading: false,
+                        cciLoading: false,
+                        stochLoading: false,
+                        obvLoading: false,
                     });
                 });
             this.setState({ averagePrice: '', quantity: '' });
@@ -741,10 +742,10 @@ class Main extends Component {
             timeSeriesDailyLoading: true,
             timeSeriesWeeklyLoading: true,
             timeSeriesMonthlyLoading: true,
-            rsiLoading:true,
-            cciLoading:true,
-            stochLoading:true,
-            obvLoading:true,
+            rsiLoading: true,
+            cciLoading: true,
+            stochLoading: true,
+            obvLoading: true,
         });
 
         StockService.deleteStock(item)
@@ -1236,16 +1237,26 @@ class Main extends Component {
                                     this.state.timeSeriesDailyLoading
                                 }
                             />
-                            <Indicator 
-                                isLoading={this.state.rsiLoading || this.state.cciLoading || this.state.stochLoading || this.state.obvLoading}
-                                rsi = {this.state.rsi}
-                                cci = {this.state.cci}
-                                stoch = {this.state.stoch}
-                                obv = {this.state.obv}
+                            <Indicator
+                                isLoading={
+                                    this.state.rsiLoading ||
+                                    this.state.cciLoading ||
+                                    this.state.stochLoading ||
+                                    this.state.obvLoading
+                                }
+                                rsi={this.state.rsi}
+                                cci={this.state.cci}
+                                stoch={this.state.stoch}
+                                obv={this.state.obv}
                                 stocks={this.state.selectedPortfolio.stocks}
                             />
                         </div>
                         <div className="row">
+                            <AllocationCalendar
+                                stocks={this.state.selectedPortfolio.stocks}
+                                equityOverviews={this.state.overviews}
+                                isLoading={this.state.overviewLoading}
+                            />
                             <News news={this.state.news} isLoading={this.state.newsLoading} />
                         </div>
                     </div>
@@ -1288,7 +1299,14 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-lg-12 col-xl-12">
+                            <div className="col-12 col-lg-5 col-xl-5">
+                                <div className="h-100 card">
+                                    <div className="card-header">
+                                        <h2 className="card-heading">📅배당 캘린더</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-lg-7 col-xl-7">
                                 <div className="h-100 card">
                                     <div className="card-header">
                                         <h2 className="card-heading">📰나만의 뉴스</h2>
@@ -1467,8 +1485,7 @@ class Main extends Component {
                         ) : (
                             <div className="list-group mb-3">
                                 {this.state.stocks.map((item) => {
-                                    if (item['4. region'] !== 'United States')
-                                        return null;
+                                    if (item['4. region'] !== 'United States') return null;
                                     return (
                                         <div key={item['1. symbol']}>
                                             <button
