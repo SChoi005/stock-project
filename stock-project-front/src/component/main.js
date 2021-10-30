@@ -966,7 +966,7 @@ class Main extends Component {
 
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };

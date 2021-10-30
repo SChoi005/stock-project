@@ -1,10 +1,9 @@
-import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import React, { Component } from 'react';
 import {
     FlexibleXYPlot,
-    BarSeries,
     VerticalBarSeries,
     VerticalGridLines,
     HorizontalGridLines,
@@ -145,7 +144,6 @@ class AllocationCalendar extends Component {
 
                     //Semi-Annual
                     if (dividendMonth.length === 2) {
-                        var divMonth = new Date(i['DividendDate']).getMonth();
                         if (divMonth === 0 || divMonth === 6) {
                             data[0].y +=
                                 ((i['DividendPerShare'] * s['quantity']) / dividendMonth.length) *
@@ -204,9 +202,9 @@ class AllocationCalendar extends Component {
                 }
             });
         });
-
+        
         data.forEach((d) => {
-            d.label = '$' + d.y.toFixed(2);
+            d.label = '$' + d.y.toFixed(1);
         });
 
         return data;
@@ -256,7 +254,7 @@ class AllocationCalendar extends Component {
                                     data={this.getData()}
                                     labelAnchorX="middle"
                                     labelAnchorY="text-middle"
-                                    style={{ fontSize: '12px' }}
+                                    style={{ fontSize: '11px', fontWeight : 'bold' }}
                                 />
                                 <BarSeries color="#4285f4" data={this.getData()} />
                             </FlexibleXYPlot>

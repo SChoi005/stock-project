@@ -9,21 +9,17 @@ class SignUp extends Component {
         this.signup = this.signup.bind(this);
         this.confirmUsername = this.confirmUsername.bind(this);
         this.confirmPassword = this.confirmPassword.bind(this);
-        this.confirmNickname = this.confirmNickname.bind(this);
         this.state = {
             username: '',
             password: '',
-            nickname: '',
             checkPassword: '',
             errorMessage: '',
             usernameMessage: '',
             passwordMessage: '',
             passwordCheckMessage: '',
-            nicknameMessage: '',
             usernameCheck: false,
             passwordCheck: false,
             checkPasswordCheck: false,
-            nicknameCheck: false,
             disabled: false,
         };
     }
@@ -33,14 +29,12 @@ class SignUp extends Component {
         if (
             this.state.usernameCheck &&
             this.state.passwordCheck &&
-            this.state.nicknameCheck &&
             this.state.checkPasswordCheck
         ) {
             this.setState({ disabled: true });
             AuthService.register(
                 this.state.username,
                 this.state.password,
-                this.state.nickname.trim()
             )
                 .then((res) => {
                     console.log(res);
@@ -134,20 +128,6 @@ class SignUp extends Component {
         this.setState({ checkPassword: e.target.value });
     }
 
-    confirmNickname(e) {
-        if (e.target.value.trim().length < 1) {
-            this.setState({
-                nicknameMessage: '닉네임을 입력하십시오.',
-                nicknameCheck: false,
-            });
-        } else {
-            this.setState({
-                nicknameMessage: '',
-                nicknameCheck: true,
-            });
-        }
-        this.setState({ nickname: e.target.value });
-    }
 
     render() {
         return (
@@ -259,33 +239,6 @@ class SignUp extends Component {
                                     </div>
                                 </div>
                             )}
-                            <div className="form-group form-floating">
-                                {this.state.nicknameCheck ? (
-                                    <input
-                                        id="floatingNickname"
-                                        className="form-control is-valid"
-                                        placeholder="Nickname"
-                                        type="text"
-                                        name="nickname"
-                                        value={this.state.nickname}
-                                        onChange={(e) => this.confirmNickname(e)}
-                                        disabled={this.state.disabled}
-                                    />
-                                ) : (
-                                    <input
-                                        id="floatingNickname"
-                                        className="form-control is-invalid"
-                                        placeholder="Nickname"
-                                        type="text"
-                                        name="nickname"
-                                        value={this.state.nickname}
-                                        onChange={(e) => this.confirmNickname(e)}
-                                        disabled={this.state.disabled}
-                                    />
-                                )}
-                                <label htmlFor="floatingNickname">Nickname</label>
-                                <div className="invalid-feedback">{this.state.nicknameMessage}</div>
-                            </div>
                             <div className="form-group login-submit">
                                 <button
                                     className="btn btn-primary btn-xl"

@@ -11,32 +11,31 @@ class PieGraph extends Component {
         this.clickValue = this.clickValue.bind(this);
         this.state = {
             switch: true,
-            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()), 4),
             fixed: false,
             data: this.getAssetData(),
         };
     }
 
     componentDidUpdate(prevProps, prevState) {
-        
-        if(this.props.isLoading !== prevProps.isLoading && this.props.isLoading===false){
+        if (this.props.isLoading !== prevProps.isLoading && this.props.isLoading === false) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()), 4),
                 switch: true,
             });
         }
         if (this.props.equityOverviews !== prevProps.equityOverviews) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()), 4),
                 switch: true,
             });
         }
         if (this.props.stocks !== prevProps.stocks) {
             this.setState({
                 data: this.getAssetData(),
-                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+                chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()), 4),
                 switch: true,
             });
         }
@@ -162,8 +161,11 @@ class PieGraph extends Component {
                                 j['Symbol'] +
                                 ' (' +
                                 percent.toFixed(1) +
-                                '%)\n$' +
-                                this.dollarString(dividend.toFixed(2), 2),
+                                '%) \n$' +
+                                this.dollarString(dividend.toFixed(2), 2) +
+                                ' (' +
+                                (j['DividendYield'] * 100).toFixed(2) +
+                                '%)',
                             label: j['Symbol'],
                             angle: percent,
                             color: colors[num++],
@@ -184,7 +186,7 @@ class PieGraph extends Component {
     assetClick(e) {
         this.setState({
             switch: true,
-            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+            chartValue: '총 자산\n$' + this.dollarString(String(this.getTotalAsset()), 4),
             data: this.getAssetData(),
             fixed: false,
         });
@@ -193,7 +195,7 @@ class PieGraph extends Component {
     allocationClick(e) {
         this.setState({
             switch: false,
-            chartValue: '연 배당금\n$' + this.dollarString(String(this.getTotalAllocation()),2),
+            chartValue: '연 배당금\n$' + this.dollarString(String(this.getTotalAllocation()), 2),
             data: this.getAllocationData(),
             fixed: false,
         });
@@ -228,7 +230,13 @@ class PieGraph extends Component {
                 {!this.props.isLoading ? (
                     <div className="h-100 card">
                         <div className="card-header">
-                            <h2 className="card-heading">📊포트폴리오 구성<br/><span className="sub-title"># ETF의 배당률은 현재 준비중입니다.</span></h2>
+                            <h2 className="card-heading">
+                                📊포트폴리오 구성
+                                <br />
+                                <span className="sub-title">
+                                    # ETF의 배당률은 현재 준비중입니다.
+                                </span>
+                            </h2>
                         </div>
                         {this.state.data.length !== 0 ? (
                             <div className="card-body radial">
@@ -274,14 +282,23 @@ class PieGraph extends Component {
                                                     if (this.state.switch)
                                                         this.setState({
                                                             chartValue:
-                                                                '총 자산\n$' + this.dollarString(String(this.getTotalAsset()),4),
+                                                                '총 자산\n$' +
+                                                                this.dollarString(
+                                                                    String(this.getTotalAsset()),
+                                                                    4
+                                                                ),
                                                             fixed: false,
                                                         });
                                                     else
                                                         this.setState({
                                                             chartValue:
                                                                 '연 배당금\n$' +
-                                                                this.dollarString(String(this.getTotalAllocation()),2),
+                                                                this.dollarString(
+                                                                    String(
+                                                                        this.getTotalAllocation()
+                                                                    ),
+                                                                    2
+                                                                ),
                                                             fixed: false,
                                                         });
                                                 }
@@ -293,9 +310,7 @@ class PieGraph extends Component {
                                                 });
                                             }}
                                         />
-                                        <div className="chartValue">
-                                            {this.state.chartValue}
-                                        </div>
+                                        <div className="chartValue">{this.state.chartValue}</div>
                                     </div>
                                     <DiscreteColorLegend
                                         className="col-12 col-md-6 col-lg-4 col-xl-6"
