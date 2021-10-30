@@ -966,7 +966,7 @@ class Main extends Component {
 
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
-        //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
@@ -1209,7 +1209,8 @@ class Main extends Component {
                 </div>
 
                 {/* Stock Component*/}
-                {JSON.stringify(this.state.selectedPortfolio) !== '{}' ? (
+                {JSON.stringify(this.state.selectedPortfolio) !== '{}' &&
+                JSON.stringify(this.state.selectedPortfolio.stocks) !== '[]' ? (
                     <div>
                         <div className="row">
                             <PieGraph
@@ -1254,8 +1255,12 @@ class Main extends Component {
                         <div className="row">
                             <AllocationCalendar
                                 stocks={this.state.selectedPortfolio.stocks}
+                                monthly={this.state.timeSeriesMonthly}
                                 equityOverviews={this.state.overviews}
-                                isLoading={this.state.overviewLoading}
+                                isLoading={
+                                    this.state.overviewLoading ||
+                                    this.state.timeSeriesMonthlyLoading
+                                }
                             />
                             <News news={this.state.news} isLoading={this.state.newsLoading} />
                         </div>
