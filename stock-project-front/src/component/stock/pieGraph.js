@@ -71,6 +71,10 @@ class PieGraph extends Component {
         return sum.toFixed(2);
     }
 
+    getAverageAllocation() {
+        return ((+this.getTotalAllocation() / +this.getTotalAsset()) * 100).toFixed(2);
+    }
+
     getAssetData() {
         const colors = [
             '#e2854c',
@@ -195,7 +199,13 @@ class PieGraph extends Component {
     allocationClick(e) {
         this.setState({
             switch: false,
-            chartValue: '연 배당금\n$' + this.dollarString(String(this.getTotalAllocation()), 2),
+            chartValue:
+                '연 배당금' +
+                ' (' +
+                this.getAverageAllocation() +
+                '%)' +
+                '\n$' +
+                this.dollarString(String(this.getTotalAllocation()), 2),
             data: this.getAllocationData(),
             fixed: false,
         });
@@ -234,6 +244,8 @@ class PieGraph extends Component {
                                 📊포트폴리오 구성
                                 <br />
                                 <span className="sub-title">
+                                    # 연 배당금은 현재 주가를 기준으로 계산합니다.
+                                    <br/>
                                     # ETF의 배당률은 현재 준비중입니다.
                                 </span>
                             </h2>
@@ -292,7 +304,11 @@ class PieGraph extends Component {
                                                     else
                                                         this.setState({
                                                             chartValue:
-                                                                '연 배당금\n$' +
+                                                                '연 배당금' +
+                                                                ' (' +
+                                                                this.getAverageAllocation() +
+                                                                '%)' +
+                                                                '\n$' +
                                                                 this.dollarString(
                                                                     String(
                                                                         this.getTotalAllocation()

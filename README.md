@@ -2,10 +2,8 @@
 URL => https://my-portfolio.run.goorm.io/
 
 # 해야할것
-1. pigGraph 평균 배당률 추가 
-2. signup 뒤로가기 제어
-3. 클릭시 테두리 수정
-* etf api 가져오는게 문제.. => polygon.io 사용해야할듯 ..
+1. etf api 가져오는게 문제.. => polygon.io 사용해야할듯 ..
+2. readme 작성
 
 # 구름 ide 항상켜두기
 springboot => nohup

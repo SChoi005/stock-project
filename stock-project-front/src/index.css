@@ -29,6 +29,14 @@ label {
     color: #5a5a5a;
 }
 
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #4285f4;
+    outline: 0;
+    box-shadow: none;
+}
+
 .react-datepicker__input-container input {
     border-radius: 0.25rem;
     border: 1px solid #ced4da;
@@ -233,7 +241,7 @@ label {
     width: 250px;
     font-size: 14px;
     position: relative;
-    bottom: 50%;
+    bottom: 150px;
     text-align: center;
     font-weight: bolder;
     white-space: pre-line;

@@ -183,7 +183,11 @@ class StockBalanceStatus extends Component {
                                                             i['averagePrice'].toFixed(4)
                                                         )}
                                                     </td>
-                                                    <td>{i['quantity']}</td>
+                                                    <td>
+                                                        {i['quantity']
+                                                            .toString()
+                                                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                                    </td>
                                                     {i['percent'][0] === '-' ? (
                                                         <td style={{ color: '#4285f4' }}>
                                                             {i['percent']}

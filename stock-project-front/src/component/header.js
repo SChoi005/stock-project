@@ -24,7 +24,7 @@ class Header extends Component {
                             Logout
                         </a>
                     ) : (
-                        ''
+                        null
                     )}
                         </div>
                 </div>

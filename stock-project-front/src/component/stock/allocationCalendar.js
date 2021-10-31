@@ -39,6 +39,13 @@ class AllocationCalendar extends Component {
         return events;
     }
 
+    dollarString(str, a) {
+        return (
+            str.substring(0, str.length - a - 1).replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
+            str.substring(str.length - a - 1, str.length)
+        );
+    }
+    
     getData() {
         var data = [
             { x: 'Jan', y: 0, label: '' },
@@ -204,7 +211,7 @@ class AllocationCalendar extends Component {
         });
         
         data.forEach((d) => {
-            d.label = '$' + d.y.toFixed(1);
+            d.label = '$' + this.dollarString(d.y.toFixed(1),1);
         });
 
         return data;
@@ -250,13 +257,13 @@ class AllocationCalendar extends Component {
                                         return '$' + v;
                                     }}
                                 />
+                                <BarSeries color="#4285f4" data={this.getData()} />
                                 <LabelSeries
                                     data={this.getData()}
                                     labelAnchorX="middle"
                                     labelAnchorY="text-middle"
                                     style={{ fontSize: '11px', fontWeight : 'bold' }}
                                 />
-                                <BarSeries color="#4285f4" data={this.getData()} />
                             </FlexibleXYPlot>
                         </div>
                     </div>

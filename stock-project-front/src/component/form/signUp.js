@@ -130,6 +130,11 @@ class SignUp extends Component {
 
 
     render() {
+        if(localStorage.getItem('user')){
+            AuthService.logout();
+            window.location.reload('/signup');
+        }
+          
         return (
             <div className="splash-container">
                 <div className="card">

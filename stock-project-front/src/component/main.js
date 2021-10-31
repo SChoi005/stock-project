@@ -87,6 +87,13 @@ class Main extends Component {
         });
     }
 
+    dollarString(str, a) {
+        return (
+            str.substring(0, str.length - a - 1).replace(/\B(?=(\d{3})+(?!\d))/g, ',') +
+            str.substring(str.length - a - 1, str.length)
+        );
+    }
+    
     async getUser() {
         const token = JSON.parse(localStorage.getItem('user')).token;
         const data = await axios
@@ -1579,8 +1586,8 @@ class Main extends Component {
                                                 <div>
                                                     주식명 : {item['name']} ( {item['symbol']} )
                                                 </div>
-                                                <div>평균단가 : ${item['average_price']}</div>
-                                                <div>수량 : {item['quantity']}</div>
+                                                <div>평균단가 : ${this.dollarString(item['average_price'].toFixed(4),4)}</div>
+                                                <div>수량 : {item['quantity'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</div>
                                                 <div className="btn-group mb-3">
                                                     <Button
                                                         onClick={() => this.toggleMyStock({ item })}
