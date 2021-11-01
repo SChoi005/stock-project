@@ -17,4 +17,9 @@ You can see charts and technical indicators of stocks in the portfolio and check
 In addition, you can check the dividend calendar and the amount of dividends you can receive monthly.
 
 ## Example
-<img src="./stock-project-front/public/ex1.png" width="600px" height="300px" align="right"/>
+>Portfolio composition and stock balance status
+<img src="./stock-project-front/public/ex1.PNG" width="600px" height="300px" align="left"/>
+>Stock charts and technical indicators.
+<img src="./stock-project-front/public/ex2.PNG" width="600px" height="300px" align="left"/>
+>Dividend calendar and news.
+<img src="./stock-project-front/public/ex3.PNG" width="600px" height="300px" align="left"/>
