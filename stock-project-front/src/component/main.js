@@ -974,6 +974,11 @@ class Main extends Component {
     render() {
         // console.log(JSON.stringify(this.state.currentUser, null, 2));
         //console.log(JSON.stringify(this.state.selectedPortfolio, null, 2));
+        
+        if(!localStorage.getItem('user')){
+            window.location.reload('/');
+        }
+        
         const isEmpty = (item) => {
             return Object.keys(item).length;
         };
@@ -1316,6 +1321,7 @@ class Main extends Component {
                                     <div className="card-header">
                                         <h2 className="card-heading">📅배당 캘린더</h2>
                                     </div>
+                                    <div className="card-body"></div>
                                 </div>
                             </div>
                             <div className="col-12 col-lg-7 col-xl-7">
