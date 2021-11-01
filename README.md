@@ -1,4 +1,4 @@
-<img src="./stock-project-front/public/banking.png" align="right"/>
+<img src="./stock-project-front/public/banking.png" width="150px" align="right"/>
 
 # My Portfolio
 > Full-Stack Web Services Project (stock project)
