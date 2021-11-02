@@ -21,9 +21,11 @@ In addition, you can check the dividend calendar and the amount of dividends you
 > Portfolio composition and stock balance status
 <img src="./stock-project-front/public/ex1.PNG" width="100%" align="left"/>   
   
-> Stock charts and technical indicators.
+> Stock charts and technical indicators
 <img src="./stock-project-front/public/ex2.PNG" width="100%" align="left"/>   
   
-> Dividend calendar and news.
+> Dividend calendar and news
 <img src="./stock-project-front/public/ex3.PNG" width="100%" align="left"/>   
 
+## Caution
+There is only one backend server, so it may be a little slow when bringing data.

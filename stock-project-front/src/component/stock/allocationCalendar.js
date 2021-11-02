@@ -73,7 +73,7 @@ class AllocationCalendar extends Component {
                         return new Date(a) - new Date(b);
                     });
 
-                    monthly = monthly.slice(monthly.length - 12, monthly.length);
+                    monthly = monthly.slice(monthly.length - 13, monthly.length-1);
 
                     monthly.forEach((d) => {
                         if (
