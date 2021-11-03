@@ -88,7 +88,7 @@ class AllocationCalendar extends Component {
             this.props.stocks.forEach((s) => {
                 if (s['symbol'] === i['Symbol']) {
                     var divMonth = new Date(i['DividendDate']).getMonth();
-                    if(dividendMonth.length === 12){
+                    if(dividendMonth.length >= 6){
                         data[0].y +=((i['DividendPerShare'] * s['quantity']) / dividendMonth.length) *0.86;
                         data[1].y +=((i['DividendPerShare'] * s['quantity']) / dividendMonth.length) *0.86;
                         data[2].y +=((i['DividendPerShare'] * s['quantity']) / dividendMonth.length) *0.86;
