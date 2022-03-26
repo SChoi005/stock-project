@@ -27,5 +27,3 @@ In addition, you can check the dividend calendar and the amount of dividends you
 > Dividend calendar and news
 <img src="./stock-project-front/public/ex3.PNG" width="100%" align="left"/>   
 
-## Caution
-There is only one backend server, so it may be a little slow when bringing data.
