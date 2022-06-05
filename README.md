@@ -3,8 +3,6 @@
 # My Portfolio
 > Full-Stack Web Services Project (stock project)
 
-It's my first web project.
-
 ## URL
 https://my-portfolio.run.goorm.io/
 
