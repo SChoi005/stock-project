@@ -13,12 +13,12 @@ In addition, you can check the dividend calendar and the amount of dividends you
 
 ## Example
 
-> Portfolio composition and stock balance status
-<img src="./stock-project-front/public/ex1.PNG" width="100%" align="left"/>   
+* <strong>Portfolio composition and stock balance status</strong>
+  <img src="./stock-project-front/public/ex1.PNG" width="100%" align="left"/>   
   
-> Stock charts and technical indicators
-<img src="./stock-project-front/public/ex2.PNG" width="100%" align="left"/>   
+* <strong>Stock charts and technical indicators</strong>
+  <img src="./stock-project-front/public/ex2.PNG" width="100%" align="left"/>   
   
-> Dividend calendar and news
-<img src="./stock-project-front/public/ex3.PNG" width="100%" align="left"/>   
+* <strong>Dividend calendar and news</strong>
+  <img src="./stock-project-front/public/ex3.PNG" width="100%" align="left"/>   
 
