@@ -1,13 +1,10 @@
 <img src="./stock-project-front/public/banking.png" width="150px" align="right"/>
 
 # My Portfolio
-> Full-Stack Web Services Project (stock project)
+> Personal stock-portfolio Web Services Project
 
 ## URL
 https://my-portfolio.run.goorm.io/
-
-## The Technology Used
-React.js, Springboot, Mysql
 
 ## Overview
 My Portfolio allows you to create your own portfolio and makes it easy to see asset composition and dividend composition.
